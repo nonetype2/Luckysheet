@@ -64,11 +64,11 @@ function luckysheet_compareWith() {
 
     //参数是不规则二维数组 时 return #VALUE! 错误
     if(getObjType(fp) == "array" && getObjType(fp[0]) == "array" && !func_methods.isDyadicArr(fp)){
-        return error.v;   
+        return error.v;
     }
 
     if(getObjType(tp) == "array" && getObjType(tp[0]) == "array" && !func_methods.isDyadicArr(tp)){
-        return error.v;   
+        return error.v;
     }
 
     if(sp == "<>"){
@@ -174,13 +174,13 @@ function luckysheet_compareWith() {
 
         return v;
     }
-      
+
     if(sp == "*"){ //乘
         if(getObjType(fp) == "array" && getObjType(tp) == "array"){
             let result = [];
 
             if(getObjType(fp[0]) == "array" && getObjType(tp[0]) == "array"){
-                //二维数组相乘（m*n 与 m*n 等于 m*n；m*p 与 p*n 等于 m*n；其它错误） 
+                //二维数组相乘（m*n 与 m*n 等于 m*n；m*p 与 p*n 等于 m*n；其它错误）
                 if(fp.length == tp.length && fp[0].length == tp[0].length){
                     for(let m = 0; m < fp.length; m++){
                         let rowArr = [];
@@ -380,7 +380,7 @@ function luckysheet_compareWith() {
             else{
                 //一维数组与一维数组相乘时，数组大小不一样是错误
                 if(fp.length != tp.length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let n = 0; n < fp.length; n++){
@@ -509,7 +509,7 @@ function luckysheet_compareWith() {
             let result = [];
 
             if(getObjType(fp[0]) == "array" && getObjType(tp[0]) == "array"){
-                //二维数组相除（m*n 与 m*n 等于 m*n；m*p 与 p*n 等于 m*n；其它错误） 
+                //二维数组相除（m*n 与 m*n 等于 m*n；m*p 与 p*n 等于 m*n；其它错误）
                 if(fp.length == tp.length && fp[0].length == tp[0].length){
                     for(let m = 0; m < fp.length; m++){
                         let rowArr = [];
@@ -524,7 +524,7 @@ function luckysheet_compareWith() {
                                     value = error.d;
                                 }
                                 else{
-                                    value = luckysheet_calcADPMM(fp[m][n], sp, tp[m][n]);// parseFloat(fp[m][n]) / parseFloat(tp[m][n]);    
+                                    value = luckysheet_calcADPMM(fp[m][n], sp, tp[m][n]);// parseFloat(fp[m][n]) / parseFloat(tp[m][n]);
                                 }
                             }
                             else{
@@ -704,7 +704,7 @@ function luckysheet_compareWith() {
             else{
                 //一维数组与一维数组相除时，数组大小不一样是错误
                 if(fp.length != tp.length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let n = 0; n < fp.length; n++){
@@ -864,7 +864,7 @@ function luckysheet_compareWith() {
 
             if(getObjType(fp[0]) == "array" && getObjType(tp[0]) == "array"){
                 if(fp.length != tp.length && fp[0].length != tp[0].length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let m = 0; m < fp.length; m++){
@@ -880,7 +880,7 @@ function luckysheet_compareWith() {
                                 value = error.d;
                             }
                             else{
-                                value = luckysheet_calcADPMM(fp[m][n], sp, tp[m][n]);// eval(parseFloat(fp[m][n]) + sp + parseFloat(tp[m][n]));    
+                                value = luckysheet_calcADPMM(fp[m][n], sp, tp[m][n]);// eval(parseFloat(fp[m][n]) + sp + parseFloat(tp[m][n]));
                             }
                         }
                         else{
@@ -911,7 +911,7 @@ function luckysheet_compareWith() {
                                 value = error.d;
                             }
                             else{
-                                value = luckysheet_calcADPMM(fp[m][n], sp, tp[n]);//eval(parseFloat(fp[m][n]) + sp + parseFloat(tp[n]));    
+                                value = luckysheet_calcADPMM(fp[m][n], sp, tp[n]);//eval(parseFloat(fp[m][n]) + sp + parseFloat(tp[n]));
                             }
                         }
                         else{
@@ -942,7 +942,7 @@ function luckysheet_compareWith() {
                                 value = error.d;
                             }
                             else{
-                                value = luckysheet_calcADPMM(fp[n], sp, tp[m][n]);//eval(parseFloat(fp[n]) + sp + parseFloat(tp[m][n]));    
+                                value = luckysheet_calcADPMM(fp[n], sp, tp[m][n]);//eval(parseFloat(fp[n]) + sp + parseFloat(tp[m][n]));
                             }
                         }
                         else{
@@ -957,7 +957,7 @@ function luckysheet_compareWith() {
             }
             else{
                 if(fp.length != tp.length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let n = 0; n < fp.length; n++){
@@ -970,7 +970,7 @@ function luckysheet_compareWith() {
                             value = error.d;
                         }
                         else{
-                            value = luckysheet_calcADPMM(fp[n], sp, tp[n]);//eval(parseFloat(fp[n]) + sp + "(" + parseFloat(tp[n]) + ")" );    
+                            value = luckysheet_calcADPMM(fp[n], sp, tp[n]);//eval(parseFloat(fp[n]) + sp + "(" + parseFloat(tp[n]) + ")" );
                         }
                     }
                     else{
@@ -1001,7 +1001,7 @@ function luckysheet_compareWith() {
                                 value = error.d;
                             }
                             else{
-                                value = luckysheet_calcADPMM(fp[m][n], sp, tp);//eval(parseFloat(fp[m][n]) + sp + parseFloat(tp));    
+                                value = luckysheet_calcADPMM(fp[m][n], sp, tp);//eval(parseFloat(fp[m][n]) + sp + parseFloat(tp));
                             }
                         }
                         else{
@@ -1024,7 +1024,7 @@ function luckysheet_compareWith() {
                             value = error.d;
                         }
                         else{
-                            value = luckysheet_calcADPMM(fp[n], sp, tp);//eval(parseFloat(fp[n]) + sp + parseFloat(tp));    
+                            value = luckysheet_calcADPMM(fp[n], sp, tp);//eval(parseFloat(fp[n]) + sp + parseFloat(tp));
                         }
                     }
                     else{
@@ -1055,7 +1055,7 @@ function luckysheet_compareWith() {
                                 value = error.d;
                             }
                             else{
-                                value = luckysheet_calcADPMM(fp, sp, tp[m][n]);//eval(parseFloat(fp) + sp + parseFloat(tp[m][n]));    
+                                value = luckysheet_calcADPMM(fp, sp, tp[m][n]);//eval(parseFloat(fp) + sp + parseFloat(tp[m][n]));
                             }
                         }
                         else{
@@ -1078,7 +1078,7 @@ function luckysheet_compareWith() {
                             value = error.d;
                         }
                         else{
-                            value = luckysheet_calcADPMM(fp, sp, tp[n]);//eval(parseFloat(fp) + sp + parseFloat(tp[n]));    
+                            value = luckysheet_calcADPMM(fp, sp, tp[n]);//eval(parseFloat(fp) + sp + parseFloat(tp[n]));
                         }
                     }
                     else{
@@ -1101,7 +1101,7 @@ function luckysheet_compareWith() {
                     result = error.d;
                 }
                 else{
-                    result = luckysheet_calcADPMM(fp, sp, tp);//eval(parseFloat(fp) + sp + "(" + parseFloat(tp) + ")");    
+                    result = luckysheet_calcADPMM(fp, sp, tp);//eval(parseFloat(fp) + sp + "(" + parseFloat(tp) + ")");
                 }
             }
             else{
@@ -1117,7 +1117,7 @@ function luckysheet_compareWith() {
 
             if(getObjType(fp[0]) == "array" && getObjType(tp[0]) == "array"){
                 if(fp.length != tp.length && fp[0].length != tp[0].length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let m = 0; m < fp.length; m++){
@@ -1165,7 +1165,7 @@ function luckysheet_compareWith() {
             }
             else{
                 if(fp.length != tp.length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let n = 0; n < fp.length; n++){
@@ -1234,7 +1234,7 @@ function luckysheet_compareWith() {
 
             if(getObjType(fp[0]) == "array" && getObjType(tp[0]) == "array"){
                 if(fp.length != tp.length && fp[0].length != tp[0].length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let m = 0; m < fp.length; m++){
@@ -1279,7 +1279,7 @@ function luckysheet_compareWith() {
             }
             else{
                 if(fp.length != tp.length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let n = 0; n < fp.length; n++){
@@ -1343,7 +1343,7 @@ function luckysheet_compareWith() {
 
             if(getObjType(fp[0]) == "array" && getObjType(tp[0]) == "array"){
                 if(fp.length != tp.length && fp[0].length != tp[0].length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let m = 0; m < fp.length; m++){
@@ -1421,7 +1421,7 @@ function luckysheet_compareWith() {
             }
             else{
                 if(fp.length != tp.length){
-                    return error.na;   
+                    return error.na;
                 }
 
                 for(let n = 0; n < fp.length; n++){
@@ -1563,7 +1563,7 @@ function luckysheet_getarraydata() {
         }
     }
     else{
-        arr = fp.split(",");    
+        arr = fp.split(",");
     }
 
     return arr;
@@ -1604,7 +1604,7 @@ function luckysheet_getcelldata(txt) {
         rangetxt = "",
         sheetIndex = -1,
         sheetdata = null;
-    
+
     if (val.length > 1) {
         sheettxt = val[0].replace(/''/g,"'");
         rangetxt = val[1];
@@ -1612,7 +1612,7 @@ function luckysheet_getcelldata(txt) {
         if(sheettxt.substr(0,1)=="'" && sheettxt.substr(sheettxt.length-1,1)=="'"){
             sheettxt = sheettxt.substring(1,sheettxt.length-1);
         }
-        
+
         for (let i in luckysheetfile) {
             if (sheettxt == luckysheetfile[i].name) {
                 sheetIndex = luckysheetfile[i].index;
@@ -1624,7 +1624,7 @@ function luckysheet_getcelldata(txt) {
         if (sheetIndex == -1) {
             sheetIndex = 0;
         }
-    } 
+    }
     else {
         let index = getSheetIndex(Store.calculateSheetIndex);
         sheettxt = luckysheetfile[index].name;
@@ -1670,17 +1670,17 @@ function luckysheet_getcelldata(txt) {
             window.luckysheet_getcelldata_cache[txt] = retAll;
 
             return retAll;
-        } 
+        }
         else {
             return [];
         }
-    } 
+    }
     else {
         rangetxt = rangetxt.split(":");
         let row = [], col = [];
         row[0] = parseInt(rangetxt[0].replace(/[^0-9]/g, "")) - 1;
         row[1] = parseInt(rangetxt[1].replace(/[^0-9]/g, "")) - 1;
-        
+
         if (isNaN(row[0])) {
             row[0] = 0;
         }
@@ -1696,7 +1696,7 @@ function luckysheet_getcelldata(txt) {
 
         col[0] = ABCatNum(rangetxt[0].replace(/[^A-Za-z]/g, ""));
         col[1] = ABCatNum(rangetxt[1].replace(/[^A-Za-z]/g, ""));
-        
+
         if (isNaN(col[0])) {
             col[0] = 0;
         }
@@ -1709,7 +1709,7 @@ function luckysheet_getcelldata(txt) {
             tooltip.info("选择失败", "输入范围错误！");
             return [];
         }
-        
+
         let ret = getdatabyselectionD(sheetdata, {
             "row": row,
             "column": col
@@ -1726,7 +1726,7 @@ function luckysheet_getcelldata(txt) {
             }
         }
 
-        
+
         //范围的长宽
         let rowl = row[1] - row[0] + 1;
         let coll = col[1] - col[0] + 1;
@@ -1737,7 +1737,7 @@ function luckysheet_getcelldata(txt) {
             "coll": coll,
             "data": ret
         };
-        
+
         window.luckysheet_getcelldata_cache[txt] = retAll;
 
         return retAll;
@@ -1756,7 +1756,7 @@ function luckysheet_parseData(value) {
         }
         else{ //getcelldat引用单元格对象，带有格式
             if(Array.isArray(value.data)){ //单元格区域
-                return error.v;             
+                return error.v;
             }
             else{ //单个单元格
                 if(value.data.v === undefined){
@@ -1799,7 +1799,7 @@ function luckysheet_getValue() {
             }
             else{ //getcelldat引用单元格对象，带有格式
                 if(Array.isArray(value.data)){ //单元格区域
-                    value = value.data;                
+                    value = value.data;
                 }
                 else{ //单个单元格
                     if(value.data.v === undefined){ //空白单元格
@@ -1815,7 +1815,7 @@ function luckysheet_getValue() {
             let v = genarate(value);
             value = v[2];
         }
-        
+
         args[i] = value;
     }
 }
@@ -1838,10 +1838,10 @@ function luckysheet_offset_check() {
         return formula.error.v;
     }
 
-    var reference = arguments[0].startCell;
+    let reference = arguments[0].startCell;
 
     //要偏移的行数
-    var rows = func_methods.getFirstValue(arguments[1]);
+    let rows = func_methods.getFirstValue(arguments[1]);
     if (valueIsError(rows)) {
         return rows;
     }
@@ -1853,7 +1853,7 @@ function luckysheet_offset_check() {
     rows = parseInt(rows);
 
     //要偏移的列数
-    var cols = func_methods.getFirstValue(arguments[2]);
+    let cols = func_methods.getFirstValue(arguments[2]);
     if (valueIsError(cols)) {
         return cols;
     }
@@ -1865,7 +1865,7 @@ function luckysheet_offset_check() {
     cols = parseInt(cols);
 
     //要从偏移目标开始返回的范围的高度
-    var height = arguments[0].rowl;
+    let height = arguments[0].rowl;
     if (arguments.length >= 4) {
         height = func_methods.getFirstValue(arguments[3]);
         if (valueIsError(height)) {
@@ -1880,7 +1880,7 @@ function luckysheet_offset_check() {
     }
 
     //要从偏移目标开始返回的范围的宽度
-    var width = arguments[0].coll;
+    let width = arguments[0].coll;
     if (arguments.length == 5) {
         width = func_methods.getFirstValue(arguments[4]);
         if (valueIsError(width)) {
@@ -1899,15 +1899,15 @@ function luckysheet_offset_check() {
     }
 
     //计算
-    var cellrange = formula.getcellrange(reference);
-    var cellRow0 = cellrange["row"][0];
-    var cellCol0 = cellrange["column"][0];
+    let cellrange = formula.getcellrange(reference);
+    let cellRow0 = cellrange["row"][0];
+    let cellCol0 = cellrange["column"][0];
 
     cellRow0 += rows;
     cellCol0 += cols;
 
-    var cellRow1 = cellRow0 + height - 1;
-    var cellCol1 = cellCol0 + width - 1;
+    let cellRow1 = cellRow0 + height - 1;
+    let cellCol1 = cellCol0 + width - 1;
 
     if (cellRow0 < 0 || cellRow1 >= Store.flowdata.length || cellCol0 < 0 || cellCol1 >= Store.flowdata[0].length) {
         return formula.error.r;
@@ -1949,7 +1949,7 @@ function luckysheet_getSpecialReference(isCellFirst, param1, param2) {
         return luckysheet_getcelldata(sheetName + functionRange.startCell + ":" + rangeT);
     }
 
-    
+
 
 }
 

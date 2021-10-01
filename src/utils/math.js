@@ -14,18 +14,18 @@ function isInteger(obj) {
  *   {times:100, num: 314}
  */
 function toInteger(floatNum) {
-    var ret = { times: 1, num: 0 };
+    let ret = { times: 1, num: 0 };
 
     if (isInteger(floatNum)) {
         ret.num = floatNum;
         return ret;
     }
 
-    var strfi = floatNum + '';
-    var dotPos = strfi.indexOf('.');
-    var len = strfi.substr(dotPos + 1).length;
-    var times = Math.pow(10, len);
-    var intNum = parseInt(floatNum * times + 0.5, 10);
+    let strfi = floatNum + '';
+    let dotPos = strfi.indexOf('.');
+    let len = strfi.substr(dotPos + 1).length;
+    let times = Math.pow(10, len);
+    let intNum = parseInt(floatNum * times + 0.5, 10);
 
     ret.times = times;
     ret.num = intNum;
@@ -44,14 +44,14 @@ function toInteger(floatNum) {
  *
  */
 function operation(a, b, op) {
-    var o1 = toInteger(a);
-    var o2 = toInteger(b);
-    var n1 = o1.num;
-    var n2 = o2.num;
-    var t1 = o1.times;
-    var t2 = o2.times;
-    var max = t1 > t2 ? t1 : t2;
-    var result = null;
+    let o1 = toInteger(a);
+    let o2 = toInteger(b);
+    let n1 = o1.num;
+    let n2 = o2.num;
+    let t1 = o1.times;
+    let t2 = o2.times;
+    let max = t1 > t2 ? t1 : t2;
+    let result = null;
 
     switch (op) {
         case 'add':
@@ -84,8 +84,8 @@ function operation(a, b, op) {
             return result;
         case 'divide':
             return result = function () {
-                var r1 = n1 / n2;
-                var r2 = t2 / t1;
+                let r1 = n1 / n2;
+                let r2 = t2 / t1;
                 return operation(r1, r2, 'multiply');
             }();
     }

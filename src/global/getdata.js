@@ -27,7 +27,7 @@ export function getdatabyselection(range, sheetIndex) {
     }
     else{
         d = editor.deepCopyFlowData(Store.flowdata);
-        cfg = Store.config;    
+        cfg = Store.config;
     }
 
     let data = [];
@@ -57,7 +57,7 @@ export function getdatabyselectionD(d, range) {
     if (range == null || range["row"] == null || range["row"].length == 0) {
         return [];
     }
-    
+
     let dynamicArray_compute = dynamicArrayCompute(Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["dynamicArray"]);
     let data = [];
 
@@ -78,7 +78,7 @@ export function getdatabyselectionD(d, range) {
 
         for (let c = range["column"][0]; c <= range["column"][1]; c++) {
             let value;
-            
+
             if((r + "_" + c) in dynamicArray_compute){
                 value = dynamicArray_compute[r + "_" + c];
             }
@@ -104,7 +104,7 @@ export function getdatabyselectionNoCopy(range) {
 
     for (let r = range["row"][0]; r <= range["row"][1]; r++) {
         let row = [];
-        
+
         if (Store.config["rowhidden"] != null && Store.config["rowhidden"][r] != null) {
             continue;
         }
@@ -118,7 +118,7 @@ export function getdatabyselectionNoCopy(range) {
 
             row.push(value);
         }
-        
+
         data.push(row);
     }
 
@@ -238,7 +238,7 @@ export function getcellFormula(r, c, i, data) {
         cell = getOrigincell(r,c,i);
     }
 
-    
+
     if(cell==null){
         return null;
     }
@@ -364,7 +364,7 @@ export function getFontStyleByCell(cell,checksAF,checksCF, isCheck=true){
                 style += "color: " + checksAF[0] + ";";
             }
             else{
-                style += "color: " + value + ";";  
+                style += "color: " + value + ";";
             }
         }
 
@@ -397,9 +397,9 @@ export function checkstatusByCell(cell, a){
             foucsStatus = "0";
         }
         else{
-            // var  w = window.getSelection(), isInlineEdit=false; 
+            // let  w = window.getSelection(), isInlineEdit=false;
             // if(w.type!="None"){
-            //     var range = w.getRangeAt(0);
+            //     let range = w.getRangeAt(0);
             //     let startContainer = range.startContainer;
             //     if (parseInt($("#luckysheet-input-box").css("top")) > 0 && startContainer.parentNode.tagName=="SPAN" && !range.collapsed) {
             //         let span = startContainer.parentNode;
@@ -408,18 +408,18 @@ export function checkstatusByCell(cell, a){
             //         isInlineEdit = true;
             //     }
             // }
-            
-            // if(!isInlineEdit){       
+
+            // if(!isInlineEdit){
             //     if(isInlineStringCell(cell)){
             //         foucsStatus = cell.ct.s[0][a];
             //     }
             //     else{
             //         foucsStatus = foucsStatus[a];
             //     }
-            // }   
-            
+            // }
+
             foucsStatus = foucsStatus[a];
-            
+
             if(foucsStatus == null){
                 foucsStatus = "0";
             }

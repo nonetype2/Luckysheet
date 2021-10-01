@@ -13,14 +13,14 @@ function isdatetime(s) {
     }
 
     function checkDateTime(str){
-        var reg1 = /^(\d{4})-(\d{1,2})-(\d{1,2})(\s(\d{1,2}):(\d{1,2})(:(\d{1,2}))?)?$/;
-        var reg2 = /^(\d{4})\/(\d{1,2})\/(\d{1,2})(\s(\d{1,2}):(\d{1,2})(:(\d{1,2}))?)?$/;
+        let reg1 = /^(\d{4})-(\d{1,2})-(\d{1,2})(\s(\d{1,2}):(\d{1,2})(:(\d{1,2}))?)?$/;
+        let reg2 = /^(\d{4})\/(\d{1,2})\/(\d{1,2})(\s(\d{1,2}):(\d{1,2})(:(\d{1,2}))?)?$/;
 
         if(!reg1.test(str) && !reg2.test(str)){
             return false;
         }
 
-        var year = RegExp.$1,
+        let year = RegExp.$1,
             month = RegExp.$2,
             day = RegExp.$3;
 

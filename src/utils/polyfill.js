@@ -24,14 +24,14 @@
             return window.event;
         }
 
-        var _caller = __window_event_constructor.caller;
-        
+        let _caller = __window_event_constructor.caller;
+
         while(_caller != null){
-            var _argument = _caller.arguments[0];
+            let _argument = _caller.arguments[0];
 
             if(_argument){
-                var _temp = _argument.constructor;
-                
+                let _temp = _argument.constructor;
+
                 if(_temp.toString().indexOf("Event") != -1){
                     return _argument;
                 }

@@ -1,8 +1,8 @@
 const Store = {
-    container: null, 
-    luckysheetfile: null, 
-    defaultcolumnNum: 60, 
-    defaultrowNum: 84, 
+    container: null,
+    luckysheetfile: null,
+    defaultcolumnNum: 60,
+    defaultrowNum: 84,
     fullscreenmode: true,
     devicePixelRatio: 1,
 
@@ -26,12 +26,12 @@ const Store = {
     cellMainSrollBarSize: 12,
     sheetBarHeight: 31,
     statisticBarHeight: 23,
-    luckysheetTableContentHW: [0, 0], 
+    luckysheetTableContentHW: [0, 0],
 
     defaultcollen: 73,
     defaultrowlen: 19,
 
-    jfcountfuncTimeout: null, 
+    jfcountfuncTimeout: null,
     jfautoscrollTimeout: null,
 
     luckysheet_select_status: false,
@@ -53,7 +53,7 @@ const Store = {
     luckysheetcurrentisPivotTable: false,
 
     luckysheet_rows_selected_status: false,  //行列标题相关参
-    luckysheet_cols_selected_status: false,  
+    luckysheet_cols_selected_status: false,
     luckysheet_rows_change_size: false,
     luckysheet_rows_change_size_start: [],
     luckysheet_cols_change_size: false,
@@ -62,7 +62,7 @@ const Store = {
     luckysheet_cols_dbclick_times: 0,
 
     luckysheetCellUpdate: [],
-    
+
     luckysheet_shiftpositon: null,
 
     iscopyself: true,

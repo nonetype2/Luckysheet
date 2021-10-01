@@ -26,8 +26,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -35,10 +35,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -70,10 +70,10 @@ const functionImplementation = {
                 }
             }
 
-            var sum = 0;
+            let sum = 0;
 
             if(dataArr.length > 0){
-                for(var i = 0; i < dataArr.length; i++){
+                for(let i = 0; i < dataArr.length; i++){
                     if(valueIsError(dataArr[i])){
                         return dataArr[i];
                     }
@@ -89,7 +89,7 @@ const functionImplementation = {
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -101,8 +101,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -110,10 +110,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array"){
@@ -135,9 +135,9 @@ const functionImplementation = {
                 }
             }
 
-            var sum = 0, count = 0;
+            let sum = 0, count = 0;
 
-            for(var i = 0; i < dataArr.length; i++){
+            for(let i = 0; i < dataArr.length; i++){
                 if(valueIsError(dataArr[i])){
                     return dataArr[i];
                 }
@@ -156,7 +156,7 @@ const functionImplementation = {
             return luckysheet_calcADPMM(sum, "/", count);// sum / count;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -168,8 +168,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -177,10 +177,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array"){
@@ -212,9 +212,9 @@ const functionImplementation = {
                 }
             }
 
-            var count = 0;
+            let count = 0;
 
-            for(var i = 0; i < dataArr.length; i++){
+            for(let i = 0; i < dataArr.length; i++){
                 if(isRealNum(dataArr[i])){
                     count++;
                 }
@@ -223,7 +223,7 @@ const functionImplementation = {
             return count;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -236,8 +236,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -245,10 +245,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array"){
@@ -285,8 +285,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -294,10 +294,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array"){
@@ -319,9 +319,9 @@ const functionImplementation = {
                 }
             }
 
-            var max = null;
+            let max = null;
 
-            for(var i = 0; i < dataArr.length; i++){
+            for(let i = 0; i < dataArr.length; i++){
                 if(valueIsError(dataArr[i])){
                     return dataArr[i];
                 }
@@ -338,7 +338,7 @@ const functionImplementation = {
             return max == null ? 0 : max;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -351,8 +351,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -360,10 +360,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array"){
@@ -385,9 +385,9 @@ const functionImplementation = {
                 }
             }
 
-            var min = null;
+            let min = null;
 
-            for(var i = 0; i < dataArr.length; i++){
+            for(let i = 0; i < dataArr.length; i++){
                 if(valueIsError(dataArr[i])){
                     return dataArr[i];
                 }
@@ -404,7 +404,7 @@ const functionImplementation = {
             return min == null ? 0 : min;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -417,8 +417,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -427,7 +427,7 @@ const functionImplementation = {
 
         try {
             //身份证号
-            var UUserCard = func_methods.getFirstValue(arguments[0]);
+            let UUserCard = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(UUserCard)){
                 return UUserCard;
             }
@@ -436,14 +436,14 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var birthday = window.luckysheet_function.BIRTHDAY_BY_IDCARD.f(UUserCard);
+            let birthday = window.luckysheet_function.BIRTHDAY_BY_IDCARD.f(UUserCard);
             if(valueIsError(birthday)){
                 return birthday;
             }
 
             birthday = dayjs(birthday);
 
-            var cuurentdate = dayjs();
+            let cuurentdate = dayjs();
             if(arguments.length == 2){
                 cuurentdate = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(cuurentdate)){
@@ -453,7 +453,7 @@ const functionImplementation = {
                 cuurentdate = dayjs(cuurentdate);
             }
 
-            var age = cuurentdate.diff(birthday, "years");
+            let age = cuurentdate.diff(birthday, "years");
 
             if(age < 0 || age.toString() == "NaN"){
                 return formula.error.v;
@@ -462,7 +462,7 @@ const functionImplementation = {
             return age;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -475,8 +475,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -485,7 +485,7 @@ const functionImplementation = {
 
         try {
             //身份证号
-            var UUserCard = func_methods.getFirstValue(arguments[0]).toString();
+            let UUserCard = func_methods.getFirstValue(arguments[0]).toString();
             if(valueIsError(UUserCard)){
                 return UUserCard;
             }
@@ -502,7 +502,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -515,8 +515,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -525,7 +525,7 @@ const functionImplementation = {
 
         try {
             //身份证号
-            var UUserCard = func_methods.getFirstValue(arguments[0]).toString();
+            let UUserCard = func_methods.getFirstValue(arguments[0]).toString();
             if(valueIsError(UUserCard)){
                 return UUserCard;
             }
@@ -534,18 +534,18 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var birthday = "";
+            let birthday = "";
             if (UUserCard.length == 15) {
-                var year = "19" + UUserCard.substring(6, 8) + "/" + UUserCard.substring(8, 10) + "/" + UUserCard.substring(10, 12);
+                let year = "19" + UUserCard.substring(6, 8) + "/" + UUserCard.substring(8, 10) + "/" + UUserCard.substring(10, 12);
                 birthday = year;
             }
             else if (UUserCard.length == 18) {
-                var year = UUserCard.substring(6, 10) + "/" + UUserCard.substring(10, 12) + "/" + UUserCard.substring(12, 14);
+                let year = UUserCard.substring(6, 10) + "/" + UUserCard.substring(10, 12) + "/" + UUserCard.substring(12, 14);
                 birthday = year;
             }
 
             //生日格式
-            var datetype = 0;
+            let datetype = 0;
             if (arguments[1] != null) {
                 datetype = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(datetype)){
@@ -574,7 +574,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -587,8 +587,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -597,7 +597,7 @@ const functionImplementation = {
 
         try {
             //身份证号
-            var UUserCard = func_methods.getFirstValue(arguments[0]).toString();
+            let UUserCard = func_methods.getFirstValue(arguments[0]).toString();
             if(valueIsError(UUserCard)){
                 return UUserCard;
             }
@@ -606,8 +606,8 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var native = "未知";
-            var provinceArray = formula.classlist.province;
+            let native = "未知";
+            let provinceArray = formula.classlist.province;
 
             if (UUserCard.substring(0, 2) in provinceArray) {
                 native = provinceArray[UUserCard.substring(0, 2)];
@@ -616,7 +616,7 @@ const functionImplementation = {
             return native;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -629,8 +629,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -639,7 +639,7 @@ const functionImplementation = {
 
         try {
             //身份证号
-            var UUserCard = func_methods.getFirstValue(arguments[0]).toString();
+            let UUserCard = func_methods.getFirstValue(arguments[0]).toString();
             if(valueIsError(UUserCard)){
                 return UUserCard;
             }
@@ -648,10 +648,10 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var dataNum = cityData.length,
+            let dataNum = cityData.length,
                 native = "未知";
 
-            for (var i = 0; i < dataNum; i++) {
+            for (let i = 0; i < dataNum; i++) {
                 if (UUserCard.substring(0, 6) == cityData[i].code) {
                     native = cityData[i].title;
                     break;
@@ -661,7 +661,7 @@ const functionImplementation = {
             return native;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -674,8 +674,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -684,7 +684,7 @@ const functionImplementation = {
 
         try {
             //身份证号
-            var UUserCard = func_methods.getFirstValue(arguments[0]);
+            let UUserCard = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(UUserCard)){
                 return UUserCard;
             }
@@ -693,18 +693,18 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var birthday = window.luckysheet_function.BIRTHDAY_BY_IDCARD.f(UUserCard);
+            let birthday = window.luckysheet_function.BIRTHDAY_BY_IDCARD.f(UUserCard);
             if(valueIsError(birthday)){
                 return birthday;
             }
 
             birthday = new Date(birthday);
 
-            var month = birthday.getMonth(),
+            let month = birthday.getMonth(),
                 day = birthday.getDate();
 
-            var d = new Date(1999, month, day, 0, 0, 0);
-            var arr = [];
+            let d = new Date(1999, month, day, 0, 0, 0);
+            let arr = [];
             arr.push(["魔羯座", new Date(1999, 0, 1, 0, 0, 0)]);
             arr.push(["水瓶座", new Date(1999, 0, 20, 0, 0, 0)]);
             arr.push(["双鱼座", new Date(1999, 1, 19, 0, 0, 0)]);
@@ -719,7 +719,7 @@ const functionImplementation = {
             arr.push(["射手座", new Date(1999, 10, 22, 0, 0, 0)]);
             arr.push(["魔羯座", new Date(1999, 11, 22, 0, 0, 0)]);
             //console.log(birthday, arr, i);
-            for (var i = arr.length - 1; i >= 0; i--) {
+            for (let i = arr.length - 1; i >= 0; i--) {
                 if (d >= arr[i][1]) {
                     return arr[i][0];
                 }
@@ -728,7 +728,7 @@ const functionImplementation = {
             return "未找到匹配星座信息";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -741,8 +741,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -751,7 +751,7 @@ const functionImplementation = {
 
         try {
             //身份证号
-            var UUserCard = func_methods.getFirstValue(arguments[0]);
+            let UUserCard = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(UUserCard)){
                 return UUserCard;
             }
@@ -760,15 +760,15 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var birthday = window.luckysheet_function.BIRTHDAY_BY_IDCARD.f(UUserCard);
+            let birthday = window.luckysheet_function.BIRTHDAY_BY_IDCARD.f(UUserCard);
             if(valueIsError(birthday)){
                 return birthday;
             }
 
             birthday = new Date(birthday);
 
-            var list = new Array("猪", "鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗");
-            var index = (parseInt(birthday.getFullYear()) + 9) % 12;
+            let list = new Array("猪", "鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗");
+            let index = (parseInt(birthday.getFullYear()) + 9) % 12;
 
             if (index != null && !isNaN(index)) {
                 return list[index];
@@ -778,7 +778,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -791,8 +791,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -800,12 +800,12 @@ const functionImplementation = {
         }
 
         try {
-            var idcard = func_methods.getFirstValue(arguments[0]);
+            let idcard = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(idcard)){
                 return idcard;
             }
 
-            var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+            let reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
 
             if(reg.test(idcard)){
                 return true
@@ -815,7 +815,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -828,8 +828,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -837,18 +837,18 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //任意需要分词的文本
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
 
             //分词模式
-            var datetype = 0;
+            let datetype = 0;
             if (arguments[1] != null) {
                 datetype = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(datetype)){
@@ -870,7 +870,7 @@ const functionImplementation = {
                 "text": text,
                 "type": datetype
             }, function(data) {
-                var d = [].concat(Store.flowdata);
+                let d = [].concat(Store.flowdata);
                 formula.execFunctionGroup(cell_r, cell_c, data);
                 d[cell_r][cell_c] = {
                     "v": data,
@@ -882,7 +882,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -894,8 +894,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -903,18 +903,18 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //任意需要分词的文本
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
 
             //关键词个数
-            var count = 20;
+            let count = 20;
             if (arguments[1] != null) {
                 count = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(count)){
@@ -929,7 +929,7 @@ const functionImplementation = {
             count = parseInt(count);
 
             //语料库
-            var set = 0;
+            let set = 0;
             if (arguments[2] != null) {
                 set = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(set)){
@@ -956,7 +956,7 @@ const functionImplementation = {
                 "count": count,
                 "set": set
             }, function(data) {
-                var d = editor.deepCopyFlowData(Store.flowdata);
+                let d = editor.deepCopyFlowData(Store.flowdata);
                 formula.execFunctionGroup(cell_r, cell_c, data);
                 d[cell_r][cell_c] = {
                     "v": data,
@@ -968,7 +968,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -980,8 +980,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -989,18 +989,18 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //任意需要分词的文本
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
 
             //关键词个数
-            var count = 20;
+            let count = 20;
             if (arguments[1] != null) {
                 count = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(count)){
@@ -1015,7 +1015,7 @@ const functionImplementation = {
             count = parseInt(count);
 
             //语料库
-            var set = 0;
+            let set = 0;
             if (arguments[2] != null) {
                 set = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(set)){
@@ -1042,7 +1042,7 @@ const functionImplementation = {
                 "count": count,
                 "set": set
             }, function(data) {
-                var d = editor.deepCopyFlowData(Store.flowdata);
+                let d = editor.deepCopyFlowData(Store.flowdata);
                 formula.execFunctionGroup(cell_r, cell_c, data);
                 d[cell_r][cell_c] = {
                     "v": data,
@@ -1054,7 +1054,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1066,8 +1066,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1075,21 +1075,21 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //股票代码
-            var stockcode = func_methods.getFirstValue(arguments[0]);
+            let stockcode = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(stockcode)){
                 return stockcode;
             }
 
             //日期
-            var date = null;
+            let date = null;
 
             if(arguments[1] != null){
-                var data_date = arguments[1];
+                let data_date = arguments[1];
 
                 if(getObjType(data_date) == "array"){
                     return formula.error.v;
@@ -1114,7 +1114,7 @@ const functionImplementation = {
             }
 
             //复权除权
-            var price = 0;
+            let price = 0;
             if (arguments[2] != null) {
                 price = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(price)){
@@ -1138,8 +1138,8 @@ const functionImplementation = {
                 "price": price,
                 type: "0"
             }, function(data) {
-                var d = editor.deepCopyFlowData(Store.flowdata);
-                var v = numFormat(data);
+                let d = editor.deepCopyFlowData(Store.flowdata);
+                let v = numFormat(data);
                 if (v == null) {
                     v = data;
                 }
@@ -1154,7 +1154,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1166,8 +1166,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1175,21 +1175,21 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //股票代码
-            var stockcode = func_methods.getFirstValue(arguments[0]);
+            let stockcode = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(stockcode)){
                 return stockcode;
             }
 
             //日期
-            var date = null;
+            let date = null;
 
             if(arguments[1] != null){
-                var data_date = arguments[1];
+                let data_date = arguments[1];
 
                 if(getObjType(data_date) == "array"){
                     return formula.error.v;
@@ -1214,7 +1214,7 @@ const functionImplementation = {
             }
 
             //复权除权
-            var price = 0;
+            let price = 0;
             if (arguments[2] != null) {
                 price = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(price)){
@@ -1238,7 +1238,7 @@ const functionImplementation = {
                 "price": price,
                 type: "1"
             }, function(data) {
-                var d = editor.deepCopyFlowData(Store.flowdata);
+                let d = editor.deepCopyFlowData(Store.flowdata);
                 formula.execFunctionGroup(cell_r, cell_c, data);
                 d[cell_r][cell_c] = {
                     "v": data,
@@ -1250,7 +1250,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1262,8 +1262,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1271,21 +1271,21 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //股票代码
-            var stockcode = func_methods.getFirstValue(arguments[0]);
+            let stockcode = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(stockcode)){
                 return stockcode;
             }
 
             //日期
-            var date = null;
+            let date = null;
 
             if(arguments[1] != null){
-                var data_date = arguments[1];
+                let data_date = arguments[1];
 
                 if(getObjType(data_date) == "array"){
                     return formula.error.v;
@@ -1310,7 +1310,7 @@ const functionImplementation = {
             }
 
             //复权除权
-            var price = 0;
+            let price = 0;
             if (arguments[2] != null) {
                 price = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(price)){
@@ -1334,7 +1334,7 @@ const functionImplementation = {
                 "price": price,
                 type: "2"
             }, function(data) {
-                var d = editor.deepCopyFlowData(Store.flowdata);
+                let d = editor.deepCopyFlowData(Store.flowdata);
                 formula.execFunctionGroup(cell_r, cell_c, data);
                 d[cell_r][cell_c] = {
                     "v": data,
@@ -1346,7 +1346,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1358,8 +1358,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1367,21 +1367,21 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //股票代码
-            var stockcode = func_methods.getFirstValue(arguments[0]);
+            let stockcode = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(stockcode)){
                 return stockcode;
             }
 
             //日期
-            var date = null;
+            let date = null;
 
             if(arguments[1] != null){
-                var data_date = arguments[1];
+                let data_date = arguments[1];
 
                 if(getObjType(data_date) == "array"){
                     return formula.error.v;
@@ -1406,7 +1406,7 @@ const functionImplementation = {
             }
 
             //复权除权
-            var price = 0;
+            let price = 0;
             if (arguments[2] != null) {
                 price = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(price)){
@@ -1430,7 +1430,7 @@ const functionImplementation = {
                 "price": price,
                 type: "3"
             }, function(data) {
-                var d = editor.deepCopyFlowData(Store.flowdata);
+                let d = editor.deepCopyFlowData(Store.flowdata);
                 formula.execFunctionGroup(cell_r, cell_c, data);
                 d[cell_r][cell_c] = {
                     "v": data,
@@ -1442,7 +1442,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1454,8 +1454,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1463,21 +1463,21 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //股票代码
-            var stockcode = func_methods.getFirstValue(arguments[0]);
+            let stockcode = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(stockcode)){
                 return stockcode;
             }
 
             //日期
-            var date = null;
+            let date = null;
 
             if(arguments[1] != null){
-                var data_date = arguments[1];
+                let data_date = arguments[1];
 
                 if(getObjType(data_date) == "array"){
                     return formula.error.v;
@@ -1502,7 +1502,7 @@ const functionImplementation = {
             }
 
             //复权除权
-            var price = 0;
+            let price = 0;
             if (arguments[2] != null) {
                 price = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(price)){
@@ -1526,7 +1526,7 @@ const functionImplementation = {
                 "price": price,
                 type: "4"
             }, function(data) {
-                var d = editor.deepCopyFlowData(Store.flowdata);
+                let d = editor.deepCopyFlowData(Store.flowdata);
                 formula.execFunctionGroup(cell_r, cell_c, data);
                 d[cell_r][cell_c] = {
                     "v": data,
@@ -1538,7 +1538,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1550,8 +1550,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1559,21 +1559,21 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
 
             //股票代码
-            var stockcode = func_methods.getFirstValue(arguments[0]);
+            let stockcode = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(stockcode)){
                 return stockcode;
             }
 
             //日期
-            var date = null;
+            let date = null;
 
             if(arguments[1] != null){
-                var data_date = arguments[1];
+                let data_date = arguments[1];
 
                 if(getObjType(data_date) == "array"){
                     return formula.error.v;
@@ -1598,7 +1598,7 @@ const functionImplementation = {
             }
 
             //复权除权
-            var price = 0;
+            let price = 0;
             if (arguments[2] != null) {
                 price = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(price)){
@@ -1622,7 +1622,7 @@ const functionImplementation = {
                 "price": price,
                 type: "5"
             }, function(data) {
-                var d = editor.deepCopyFlowData(Store.flowdata);
+                let d = editor.deepCopyFlowData(Store.flowdata);
                 formula.execFunctionGroup(cell_r, cell_c, data);
                 d[cell_r][cell_c] = {
                     "v": data,
@@ -1634,7 +1634,7 @@ const functionImplementation = {
             return "loading...";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1646,8 +1646,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1656,7 +1656,7 @@ const functionImplementation = {
 
         try {
             //日期
-            var date = func_methods.getFirstValue(arguments[0], "text");
+            let date = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(date)){
                 return date;
             }
@@ -1664,7 +1664,7 @@ const functionImplementation = {
             return isdatetime(date);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -1677,8 +1677,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1690,33 +1690,33 @@ const functionImplementation = {
             //=SUMIF(A2:A5,">1600000")
             //=SUMIF(A2:A5,3000000,B2:B5)
             //找出range中匹配的字符串
-            var sum = 0;
+            let sum = 0;
 
-            var rangeData = arguments[0].data;
-            var rangeRow = arguments[0].rowl;
-            var rangeCol = arguments[0].coll;
+            let rangeData = arguments[0].data;
+            let rangeRow = arguments[0].rowl;
+            let rangeCol = arguments[0].coll;
 
-            var criteria = luckysheet_parseData(arguments[1]);
+            let criteria = luckysheet_parseData(arguments[1]);
 
             rangeData = formula.getRangeArray(rangeData)[0];
 
             //如果有第三个参数
             if(arguments[2]){
-                var sumRangeData = [];
+                let sumRangeData = [];
                 //根据选择的目标的区域确定实际目标区域
                 //初始位置
-                var sumRangeStart = arguments[2].startCell;
-                var sumRangeRow = arguments[2].rowl;
-                var sumRangeCol = arguments[2].coll;
-                var sumRangeSheet = arguments[2].sheetName;
+                let sumRangeStart = arguments[2].startCell;
+                let sumRangeRow = arguments[2].rowl;
+                let sumRangeCol = arguments[2].coll;
+                let sumRangeSheet = arguments[2].sheetName;
 
                 if(rangeRow == sumRangeRow && rangeCol == sumRangeCol){
                     sumRangeData = arguments[2].data;
                 }
                 else{
-                    var row=[],col=[];
-                    var sumRangeEnd = "";
-                    var realSumRange = "";
+                    let row=[],col=[];
+                    let sumRangeEnd = "";
+                    let realSumRange = "";
                     //console.log("开始位置！！！",sumRangeStart,typeof(sumRangeStart));
                     row[0] = parseInt(sumRangeStart.replace(/[^0-9]/g,"")) - 1;
                     col[0] = ABCatNum(sumRangeStart.replace(/[^A-Za-z]/g,""));
@@ -1727,8 +1727,8 @@ const functionImplementation = {
 
                     //console.log(row[0],col[0],row[1],col[1]);
                     //末尾位置转化为sheet格式：如 F4
-                    var real_ABC = chatatABC(col[1]);
-                    var real_Num = row[1] + 1;
+                    let real_ABC = chatatABC(col[1]);
+                    let real_Num = row[1] + 1;
                     sumRangeEnd = real_ABC + real_Num;
                     //console.log("合成新的末尾位置：" + sumRangeEnd);
 
@@ -1740,8 +1740,8 @@ const functionImplementation = {
                 sumRangeData = formula.getRangeArray(sumRangeData)[0];
 
                 //循环遍历查找匹配项
-                for(var i = 0; i < rangeData.length;i++){
-                    var v = rangeData[i];
+                for(let i = 0; i < rangeData.length;i++){
+                    let v = rangeData[i];
 
                     if(!!v && formula.acompareb(v, criteria)){
                         if(!isRealNum(sumRangeData[i])){
@@ -1754,8 +1754,8 @@ const functionImplementation = {
             }
             else{
                 //循环遍历查找匹配项
-                for(var i = 0; i < rangeData.length;i++){
-                    var v = rangeData[i];
+                for(let i = 0; i < rangeData.length;i++){
+                    let v = rangeData[i];
 
                     if(!!v && formula.acompareb(v, criteria)){
                         if(!isRealNum(v)){
@@ -1770,7 +1770,7 @@ const functionImplementation = {
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1782,8 +1782,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1791,7 +1791,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -1805,7 +1805,7 @@ const functionImplementation = {
             return Math.tan(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1817,8 +1817,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1826,7 +1826,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -1837,12 +1837,12 @@ const functionImplementation = {
 
             number = parseFloat(number);
 
-            var e2 = Math.exp(2 * number);
+            let e2 = Math.exp(2 * number);
 
             return (e2 - 1) / (e2 + 1);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1854,8 +1854,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1864,7 +1864,7 @@ const functionImplementation = {
 
         try {
             //number
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -1876,7 +1876,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //significance
-            var significance = func_methods.getFirstValue(arguments[1]);
+            let significance = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(significance)){
                 return significance;
             }
@@ -1898,7 +1898,7 @@ const functionImplementation = {
             return Math.ceil(number / significance) * significance;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1910,8 +1910,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1919,7 +1919,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -1933,7 +1933,7 @@ const functionImplementation = {
             return Math.atan(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1945,8 +1945,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1954,7 +1954,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -1968,7 +1968,7 @@ const functionImplementation = {
             return Math.log(number + Math.sqrt(number * number + 1));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -1980,8 +1980,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -1989,7 +1989,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2003,7 +2003,7 @@ const functionImplementation = {
             return Math.abs(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2015,8 +2015,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2024,7 +2024,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2042,7 +2042,7 @@ const functionImplementation = {
             return Math.acos(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2054,8 +2054,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2063,7 +2063,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2081,7 +2081,7 @@ const functionImplementation = {
             return Math.log(number + Math.sqrt(number * number - 1));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2093,8 +2093,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2102,10 +2102,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -2122,10 +2122,10 @@ const functionImplementation = {
                 }
             }
 
-            var sum = 0, divisor = 1;
+            let sum = 0, divisor = 1;
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -2144,7 +2144,7 @@ const functionImplementation = {
             return func_methods.factorial(sum) / divisor;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2156,8 +2156,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2165,7 +2165,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2183,7 +2183,7 @@ const functionImplementation = {
             return Math.log((1 + number) / (1 - number)) / 2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2195,8 +2195,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2205,7 +2205,7 @@ const functionImplementation = {
 
         try {
             //要计算其与x轴夹角大小的线段的终点x坐标
-            var number_x = func_methods.getFirstValue(arguments[0]);
+            let number_x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number_x)){
                 return number_x;
             }
@@ -2217,7 +2217,7 @@ const functionImplementation = {
             number_x = parseFloat(number_x);
 
             //要计算其与x轴夹角大小的线段的终点y坐标
-            var number_y = func_methods.getFirstValue(arguments[1]);
+            let number_y = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(number_y)){
                 return number_y;
             }
@@ -2235,7 +2235,7 @@ const functionImplementation = {
             return Math.atan2(number_y, number_x);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2247,8 +2247,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2256,8 +2256,8 @@ const functionImplementation = {
         }
 
         try {
-            var data = arguments[0];
-            var sum = 0;
+            let data = arguments[0];
+            let sum = 0;
 
             if(getObjType(data) == "object" && data.startCell != null){
                 if(data.data == null){
@@ -2265,8 +2265,8 @@ const functionImplementation = {
                 }
 
                 if(getObjType(data.data) == "array"){
-                    for(var r = 0; r < data.data.length; r++){
-                        for(var c = 0; c < data.data[r].length; c++){
+                    for(let r = 0; r < data.data.length; r++){
+                        for(let c = 0; c < data.data[r].length; c++){
                             if(data.data[r][c] == null || isRealNull(data.data[r][c].v)){
                                 sum++;
                             }
@@ -2283,7 +2283,7 @@ const functionImplementation = {
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2295,8 +2295,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2304,7 +2304,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2318,7 +2318,7 @@ const functionImplementation = {
             return (Math.exp(number) + Math.exp(-number)) / 2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2330,8 +2330,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2339,7 +2339,7 @@ const functionImplementation = {
         }
 
         try {
-            var data = arguments[0];
+            let data = arguments[0];
 
             if(getObjType(data) == "array"){
                 if(getObjType(data[0]) == "array"){
@@ -2367,17 +2367,17 @@ const functionImplementation = {
                 }
 
                 if(data.rowl > 1){
-                    var cellrange = formula.getcellrange(data.startCell);
-                    var str = cellrange.row[0];
+                    let cellrange = formula.getcellrange(data.startCell);
+                    let str = cellrange.row[0];
 
                     if(window.luckysheetCurrentRow < str || window.luckysheetCurrentRow > str + data.rowl - 1){
                         return formula.error.v;
                     }
 
-                    var cell = data.data[window.luckysheetCurrentRow - str][0];
+                    let cell = data.data[window.luckysheetCurrentRow - str][0];
                 }
                 else{
-                    var cell = data.data;
+                    let cell = data.data;
                 }
 
                 if(cell == null || isRealNull(cell.v)){
@@ -2409,7 +2409,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2421,8 +2421,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2430,7 +2430,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2444,7 +2444,7 @@ const functionImplementation = {
             return Math.abs(number) & 1 ? false : true;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2456,8 +2456,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2465,7 +2465,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2479,7 +2479,7 @@ const functionImplementation = {
             return Math.abs(number) & 1 ? true : false;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2491,8 +2491,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2500,10 +2500,10 @@ const functionImplementation = {
         }
 
         try {
-            var o = [];
+            let o = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array"){
@@ -2525,8 +2525,8 @@ const functionImplementation = {
                 }
             }
 
-            for(var y = 0; y < o.length; y++){
-                var number = o[y];
+            for(let y = 0; y < o.length; y++){
+                let number = o[y];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -2541,7 +2541,7 @@ const functionImplementation = {
                 o[y] = number;
             }
 
-            for (var i, j, n, d, r = 1; (n = o.pop()) !== undefined;) {
+            for (let i, j, n, d, r = 1; (n = o.pop()) !== undefined;) {
                 if(n == 0){
                     r = 0;
                 }
@@ -2571,7 +2571,7 @@ const functionImplementation = {
             return r;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2583,8 +2583,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2592,7 +2592,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2610,7 +2610,7 @@ const functionImplementation = {
             return Math.log(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2622,8 +2622,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2631,7 +2631,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2647,7 +2647,7 @@ const functionImplementation = {
             }
 
             if(arguments.length == 2){
-                var base = func_methods.getFirstValue(arguments[1]);
+                let base = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(base)){
                     return base;
                 }
@@ -2663,13 +2663,13 @@ const functionImplementation = {
                 }
             }
             else{
-                var base = 10;
+                let base = 10;
             }
 
             return Math.log(number) / Math.log(base);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2681,8 +2681,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2690,7 +2690,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2708,7 +2708,7 @@ const functionImplementation = {
             return Math.log(number) / Math.log(10);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2720,8 +2720,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2730,7 +2730,7 @@ const functionImplementation = {
 
         try {
             //被除数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2742,7 +2742,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //除数
-            var divisor = func_methods.getFirstValue(arguments[1]);
+            let divisor = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(divisor)){
                 return divisor;
             }
@@ -2758,11 +2758,11 @@ const functionImplementation = {
             }
 
             //计算结果
-            var modulus = Math.abs(number % divisor);
+            let modulus = Math.abs(number % divisor);
             return (divisor > 0) ? modulus : -modulus;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2774,8 +2774,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2784,7 +2784,7 @@ const functionImplementation = {
 
         try {
             //要舍入的值
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2796,7 +2796,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //要舍入到的倍数
-            var multiple = func_methods.getFirstValue(arguments[1]);
+            let multiple = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(multiple)){
                 return multiple;
             }
@@ -2815,7 +2815,7 @@ const functionImplementation = {
             return Math.round(number / multiple) * multiple;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2827,8 +2827,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2836,7 +2836,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2847,12 +2847,12 @@ const functionImplementation = {
 
             number = parseFloat(number);
 
-            var temp = Math.ceil(Math.abs(number));
+            let temp = Math.ceil(Math.abs(number));
             temp = (temp & 1) ? temp : temp + 1;
             return (number >= 0) ? temp : -temp;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2864,8 +2864,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2873,10 +2873,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -2893,11 +2893,11 @@ const functionImplementation = {
                 }
             }
 
-            var sum = 0;
+            let sum = 0;
 
             if(dataArr.length > 0){
-                for(var i = 0; i < dataArr.length; i++){
-                    var number = dataArr[i];
+                for(let i = 0; i < dataArr.length; i++){
+                    let number = dataArr[i];
 
                     if(!isRealNum(number)){
                         return formula.error.v;
@@ -2912,7 +2912,7 @@ const functionImplementation = {
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2924,8 +2924,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2934,7 +2934,7 @@ const functionImplementation = {
 
         try {
             //项目的数量
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -2946,7 +2946,7 @@ const functionImplementation = {
             number = parseInt(number);
 
             //每一组合中项目的数量
-            var number_chosen = func_methods.getFirstValue(arguments[1]);
+            let number_chosen = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(number_chosen)){
                 return number_chosen;
             }
@@ -2965,7 +2965,7 @@ const functionImplementation = {
             return func_methods.factorial(number) / (func_methods.factorial(number_chosen) * func_methods.factorial(number - number_chosen))
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -2977,8 +2977,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -2987,8 +2987,8 @@ const functionImplementation = {
 
         try {
             //数字 1-11 或 101-111，用于指定要为分类汇总使用的函数
-            var data_function_num = arguments[0];
-            var function_num;
+            let data_function_num = arguments[0];
+            let function_num;
 
             if(getObjType(data_function_num) == "array"){
                 if(getObjType(data_function_num[0]) == "array"){
@@ -2998,10 +2998,10 @@ const functionImplementation = {
 
                     function_num = [];
 
-                    for(var i = 0; i < data_function_num.length; i++){
-                        var rowArr = [];
+                    for(let i = 0; i < data_function_num.length; i++){
+                        let rowArr = [];
 
-                        for(var j = 0; j < data_function_num[i].length; j++){
+                        for(let j = 0; j < data_function_num[i].length; j++){
                             rowArr.push(data_function_num[i][j]);
                         }
 
@@ -3011,7 +3011,7 @@ const functionImplementation = {
                 else{
                     function_num = [];
 
-                    for(var i = 0; i < data_function_num.length; i++){
+                    for(let i = 0; i < data_function_num.length; i++){
                         function_num.push(data_function_num[i]);
                     }
                 }
@@ -3023,19 +3023,19 @@ const functionImplementation = {
                 function_num = data_function_num;
             }
 
-            var arr = Array.prototype.slice.apply(arguments);
+            let arr = Array.prototype.slice.apply(arguments);
             arr.shift();
 
             //计算结果
             if(getObjType(function_num) == "array"){
-                var result = [];
+                let result = [];
 
                 if(getObjType(function_num[0]) == "array"){
-                    for(var i = 0; i < function_num.length; i++){
-                        var rowArr = [];
+                    for(let i = 0; i < function_num.length; i++){
+                        let rowArr = [];
 
-                        for(var j = 0; j < function_num[i].length; j++){
-                            var value = function_num[i][j];
+                        for(let j = 0; j < function_num[i].length; j++){
+                            let value = function_num[i][j];
 
                             if(valueIsError(value)){
                                 rowArr.push(value);
@@ -3059,8 +3059,8 @@ const functionImplementation = {
                     }
                 }
                 else{
-                    for(var i = 0; i < function_num.length; i++){
-                        var value = function_num[i];
+                    for(let i = 0; i < function_num.length; i++){
+                        let value = function_num[i];
 
                         if(valueIsError(value)){
                             result.push(value);
@@ -3152,7 +3152,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3164,8 +3164,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3173,7 +3173,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3191,7 +3191,7 @@ const functionImplementation = {
             return Math.asin(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3203,8 +3203,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3213,8 +3213,8 @@ const functionImplementation = {
 
         try {
             //范围
-            var data_range = arguments[0];
-            var range;
+            let data_range = arguments[0];
+            let range;
 
             if(getObjType(data_range) == "object" && data_range.startCell != null){
                 range = data_range.data;
@@ -3224,8 +3224,8 @@ const functionImplementation = {
             }
 
             //条件
-            var data_criteria = arguments[1];
-            var criteria;
+            let data_criteria = arguments[1];
+            let criteria;
 
             if(getObjType(data_criteria) == "array"){
                 criteria = [];
@@ -3235,10 +3235,10 @@ const functionImplementation = {
                         return formula.error.v;
                     }
 
-                    for(var i = 0; i < data_criteria.length; i++){
-                        var rowArr = [];
+                    for(let i = 0; i < data_criteria.length; i++){
+                        let rowArr = [];
 
-                        for(var j = 0; j < data_criteria[i].length; j++){
+                        for(let j = 0; j < data_criteria[i].length; j++){
                             rowArr.push(data_criteria[i][j]);
                         }
 
@@ -3246,7 +3246,7 @@ const functionImplementation = {
                     }
                 }
                 else{
-                    for(var i = 0; i < data_criteria.length; i++){
+                    for(let i = 0; i < data_criteria.length; i++){
                         criteria.push(data_criteria[i]);
                     }
                 }
@@ -3264,13 +3264,13 @@ const functionImplementation = {
 
             //计算
             if(getObjType(criteria) == "array"){
-                var result = [];
+                let result = [];
 
                 if(getObjType(criteria[0]) == "array"){
-                    for(var i = 0; i < criteria.length; i++){
-                        var rowArr = [];
+                    for(let i = 0; i < criteria.length; i++){
+                        let rowArr = [];
 
-                        for(var j = 0; j < criteria[i].length; j++){
+                        for(let j = 0; j < criteria[i].length; j++){
                             rowArr.push(getCriteriaResult(range, criteria[i][j]));
                         }
 
@@ -3278,7 +3278,7 @@ const functionImplementation = {
                     }
                 }
                 else{
-                    for(var i = 0; i < criteria.length; i++){
+                    for(let i = 0; i < criteria.length; i++){
                         result.push(getCriteriaResult(range, criteria[i]));
                     }
                 }
@@ -3296,13 +3296,13 @@ const functionImplementation = {
 
                 criter = criter.replace("<>", "!=");
 
-                var matches = 0;
+                let matches = 0;
 
                 if(getObjType(range) == "array"){
-                    for (var i = 0; i < range.length; i++) {
-                        for(var j = 0; j < range[i].length; j++){
+                    for (let i = 0; i < range.length; i++) {
+                        for(let j = 0; j < range[i].length; j++){
                             if(range[i][j] != null && !isRealNull(range[i][j].v)){
-                                var value = range[i][j].v;
+                                let value = range[i][j].v;
 
                                 if(criter.indexOf("*") > -1 || criter.indexOf("?") > -1){
                                     if(formula.isWildcard(value, criter)){
@@ -3327,7 +3327,7 @@ const functionImplementation = {
                 }
                 else{
                     if(range != null && !isRealNull(range.v)){
-                        var value = range.v;
+                        let value = range.v;
 
                         if(criter.indexOf("*") > -1 || criter.indexOf("?") > -1){
                             if(formula.isWildcard(value, criter)){
@@ -3353,7 +3353,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3365,8 +3365,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3374,7 +3374,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3388,7 +3388,7 @@ const functionImplementation = {
             return number * Math.PI / 180;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3403,7 +3403,7 @@ const functionImplementation = {
             return Math.floor(Math.random() * 1000000000) / 1000000000;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3415,8 +3415,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3424,10 +3424,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -3447,7 +3447,7 @@ const functionImplementation = {
             return window.luckysheet_function.UNIQUE.f(dataArr);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3459,8 +3459,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3468,7 +3468,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3482,7 +3482,7 @@ const functionImplementation = {
             return number * 180 / Math.PI;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3494,8 +3494,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3503,7 +3503,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3517,7 +3517,7 @@ const functionImplementation = {
             return jStat.erfc(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3529,8 +3529,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3538,7 +3538,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3549,12 +3549,12 @@ const functionImplementation = {
 
             number = parseFloat(number);
 
-            var temp = Math.ceil(Math.abs(number));
+            let temp = Math.ceil(Math.abs(number));
             temp = (temp & 1) ? temp + 1 : temp;
             return (number > 0) ? temp : -temp;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3566,8 +3566,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3575,7 +3575,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3589,7 +3589,7 @@ const functionImplementation = {
             return Math.exp(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3601,8 +3601,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3610,7 +3610,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3638,7 +3638,7 @@ const functionImplementation = {
             return func_methods.factorial(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3650,8 +3650,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3659,7 +3659,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3687,7 +3687,7 @@ const functionImplementation = {
             return func_methods.factorialDouble(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3702,7 +3702,7 @@ const functionImplementation = {
             return Math.PI;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3714,8 +3714,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3724,7 +3724,7 @@ const functionImplementation = {
 
         try {
             //number
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3736,7 +3736,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //significance
-            var significance = func_methods.getFirstValue(arguments[1]);
+            let significance = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(significance)){
                 return significance;
             }
@@ -3756,7 +3756,7 @@ const functionImplementation = {
             }
 
             //计算
-            var precision = -Math.floor(Math.log(Math.abs(significance)) / Math.log(10));
+            let precision = -Math.floor(Math.log(Math.abs(significance)) / Math.log(10));
 
             if (number >= 0) {
                 return (Math.floor(number / significance) * significance) * Math.pow(10, precision) / Math.pow(10, precision);
@@ -3766,7 +3766,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3778,8 +3778,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3787,10 +3787,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -3811,14 +3811,14 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var x = parseInt(dataArr[0]);
+            let x = parseInt(dataArr[0]);
 
             if(x < 0 || x >= Math.pow(2, 53)){
                 return formula.error.nm;
             }
 
-            for (var i = 1; i < dataArr.length; i++) {
-                var y = dataArr[i];
+            for (let i = 1; i < dataArr.length; i++) {
+                let y = dataArr[i];
 
                 if(!isRealNum(y)){
                     return formula.error.v;
@@ -3845,7 +3845,7 @@ const functionImplementation = {
             return x;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3857,8 +3857,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3867,7 +3867,7 @@ const functionImplementation = {
 
         try {
             //下界
-            var bottom = func_methods.getFirstValue(arguments[0]);
+            let bottom = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(bottom)){
                 return bottom;
             }
@@ -3879,7 +3879,7 @@ const functionImplementation = {
             bottom = parseInt(bottom);
 
             //上界
-            var top = func_methods.getFirstValue(arguments[1]);
+            let top = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(top)){
                 return top;
             }
@@ -3898,7 +3898,7 @@ const functionImplementation = {
             return bottom + Math.ceil((top - bottom + 1) * Math.random()) - 1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3910,8 +3910,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3920,7 +3920,7 @@ const functionImplementation = {
 
         try {
             //四舍五入的数字
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3932,7 +3932,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //位数
-            var digits = func_methods.getFirstValue(arguments[1]);
+            let digits = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(digits)){
                 return digits;
             }
@@ -3944,11 +3944,11 @@ const functionImplementation = {
             digits = parseInt(digits);
 
             //计算
-            var sign = (number > 0) ? 1 : -1;
+            let sign = (number > 0) ? 1 : -1;
             return sign * (Math.round(Math.abs(number) * Math.pow(10, digits))) / Math.pow(10, digits);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -3960,8 +3960,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -3970,7 +3970,7 @@ const functionImplementation = {
 
         try {
             //四舍五入的数字
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -3982,7 +3982,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //位数
-            var digits = func_methods.getFirstValue(arguments[1]);
+            let digits = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(digits)){
                 return digits;
             }
@@ -3994,11 +3994,11 @@ const functionImplementation = {
             digits = parseInt(digits);
 
             //计算
-            var sign = (number > 0) ? 1 : -1;
+            let sign = (number > 0) ? 1 : -1;
             return sign * (Math.floor(Math.abs(number) * Math.pow(10, digits))) / Math.pow(10, digits);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4010,8 +4010,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4020,7 +4020,7 @@ const functionImplementation = {
 
         try {
             //四舍五入的数字
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4032,7 +4032,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //位数
-            var digits = func_methods.getFirstValue(arguments[1]);
+            let digits = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(digits)){
                 return digits;
             }
@@ -4044,11 +4044,11 @@ const functionImplementation = {
             digits = parseInt(digits);
 
             //计算
-            var sign = (number > 0) ? 1 : -1;
+            let sign = (number > 0) ? 1 : -1;
             return sign * (Math.ceil(Math.abs(number) * Math.pow(10, digits))) / Math.pow(10, digits);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4060,8 +4060,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4070,7 +4070,7 @@ const functionImplementation = {
 
         try {
             //幂级数的输入值
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -4082,7 +4082,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //x 的首项乘幂
-            var n = func_methods.getFirstValue(arguments[1]);
+            let n = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(n)){
                 return n;
             }
@@ -4094,7 +4094,7 @@ const functionImplementation = {
             n = parseFloat(n);
 
             //级数中每一项的乘幂 n 的步长增加值
-            var m = func_methods.getFirstValue(arguments[2]);
+            let m = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(m)){
                 return m;
             }
@@ -4106,8 +4106,8 @@ const functionImplementation = {
             m = parseFloat(m);
 
             //与 x 的每个连续乘幂相乘的一组系数
-            var data_coefficients = arguments[3];
-            var coefficients = [];
+            let data_coefficients = arguments[3];
+            let coefficients = [];
 
             if(getObjType(data_coefficients) == "array"){
                 if(getObjType(data_coefficients[0]) == "array" && !func_methods.isDyadicArr(data_coefficients)){
@@ -4128,10 +4128,10 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var result = parseFloat(coefficients[0]) * Math.pow(x, n);
+            let result = parseFloat(coefficients[0]) * Math.pow(x, n);
 
-            for (var i = 1; i < coefficients.length; i++) {
-                var number = coefficients[i];
+            for (let i = 1; i < coefficients.length; i++) {
+                let number = coefficients[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -4145,7 +4145,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4157,8 +4157,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4166,7 +4166,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4188,7 +4188,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4200,8 +4200,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4209,7 +4209,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4223,7 +4223,7 @@ const functionImplementation = {
             return Math.sin(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4235,8 +4235,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4244,7 +4244,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4258,7 +4258,7 @@ const functionImplementation = {
             return (Math.exp(number) - Math.exp(-number)) / 2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4270,8 +4270,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4279,7 +4279,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4297,7 +4297,7 @@ const functionImplementation = {
             return Math.sqrt(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4309,8 +4309,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4318,7 +4318,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4336,7 +4336,7 @@ const functionImplementation = {
             return Math.sqrt(number * Math.PI);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4348,8 +4348,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4357,7 +4357,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4375,7 +4375,7 @@ const functionImplementation = {
             return jStat.gammaln(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4387,8 +4387,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4396,7 +4396,7 @@ const functionImplementation = {
         }
 
         try {
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4410,7 +4410,7 @@ const functionImplementation = {
             return Math.cos(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4422,8 +4422,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4432,7 +4432,7 @@ const functionImplementation = {
 
         try {
             //要截取的数据
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4445,7 +4445,7 @@ const functionImplementation = {
 
             //位数
             if(arguments.length == 2){
-                var digits = func_methods.getFirstValue(arguments[1]);
+                let digits = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(digits)){
                     return digits;
                 }
@@ -4457,15 +4457,15 @@ const functionImplementation = {
                 digits = parseInt(digits);
             }
             else{
-                var digits = 0;
+                let digits = 0;
             }
 
             //计算
-            var sign = (number > 0) ? 1 : -1;
+            let sign = (number > 0) ? 1 : -1;
             return sign * (Math.floor(Math.abs(number) * Math.pow(10, digits))) / Math.pow(10, digits);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4477,8 +4477,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4487,7 +4487,7 @@ const functionImplementation = {
 
         try {
             //被除数
-            var numerator = func_methods.getFirstValue(arguments[0]);
+            let numerator = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(numerator)){
                 return numerator;
             }
@@ -4499,7 +4499,7 @@ const functionImplementation = {
             numerator = parseFloat(numerator);
 
             //除数
-            var denominator = func_methods.getFirstValue(arguments[1]);
+            let denominator = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(denominator)){
                 return denominator;
             }
@@ -4518,7 +4518,7 @@ const functionImplementation = {
             return parseInt(numerator / denominator, 10);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4530,8 +4530,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4540,7 +4540,7 @@ const functionImplementation = {
 
         try {
             //底数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -4552,7 +4552,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //指数
-            var power = func_methods.getFirstValue(arguments[1]);
+            let power = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(power)){
                 return power;
             }
@@ -4574,7 +4574,7 @@ const functionImplementation = {
             return Math.pow(number, power);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4586,8 +4586,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4595,26 +4595,26 @@ const functionImplementation = {
         }
 
         try {
-            var sum = 0;
-            var args = arguments;
+            let sum = 0;
+            let args = arguments;
             luckysheet_getValue(args);
-            var rangeData = formula.getRangeArray(args[0])[0];
-            var results = new Array(rangeData.length);
+            let rangeData = formula.getRangeArray(args[0])[0];
+            let results = new Array(rangeData.length);
 
-            for(var i = 0;i < results.length; i++){
+            for(let i = 0;i < results.length; i++){
                 results[i] = true;
             }
 
-            for(var i = 1; i < args.length; i += 2){
-                var range = formula.getRangeArray(args[i])[0];
-                var criteria = args[i+1];
-                for(var j = 0; j < range.length; j++){
-                    var v = range[j];
+            for(let i = 1; i < args.length; i += 2){
+                let range = formula.getRangeArray(args[i])[0];
+                let criteria = args[i+1];
+                for(let j = 0; j < range.length; j++){
+                    let v = range[j];
                     results[j] = results[j] && (!!v) && formula.acompareb(v,criteria);
                 }
             }
 
-            for(var i = 0; i < rangeData.length; i++){
+            for(let i = 0; i < rangeData.length; i++){
                 if(results[i]){
                     sum = luckysheet_calcADPMM(sum, "+", rangeData[i]); //parseFloat(rangeData[i]);
                 }
@@ -4623,7 +4623,7 @@ const functionImplementation = {
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4635,8 +4635,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4644,22 +4644,22 @@ const functionImplementation = {
         }
 
         try {
-            var args = arguments;
+            let args = arguments;
             luckysheet_getValue(args);
-            var results = new Array(formula.getRangeArray(args[0])[0].length);
-            for(var i = 0;i < results.length; i++){
+            let results = new Array(formula.getRangeArray(args[0])[0].length);
+            for(let i = 0;i < results.length; i++){
                 results[i] = true;
             }
-            for(var i = 0; i < args.length; i += 2){
-                var range = formula.getRangeArray(args[i])[0];
-                var criteria = args[i+1];
-                for(var j = 0; j < range.length; j++){
-                    var v = range[j];
+            for(let i = 0; i < args.length; i += 2){
+                let range = formula.getRangeArray(args[i])[0];
+                let criteria = args[i+1];
+                for(let j = 0; j < range.length; j++){
+                    let v = range[j];
                     results[j] = results[j] && (!!v) && formula.acompareb(v,criteria);
                 }
             }
-            var result = 0;
-            for(var i = 0; i < results.length; i++){
+            let result = 0;
+            for(let i = 0; i < results.length; i++){
                 if(results[i]){
                     result++;
                 }
@@ -4667,7 +4667,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4679,8 +4679,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4688,10 +4688,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -4708,10 +4708,10 @@ const functionImplementation = {
                 }
             }
 
-            var result = 1;
+            let result = 1;
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -4725,7 +4725,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4737,8 +4737,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4746,10 +4746,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -4766,10 +4766,10 @@ const functionImplementation = {
                 }
             }
 
-            var den = 0, len = 0;
+            let den = 0, len = 0;
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -4788,7 +4788,7 @@ const functionImplementation = {
             return len / den;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4800,8 +4800,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4810,7 +4810,7 @@ const functionImplementation = {
 
         try {
             //样本中成功的次数
-            var sample_s = func_methods.getFirstValue(arguments[0]);
+            let sample_s = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(sample_s)){
                 return sample_s;
             }
@@ -4822,7 +4822,7 @@ const functionImplementation = {
             sample_s = parseInt(sample_s);
 
             //样本量
-            var number_sample = func_methods.getFirstValue(arguments[1]);
+            let number_sample = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(number_sample)){
                 return number_sample;
             }
@@ -4834,7 +4834,7 @@ const functionImplementation = {
             number_sample = parseInt(number_sample);
 
             //总体中成功的次数
-            var population_s = func_methods.getFirstValue(arguments[2]);
+            let population_s = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(population_s)){
                 return population_s;
             }
@@ -4846,7 +4846,7 @@ const functionImplementation = {
             population_s = parseInt(population_s);
 
             //总体大小
-            var number_pop = func_methods.getFirstValue(arguments[3]);
+            let number_pop = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(number_pop)){
                 return number_pop;
             }
@@ -4858,7 +4858,7 @@ const functionImplementation = {
             number_pop = parseInt(number_pop);
 
             //决定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[4]);
+            let cumulative = func_methods.getCellBoolen(arguments[4]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -4882,17 +4882,17 @@ const functionImplementation = {
 
             //计算
             function pdf(x, n, M, N) {
-                var a = func_methods.factorial(M) / (func_methods.factorial(x) * func_methods.factorial(M - x));
-                var b = func_methods.factorial(N - M) / (func_methods.factorial(n - x) * func_methods.factorial(N - M - n + x));
-                var c = func_methods.factorial(N) / (func_methods.factorial(n) * func_methods.factorial(N - n));
+                let a = func_methods.factorial(M) / (func_methods.factorial(x) * func_methods.factorial(M - x));
+                let b = func_methods.factorial(N - M) / (func_methods.factorial(n - x) * func_methods.factorial(N - M - n + x));
+                let c = func_methods.factorial(N) / (func_methods.factorial(n) * func_methods.factorial(N - n));
 
                 return a * b / c;
             }
 
             function cdf(x, n, M, N) {
-                var sum = 0;
+                let sum = 0;
 
-                for (var i = 0; i <= x; i++) {
+                for (let i = 0; i <= x; i++) {
                     sum += pdf(i, n, M, N);
                 }
 
@@ -4902,7 +4902,7 @@ const functionImplementation = {
             return (cumulative) ? cdf(sample_s, number_sample, population_s, number_pop) : pdf(sample_s, number_sample, population_s, number_pop);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -4914,8 +4914,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -4924,11 +4924,11 @@ const functionImplementation = {
 
         try {
             //x轴上用于预测的值
-            var x = 0;
+            let x = 0;
 
             //代表因变量数据数组或矩阵的范围
-            var data_known_y = arguments[0];
-            var known_y = [];
+            let data_known_y = arguments[0];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -4945,8 +4945,8 @@ const functionImplementation = {
             }
 
             //代表自变量数据数组或矩阵的范围
-            var data_known_x = arguments[1];
-            var known_x = [];
+            let data_known_x = arguments[1];
+            let known_x = [];
 
             if(getObjType(data_known_x) == "array"){
                 if(getObjType(data_known_x[0]) == "array" && !func_methods.isDyadicArr(data_known_x)){
@@ -4967,11 +4967,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_y = [], data_x = [];
+            let data_y = [], data_x = [];
 
-            for(var i = 0; i < known_y.length; i++){
-                var num_y = known_y[i];
-                var num_x = known_x[i];
+            for(let i = 0; i < known_y.length; i++){
+                let num_y = known_y[i];
+                let num_x = known_x[i];
 
                 if(isRealNum(num_y) && isRealNum(num_x)){
                     data_y.push(parseFloat(num_y));
@@ -4984,25 +4984,25 @@ const functionImplementation = {
             }
 
             //计算
-            var xmean = jStat.mean(data_x);
-            var ymean = jStat.mean(data_y);
+            let xmean = jStat.mean(data_x);
+            let ymean = jStat.mean(data_y);
 
-            var n = data_x.length;
-            var num = 0;
-            var den = 0;
+            let n = data_x.length;
+            let num = 0;
+            let den = 0;
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 num += (data_x[i] - xmean) * (data_y[i] - ymean);
                 den += Math.pow(data_x[i] - xmean, 2);
             }
 
-            var b = num / den;
-            var a = ymean - b * xmean;
+            let b = num / den;
+            let a = ymean - b * xmean;
 
             return a + b * x;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5014,8 +5014,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5023,10 +5023,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -5044,10 +5044,10 @@ const functionImplementation = {
             }
 
             //剔除不是数值类型的值
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var j = 0; j < dataArr.length; j++){
-                var number = dataArr[j];
+            for(let j = 0; j < dataArr.length; j++){
+                let number = dataArr[j];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -5063,12 +5063,12 @@ const functionImplementation = {
             }
 
             //计算
-            var mean = jStat.mean(dataArr_n);
-            var n = dataArr_n.length;
+            let mean = jStat.mean(dataArr_n);
+            let n = dataArr_n.length;
 
-            var sigma = 0;
+            let sigma = 0;
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 sigma += Math.pow(dataArr_n[i] - mean, 4);
             }
 
@@ -5077,7 +5077,7 @@ const functionImplementation = {
             return ((n * (n + 1)) / ((n - 1) * (n - 2) * (n - 3))) * sigma - 3 * (n - 1) * (n - 1) / ((n - 2) * (n - 3));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5089,8 +5089,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5099,7 +5099,7 @@ const functionImplementation = {
 
         try {
             //数组或范围
-            var dataArr = [];
+            let dataArr = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -5115,10 +5115,10 @@ const functionImplementation = {
                 dataArr.push(arguments[0]);
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var j = 0; j < dataArr.length; j++){
-                var number = dataArr[j];
+            for(let j = 0; j < dataArr.length; j++){
+                let number = dataArr[j];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -5130,7 +5130,7 @@ const functionImplementation = {
             }
 
             //要返回的元素的排行位置
-            var n;
+            let n;
 
             if(getObjType(arguments[1]) == "array"){
                 if(getObjType(arguments[1][0]) == "array" && !func_methods.isDyadicArr(arguments[1])){
@@ -5144,13 +5144,13 @@ const functionImplementation = {
                     return formula.error.v;
                 }
 
-                var cell = arguments[1].data;
+                let cell = arguments[1].data;
 
                 if(cell == null || isRealNull(cell.v)){
-                    var n = 0;
+                    let n = 0;
                 }
                 else{
-                    var n = cell.v;
+                    let n = cell.v;
                 }
             }
             else{
@@ -5163,9 +5163,9 @@ const functionImplementation = {
                     return formula.error.nm;
                 }
 
-                var result = [];
+                let result = [];
 
-                for(var i = 0; i < n.length; i++){
+                for(let i = 0; i < n.length; i++){
                     if(!isRealNum(n[i])){
                         result.push(formula.error.v);
                         continue;
@@ -5204,7 +5204,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5216,8 +5216,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5225,10 +5225,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -5246,10 +5246,10 @@ const functionImplementation = {
             }
 
             //不是数值类型的值转化成数字（true为1，false和文本为0）
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var j = 0; j < dataArr.length; j++){
-                var number = dataArr[j];
+            for(let j = 0; j < dataArr.length; j++){
+                let number = dataArr[j];
 
                 if(!isRealNum(number)){
                     if(number.toString().toLowerCase() == "true"){
@@ -5277,7 +5277,7 @@ const functionImplementation = {
             return func_methods.standardDeviation_s(dataArr_n);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5289,8 +5289,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5298,10 +5298,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -5319,10 +5319,10 @@ const functionImplementation = {
             }
 
             //剔除不是数值类型的值
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var j = 0; j < dataArr.length; j++){
-                var number = dataArr[j];
+            for(let j = 0; j < dataArr.length; j++){
+                let number = dataArr[j];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -5344,7 +5344,7 @@ const functionImplementation = {
             return func_methods.standardDeviation(dataArr_n);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5356,8 +5356,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5365,10 +5365,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -5399,10 +5399,10 @@ const functionImplementation = {
             }
 
             //剔除不是数值类型的值
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var j = 0; j < dataArr.length; j++){
-                var number = dataArr[j];
+            for(let j = 0; j < dataArr.length; j++){
+                let number = dataArr[j];
 
                 if(!isRealNum(number)){
                     continue;
@@ -5424,7 +5424,7 @@ const functionImplementation = {
             return jStat.geomean(dataArr_n);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5436,8 +5436,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5446,7 +5446,7 @@ const functionImplementation = {
 
         try {
             //要确定其排名的值
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -5458,8 +5458,8 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //包含相关数据集的数组或范围
-            var data_ref = arguments[1];
-            var ref = [];
+            let data_ref = arguments[1];
+            let ref = [];
 
             if(getObjType(data_ref) == "array"){
                 if(getObjType(data_ref[0]) == "array" && !func_methods.isDyadicArr(data_ref)){
@@ -5475,10 +5475,10 @@ const functionImplementation = {
                 ref.push(data_ref);
             }
 
-            var ref_n = [];
+            let ref_n = [];
 
-            for(var j = 0; j < ref.length; j++){
-                var num = ref[j];
+            for(let j = 0; j < ref.length; j++){
+                let num = ref[j];
 
                 if(!isRealNum(num)){
                     return formula.error.v;
@@ -5491,18 +5491,18 @@ const functionImplementation = {
 
             //要按升序还是按降序考虑“data”中的值
             if(arguments.length == 3){
-                var order = func_methods.getCellBoolen(arguments[2]);
+                let order = func_methods.getCellBoolen(arguments[2]);
 
                 if(valueIsError(order)){
                     return order;
                 }
             }
             else{
-                var order = false;
+                let order = false;
             }
 
             //计算
-            var sort = (order) ? function(a, b) {
+            let sort = (order) ? function(a, b) {
                 return a - b;
             } : function(a, b) {
                 return b - a;
@@ -5510,7 +5510,7 @@ const functionImplementation = {
 
             ref_n = ref_n.sort(sort);
 
-            var index = ref_n.indexOf(number);
+            let index = ref_n.indexOf(number);
 
             if(index == -1){
                 return formula.error.na;
@@ -5520,7 +5520,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5532,8 +5532,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5542,7 +5542,7 @@ const functionImplementation = {
 
         try {
             //要确定其排名的值
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -5554,8 +5554,8 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //包含相关数据集的数组或范围
-            var data_ref = arguments[1];
-            var ref = [];
+            let data_ref = arguments[1];
+            let ref = [];
 
             if(getObjType(data_ref) == "array"){
                 if(getObjType(data_ref[0]) == "array" && !func_methods.isDyadicArr(data_ref)){
@@ -5571,10 +5571,10 @@ const functionImplementation = {
                 ref.push(data_ref);
             }
 
-            var ref_n = [];
+            let ref_n = [];
 
-            for(var j = 0; j < ref.length; j++){
-                var num = ref[j];
+            for(let j = 0; j < ref.length; j++){
+                let num = ref[j];
 
                 if(!isRealNum(num)){
                     return formula.error.v;
@@ -5587,7 +5587,7 @@ const functionImplementation = {
 
             //要按升序还是按降序考虑“data”中的值
             if(arguments.length == 3){
-                var order = func_methods.getFirstValue(arguments[2]);
+                let order = func_methods.getFirstValue(arguments[2]);
 
                 if(valueIsError(order)){
                     return order;
@@ -5615,11 +5615,11 @@ const functionImplementation = {
                 }
             }
             else{
-                var order = false;
+                let order = false;
             }
 
             //计算
-            var sort = (order) ? function(a, b) {
+            let sort = (order) ? function(a, b) {
                 return a - b;
             } : function(a, b) {
                 return b - a;
@@ -5627,8 +5627,8 @@ const functionImplementation = {
 
             ref_n = ref_n.sort(sort);
 
-            var count = 0;
-            for (var i = 0; i < ref_n.length; i++) {
+            let count = 0;
+            for (let i = 0; i < ref_n.length; i++) {
                 if (ref_n[i] == number) {
                     count++;
                 }
@@ -5637,7 +5637,7 @@ const functionImplementation = {
             return (count > 1) ? (2 * ref_n.indexOf(number) + count + 1) / 2 : ref_n.indexOf(number) + 1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5649,8 +5649,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5659,8 +5659,8 @@ const functionImplementation = {
 
         try {
             //包含相关数据集的数组或范围
-            var data_ref = arguments[0];
-            var ref = [];
+            let data_ref = arguments[0];
+            let ref = [];
 
             if(getObjType(data_ref) == "array"){
                 if(getObjType(data_ref[0]) == "array" && !func_methods.isDyadicArr(data_ref)){
@@ -5676,10 +5676,10 @@ const functionImplementation = {
                 ref.push(data_ref);
             }
 
-            var ref_n = [];
+            let ref_n = [];
 
-            for(var j = 0; j < ref.length; j++){
-                var number = ref[j];
+            for(let j = 0; j < ref.length; j++){
+                let number = ref[j];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -5691,7 +5691,7 @@ const functionImplementation = {
             }
 
             //要确定其百分比排位的值
-            var x = func_methods.getFirstValue(arguments[1]);
+            let x = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(x)){
                 return x;
             }
@@ -5704,7 +5704,7 @@ const functionImplementation = {
 
             //要在计算中使用的有效位数
             if(arguments.length == 3){
-                var significance = func_methods.getFirstValue(arguments[2]);
+                let significance = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(significance)){
                     return significance;
                 }
@@ -5716,7 +5716,7 @@ const functionImplementation = {
                 significance = parseInt(significance);
             }
             else{
-                var significance = 3;
+                let significance = 3;
             }
 
             if(ref_n.length == 0){
@@ -5735,15 +5735,15 @@ const functionImplementation = {
             ref_n = ref_n.sort(function(a, b) {
                 return a - b;
             });
-            var uniques = window.luckysheet_function.UNIQUE.f(ref_n)[0];
+            let uniques = window.luckysheet_function.UNIQUE.f(ref_n)[0];
 
-            var n = ref_n.length;
-            var m = uniques.length;
+            let n = ref_n.length;
+            let m = uniques.length;
 
-            var power = Math.pow(10, significance);
-            var result = 0;
-            var match = false;
-            var i = 0;
+            let power = Math.pow(10, significance);
+            let result = 0;
+            let match = false;
+            let i = 0;
 
             while (!match && i < m) {
                 if (x === uniques[i]) {
@@ -5766,7 +5766,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5778,8 +5778,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5788,8 +5788,8 @@ const functionImplementation = {
 
         try {
             //包含相关数据集的数组或范围
-            var data_ref = arguments[0];
-            var ref = [];
+            let data_ref = arguments[0];
+            let ref = [];
 
             if(getObjType(data_ref) == "array"){
                 if(getObjType(data_ref[0]) == "array" && !func_methods.isDyadicArr(data_ref)){
@@ -5805,10 +5805,10 @@ const functionImplementation = {
                 ref.push(data_ref);
             }
 
-            var ref_n = [];
+            let ref_n = [];
 
-            for(var j = 0; j < ref.length; j++){
-                var number = ref[j];
+            for(let j = 0; j < ref.length; j++){
+                let number = ref[j];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -5820,7 +5820,7 @@ const functionImplementation = {
             }
 
             //要确定其百分比排位的值
-            var x = func_methods.getFirstValue(arguments[1]);
+            let x = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(x)){
                 return x;
             }
@@ -5833,7 +5833,7 @@ const functionImplementation = {
 
             //要在计算中使用的有效位数
             if(arguments.length == 3){
-                var significance = func_methods.getFirstValue(arguments[2]);
+                let significance = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(significance)){
                     return significance;
                 }
@@ -5845,7 +5845,7 @@ const functionImplementation = {
                 significance = parseInt(significance);
             }
             else{
-                var significance = 3;
+                let significance = 3;
             }
 
             if(ref_n.length == 0){
@@ -5864,15 +5864,15 @@ const functionImplementation = {
             ref_n = ref_n.sort(function(a, b) {
                 return a - b;
             });
-            var uniques = window.luckysheet_function.UNIQUE.f(ref_n)[0];
+            let uniques = window.luckysheet_function.UNIQUE.f(ref_n)[0];
 
-            var n = ref_n.length;
-            var m = uniques.length;
+            let n = ref_n.length;
+            let m = uniques.length;
 
-            var power = Math.pow(10, significance);
-            var result = 0;
-            var match = false;
-            var i = 0;
+            let power = Math.pow(10, significance);
+            let result = 0;
+            let match = false;
+            let i = 0;
 
             while (!match && i < m) {
                 if (x === uniques[i]) {
@@ -5895,7 +5895,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -5907,8 +5907,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -5917,7 +5917,7 @@ const functionImplementation = {
 
         try {
             //x轴上用于预测的值
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -5929,8 +5929,8 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //代表因变量数据数组或矩阵的范围
-            var data_known_y = arguments[1];
-            var known_y = [];
+            let data_known_y = arguments[1];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -5947,8 +5947,8 @@ const functionImplementation = {
             }
 
             //代表自变量数据数组或矩阵的范围
-            var data_known_x = arguments[2];
-            var known_x = [];
+            let data_known_x = arguments[2];
+            let known_x = [];
 
             if(getObjType(data_known_x) == "array"){
                 if(getObjType(data_known_x[0]) == "array" && !func_methods.isDyadicArr(data_known_x)){
@@ -5969,11 +5969,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_y = [], data_x = [];
+            let data_y = [], data_x = [];
 
-            for(var i = 0; i < known_y.length; i++){
-                var num_y = known_y[i];
-                var num_x = known_x[i];
+            for(let i = 0; i < known_y.length; i++){
+                let num_y = known_y[i];
+                let num_x = known_x[i];
 
                 if(isRealNum(num_y) && isRealNum(num_x)){
                     data_y.push(parseFloat(num_y));
@@ -5986,25 +5986,25 @@ const functionImplementation = {
             }
 
             //计算
-            var xmean = jStat.mean(data_x);
-            var ymean = jStat.mean(data_y);
+            let xmean = jStat.mean(data_x);
+            let ymean = jStat.mean(data_y);
 
-            var n = data_x.length;
-            var num = 0;
-            var den = 0;
+            let n = data_x.length;
+            let num = 0;
+            let den = 0;
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 num += (data_x[i] - xmean) * (data_y[i] - ymean);
                 den += Math.pow(data_x[i] - xmean, 2);
             }
 
-            var b = num / den;
-            var a = ymean - b * xmean;
+            let b = num / den;
+            let a = ymean - b * xmean;
 
             return a + b * x;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6016,8 +6016,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6025,7 +6025,7 @@ const functionImplementation = {
         }
 
         try {
-            var y = func_methods.getFirstValue(arguments[0]);
+            let y = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(y)){
                 return y;
             }
@@ -6036,12 +6036,12 @@ const functionImplementation = {
 
             y = parseFloat(y);
 
-            var e2y = Math.exp(2 * y);
+            let e2y = Math.exp(2 * y);
 
             return (e2y - 1) / (e2y + 1);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6053,8 +6053,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6062,7 +6062,7 @@ const functionImplementation = {
         }
 
         try {
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -6080,7 +6080,7 @@ const functionImplementation = {
             return Math.log((1 + x) / (1 - x)) / 2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6092,8 +6092,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6101,10 +6101,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -6125,22 +6125,22 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
                 }
             }
 
-            var count = {};
-            var maxItems = [];
-            var max = 0;
-            var currentItem;
+            let count = {};
+            let maxItems = [];
+            let max = 0;
+            let currentItem;
 
-            for (var i = 0; i < dataArr_n.length; i++) {
+            for (let i = 0; i < dataArr_n.length; i++) {
                 currentItem = dataArr_n[i];
                 count[currentItem] = count[currentItem] ? count[currentItem] + 1 : 1;
 
@@ -6158,10 +6158,10 @@ const functionImplementation = {
                 return formula.error.na;
             }
 
-            var resultIndex = dataArr_n.indexOf(maxItems[0]);
+            let resultIndex = dataArr_n.indexOf(maxItems[0]);
 
-            for(var j = 0; j < maxItems.length; j++){
-                var index = dataArr_n.indexOf(maxItems[j]);
+            for(let j = 0; j < maxItems.length; j++){
+                let index = dataArr_n.indexOf(maxItems[j]);
 
                 if(index < resultIndex){
                     resultIndex = index;
@@ -6171,7 +6171,7 @@ const functionImplementation = {
             return dataArr_n[resultIndex];
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6183,8 +6183,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6193,7 +6193,7 @@ const functionImplementation = {
 
         try {
             //WEIBULL 分布函数的输入值
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -6205,7 +6205,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //Weibull 分布函数的形状参数
-            var alpha = func_methods.getFirstValue(arguments[1]);
+            let alpha = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(alpha)){
                 return alpha;
             }
@@ -6217,7 +6217,7 @@ const functionImplementation = {
             alpha = parseFloat(alpha);
 
             //Weibull 分布函数的尺度参数
-            var beta = func_methods.getFirstValue(arguments[2]);
+            let beta = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(beta)){
                 return beta;
             }
@@ -6229,7 +6229,7 @@ const functionImplementation = {
             beta = parseFloat(beta);
 
             //决定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[3]);
+            let cumulative = func_methods.getCellBoolen(arguments[3]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -6242,7 +6242,7 @@ const functionImplementation = {
             return (cumulative) ? 1 - Math.exp(-Math.pow(x / beta, alpha)) : Math.pow(x, alpha - 1) * Math.exp(-Math.pow(x / beta, alpha)) * alpha / Math.pow(beta, alpha);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6254,8 +6254,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6263,10 +6263,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -6287,10 +6287,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -6304,7 +6304,7 @@ const functionImplementation = {
             return jStat.sum(jStat(dataArr_n).subtract(jStat.mean(dataArr_n)).abs()[0]) / dataArr_n.length;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6316,8 +6316,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6325,10 +6325,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -6356,11 +6356,11 @@ const functionImplementation = {
                 }
             }
 
-            var sum = 0,
+            let sum = 0,
                 count = 0;
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     sum += parseFloat(number);
@@ -6384,7 +6384,7 @@ const functionImplementation = {
             return sum / count;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6396,8 +6396,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6406,7 +6406,7 @@ const functionImplementation = {
 
         try {
             //试验的成功次数
-            var number_s = func_methods.getFirstValue(arguments[0]);
+            let number_s = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number_s)){
                 return number_s;
             }
@@ -6418,7 +6418,7 @@ const functionImplementation = {
             number_s = parseInt(number_s);
 
             //独立检验的次数
-            var trials = func_methods.getFirstValue(arguments[1]);
+            let trials = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(trials)){
                 return trials;
             }
@@ -6430,7 +6430,7 @@ const functionImplementation = {
             trials = parseInt(trials);
 
             //任一给定检验的成功概率
-            var probability_s = func_methods.getFirstValue(arguments[2]);
+            let probability_s = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(probability_s)){
                 return probability_s;
             }
@@ -6442,7 +6442,7 @@ const functionImplementation = {
             probability_s = parseFloat(probability_s);
 
             //是否使用二项式累积分布
-            var cumulative = func_methods.getCellBoolen(arguments[3]);
+            let cumulative = func_methods.getCellBoolen(arguments[3]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -6459,7 +6459,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.binomial.cdf(number_s, trials, probability_s) : jStat.binomial.pdf(number_s, trials, probability_s);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6471,8 +6471,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6481,7 +6481,7 @@ const functionImplementation = {
 
         try {
             //贝努利试验次数
-            var trials = func_methods.getFirstValue(arguments[0]);
+            let trials = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(trials)){
                 return trials;
             }
@@ -6493,7 +6493,7 @@ const functionImplementation = {
             trials = parseInt(trials);
 
             //任一次给定检验的成功概率
-            var probability_s = func_methods.getFirstValue(arguments[1]);
+            let probability_s = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(probability_s)){
                 return probability_s;
             }
@@ -6505,7 +6505,7 @@ const functionImplementation = {
             probability_s = parseFloat(probability_s);
 
             //期望的临界概率
-            var alpha = func_methods.getFirstValue(arguments[2]);
+            let alpha = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(alpha)){
                 return alpha;
             }
@@ -6529,7 +6529,7 @@ const functionImplementation = {
             }
 
             //计算
-            var x = 0;
+            let x = 0;
             while (x <= trials) {
                 if (jStat.binomial.cdf(x, trials, probability_s) >= alpha) {
                     return x;
@@ -6539,7 +6539,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6551,8 +6551,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6561,7 +6561,7 @@ const functionImplementation = {
 
         try {
             //置信水平
-            var alpha = func_methods.getFirstValue(arguments[0]);
+            let alpha = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(alpha)){
                 return alpha;
             }
@@ -6573,7 +6573,7 @@ const functionImplementation = {
             alpha = parseFloat(alpha);
 
             //数据区域的总体标准偏差
-            var standard_dev = func_methods.getFirstValue(arguments[1]);
+            let standard_dev = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(standard_dev)){
                 return standard_dev;
             }
@@ -6585,7 +6585,7 @@ const functionImplementation = {
             standard_dev = parseFloat(standard_dev);
 
             //样本总量的大小
-            var size = func_methods.getFirstValue(arguments[2]);
+            let size = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(size)){
                 return size;
             }
@@ -6611,7 +6611,7 @@ const functionImplementation = {
             return jStat.normalci(1, alpha, standard_dev, size)[1] - 1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6623,8 +6623,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6633,8 +6633,8 @@ const functionImplementation = {
 
         try {
             //代表因变量数据数组或矩阵的范围
-            var data_known_y = arguments[0];
-            var known_y = [];
+            let data_known_y = arguments[0];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -6651,8 +6651,8 @@ const functionImplementation = {
             }
 
             //代表自变量数据数组或矩阵的范围
-            var data_known_x = arguments[1];
-            var known_x = [];
+            let data_known_x = arguments[1];
+            let known_x = [];
 
             if(getObjType(data_known_x) == "array"){
                 if(getObjType(data_known_x[0]) == "array" && !func_methods.isDyadicArr(data_known_x)){
@@ -6673,11 +6673,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_y = [], data_x = [];
+            let data_y = [], data_x = [];
 
-            for(var i = 0; i < known_y.length; i++){
-                var num_y = known_y[i];
-                var num_x = known_x[i];
+            for(let i = 0; i < known_y.length; i++){
+                let num_y = known_y[i];
+                let num_x = known_x[i];
 
                 if(isRealNum(num_y) && isRealNum(num_x)){
                     data_y.push(parseFloat(num_y));
@@ -6692,7 +6692,7 @@ const functionImplementation = {
             return jStat.corrcoeff(data_y, data_x);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6704,8 +6704,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6714,8 +6714,8 @@ const functionImplementation = {
 
         try {
             //代表自变量数据数组或矩阵的范围
-            var data_known_x = arguments[0];
-            var known_x = [];
+            let data_known_x = arguments[0];
+            let known_x = [];
 
             if(getObjType(data_known_x) == "array"){
                 if(getObjType(data_known_x[0]) == "array" && !func_methods.isDyadicArr(data_known_x)){
@@ -6732,8 +6732,8 @@ const functionImplementation = {
             }
 
             //代表因变量数据数组或矩阵的范围
-            var data_known_y = arguments[1];
-            var known_y = [];
+            let data_known_y = arguments[1];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -6754,11 +6754,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_x = [], data_y = [];
+            let data_x = [], data_y = [];
 
-            for(var i = 0; i < known_x.length; i++){
-                var num_x = known_x[i];
-                var num_y = known_y[i];
+            for(let i = 0; i < known_x.length; i++){
+                let num_x = known_x[i];
+                let num_y = known_y[i];
 
                 if(isRealNum(num_x) && isRealNum(num_y)){
                     data_x.push(parseFloat(num_x));
@@ -6771,12 +6771,12 @@ const functionImplementation = {
             }
 
             //计算
-            var mean1 = jStat.mean(data_x);
-            var mean2 = jStat.mean(data_y);
+            let mean1 = jStat.mean(data_x);
+            let mean2 = jStat.mean(data_y);
 
-            var result = 0;
+            let result = 0;
 
-            for (var i = 0; i < data_x.length; i++) {
+            for (let i = 0; i < data_x.length; i++) {
                 result += (data_x[i] - mean1) * (data_y[i] - mean2);
             }
 
@@ -6785,7 +6785,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6797,8 +6797,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6807,8 +6807,8 @@ const functionImplementation = {
 
         try {
             //代表自变量数据数组或矩阵的范围
-            var data_known_x = arguments[0];
-            var known_x = [];
+            let data_known_x = arguments[0];
+            let known_x = [];
 
             if(getObjType(data_known_x) == "array"){
                 if(getObjType(data_known_x[0]) == "array" && !func_methods.isDyadicArr(data_known_x)){
@@ -6825,8 +6825,8 @@ const functionImplementation = {
             }
 
             //代表因变量数据数组或矩阵的范围
-            var data_known_y = arguments[1];
-            var known_y = [];
+            let data_known_y = arguments[1];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -6847,11 +6847,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_x = [], data_y = [];
+            let data_x = [], data_y = [];
 
-            for(var i = 0; i < known_x.length; i++){
-                var num_x = known_x[i];
-                var num_y = known_y[i];
+            for(let i = 0; i < known_x.length; i++){
+                let num_x = known_x[i];
+                let num_y = known_y[i];
 
                 if(isRealNum(num_x) && isRealNum(num_y)){
                     data_x.push(parseFloat(num_x));
@@ -6866,7 +6866,7 @@ const functionImplementation = {
             return jStat.covariance(data_x, data_y);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6878,8 +6878,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6887,10 +6887,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -6922,27 +6922,27 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
                 }
             }
 
-            var mean = jStat.mean(dataArr_n);
-            var result = 0;
+            let mean = jStat.mean(dataArr_n);
+            let result = 0;
 
-            for (var i = 0; i < dataArr_n.length; i++) {
+            for (let i = 0; i < dataArr_n.length; i++) {
                 result += Math.pow((dataArr_n[i] - mean), 2);
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -6954,8 +6954,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -6964,7 +6964,7 @@ const functionImplementation = {
 
         try {
             //指数分布函数的输入值
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -6976,7 +6976,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //用于指定指数分布函数的 lambda 值
-            var lambda = func_methods.getFirstValue(arguments[1]);
+            let lambda = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(lambda)){
                 return lambda;
             }
@@ -6988,7 +6988,7 @@ const functionImplementation = {
             lambda = parseFloat(lambda);
 
             //是否使用指数累积分布
-            var cumulative = func_methods.getCellBoolen(arguments[2]);
+            let cumulative = func_methods.getCellBoolen(arguments[2]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -7005,7 +7005,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.exponential.cdf(x, lambda) : jStat.exponential.pdf(x, lambda);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7017,8 +7017,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7026,31 +7026,31 @@ const functionImplementation = {
         }
 
         try {
-            var sum = 0;
-            var count = 0;
+            let sum = 0;
+            let count = 0;
 
-            var rangeData = arguments[0].data;
-            var rangeRow = arguments[0].rowl;
-            var rangeCol = arguments[0].coll;
-            var criteria = luckysheet_parseData(arguments[1]);
-            var sumRangeData = [];
+            let rangeData = arguments[0].data;
+            let rangeRow = arguments[0].rowl;
+            let rangeCol = arguments[0].coll;
+            let criteria = luckysheet_parseData(arguments[1]);
+            let sumRangeData = [];
 
             //如果有第三个参数
             if(arguments[2]){
                 //根据选择的目标的区域确定实际目标区域
                 //初始位置
-                var sumRangeStart = arguments[2].startCell;
-                var sumRangeRow = arguments[2].rowl;
-                var sumRangeCol = arguments[2].coll;
-                var sumRangeSheet = arguments[2].sheetName;
+                let sumRangeStart = arguments[2].startCell;
+                let sumRangeRow = arguments[2].rowl;
+                let sumRangeCol = arguments[2].coll;
+                let sumRangeSheet = arguments[2].sheetName;
 
                 if(rangeRow == sumRangeRow && rangeCol == sumRangeCol){
                     sumRangeData = arguments[2].data;
                 }
                 else{
-                    var row=[],col=[];
-                    var sumRangeEnd = "";
-                    var realSumRange = "";
+                    let row=[],col=[];
+                    let sumRangeEnd = "";
+                    let realSumRange = "";
                     //console.log("开始位置！！！",sumRangeStart,typeof(sumRangeStart));
                     row[0] = parseInt(sumRangeStart.replace(/[^0-9]/g,"")) - 1;
                     col[0] = ABCatNum(sumRangeStart.replace(/[^A-Za-z]/g,""));
@@ -7061,8 +7061,8 @@ const functionImplementation = {
 
                     //console.log(row[0],col[0],row[1],col[1]);
                     //末尾位置转化为sheet格式：如 F4
-                    var real_ABC = chatatABC(col[1]);
-                    var real_Num = row[1] + 1;
+                    let real_ABC = chatatABC(col[1]);
+                    let real_Num = row[1] + 1;
                     sumRangeEnd = real_ABC + real_Num;
                     //console.log("合成新的末尾位置：" + sumRangeEnd);
 
@@ -7076,10 +7076,10 @@ const functionImplementation = {
             rangeData = formula.getRangeArray(rangeData)[0];
 
             //循环遍历查找匹配项
-            for(var i = 0; i < rangeData.length;i++){
-                var v = rangeData[i];
+            for(let i = 0; i < rangeData.length;i++){
+                let v = rangeData[i];
                 if(!!v && formula.acompareb(v, criteria)){
-                    var vnow = sumRangeData[i] || v;
+                    let vnow = sumRangeData[i] || v;
 
                     if(!isRealNum(vnow)){
                         continue;
@@ -7098,7 +7098,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7110,8 +7110,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7119,24 +7119,24 @@ const functionImplementation = {
         }
 
         try {
-            var sum = 0;
-            var count = 0;
-            var args = arguments;
+            let sum = 0;
+            let count = 0;
+            let args = arguments;
             luckysheet_getValue(args);
-            var rangeData = formula.getRangeArray(args[0])[0];
-            var results = new Array(rangeData.length);
-            for(var i = 0;i < results.length; i++){
+            let rangeData = formula.getRangeArray(args[0])[0];
+            let results = new Array(rangeData.length);
+            for(let i = 0;i < results.length; i++){
                 results[i] = true;
             }
-            for(var i = 1; i < args.length; i += 2){
-                var range = formula.getRangeArray(args[i])[0];
-                var criteria = args[i+1];
-                for(var j = 0; j < range.length; j++){
-                    var v = range[j];
+            for(let i = 1; i < args.length; i += 2){
+                let range = formula.getRangeArray(args[i])[0];
+                let criteria = args[i+1];
+                for(let j = 0; j < range.length; j++){
+                    let v = range[j];
                     results[j] = results[j] && (!!v) && formula.acompareb(v,criteria);
                 }
             }
-            for(var i = 0; i < rangeData.length; i++){
+            for(let i = 0; i < rangeData.length; i++){
                 if(results[i] && isRealNum(rangeData[i])){
                     sum += parseFloat(rangeData[i]);
                     count ++;
@@ -7151,7 +7151,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7163,8 +7163,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7173,7 +7173,7 @@ const functionImplementation = {
 
         try {
             //表示对象个数的整数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -7185,7 +7185,7 @@ const functionImplementation = {
             number = parseInt(number);
 
             //表示每个排列中对象个数的整数
-            var number_chosen = func_methods.getFirstValue(arguments[1]);
+            let number_chosen = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(number_chosen)){
                 return number_chosen;
             }
@@ -7207,7 +7207,7 @@ const functionImplementation = {
             return func_methods.factorial(number) / func_methods.factorial(number - number_chosen);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7219,8 +7219,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7229,8 +7229,8 @@ const functionImplementation = {
 
         try {
             //包含相关数据集的数组或范围
-            var data_dataArr = arguments[0];
-            var dataArr = [];
+            let data_dataArr = arguments[0];
+            let dataArr = [];
 
             if(getObjType(data_dataArr) == "array"){
                 if(getObjType(data_dataArr[0]) == "array" && !func_methods.isDyadicArr(data_dataArr)){
@@ -7246,10 +7246,10 @@ const functionImplementation = {
                 dataArr.push(data_dataArr);
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -7257,7 +7257,7 @@ const functionImplementation = {
             }
 
             //排除比例
-            var percent = func_methods.getFirstValue(arguments[1]);
+            let percent = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(percent)){
                 return percent;
             }
@@ -7297,16 +7297,16 @@ const functionImplementation = {
                 return a - b;
             })
 
-            var trim = window.luckysheet_function.FLOOR.f(dataArr_n.length * percent, 2) / 2;
+            let trim = window.luckysheet_function.FLOOR.f(dataArr_n.length * percent, 2) / 2;
 
-            var result = rest(dataArr_n, trim);
+            let result = rest(dataArr_n, trim);
             result = initial(result, trim);
             result = jStat.mean(result);
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7318,8 +7318,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7328,8 +7328,8 @@ const functionImplementation = {
 
         try {
             //定义相对位置的数组或数据区域
-            var data_dataArr = arguments[0];
-            var dataArr = [];
+            let data_dataArr = arguments[0];
+            let dataArr = [];
 
             if(getObjType(data_dataArr) == "array"){
                 if(getObjType(data_dataArr[0]) == "array" && !func_methods.isDyadicArr(data_dataArr)){
@@ -7345,10 +7345,10 @@ const functionImplementation = {
                 dataArr.push(data_dataArr);
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -7356,7 +7356,7 @@ const functionImplementation = {
             }
 
             //0 到 1 之间的百分点值，不包含 0 和 1
-            var k = func_methods.getFirstValue(arguments[1]);
+            let k = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(k)){
                 return k;
             }
@@ -7380,19 +7380,19 @@ const functionImplementation = {
                 return a - b;
             });
 
-            var n = dataArr_n.length;
+            let n = dataArr_n.length;
 
             if (k < 1 / (n + 1) || k > 1 - 1 / (n + 1)) {
                 return formula.error.nm;
             }
 
-            var l = k * (n + 1) - 1;
-            var fl = Math.floor(l);
+            let l = k * (n + 1) - 1;
+            let fl = Math.floor(l);
 
             return (l === fl) ? dataArr_n[l] : dataArr_n[fl] + (l - fl) * (dataArr_n[fl + 1] - dataArr_n[fl]);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7404,8 +7404,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7414,8 +7414,8 @@ const functionImplementation = {
 
         try {
             //定义相对位置的数组或数据区域
-            var data_dataArr = arguments[0];
-            var dataArr = [];
+            let data_dataArr = arguments[0];
+            let dataArr = [];
 
             if(getObjType(data_dataArr) == "array"){
                 if(getObjType(data_dataArr[0]) == "array" && !func_methods.isDyadicArr(data_dataArr)){
@@ -7431,10 +7431,10 @@ const functionImplementation = {
                 dataArr.push(data_dataArr);
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -7442,7 +7442,7 @@ const functionImplementation = {
             }
 
             //0 到 1 之间的百分点值，不包含 0 和 1
-            var k = func_methods.getFirstValue(arguments[1]);
+            let k = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(k)){
                 return k;
             }
@@ -7466,15 +7466,15 @@ const functionImplementation = {
                 return a - b;
             });
 
-            var n = dataArr_n.length;
+            let n = dataArr_n.length;
 
-            var l = k * (n - 1);
-            var fl = Math.floor(l);
+            let l = k * (n - 1);
+            let fl = Math.floor(l);
 
             return (l === fl) ? dataArr_n[l] : dataArr_n[fl] + (l - fl) * (dataArr_n[fl + 1] - dataArr_n[fl]);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7486,8 +7486,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7496,8 +7496,8 @@ const functionImplementation = {
 
         try {
             //代表自变量数据数组或矩阵的范围
-            var data_known_x = arguments[0];
-            var known_x = [];
+            let data_known_x = arguments[0];
+            let known_x = [];
 
             if(getObjType(data_known_x) == "array"){
                 if(getObjType(data_known_x[0]) == "array" && !func_methods.isDyadicArr(data_known_x)){
@@ -7514,8 +7514,8 @@ const functionImplementation = {
             }
 
             //代表因变量数据数组或矩阵的范围
-            var data_known_y = arguments[1];
-            var known_y = [];
+            let data_known_y = arguments[1];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -7536,11 +7536,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_x = [], data_y = [];
+            let data_x = [], data_y = [];
 
-            for(var i = 0; i < known_x.length; i++){
-                var num_x = known_x[i];
-                var num_y = known_y[i];
+            for(let i = 0; i < known_x.length; i++){
+                let num_x = known_x[i];
+                let num_y = known_y[i];
 
                 if(isRealNum(num_x) && isRealNum(num_y)){
                     data_x.push(parseFloat(num_x));
@@ -7553,15 +7553,15 @@ const functionImplementation = {
             }
 
             //计算
-            var xmean = jStat.mean(data_x);
-            var ymean = jStat.mean(data_y);
+            let xmean = jStat.mean(data_x);
+            let ymean = jStat.mean(data_y);
 
-            var n = data_x.length;
-            var num = 0;
-            var den1 = 0;
-            var den2 = 0;
+            let n = data_x.length;
+            let num = 0;
+            let den1 = 0;
+            let den2 = 0;
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 num += (data_x[i] - xmean) * (data_y[i] - ymean);
                 den1 += Math.pow(data_x[i] - xmean, 2);
                 den2 += Math.pow(data_y[i] - ymean, 2);
@@ -7570,7 +7570,7 @@ const functionImplementation = {
             return num / Math.sqrt(den1 * den2);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7582,8 +7582,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7592,7 +7592,7 @@ const functionImplementation = {
 
         try {
             //对应于正态分布的概率
-            var probability = func_methods.getFirstValue(arguments[0]);
+            let probability = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(probability)){
                 return probability;
             }
@@ -7610,7 +7610,7 @@ const functionImplementation = {
             return jStat.normal.inv(probability, 0, 1);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7622,8 +7622,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7632,7 +7632,7 @@ const functionImplementation = {
 
         try {
             //需要计算其分布的数值
-            var z = func_methods.getFirstValue(arguments[0]);
+            let z = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(z)){
                 return z;
             }
@@ -7644,7 +7644,7 @@ const functionImplementation = {
             z = parseFloat(z);
 
             //决定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[1]);
+            let cumulative = func_methods.getCellBoolen(arguments[1]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -7653,7 +7653,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.normal.cdf(z, 0, 1) : jStat.normal.pdf(z, 0, 1);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7665,8 +7665,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7675,7 +7675,7 @@ const functionImplementation = {
 
         try {
             //对应于正态分布的概率
-            var probability = func_methods.getFirstValue(arguments[0]);
+            let probability = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(probability)){
                 return probability;
             }
@@ -7697,7 +7697,7 @@ const functionImplementation = {
             probability = parseFloat(probability);
 
             //分布的算术平均值
-            var mean = func_methods.getFirstValue(arguments[1]);
+            let mean = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(mean)){
                 return mean;
             }
@@ -7719,7 +7719,7 @@ const functionImplementation = {
             mean = parseFloat(mean);
 
             //分布的标准偏差
-            var standard_dev = func_methods.getFirstValue(arguments[2]);
+            let standard_dev = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(standard_dev)){
                 return standard_dev;
             }
@@ -7752,7 +7752,7 @@ const functionImplementation = {
             return jStat.normal.inv(probability, mean, standard_dev);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7764,8 +7764,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7774,7 +7774,7 @@ const functionImplementation = {
 
         try {
             //需要计算其分布的数值
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -7796,7 +7796,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //分布的算术平均值
-            var mean = func_methods.getFirstValue(arguments[1]);
+            let mean = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(mean)){
                 return mean;
             }
@@ -7808,7 +7808,7 @@ const functionImplementation = {
             mean = parseFloat(mean);
 
             //分布的标准偏差
-            var standard_dev = func_methods.getFirstValue(arguments[2]);
+            let standard_dev = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(standard_dev)){
                 return standard_dev;
             }
@@ -7820,7 +7820,7 @@ const functionImplementation = {
             standard_dev = parseFloat(standard_dev);
 
             //决定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[3]);
+            let cumulative = func_methods.getCellBoolen(arguments[3]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -7833,7 +7833,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.normal.cdf(x, mean, standard_dev) : jStat.normal.pdf(x, mean, standard_dev);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7845,8 +7845,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7855,7 +7855,7 @@ const functionImplementation = {
 
         try {
             //要模拟的失败次数
-            var number_f = func_methods.getFirstValue(arguments[0]);
+            let number_f = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number_f)){
                 return number_f;
             }
@@ -7867,7 +7867,7 @@ const functionImplementation = {
             number_f = parseInt(number_f);
 
             //要模拟的成功次数
-            var number_s = func_methods.getFirstValue(arguments[1]);
+            let number_s = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(number_s)){
                 return number_s;
             }
@@ -7879,7 +7879,7 @@ const functionImplementation = {
             number_s = parseInt(number_s);
 
             //任一次给定检验的成功概率
-            var probability_s = func_methods.getFirstValue(arguments[2]);
+            let probability_s = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(probability_s)){
                 return probability_s;
             }
@@ -7891,7 +7891,7 @@ const functionImplementation = {
             probability_s = parseFloat(probability_s);
 
             //决定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[3]);
+            let cumulative = func_methods.getCellBoolen(arguments[3]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -7908,7 +7908,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.negbin.cdf(number_f, number_s, probability_s) : jStat.negbin.pdf(number_f, number_s, probability_s);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7920,8 +7920,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -7929,10 +7929,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -7960,10 +7960,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -7981,7 +7981,7 @@ const functionImplementation = {
             return (dataArr_n.length === 0) ? 0 : Math.min.apply(Math, dataArr_n);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -7993,8 +7993,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8002,10 +8002,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -8026,10 +8026,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -8039,7 +8039,7 @@ const functionImplementation = {
             return jStat.median(dataArr_n);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8051,8 +8051,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8060,10 +8060,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -8091,10 +8091,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -8112,7 +8112,7 @@ const functionImplementation = {
             return (dataArr_n.length === 0) ? 0 : Math.max.apply(Math, dataArr_n);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8124,8 +8124,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8134,7 +8134,7 @@ const functionImplementation = {
 
         try {
             //与对数分布相关的概率
-            var probability = func_methods.getFirstValue(arguments[0]);
+            let probability = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(probability)){
                 return probability;
             }
@@ -8146,7 +8146,7 @@ const functionImplementation = {
             probability = parseFloat(probability);
 
             //ln(x) 的平均值
-            var mean = func_methods.getFirstValue(arguments[1]);
+            let mean = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(mean)){
                 return mean;
             }
@@ -8158,7 +8158,7 @@ const functionImplementation = {
             mean = parseFloat(mean);
 
             //ln(x) 的标准偏差
-            var standard_dev = func_methods.getFirstValue(arguments[2]);
+            let standard_dev = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(standard_dev)){
                 return standard_dev;
             }
@@ -8180,7 +8180,7 @@ const functionImplementation = {
             return jStat.lognormal.inv(probability, mean, standard_dev);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8192,8 +8192,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8202,7 +8202,7 @@ const functionImplementation = {
 
         try {
             //与对数分布相关的概率
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -8214,7 +8214,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //ln(x) 的平均值
-            var mean = func_methods.getFirstValue(arguments[1]);
+            let mean = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(mean)){
                 return mean;
             }
@@ -8226,7 +8226,7 @@ const functionImplementation = {
             mean = parseFloat(mean);
 
             //ln(x) 的标准偏差
-            var standard_dev = func_methods.getFirstValue(arguments[2]);
+            let standard_dev = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(standard_dev)){
                 return standard_dev;
             }
@@ -8238,7 +8238,7 @@ const functionImplementation = {
             standard_dev = parseFloat(standard_dev);
 
             //决定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[3]);
+            let cumulative = func_methods.getCellBoolen(arguments[3]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -8251,7 +8251,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.lognormal.cdf(x, mean, standard_dev) : jStat.lognormal.pdf(x, mean, standard_dev);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8263,8 +8263,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8273,7 +8273,7 @@ const functionImplementation = {
 
         try {
             //用来检验 x 的数组或数据区域
-            var dataArr = [];
+            let dataArr = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -8289,10 +8289,10 @@ const functionImplementation = {
                 dataArr.push(arguments[0]);
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var j = 0; j < dataArr.length; j++){
-                var number = dataArr[j];
+            for(let j = 0; j < dataArr.length; j++){
+                let number = dataArr[j];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -8300,7 +8300,7 @@ const functionImplementation = {
             }
 
             //要测试的值
-            var x = func_methods.getFirstValue(arguments[1]);
+            let x = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(x)){
                 return x;
             }
@@ -8316,7 +8316,7 @@ const functionImplementation = {
             }
 
             //总体（已知）标准偏差。 如果省略，则使用样本标准偏差
-            var sigma = func_methods.standardDeviation_s(dataArr_n);
+            let sigma = func_methods.standardDeviation_s(dataArr_n);
             if(arguments.length == 3){
                 sigma = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(sigma)){
@@ -8331,13 +8331,13 @@ const functionImplementation = {
             }
 
             //计算
-            var n = dataArr_n.length;
-            var mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
+            let n = dataArr_n.length;
+            let mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
 
             return 1 - window.luckysheet_function.NORM_S_DIST.f((mean - x) / (sigma / Math.sqrt(n)), "true");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8349,8 +8349,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8359,7 +8359,7 @@ const functionImplementation = {
 
         try {
             //x_range
-            var data_x_range = [];
+            let data_x_range = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -8376,7 +8376,7 @@ const functionImplementation = {
             }
 
             //prob_range
-            var data_prob_range = [];
+            let data_prob_range = [];
 
             if(getObjType(arguments[1]) == "array"){
                 if(getObjType(arguments[1][0]) == "array" && !func_methods.isDyadicArr(arguments[1])){
@@ -8397,11 +8397,11 @@ const functionImplementation = {
             }
 
             //data_x_range 和 data_prob_range 只取数值
-            var x_range = [], prob_range = [], prob_range_sum = 0;
+            let x_range = [], prob_range = [], prob_range_sum = 0;
 
-            for(var i = 0; i < data_x_range.length; i++){
-                var num_x_range = data_x_range[i];
-                var num_prob_range = data_prob_range[i];
+            for(let i = 0; i < data_x_range.length; i++){
+                let num_x_range = data_x_range[i];
+                let num_prob_range = data_prob_range[i];
 
                 if(isRealNum(num_x_range) && isRealNum(num_prob_range)){
                     x_range.push(parseFloat(num_x_range));
@@ -8420,7 +8420,7 @@ const functionImplementation = {
             }
 
             //要计算其概率的数值下界
-            var lower_limit = func_methods.getFirstValue(arguments[2]);
+            let lower_limit = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(lower_limit)){
                 return lower_limit;
             }
@@ -8432,7 +8432,7 @@ const functionImplementation = {
             lower_limit = parseFloat(lower_limit);
 
             //要计算其概率的数值上界
-            var upper_limit = lower_limit;
+            let upper_limit = lower_limit;
             if(arguments.length == 4){
                 upper_limit = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(upper_limit)){
@@ -8447,9 +8447,9 @@ const functionImplementation = {
             }
 
             //计算
-            var result = 0;
+            let result = 0;
 
-            for (var i = 0; i < x_range.length; i++) {
+            for (let i = 0; i < x_range.length; i++) {
                 if (x_range[i] >= lower_limit && x_range[i] <= upper_limit) {
                     result += prob_range[i];
                 }
@@ -8458,7 +8458,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8470,8 +8470,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8480,7 +8480,7 @@ const functionImplementation = {
 
         try {
             //要求得四分位数值的数组或数字型单元格区域
-            var data_array = [];
+            let data_array = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -8500,10 +8500,10 @@ const functionImplementation = {
                 data_array.push(arguments[0]);
             }
 
-            var array = [];
+            let array = [];
 
-            for(var i = 0; i < data_array.length; i++){
-                var number = data_array[i];
+            for(let i = 0; i < data_array.length; i++){
+                let number = data_array[i];
 
                 if(isRealNum(number)){
                     array.push(parseFloat(number));
@@ -8511,7 +8511,7 @@ const functionImplementation = {
             }
 
             //要返回第几个四分位值
-            var quart = func_methods.getFirstValue(arguments[1]);
+            let quart = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(quart)){
                 return quart;
             }
@@ -8541,7 +8541,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8553,8 +8553,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8563,7 +8563,7 @@ const functionImplementation = {
 
         try {
             //要求得四分位数值的数组或数字型单元格区域
-            var data_array = [];
+            let data_array = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -8583,10 +8583,10 @@ const functionImplementation = {
                 data_array.push(arguments[0]);
             }
 
-            var array = [];
+            let array = [];
 
-            for(var i = 0; i < data_array.length; i++){
-                var number = data_array[i];
+            for(let i = 0; i < data_array.length; i++){
+                let number = data_array[i];
 
                 if(isRealNum(number)){
                     array.push(parseFloat(number));
@@ -8594,7 +8594,7 @@ const functionImplementation = {
             }
 
             //要返回第几个四分位值
-            var quart = func_methods.getFirstValue(arguments[1]);
+            let quart = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(quart)){
                 return quart;
             }
@@ -8628,7 +8628,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8640,8 +8640,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8650,7 +8650,7 @@ const functionImplementation = {
 
         try {
             //事件数
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -8662,7 +8662,7 @@ const functionImplementation = {
             x = parseInt(x);
 
             //期望值
-            var mean = func_methods.getFirstValue(arguments[1]);
+            let mean = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(mean)){
                 return mean;
             }
@@ -8674,7 +8674,7 @@ const functionImplementation = {
             mean = parseFloat(mean);
 
             //决定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[2]);
+            let cumulative = func_methods.getCellBoolen(arguments[2]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -8687,7 +8687,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.poisson.cdf(x, mean) : jStat.poisson.pdf(x, mean);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8699,8 +8699,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8709,8 +8709,8 @@ const functionImplementation = {
 
         try {
             //代表因变量数据数组或矩阵的范围
-            var data_known_y = arguments[0];
-            var known_y = [];
+            let data_known_y = arguments[0];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -8731,8 +8731,8 @@ const functionImplementation = {
             }
 
             //代表自变量数据数组或矩阵的范围
-            var data_known_x = arguments[1];
-            var known_x = [];
+            let data_known_x = arguments[1];
+            let known_x = [];
 
             if(getObjType(data_known_x) == "array"){
                 if(getObjType(data_known_x[0]) == "array" && !func_methods.isDyadicArr(data_known_x)){
@@ -8757,11 +8757,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_y = [], data_x = [];
+            let data_y = [], data_x = [];
 
-            for(var i = 0; i < known_y.length; i++){
-                var num_y = known_y[i];
-                var num_x = known_x[i];
+            for(let i = 0; i < known_y.length; i++){
+                let num_y = known_y[i];
+                let num_x = known_x[i];
 
                 if(isRealNum(num_y) && isRealNum(num_x)){
                     data_y.push(parseFloat(num_y));
@@ -8776,7 +8776,7 @@ const functionImplementation = {
             return Math.pow(window.luckysheet_function.PEARSON.f(data_y, data_x), 2);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8788,8 +8788,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8798,7 +8798,7 @@ const functionImplementation = {
 
         try {
             //T-分布函数的输入
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -8810,7 +8810,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //自由度数值
-            var degrees_freedom = func_methods.getFirstValue(arguments[1]);
+            let degrees_freedom = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(degrees_freedom)){
                 return degrees_freedom;
             }
@@ -8822,7 +8822,7 @@ const functionImplementation = {
             degrees_freedom = parseInt(degrees_freedom);
 
             //决定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[2]);
+            let cumulative = func_methods.getCellBoolen(arguments[2]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -8835,7 +8835,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.studentt.cdf(x, degrees_freedom) : jStat.studentt.pdf(x, degrees_freedom);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8847,8 +8847,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8857,7 +8857,7 @@ const functionImplementation = {
 
         try {
             //T-分布函数的输入
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -8869,7 +8869,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //自由度数值
-            var degrees_freedom = func_methods.getFirstValue(arguments[1]);
+            let degrees_freedom = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(degrees_freedom)){
                 return degrees_freedom;
             }
@@ -8887,7 +8887,7 @@ const functionImplementation = {
             return (1 - jStat.studentt.cdf(x , degrees_freedom)) * 2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8899,8 +8899,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8909,7 +8909,7 @@ const functionImplementation = {
 
         try {
             //T-分布函数的输入
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -8921,7 +8921,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //自由度数值
-            var degrees_freedom = func_methods.getFirstValue(arguments[1]);
+            let degrees_freedom = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(degrees_freedom)){
                 return degrees_freedom;
             }
@@ -8939,7 +8939,7 @@ const functionImplementation = {
             return 1 - jStat.studentt.cdf(x , degrees_freedom);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -8951,8 +8951,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -8961,7 +8961,7 @@ const functionImplementation = {
 
         try {
             //与学生的 t 分布相关的概率
-            var probability = func_methods.getFirstValue(arguments[0]);
+            let probability = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(probability)){
                 return probability;
             }
@@ -8973,7 +8973,7 @@ const functionImplementation = {
             probability = parseFloat(probability);
 
             //自由度数值
-            var deg_freedom = func_methods.getFirstValue(arguments[1]);
+            let deg_freedom = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(deg_freedom)){
                 return deg_freedom;
             }
@@ -8995,7 +8995,7 @@ const functionImplementation = {
             return jStat.studentt.inv(probability, deg_freedom);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9007,8 +9007,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9017,7 +9017,7 @@ const functionImplementation = {
 
         try {
             //与学生的 t 分布相关的概率
-            var probability = func_methods.getFirstValue(arguments[0]);
+            let probability = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(probability)){
                 return probability;
             }
@@ -9029,7 +9029,7 @@ const functionImplementation = {
             probability = parseFloat(probability);
 
             //自由度数值
-            var deg_freedom = func_methods.getFirstValue(arguments[1]);
+            let deg_freedom = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(deg_freedom)){
                 return deg_freedom;
             }
@@ -9051,7 +9051,7 @@ const functionImplementation = {
             return Math.abs(jStat.studentt.inv(probability / 2, deg_freedom));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9063,8 +9063,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9073,7 +9073,7 @@ const functionImplementation = {
 
         try {
             //第一个数据集
-            var known_x = [];
+            let known_x = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -9093,11 +9093,11 @@ const functionImplementation = {
                 known_x.push(arguments[0]);
             }
 
-            // var data_x = [];
-            var data_x = known_x;
+            // let data_x = [];
+            let data_x = known_x;
 
             //第二个数据集
-            var known_y = [];
+            let known_y = [];
 
             if(getObjType(arguments[1]) == "array"){
                 if(getObjType(arguments[1][0]) == "array" && !func_methods.isDyadicArr(arguments[1])){
@@ -9117,11 +9117,11 @@ const functionImplementation = {
                 known_y.push(arguments[1]);
             }
 
-            // var data_y = [];
-            var data_y = known_y;
+            // let data_y = [];
+            let data_y = known_y;
 
             //指定分布的尾数
-            var tails = func_methods.getFirstValue(arguments[2]);
+            let tails = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(tails)){
                 return tails;
             }
@@ -9133,7 +9133,7 @@ const functionImplementation = {
             tails = parseInt(tails);
 
             //指定 t 检验的类型
-            var type = func_methods.getFirstValue(arguments[3]);
+            let type = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(type)){
                 return type;
             }
@@ -9153,26 +9153,26 @@ const functionImplementation = {
             }
 
             //计算
-            var t = null, df = null;
+            let t = null, df = null;
             if(type == 1){
-                var diff_arr = [];
+                let diff_arr = [];
 
                 for (i = 0; i < data_x.length; i++) {
                     diff_arr.push(data_x[i] - data_y[i]);
                 }
 
-                var diff_mean = Math.abs(jStat.mean(diff_arr));
-                var diff_sd = func_methods.standardDeviation_s(diff_arr);
+                let diff_mean = Math.abs(jStat.mean(diff_arr));
+                let diff_sd = func_methods.standardDeviation_s(diff_arr);
 
                 t = diff_mean / (diff_sd / Math.sqrt(data_x.length));
                 df = data_x.length - 1;
             }
             else{
-                var mean_x = jStat.mean(data_x);
-                var mean_y = jStat.mean(data_y);
+                let mean_x = jStat.mean(data_x);
+                let mean_y = jStat.mean(data_y);
 
-                var s_x = func_methods.variance_s(data_x);
-                var s_y = func_methods.variance_s(data_y);
+                let s_x = func_methods.variance_s(data_x);
+                let s_y = func_methods.variance_s(data_y);
 
                 t = Math.abs(mean_x - mean_y) / Math.sqrt(s_x / data_x.length + s_y / data_y.length);
 
@@ -9187,16 +9187,16 @@ const functionImplementation = {
             }
 
             if(tails == 1){
-                var result = window.luckysheet_function.T_DIST_RT.f(t, df);
+                let result = window.luckysheet_function.T_DIST_RT.f(t, df);
             }
             else if(tails == 2){
-                var result = window.luckysheet_function.T_DIST_2T.f(t, df);
+                let result = window.luckysheet_function.T_DIST_2T.f(t, df);
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9208,8 +9208,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9218,7 +9218,7 @@ const functionImplementation = {
 
         try {
             //用来计算函数的值
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -9230,7 +9230,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //分子自由度
-            var degrees_freedom1 = func_methods.getFirstValue(arguments[1]);
+            let degrees_freedom1 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(degrees_freedom1)){
                 return degrees_freedom1;
             }
@@ -9242,7 +9242,7 @@ const functionImplementation = {
             degrees_freedom1 = parseInt(degrees_freedom1);
 
             //分母自由度
-            var degrees_freedom2 = func_methods.getFirstValue(arguments[2]);
+            let degrees_freedom2 = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(degrees_freedom2)){
                 return degrees_freedom2;
             }
@@ -9254,7 +9254,7 @@ const functionImplementation = {
             degrees_freedom2 = parseInt(degrees_freedom2);
 
             //用于确定函数形式的逻辑值
-            var cumulative = func_methods.getCellBoolen(arguments[3]);
+            let cumulative = func_methods.getCellBoolen(arguments[3]);
 
             if(valueIsError(cumulative)){
                 return cumulative;
@@ -9275,7 +9275,7 @@ const functionImplementation = {
             return (cumulative) ? jStat.centralF.cdf(x, degrees_freedom1, degrees_freedom2) : jStat.centralF.pdf(x, degrees_freedom1, degrees_freedom2);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9287,8 +9287,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9297,7 +9297,7 @@ const functionImplementation = {
 
         try {
             //用来计算函数的值
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -9309,7 +9309,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //分子自由度
-            var degrees_freedom1 = func_methods.getFirstValue(arguments[1]);
+            let degrees_freedom1 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(degrees_freedom1)){
                 return degrees_freedom1;
             }
@@ -9321,7 +9321,7 @@ const functionImplementation = {
             degrees_freedom1 = parseInt(degrees_freedom1);
 
             //分母自由度
-            var degrees_freedom2 = func_methods.getFirstValue(arguments[2]);
+            let degrees_freedom2 = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(degrees_freedom2)){
                 return degrees_freedom2;
             }
@@ -9347,7 +9347,7 @@ const functionImplementation = {
             return 1 - jStat.centralF.cdf(x, degrees_freedom1, degrees_freedom2);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9359,8 +9359,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9368,10 +9368,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -9392,10 +9392,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -9406,17 +9406,17 @@ const functionImplementation = {
                 return formula.error.d;
             }
 
-            var n = dataArr_n.length;
-            var sigma = 0;
-            var mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
-            for (var i = 0; i < n; i++) {
+            let n = dataArr_n.length;
+            let sigma = 0;
+            let mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
+            for (let i = 0; i < n; i++) {
                 sigma += Math.pow(dataArr_n[i] - mean, 2);
             }
 
             return sigma / n;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9428,8 +9428,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9437,10 +9437,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -9461,10 +9461,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -9475,17 +9475,17 @@ const functionImplementation = {
                 return formula.error.d;
             }
 
-            var n = dataArr_n.length;
-            var sigma = 0;
-            var mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
-            for (var i = 0; i < n; i++) {
+            let n = dataArr_n.length;
+            let sigma = 0;
+            let mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
+            for (let i = 0; i < n; i++) {
                 sigma += Math.pow(dataArr_n[i] - mean, 2);
             }
 
             return sigma / (n - 1);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9497,8 +9497,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9506,10 +9506,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -9537,10 +9537,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -9555,17 +9555,17 @@ const functionImplementation = {
                 }
             }
 
-            var n = dataArr_n.length;
-            var sigma = 0;
-            var mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
-            for (var i = 0; i < n; i++) {
+            let n = dataArr_n.length;
+            let sigma = 0;
+            let mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
+            for (let i = 0; i < n; i++) {
                 sigma += Math.pow(dataArr_n[i] - mean, 2);
             }
 
             return sigma / (n - 1);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9577,8 +9577,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9586,10 +9586,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -9617,10 +9617,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -9635,17 +9635,17 @@ const functionImplementation = {
                 }
             }
 
-            var n = dataArr_n.length;
-            var sigma = 0;
-            var mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
-            for (var i = 0; i < n; i++) {
+            let n = dataArr_n.length;
+            let sigma = 0;
+            let mean = window.luckysheet_function.AVERAGE.f.apply(window.luckysheet_function.AVERAGE, dataArr_n);
+            for (let i = 0; i < n; i++) {
                 sigma += Math.pow(dataArr_n[i] - mean, 2);
             }
 
             return sigma / n;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9657,8 +9657,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9667,7 +9667,7 @@ const functionImplementation = {
 
         try {
             //代表因变量数据数组或矩阵的范围
-            var known_y = [];
+            let known_y = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -9688,7 +9688,7 @@ const functionImplementation = {
             }
 
             //代表自变量数据数组或矩阵的范围
-            var known_x = [];
+            let known_x = [];
 
             if(getObjType(arguments[1]) == "array"){
                 if(getObjType(arguments[1][0]) == "array" && !func_methods.isDyadicArr(arguments[1])){
@@ -9713,11 +9713,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_y = [], data_x = [];
+            let data_y = [], data_x = [];
 
-            for(var i = 0; i < known_y.length; i++){
-                var num_y = known_y[i];
-                var num_x = known_x[i];
+            for(let i = 0; i < known_y.length; i++){
+                let num_y = known_y[i];
+                let num_x = known_x[i];
 
                 if(isRealNum(num_y) && isRealNum(num_x)){
                     data_y.push(parseFloat(num_y));
@@ -9730,15 +9730,15 @@ const functionImplementation = {
             }
 
             //计算
-            var xmean = jStat.mean(data_x);
-            var ymean = jStat.mean(data_y);
+            let xmean = jStat.mean(data_x);
+            let ymean = jStat.mean(data_y);
 
-            var n = data_x.length;
-            var lft = 0;
-            var num = 0;
-            var den = 0;
+            let n = data_x.length;
+            let lft = 0;
+            let num = 0;
+            let den = 0;
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 lft += Math.pow(data_y[i] - ymean, 2);
                 num += (data_x[i] - xmean) * (data_y[i] - ymean);
                 den += Math.pow(data_x[i] - xmean, 2);
@@ -9747,7 +9747,7 @@ const functionImplementation = {
             return Math.sqrt((lft - num * num / den) / (n - 2));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9759,8 +9759,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9769,7 +9769,7 @@ const functionImplementation = {
 
         try {
             //要正态化的随机变量值
-            var x = func_methods.getFirstValue(arguments[0]);
+            let x = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
@@ -9781,7 +9781,7 @@ const functionImplementation = {
             x = parseFloat(x);
 
             //分布的均值
-            var mean = func_methods.getFirstValue(arguments[1]);
+            let mean = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(mean)){
                 return mean;
             }
@@ -9793,7 +9793,7 @@ const functionImplementation = {
             mean = parseFloat(mean);
 
             //分布的标准偏差
-            var standard_dev = func_methods.getFirstValue(arguments[2]);
+            let standard_dev = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(standard_dev)){
                 return standard_dev;
             }
@@ -9811,7 +9811,7 @@ const functionImplementation = {
             return (x - mean) / standard_dev;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9823,8 +9823,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9833,7 +9833,7 @@ const functionImplementation = {
 
         try {
             //要正态化的随机变量值
-            var dataArr = [];
+            let dataArr = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -9853,10 +9853,10 @@ const functionImplementation = {
                 dataArr.push(arguments[0]);
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -9864,7 +9864,7 @@ const functionImplementation = {
             }
 
             //要返回的数据在数组或数据区域里的位置（从小到大）
-            var k = func_methods.getFirstValue(arguments[1]);
+            let k = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(k)){
                 return k;
             }
@@ -9890,7 +9890,7 @@ const functionImplementation = {
                     })[k - 1];
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -9902,8 +9902,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -9912,7 +9912,7 @@ const functionImplementation = {
 
         try {
             //代表因变量数据数组或矩阵的范围
-            var known_y = [];
+            let known_y = [];
 
             if(getObjType(arguments[0]) == "array"){
                 if(getObjType(arguments[0][0]) == "array" && !func_methods.isDyadicArr(arguments[0])){
@@ -9933,7 +9933,7 @@ const functionImplementation = {
             }
 
             //代表自变量数据数组或矩阵的范围
-            var known_x = [];
+            let known_x = [];
 
             if(getObjType(arguments[1]) == "array"){
                 if(getObjType(arguments[1][0]) == "array" && !func_methods.isDyadicArr(arguments[1])){
@@ -9958,11 +9958,11 @@ const functionImplementation = {
             }
 
             //known_y 和 known_x 只取数值
-            var data_y = [], data_x = [];
+            let data_y = [], data_x = [];
 
-            for(var i = 0; i < known_y.length; i++){
-                var num_y = known_y[i];
-                var num_x = known_x[i];
+            for(let i = 0; i < known_y.length; i++){
+                let num_y = known_y[i];
+                let num_x = known_x[i];
 
                 if(isRealNum(num_y) && isRealNum(num_x)){
                     data_y.push(parseFloat(num_y));
@@ -9975,14 +9975,14 @@ const functionImplementation = {
             }
 
             //计算
-            var xmean = jStat.mean(data_x);
-            var ymean = jStat.mean(data_y);
+            let xmean = jStat.mean(data_x);
+            let ymean = jStat.mean(data_y);
 
-            var n = data_x.length;
-            var num = 0;
-            var den = 0;
+            let n = data_x.length;
+            let num = 0;
+            let den = 0;
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 num += (data_x[i] - xmean) * (data_y[i] - ymean);
                 den += Math.pow(data_x[i] - xmean, 2);
             }
@@ -9990,7 +9990,7 @@ const functionImplementation = {
             return num / den;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10002,8 +10002,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10011,10 +10011,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -10035,10 +10035,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -10050,17 +10050,17 @@ const functionImplementation = {
             }
 
             //计算
-            var mean = jStat.mean(dataArr_n);
-            var n = dataArr_n.length;
-            var sigma = 0;
-            for (var i = 0; i < n; i++) {
+            let mean = jStat.mean(dataArr_n);
+            let n = dataArr_n.length;
+            let sigma = 0;
+            for (let i = 0; i < n; i++) {
                 sigma += Math.pow(dataArr_n[i] - mean, 3);
             }
 
             return n * sigma / ((n - 1) * (n - 2) * Math.pow(jStat.stdev(dataArr_n, true), 3));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10072,8 +10072,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10081,10 +10081,10 @@ const functionImplementation = {
         }
 
         try {
-            var dataArr = [];
+            let dataArr = [];
 
-            for (var i = 0; i < arguments.length; i++) {
-                var data = arguments[i];
+            for (let i = 0; i < arguments.length; i++) {
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -10105,10 +10105,10 @@ const functionImplementation = {
                 }
             }
 
-            var dataArr_n = [];
+            let dataArr_n = [];
 
-            for(var i = 0; i < dataArr.length; i++){
-                var number = dataArr[i];
+            for(let i = 0; i < dataArr.length; i++){
+                let number = dataArr[i];
 
                 if(isRealNum(number)){
                     dataArr_n.push(parseFloat(number));
@@ -10120,12 +10120,12 @@ const functionImplementation = {
             }
 
             //计算
-            var mean = jStat.mean(dataArr_n);
-            var n = dataArr_n.length;
-            var m2 = 0;
-            var m3 = 0;
+            let mean = jStat.mean(dataArr_n);
+            let n = dataArr_n.length;
+            let m2 = 0;
+            let m3 = 0;
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 m3 += Math.pow(dataArr_n[i] - mean, 3);
                 m2 += Math.pow(dataArr_n[i] - mean, 2);
             }
@@ -10136,7 +10136,7 @@ const functionImplementation = {
             return m3 / Math.pow(m2, 3 / 2);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10148,8 +10148,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10158,7 +10158,7 @@ const functionImplementation = {
 
         try {
             //行号
-            var row_num = func_methods.getFirstValue(arguments[0]);
+            let row_num = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(row_num)){
                 return row_num;
             }
@@ -10170,7 +10170,7 @@ const functionImplementation = {
             row_num = parseInt(row_num);
 
             //列标
-            var column_num = func_methods.getFirstValue(arguments[1]);
+            let column_num = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(column_num)){
                 return column_num;
             }
@@ -10182,7 +10182,7 @@ const functionImplementation = {
             column_num = parseInt(column_num);
 
             //引用类型
-            var abs_num = 1;
+            let abs_num = 1;
             if(arguments.length >= 3){
                 abs_num = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(abs_num)){
@@ -10197,7 +10197,7 @@ const functionImplementation = {
             }
 
             //A1标记形式 -- R1C1标记形式
-            var A1 = true;
+            let A1 = true;
             if(arguments.length >= 4){
                 A1 = func_methods.getCellBoolen(arguments[3]);
 
@@ -10215,7 +10215,7 @@ const functionImplementation = {
             }
 
             //计算
-            var str;
+            let str;
             if(A1){
                 column_num = chatatABC(column_num - 1);
 
@@ -10253,7 +10253,7 @@ const functionImplementation = {
 
             if(arguments.length == 5){
                 //工作表名称
-                var sheet_text = func_methods.getFirstValue(arguments[4]);
+                let sheet_text = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(sheet_text)){
                     return sheet_text;
                 }
@@ -10265,7 +10265,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10277,8 +10277,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10287,13 +10287,13 @@ const functionImplementation = {
 
         try {
             //以带引号的字符串形式提供的单元格引用
-            var ref_text = func_methods.getFirstValue(arguments[0], "text");
+            let ref_text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(ref_text)){
                 return ref_text;
             }
 
             //A1标记形式 -- R1C1标记形式
-            var A1 = true;
+            let A1 = true;
             if(arguments.length == 2){
                 A1 = func_methods.getCellBoolen(arguments[1]);
 
@@ -10355,7 +10355,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10367,8 +10367,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10378,7 +10378,7 @@ const functionImplementation = {
         try {
             if(arguments.length == 1){
                 //要返回其行号的单元格
-                var reference;
+                let reference;
 
                 if(getObjType(arguments[0]) == "array"){
                     return formula.error.v;
@@ -10391,7 +10391,7 @@ const functionImplementation = {
                 }
 
                 if(formula.iscelldata(reference)){
-                    var cellrange = formula.getcellrange(reference);
+                    let cellrange = formula.getcellrange(reference);
 
                     return cellrange["row"][0] + 1;
                 }
@@ -10404,7 +10404,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10416,8 +10416,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10442,7 +10442,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10454,8 +10454,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10465,7 +10465,7 @@ const functionImplementation = {
         try {
             if(arguments.length == 1){
                 //要返回其列号的单元格
-                var reference;
+                let reference;
 
                 if(getObjType(arguments[0]) == "array"){
                     return formula.error.v;
@@ -10478,7 +10478,7 @@ const functionImplementation = {
                 }
 
                 if(formula.iscelldata(reference)){
-                    var cellrange = formula.getcellrange(reference);
+                    let cellrange = formula.getcellrange(reference);
 
                     return cellrange["column"][0] + 1;
                 }
@@ -10491,7 +10491,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10503,8 +10503,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10529,7 +10529,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10541,8 +10541,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10555,11 +10555,11 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var reference = arguments[0].startCell;
+            let reference = arguments[0].startCell;
             let sheetName = arguments[0].sheetName;
 
             //要偏移的行数
-            var rows = func_methods.getFirstValue(arguments[1]);
+            let rows = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(rows)){
                 return rows;
             }
@@ -10571,7 +10571,7 @@ const functionImplementation = {
             rows = parseInt(rows);
 
             //要偏移的列数
-            var cols = func_methods.getFirstValue(arguments[2]);
+            let cols = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(cols)){
                 return cols;
             }
@@ -10583,7 +10583,7 @@ const functionImplementation = {
             cols = parseInt(cols);
 
             //要从偏移目标开始返回的范围的高度
-            var height = arguments[0].rowl;
+            let height = arguments[0].rowl;
             if(arguments.length >= 4){
                 height = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(height)){
@@ -10598,7 +10598,7 @@ const functionImplementation = {
             }
 
             //要从偏移目标开始返回的范围的宽度
-            var width = arguments[0].coll;
+            let width = arguments[0].coll;
             if(arguments.length == 5){
                 width = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(width)){
@@ -10617,15 +10617,15 @@ const functionImplementation = {
             }
 
             //计算
-            var cellrange = formula.getcellrange(reference);
-            var cellRow0 = cellrange["row"][0];
-            var cellCol0 = cellrange["column"][0];
+            let cellrange = formula.getcellrange(reference);
+            let cellRow0 = cellrange["row"][0];
+            let cellCol0 = cellrange["column"][0];
 
             cellRow0 += rows;
             cellCol0 += cols;
 
-            var cellRow1 = cellRow0 + height - 1;
-            var cellCol1 = cellCol0 + width - 1;
+            let cellRow1 = cellRow0 + height - 1;
+            let cellCol1 = cellCol0 + width - 1;
 
             // let sheetdata = null;
             // sheetdata = Store.flowdata;
@@ -10641,12 +10641,12 @@ const functionImplementation = {
                 return formula.error.r;
             }
 
-            var result = [];
+            let result = [];
 
-            for(var r = cellRow0; r <= cellRow1; r++){
-                var rowArr = [];
+            for(let r = cellRow0; r <= cellRow1; r++){
+                let rowArr = [];
 
-                for(var c = cellCol0; c <= cellCol1; c++){
+                for(let c = cellCol0; c <= cellCol1; c++){
                     if(formula.execFunctionGlobalData != null && formula.execFunctionGlobalData[r+"_"+c+"_"+Store.calculateSheetIndex]!=null){
                         let ef = formula.execFunctionGlobalData[r+"_"+c+"_"+Store.calculateSheetIndex];
                         if(ef!=null){
@@ -10682,7 +10682,7 @@ const functionImplementation = {
             return retAll;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10694,8 +10694,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10704,14 +10704,14 @@ const functionImplementation = {
 
         try {
             //lookup_value
-            var lookup_value = func_methods.getFirstValue(arguments[0]);
+            let lookup_value = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(lookup_value)){
                 return lookup_value;
             }
 
             //lookup_array
-            var data_lookup_array = arguments[1];
-            var lookup_array = [];
+            let data_lookup_array = arguments[1];
+            let lookup_array = [];
 
             if(getObjType(data_lookup_array) == "array"){
                 if(getObjType(data_lookup_array[0]) == "array"){
@@ -10722,7 +10722,7 @@ const functionImplementation = {
                     return formula.error.na;
                 }
                 else{
-                    for(var i = 0; i < data_lookup_array.length; i++){
+                    for(let i = 0; i < data_lookup_array.length; i++){
                         lookup_array.push(data_lookup_array[i]);
                     }
                 }
@@ -10734,8 +10734,8 @@ const functionImplementation = {
 
                 if(data_lookup_array.data != null){
                     if(getObjType(data_lookup_array.data) == "array"){
-                        for(var i = 0; i < data_lookup_array.data.length; i++){
-                            for(var j = 0; j < data_lookup_array.data[i].length; j++){
+                        for(let i = 0; i < data_lookup_array.data.length; i++){
+                            for(let j = 0; j < data_lookup_array.data[i].length; j++){
                                 if(data_lookup_array.data[i][j] != null && !isRealNull(data_lookup_array.data[i][j].v)){
                                     lookup_array.push(data_lookup_array.data[i][j].v);
                                 }
@@ -10749,7 +10749,7 @@ const functionImplementation = {
             }
 
             //match_type
-            var match_type = 1;
+            let match_type = 1;
             if(arguments.length == 3){
                 match_type = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(match_type)){
@@ -10768,10 +10768,10 @@ const functionImplementation = {
             }
 
             //计算
-            var index;
-            var indexValue;
+            let index;
+            let indexValue;
 
-            for (var idx = 0; idx < lookup_array.length; idx++) {
+            for (let idx = 0; idx < lookup_array.length; idx++) {
                 if (match_type === 1) {
                     if (lookup_array[idx] === lookup_value) {
                         return idx + 1;
@@ -10820,7 +10820,7 @@ const functionImplementation = {
             return index ? index : formula.error.na;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -10832,8 +10832,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10842,7 +10842,7 @@ const functionImplementation = {
 
         try {
             //lookup_value
-            var lookup_value = func_methods.getFirstValue(arguments[0], "text");
+            let lookup_value = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(lookup_value)){
                 return lookup_value;
             }
@@ -10852,8 +10852,8 @@ const functionImplementation = {
             }
 
             //table_array
-            var data_table_array = arguments[1];
-            var table_array = [];
+            let data_table_array = arguments[1];
+            let table_array = [];
 
             if(getObjType(data_table_array) == "array"){
                 if(getObjType(data_table_array[0]) == "array"){
@@ -10861,10 +10861,10 @@ const functionImplementation = {
                         return formula.error.v;
                     }
 
-                    for(var i = 0; i < data_table_array.length; i++){
-                        var rowArr = [];
+                    for(let i = 0; i < data_table_array.length; i++){
+                        let rowArr = [];
 
-                        for(var j = 0; j < data_table_array[i].length; j++){
+                        for(let j = 0; j < data_table_array[i].length; j++){
                             rowArr.push(data_table_array[i][j]);
                         }
 
@@ -10872,9 +10872,9 @@ const functionImplementation = {
                     }
                 }
                 else{
-                    var rowArr = [];
+                    let rowArr = [];
 
-                    for(var i = 0; i < data_table_array.length; i++){
+                    for(let i = 0; i < data_table_array.length; i++){
                         rowArr.push(data_table_array[i]);
                     }
 
@@ -10889,7 +10889,7 @@ const functionImplementation = {
             }
 
             //col_index_num
-            var col_index_num = func_methods.getFirstValue(arguments[2]);
+            let col_index_num = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(col_index_num)){
                 return col_index_num;
             }
@@ -10901,7 +10901,7 @@ const functionImplementation = {
             col_index_num = parseInt(col_index_num);
 
             //range_lookup
-            var range_lookup = true;
+            let range_lookup = true;
             if(arguments.length == 4){
                 range_lookup = func_methods.getCellBoolen(arguments[3]);
 
@@ -10922,10 +10922,10 @@ const functionImplementation = {
             if(range_lookup){
                 table_array = orderbydata(table_array, 0, true);
 
-                for(var r = 0; r < table_array.length; r++){
-                    var v = table_array[r][0];
+                for(let r = 0; r < table_array.length; r++){
+                    let v = table_array[r][0];
 
-                    var result;
+                    let result;
 
                     if (isdatetime(lookup_value) && isdatetime(v)) {
                         result = diff(lookup_value, v);
@@ -10959,9 +10959,9 @@ const functionImplementation = {
                 }
             }
             else{
-                var index = null;
+                let index = null;
 
-                for(var r = 0; r < table_array.length; r++){
+                for(let r = 0; r < table_array.length; r++){
                     if(lookup_value.toString() == table_array[r][0].toString()){
                         index = r;
                         break;
@@ -10976,7 +10976,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -10989,8 +10989,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -10998,9 +10998,9 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var searchkey = arguments[0];
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let searchkey = arguments[0];
 
             if(typeof(searchkey) == "object"){
                 searchkey = arguments[0].data;
@@ -11016,9 +11016,9 @@ const functionImplementation = {
                     searchkey = searchkey.v;
                 }
             }
-            var range = arguments[1].data;
-            var index = arguments[2];
-            var isaccurate = false;
+            let range = arguments[1].data;
+            let index = arguments[2];
+            let isaccurate = false;
             if (arguments.length > 3) {
                 isaccurate = !!arguments[3];
             }
@@ -11029,10 +11029,10 @@ const functionImplementation = {
                 return [formula.error.v, "索引必须大于1"];
             }
 
-            var result = formula.error.na;
-            for(var c = 0;c < range[0].length;c++){
-                var matchv = getcellvalue(0, c, range);
-                var showv = getcellvalue(index - 1, c, range);
+            let result = formula.error.na;
+            for(let c = 0;c < range[0].length;c++){
+                let matchv = getcellvalue(0, c, range);
+                let showv = getcellvalue(index - 1, c, range);
 
                 if (isaccurate) {
                     if (matchv.indexOf(searchkey) > -1) {
@@ -11049,7 +11049,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11061,8 +11061,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11073,9 +11073,9 @@ const functionImplementation = {
             //完成矢量形式（数组形式不推荐，未做）
             //=LOOKUP(4.19, A2:A6, B2:B6)
             //=LOOKUP(0, A2:A6, B2:B6)
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var searchkey = arguments[0];
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let searchkey = arguments[0];
 
             if(typeof(searchkey) == "object"){
                 searchkey = arguments[0].data;
@@ -11093,9 +11093,9 @@ const functionImplementation = {
             }
 
             //必须为一维数组
-            var range = arguments[1].data;
-            var range2;
-            var result = formula.error.na;
+            let range = arguments[1].data;
+            let range2;
+            let result = formula.error.na;
 
             function sortNum(a,b){ //用于排序
                 return b - a;
@@ -11110,9 +11110,9 @@ const functionImplementation = {
 
             if(typeof(searchkey) == "string"){ //字符串直接判断是否相等
 
-                for (var i = 0; i < range.length; i++) {
-                    var matchv = range[i];
-                    var showv;
+                for (let i = 0; i < range.length; i++) {
+                    let matchv = range[i];
+                    let showv;
                     if(arguments[2]){
                         showv = range2[i];
                         if(matchv == searchkey) {
@@ -11125,11 +11125,11 @@ const functionImplementation = {
                     }
                 }
             }else if(isdatatype(searchkey) == "num"){ //数字判断1.是否相等2.不等，去找接近值
-                    var rangeNow = [];
+                    let rangeNow = [];
 
-                    for (var i = 0; i < range.length; i++) {
-                        var matchv = range[i];
-                        var showv;
+                    for (let i = 0; i < range.length; i++) {
+                        let matchv = range[i];
+                        let showv;
 
                         if(arguments[2]){
                             showv = range2[i];
@@ -11153,13 +11153,13 @@ const functionImplementation = {
                         rangeNow.push(searchkey);
                         rangeNow.sort(sortNum);
 
-                        var index = rangeNow.indexOf(searchkey);
+                        let index = rangeNow.indexOf(searchkey);
                         if(index == (rangeNow.length -1)){
                             return [formula.error.na, "找不到对应参数"];
                         }else{
-                            var mat = rangeNow[index + 1];
+                            let mat = rangeNow[index + 1];
                             if(arguments[2]){
-                                var i = range.indexOf(mat);//改成数组
+                                let i = range.indexOf(mat);//改成数组
                                 result = range2[i];
                             }else{
                                 result = mat;
@@ -11174,7 +11174,7 @@ const functionImplementation = {
 
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11186,8 +11186,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11196,8 +11196,8 @@ const functionImplementation = {
 
         try {
             //单元格区域或数组常量
-            var data_array = arguments[0];
-            var array = [];
+            let data_array = arguments[0];
+            let array = [];
             let isReference = false;
             if(getObjType(data_array) == "array"){
                 if(getObjType(data_array[0]) == "array" && !func_methods.isDyadicArr(data_array)){
@@ -11211,10 +11211,10 @@ const functionImplementation = {
                 isReference = true;
             }
 
-            var rowlen = array.length, collen = array[0].length;
+            let rowlen = array.length, collen = array[0].length;
 
             //选择数组中的某行，函数从该行返回数值
-            var row_num = func_methods.getFirstValue(arguments[1]);
+            let row_num = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(row_num)){
                 return row_num;
             }
@@ -11226,7 +11226,7 @@ const functionImplementation = {
             row_num = parseInt(row_num);
 
             //选择数组中的某列，函数从该列返回数值
-            var column_num = func_methods.getFirstValue(arguments[2]);
+            let column_num = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(column_num)){
                 return column_num;
             }
@@ -11243,9 +11243,9 @@ const functionImplementation = {
 
             if(isReference){
 
-                var cellrange = formula.getcellrange(data_array.startCell);
-                var cellRow0 = cellrange["row"][0];
-                var cellCol0 = cellrange["column"][0];
+                let cellrange = formula.getcellrange(data_array.startCell);
+                let cellRow0 = cellrange["row"][0];
+                let cellCol0 = cellrange["column"][0];
 
 
                 let data = array;
@@ -11314,7 +11314,7 @@ const functionImplementation = {
 
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11326,8 +11326,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11338,7 +11338,7 @@ const functionImplementation = {
             return formula.error.v;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11350,8 +11350,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11360,7 +11360,7 @@ const functionImplementation = {
 
         try {
             //指定要返回哪一项
-            var index_num = func_methods.getFirstValue(arguments[0]);
+            let index_num = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(index_num)){
                 return index_num;
             }
@@ -11375,7 +11375,7 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var data_result = arguments[index_num];
+            let data_result = arguments[index_num];
 
             if(getObjType(data_result) == "array"){
                 if(getObjType(data_result[0]) == "array" && !func_methods.isDyadicArr(data_result)){
@@ -11390,7 +11390,7 @@ const functionImplementation = {
                 }
 
                 if(getObjType(data_result.data) == "array"){
-                    var result = func_methods.getCellDataDyadicArr(data_result.data, "number");
+                    let result = func_methods.getCellDataDyadicArr(data_result.data, "number");
 
                     return result;
                 }
@@ -11407,7 +11407,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11419,8 +11419,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11431,7 +11431,7 @@ const functionImplementation = {
             return formula.error.v;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11443,8 +11443,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11453,7 +11453,7 @@ const functionImplementation = {
 
         try {
             //时
-            var hour = func_methods.getFirstValue(arguments[0]);
+            let hour = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(hour)){
                 return hour;
             }
@@ -11465,7 +11465,7 @@ const functionImplementation = {
             hour = parseInt(hour);
 
             //分
-            var minute = func_methods.getFirstValue(arguments[1]);
+            let minute = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(minute)){
                 return minute;
             }
@@ -11477,7 +11477,7 @@ const functionImplementation = {
             minute = parseInt(minute);
 
             //秒
-            var second = func_methods.getFirstValue(arguments[2]);
+            let second = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(second)){
                 return second;
             }
@@ -11504,12 +11504,12 @@ const functionImplementation = {
             }
 
             //计算
-            var time = dayjs().set({'hour': hour, 'minute': minute, 'second': second});
+            let time = dayjs().set({'hour': hour, 'minute': minute, 'second': second});
 
             return dayjs(time).format("h:mm:ss a");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11521,8 +11521,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11531,7 +11531,7 @@ const functionImplementation = {
 
         try {
             //用于表示时间的字符串
-            var time_text = func_methods.getCellDate(arguments[0]);
+            let time_text = func_methods.getCellDate(arguments[0]);
             if(valueIsError(time_text)){
                 return time_text;
             }
@@ -11544,7 +11544,7 @@ const functionImplementation = {
             return (3600 * dayjs(time_text).get('hour') + 60 * dayjs(time_text).get('minute') + dayjs(time_text).get('second')) / 86400;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11556,8 +11556,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11566,13 +11566,13 @@ const functionImplementation = {
 
         try {
             //用于计算结果的参照日期
-            var start_date = func_methods.getCellDate(arguments[0]);
+            let start_date = func_methods.getCellDate(arguments[0]);
             if(valueIsError(start_date)){
                 return start_date;
             }
 
             //月数
-            var months = func_methods.getFirstValue(arguments[1]);
+            let months = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(months)){
                 return months;
             }
@@ -11588,15 +11588,15 @@ const functionImplementation = {
             }
 
             //计算
-            var date = dayjs(start_date).add(months + 1, 'months').set('date', 1).subtract(1, 'days');
-            var mask = genarate(dayjs(date).format("YYYY-MM-DD H:mm:ss"));
+            let date = dayjs(start_date).add(months + 1, 'months').set('date', 1).subtract(1, 'days');
+            let mask = genarate(dayjs(date).format("YYYY-MM-DD H:mm:ss"));
 
-            var result = mask[2];
+            let result = mask[2];
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11608,8 +11608,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11618,13 +11618,13 @@ const functionImplementation = {
 
         try {
             //用于计算结果的参照日期
-            var start_date = func_methods.getCellDate(arguments[0]);
+            let start_date = func_methods.getCellDate(arguments[0]);
             if(valueIsError(start_date)){
                 return start_date;
             }
 
             //月数
-            var months = func_methods.getFirstValue(arguments[1]);
+            let months = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(months)){
                 return months;
             }
@@ -11640,15 +11640,15 @@ const functionImplementation = {
             }
 
             //计算
-            var date = dayjs(start_date).add(months, 'months');
-            var mask = genarate(dayjs(date).format("YYYY-MM-DD h:mm:ss"));
+            let date = dayjs(start_date).add(months, 'months');
+            let mask = genarate(dayjs(date).format("YYYY-MM-DD h:mm:ss"));
 
-            var result = mask[2];
+            let result = mask[2];
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11660,8 +11660,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11670,7 +11670,7 @@ const functionImplementation = {
 
         try {
             //时间值
-            var time_text = func_methods.getCellDate(arguments[0]);
+            let time_text = func_methods.getCellDate(arguments[0]);
             if(valueIsError(time_text)){
                 return time_text;
             }
@@ -11679,12 +11679,12 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var result = dayjs(time_text).seconds();
+            let result = dayjs(time_text).seconds();
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11696,8 +11696,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11706,7 +11706,7 @@ const functionImplementation = {
 
         try {
             //时间值
-            var time_text = func_methods.getCellDate(arguments[0]);
+            let time_text = func_methods.getCellDate(arguments[0]);
             if(valueIsError(time_text)){
                 return time_text;
             }
@@ -11715,12 +11715,12 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var result = dayjs(time_text).minutes();
+            let result = dayjs(time_text).minutes();
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11732,8 +11732,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11742,7 +11742,7 @@ const functionImplementation = {
 
         try {
             //时间值
-            var time_text = func_methods.getCellDate(arguments[0]);
+            let time_text = func_methods.getCellDate(arguments[0]);
             if(valueIsError(time_text)){
                 return time_text;
             }
@@ -11751,12 +11751,12 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var result = dayjs(time_text).hours();
+            let result = dayjs(time_text).hours();
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11768,8 +11768,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11780,7 +11780,7 @@ const functionImplementation = {
             return dayjs().format("YYYY-M-D HH:mm");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11792,8 +11792,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11802,16 +11802,16 @@ const functionImplementation = {
 
         try {
             if(arguments.length == 3){
-                var result = window.luckysheet_function.NETWORKDAYS_INTL.f(arguments[0], arguments[1], 1, arguments[2]);
+                let result = window.luckysheet_function.NETWORKDAYS_INTL.f(arguments[0], arguments[1], 1, arguments[2]);
             }
             else{
-                var result = window.luckysheet_function.NETWORKDAYS_INTL.f(arguments[0], arguments[1], 1);
+                let result = window.luckysheet_function.NETWORKDAYS_INTL.f(arguments[0], arguments[1], 1);
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11823,8 +11823,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11832,7 +11832,7 @@ const functionImplementation = {
         }
 
         try {
-            var WEEKEND_TYPES = [
+            let WEEKEND_TYPES = [
                 [],
                 [6, 0],
                 [0, 1],
@@ -11854,7 +11854,7 @@ const functionImplementation = {
             ];
 
             //用于计算净工作日天数的时间段开始日期
-            var start_date = func_methods.getCellDate(arguments[0]);
+            let start_date = func_methods.getCellDate(arguments[0]);
             if(valueIsError(start_date)){
                 return start_date;
             }
@@ -11864,7 +11864,7 @@ const functionImplementation = {
             }
 
             //用于计算净工作日天数的时间段结束日期
-            var end_date = func_methods.getCellDate(arguments[1]);
+            let end_date = func_methods.getCellDate(arguments[1]);
             if(valueIsError(end_date)){
                 return end_date;
             }
@@ -11874,7 +11874,7 @@ const functionImplementation = {
             }
 
             //用于表示哪些天为周末的数字或字符串
-            var weekend = WEEKEND_TYPES[1];
+            let weekend = WEEKEND_TYPES[1];
             if(arguments.length >= 3){
                 weekend = arguments[2];
 
@@ -11902,7 +11902,7 @@ const functionImplementation = {
             }
 
             //这是一个范围或数组常量，其中包含作为节假日的日期
-            var holidays = [];
+            let holidays = [];
             if(arguments.length == 4){
                 holidays = func_methods.getCellrangeDate(arguments[3]);
                 if(valueIsError(holidays)){
@@ -11910,20 +11910,20 @@ const functionImplementation = {
                 }
             }
 
-            for (var i = 0; i < holidays.length; i++) {
+            for (let i = 0; i < holidays.length; i++) {
                 if(!dayjs(holidays[i]).isValid()){
                     return formula.error.v;
                 }
             }
 
             //计算
-            var days = dayjs(end_date).diff(dayjs(start_date), 'days') + 1;
-            var total = days;
-            var day = dayjs(start_date);
+            let days = dayjs(end_date).diff(dayjs(start_date), 'days') + 1;
+            let total = days;
+            let day = dayjs(start_date);
 
             for (i = 0; i < days; i++) {
-                var d = dayjs(day).weekday();
-                var dec = false;
+                let d = dayjs(day).weekday();
+                let dec = false;
 
                 if(getObjType(weekend) == "array"){
                     if (d === weekend[0] || d === weekend[1]) {
@@ -11940,7 +11940,7 @@ const functionImplementation = {
                     }
                 }
 
-                for (var j = 0; j < holidays.length; j++) {
+                for (let j = 0; j < holidays.length; j++) {
                     if(dayjs(day).diff(dayjs(holidays[j]), 'days') === 0){
                         dec = true;
                         break;
@@ -11957,7 +11957,7 @@ const functionImplementation = {
             return total;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -11969,8 +11969,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -11979,7 +11979,7 @@ const functionImplementation = {
 
         try {
             //用于日期和时间计算的日期
-            var date = func_methods.getCellDate(arguments[0]);
+            let date = func_methods.getCellDate(arguments[0]);
             if(valueIsError(date)){
                 return date;
             }
@@ -11992,7 +11992,7 @@ const functionImplementation = {
             return dayjs(date).isoWeeks();
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12004,8 +12004,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12013,7 +12013,7 @@ const functionImplementation = {
         }
 
         try {
-            var WEEK_STARTS = [
+            let WEEK_STARTS = [
                 undefined,
                 7,
                 1,
@@ -12035,7 +12035,7 @@ const functionImplementation = {
             ];
 
             //用于计算净工作日天数的时间段开始日期
-            var serial_number = func_methods.getCellDate(arguments[0]);
+            let serial_number = func_methods.getCellDate(arguments[0]);
             if(valueIsError(serial_number)){
                 return serial_number;
             }
@@ -12045,7 +12045,7 @@ const functionImplementation = {
             }
 
             //用于表示哪些天为周末的数字或字符串
-            var return_type = 1;
+            let return_type = 1;
             if(arguments.length == 2){
                 return_type = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(return_type)){
@@ -12068,14 +12068,14 @@ const functionImplementation = {
             }
 
             //计算
-            var week_start = WEEK_STARTS[return_type];
-            var inc = dayjs(serial_number).isoWeekday() >= week_start ? 1 : 0;
-            var result = dayjs(serial_number).isoWeeks() + inc;
+            let week_start = WEEK_STARTS[return_type];
+            let inc = dayjs(serial_number).isoWeekday() >= week_start ? 1 : 0;
+            let result = dayjs(serial_number).isoWeeks() + inc;
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12087,8 +12087,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12096,7 +12096,7 @@ const functionImplementation = {
         }
 
         try {
-            var WEEK_TYPES = [
+            let WEEK_TYPES = [
                 [],
                 [1, 2, 3, 4, 5, 6, 7],
                 [7, 1, 2, 3, 4, 5, 6],
@@ -12118,7 +12118,7 @@ const functionImplementation = {
             ];
 
             //用于计算净工作日天数的时间段开始日期
-            var serial_number = func_methods.getCellDate(arguments[0]);
+            let serial_number = func_methods.getCellDate(arguments[0]);
             if(valueIsError(serial_number)){
                 return serial_number;
             }
@@ -12128,7 +12128,7 @@ const functionImplementation = {
             }
 
             //以数字指示使用哪种编号顺序来表示星期几
-            var return_type = 1;
+            let return_type = 1;
             if(arguments.length == 2){
                 return_type = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(return_type)){
@@ -12147,12 +12147,12 @@ const functionImplementation = {
             }
 
             //计算
-            var result = WEEK_TYPES[return_type][dayjs(serial_number).day()];
+            let result = WEEK_TYPES[return_type][dayjs(serial_number).day()];
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12164,8 +12164,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12174,7 +12174,7 @@ const functionImplementation = {
 
         try {
             //用于计算净工作日天数的时间段开始日期
-            var serial_number = func_methods.getCellDate(arguments[0]);
+            let serial_number = func_methods.getCellDate(arguments[0]);
             if(valueIsError(serial_number)){
                 return serial_number;
             }
@@ -12187,7 +12187,7 @@ const functionImplementation = {
             return dayjs(serial_number).date();
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12199,8 +12199,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12209,7 +12209,7 @@ const functionImplementation = {
 
         try {
             //结束日期
-            var end_date = func_methods.getCellDate(arguments[0]);
+            let end_date = func_methods.getCellDate(arguments[0]);
             if(valueIsError(end_date)){
                 return end_date;
             }
@@ -12219,7 +12219,7 @@ const functionImplementation = {
             }
 
             //开始日期
-            var start_date = func_methods.getCellDate(arguments[1]);
+            let start_date = func_methods.getCellDate(arguments[1]);
             if(valueIsError(start_date)){
                 return start_date;
             }
@@ -12229,12 +12229,12 @@ const functionImplementation = {
             }
 
             //计算
-            var result = dayjs(end_date).diff(dayjs(start_date), 'days');
+            let result = dayjs(end_date).diff(dayjs(start_date), 'days');
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12246,8 +12246,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12256,7 +12256,7 @@ const functionImplementation = {
 
         try {
             //开始日期
-            var start_date = func_methods.getCellDate(arguments[0]);
+            let start_date = func_methods.getCellDate(arguments[0]);
             if(valueIsError(start_date)){
                 return start_date;
             }
@@ -12266,7 +12266,7 @@ const functionImplementation = {
             }
 
             //结束日期
-            var end_date = func_methods.getCellDate(arguments[1]);
+            let end_date = func_methods.getCellDate(arguments[1]);
             if(valueIsError(end_date)){
                 return end_date;
             }
@@ -12276,7 +12276,7 @@ const functionImplementation = {
             }
 
             //天数计算方法
-            var method = false;
+            let method = false;
             if(arguments.length == 3){
                 method = func_methods.getCellBoolen(arguments[2]);
 
@@ -12286,17 +12286,17 @@ const functionImplementation = {
             }
 
             //计算
-            var sm = dayjs(start_date).month();
-            var em = dayjs(end_date).month();
-            var sd, ed;
+            let sm = dayjs(start_date).month();
+            let em = dayjs(end_date).month();
+            let sd, ed;
 
             if (method) {
                 sd = dayjs(start_date).date() === 31 ? 30 : dayjs(start_date).date();
                 ed = dayjs(end_date).date() === 31 ? 30 : dayjs(end_date).date();
             }
             else {
-                var smd = dayjs().set({ 'year': dayjs(start_date).year(), 'month': sm + 1, 'date': 0 }).date();
-                var emd = dayjs().set({ 'year': dayjs(end_date).year(), 'month': em + 1, 'date': 0 }).date();
+                let smd = dayjs().set({ 'year': dayjs(start_date).year(), 'month': sm + 1, 'date': 0 }).date();
+                let emd = dayjs().set({ 'year': dayjs(end_date).year(), 'month': em + 1, 'date': 0 }).date();
                 sd = dayjs(start_date).date() === smd ? 30 : dayjs(start_date).date();
 
                 if (dayjs(end_date).date() === emd) {
@@ -12313,12 +12313,12 @@ const functionImplementation = {
                 }
             }
 
-            var result = 360 * dayjs(end_date).diff(dayjs(start_date), 'years') + 30 * (em - sm) + (ed - sd);
+            let result = 360 * dayjs(end_date).diff(dayjs(start_date), 'years') + 30 * (em - sm) + (ed - sd);
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12330,8 +12330,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12340,7 +12340,7 @@ const functionImplementation = {
 
         try {
             //年
-            var year = func_methods.getFirstValue(arguments[0]);
+            let year = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(year)){
                 return year;
             }
@@ -12352,7 +12352,7 @@ const functionImplementation = {
             year = parseInt(year);
 
             //月
-            var month = func_methods.getFirstValue(arguments[1]);
+            let month = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(month)){
                 return month;
             }
@@ -12364,7 +12364,7 @@ const functionImplementation = {
             month = parseInt(month);
 
             //日
-            var day = func_methods.getFirstValue(arguments[2]);
+            let day = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(day)){
                 return day;
             }
@@ -12382,7 +12382,7 @@ const functionImplementation = {
                 year = year + 1900;
             }
 
-            var date = dayjs().set({ 'year': year, 'month': month - 1, "date": day });
+            let date = dayjs().set({ 'year': year, 'month': month - 1, "date": day });
 
             if(dayjs(date).year() < 1900){
                 return formula.error.nm;
@@ -12391,7 +12391,7 @@ const functionImplementation = {
             return dayjs(date).format("YYYY-MM-DD");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12403,8 +12403,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12413,7 +12413,7 @@ const functionImplementation = {
 
         try {
             //开始日期
-            var date_text = func_methods.getCellDate(arguments[0]);
+            let date_text = func_methods.getCellDate(arguments[0]);
             if(valueIsError(date_text)){
                 return date_text;
             }
@@ -12424,12 +12424,12 @@ const functionImplementation = {
 
             //计算
             date_text = dayjs(date_text).format("YYYY-MM-DD");
-            var result = genarate(date_text)[2];
+            let result = genarate(date_text)[2];
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12441,8 +12441,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12451,22 +12451,22 @@ const functionImplementation = {
 
         try {
             luckysheet_getValue(arguments);
-            for (var i = 0; i < arguments.length-1; i++){
+            for (let i = 0; i < arguments.length-1; i++){
                 arguments[i] = moment.fromOADate(arguments[i]).format("l");
                 if(!isdatetime(arguments[i])){
                     return formula.error.v;
                 }
             }
 
-            var startDate = dayjs(arguments[0]);
-            var endDate = dayjs(arguments[1]);
-            var unit = arguments[2];
-            var result = formula.error.v;
+            let startDate = dayjs(arguments[0]);
+            let endDate = dayjs(arguments[1]);
+            let unit = arguments[2];
+            let result = formula.error.v;
             if(window.luckysheet_function.DAYS.f(endDate,startDate) < 0){
                 return formula.error.v;
             }
-
-            switch(unit){
+            let startM, endM;
+            switch(unita){
                 case "Y":case "y":
                     result = endDate.diff(startDate,"years",false);
                     break;
@@ -12480,13 +12480,13 @@ const functionImplementation = {
                     result = endDate.format('DD') - startDate.format('DD');
                     break;
                 case "YM":case "ym":
-                    var startM = parseInt(startDate.format('M')); //注意字符串转化为数字
-                    var endM = parseInt(endDate.format('M'));
+                     startM = parseInt(startDate.format('M')); //注意字符串转化为数字
+                     endM = parseInt(endDate.format('M'));
                     result = (startM <= endM) ?  endM - startM : endM + 12 - startM;
                     break;
                 case "YD":case "yd":
-                    var startM = genarate(startDate.format('MM-DD'))[2];
-                    var endM = genarate(endDate.format('MM-DD'))[2];
+                     startM = genarate(startDate.format('MM-DD'))[2];
+                     endM = genarate(endDate.format('MM-DD'))[2];
 
                     result = (startM <= endM) ? endM - startM : endM + 365 - startM;
                     break;
@@ -12497,7 +12497,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12509,8 +12509,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12519,16 +12519,16 @@ const functionImplementation = {
 
         try {
             if(arguments.length == 3){
-                var result = window.luckysheet_function.WORKDAY_INTL.f(arguments[0], arguments[1], 1, arguments[2]);
+                let result = window.luckysheet_function.WORKDAY_INTL.f(arguments[0], arguments[1], 1, arguments[2]);
             }
             else{
-                var result = window.luckysheet_function.WORKDAY_INTL.f(arguments[0], arguments[1], 1);
+                let result = window.luckysheet_function.WORKDAY_INTL.f(arguments[0], arguments[1], 1);
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12540,8 +12540,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12549,7 +12549,7 @@ const functionImplementation = {
         }
 
         try {
-            var WEEKEND_TYPES = [
+            let WEEKEND_TYPES = [
                 [],
                 [6, 0],
                 [0, 1],
@@ -12571,7 +12571,7 @@ const functionImplementation = {
             ];
 
             //计算的开始日期
-            var start_date = func_methods.getCellDate(arguments[0]);
+            let start_date = func_methods.getCellDate(arguments[0]);
             if(valueIsError(start_date)){
                 return start_date;
             }
@@ -12581,7 +12581,7 @@ const functionImplementation = {
             }
 
             //工作日的天数
-            var days = func_methods.getFirstValue(arguments[1]);
+            let days = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(days)){
                 return days;
             }
@@ -12593,7 +12593,7 @@ const functionImplementation = {
             days = parseInt(days);
 
             //用于表示哪些天为周末的数字或字符串
-            var weekend = WEEKEND_TYPES[1];
+            let weekend = WEEKEND_TYPES[1];
             if(arguments.length >= 3){
                 weekend = arguments[2];
 
@@ -12621,7 +12621,7 @@ const functionImplementation = {
             }
 
             //这是一个范围或数组常量，其中包含作为节假日的日期
-            var holidays = [];
+            let holidays = [];
             if(arguments.length == 4){
                 holidays = func_methods.getCellrangeDate(arguments[3]);
                 if(valueIsError(holidays)){
@@ -12629,18 +12629,18 @@ const functionImplementation = {
                 }
             }
 
-            for (var i = 0; i < holidays.length; i++) {
+            for (let i = 0; i < holidays.length; i++) {
                 if(!dayjs(holidays[i]).isValid()){
                     return formula.error.v;
                 }
             }
 
             //计算
-            var d = 0;
+            let d = 0;
 
             while (d < days) {
                 start_date = dayjs(start_date).add(1, 'days');
-                var day = dayjs(start_date).weekday();
+                let day = dayjs(start_date).weekday();
 
                 if(getObjType(weekend)){
                     if (day === weekend[0] || day === weekend[1]) {
@@ -12657,7 +12657,7 @@ const functionImplementation = {
                     }
                 }
 
-                for (var j = 0; j < holidays.length; j++) {
+                for (let j = 0; j < holidays.length; j++) {
                     if(dayjs(start_date).diff(dayjs(holidays[j]), 'days') === 0){
                         d--;
                         break;
@@ -12670,7 +12670,7 @@ const functionImplementation = {
             return dayjs(start_date).format("YYYY-MM-DD");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12682,8 +12682,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12692,7 +12692,7 @@ const functionImplementation = {
 
         try {
             //开始日期
-            var serial_number = func_methods.getCellDate(arguments[0]);
+            let serial_number = func_methods.getCellDate(arguments[0]);
             if(valueIsError(serial_number)){
                 return serial_number;
             }
@@ -12705,7 +12705,7 @@ const functionImplementation = {
             return dayjs(serial_number).year();
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12717,8 +12717,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12727,7 +12727,7 @@ const functionImplementation = {
 
         try {
             //开始日期
-            var start_date = func_methods.getCellDate(arguments[0]);
+            let start_date = func_methods.getCellDate(arguments[0]);
             if(valueIsError(start_date)){
                 return start_date;
             }
@@ -12737,7 +12737,7 @@ const functionImplementation = {
             }
 
             //结束日期
-            var end_date = func_methods.getCellDate(arguments[1]);
+            let end_date = func_methods.getCellDate(arguments[1]);
             if(valueIsError(end_date)){
                 return end_date;
             }
@@ -12747,7 +12747,7 @@ const functionImplementation = {
             }
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 3){
                 basis = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(basis)){
@@ -12766,14 +12766,14 @@ const functionImplementation = {
             }
 
             //计算
-            var sd = dayjs(start_date).date();
-            var sm = dayjs(start_date).month() + 1;
-            var sy = dayjs(start_date).year();
-            var ed = dayjs(end_date).date();
-            var em = dayjs(end_date).month() + 1;
-            var ey = dayjs(end_date).year();
+            let sd = dayjs(start_date).date();
+            let sm = dayjs(start_date).month() + 1;
+            let sy = dayjs(start_date).year();
+            let ed = dayjs(end_date).date();
+            let em = dayjs(end_date).month() + 1;
+            let ey = dayjs(end_date).year();
 
-            var result;
+            let result;
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     if (sd === 31 && ed === 31) {
@@ -12791,7 +12791,7 @@ const functionImplementation = {
 
                     break;
                 case 1: // Actual/actual
-                    var ylength = 365;
+                    let ylength = 365;
                     if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                         if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(start_date, end_date) || (em === 1 && ed === 29)) {
                             ylength = 366;
@@ -12800,9 +12800,9 @@ const functionImplementation = {
                         return dayjs(end_date).diff(dayjs(start_date), 'days') / ylength;
                     }
 
-                    var years = (ey - sy) + 1;
-                    var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                    var average = days / years;
+                    let years = (ey - sy) + 1;
+                    let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                    let average = days / years;
 
                     result = dayjs(end_date).diff(dayjs(start_date), 'days') / average;
 
@@ -12824,7 +12824,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12836,8 +12836,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12848,7 +12848,7 @@ const functionImplementation = {
             return dayjs().format("YYYY-MM-DD");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12860,8 +12860,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12870,7 +12870,7 @@ const functionImplementation = {
 
         try {
             //开始日期
-            var serial_number = func_methods.getCellDate(arguments[0]);
+            let serial_number = func_methods.getCellDate(arguments[0]);
             if(valueIsError(serial_number)){
                 return serial_number;
             }
@@ -12883,7 +12883,7 @@ const functionImplementation = {
             return dayjs(serial_number).month() + 1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12895,8 +12895,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12905,7 +12905,7 @@ const functionImplementation = {
 
         try {
             //每年的名义利率
-            var nominal_rate = func_methods.getFirstValue(arguments[0]);
+            let nominal_rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(nominal_rate)){
                 return nominal_rate;
             }
@@ -12917,7 +12917,7 @@ const functionImplementation = {
             nominal_rate = parseFloat(nominal_rate);
 
             //每年的复利计算期数
-            var npery = func_methods.getFirstValue(arguments[1]);
+            let npery = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(npery)){
                 return npery;
             }
@@ -12935,7 +12935,7 @@ const functionImplementation = {
             return Math.pow(1 + nominal_rate / npery, npery) - 1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -12947,8 +12947,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -12957,7 +12957,7 @@ const functionImplementation = {
 
         try {
             //要设置格式的值
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -12969,7 +12969,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //显示的小数位数
-            var decimals = 2;
+            let decimals = 2;
             if(arguments.length == 2){
                 decimals = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(decimals)){
@@ -12987,18 +12987,18 @@ const functionImplementation = {
                 decimals = 9;
             }
 
-            var foucsStatus = "0.";
-            for(var i = 1; i <= decimals; i++){
+            let foucsStatus = "0.";
+            for(let i = 1; i <= decimals; i++){
                 foucsStatus += "0";
             }
 
             //计算
-            var sign = (number > 0) ? 1 : -1;
+            let sign = (number > 0) ? 1 : -1;
 
             return sign * (Math.floor(Math.abs(number) * Math.pow(10, decimals))) / Math.pow(10, decimals);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13010,8 +13010,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13020,7 +13020,7 @@ const functionImplementation = {
 
         try {
             //分数
-            var fractional_dollar = func_methods.getFirstValue(arguments[0]);
+            let fractional_dollar = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(fractional_dollar)){
                 return fractional_dollar;
             }
@@ -13032,7 +13032,7 @@ const functionImplementation = {
             fractional_dollar = parseFloat(fractional_dollar);
 
             //用作分数中的分母的整数
-            var fraction = func_methods.getFirstValue(arguments[1]);
+            let fraction = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(fraction)){
                 return fraction;
             }
@@ -13051,17 +13051,17 @@ const functionImplementation = {
             }
 
             //计算
-            var result = parseInt(fractional_dollar, 10);
+            let result = parseInt(fractional_dollar, 10);
 
             result += (fractional_dollar % 1) * Math.pow(10, Math.ceil(Math.log(fraction) / Math.LN10)) / fraction;
 
-            var power = Math.pow(10, Math.ceil(Math.log(fraction) / Math.LN2) + 1);
+            let power = Math.pow(10, Math.ceil(Math.log(fraction) / Math.LN2) + 1);
             result = Math.round(result * power) / power;
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13073,8 +13073,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13083,7 +13083,7 @@ const functionImplementation = {
 
         try {
             //小数
-            var decimal_dollar = func_methods.getFirstValue(arguments[0]);
+            let decimal_dollar = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(decimal_dollar)){
                 return decimal_dollar;
             }
@@ -13095,7 +13095,7 @@ const functionImplementation = {
             decimal_dollar = parseFloat(decimal_dollar);
 
             //用作分数中的分母的整数
-            var fraction = func_methods.getFirstValue(arguments[1]);
+            let fraction = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(fraction)){
                 return fraction;
             }
@@ -13114,14 +13114,14 @@ const functionImplementation = {
             }
 
             //计算
-            var result = parseInt(decimal_dollar, 10);
+            let result = parseInt(decimal_dollar, 10);
 
             result += (decimal_dollar % 1) * Math.pow(10, -Math.ceil(Math.log(fraction) / Math.LN10)) * fraction;
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13133,8 +13133,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13143,7 +13143,7 @@ const functionImplementation = {
 
         try {
             //资产原值
-            var cost = func_methods.getFirstValue(arguments[0]);
+            let cost = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(cost)){
                 return cost;
             }
@@ -13155,7 +13155,7 @@ const functionImplementation = {
             cost = parseFloat(cost);
 
             //资产残值
-            var salvage = func_methods.getFirstValue(arguments[1]);
+            let salvage = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(salvage)){
                 return salvage;
             }
@@ -13167,7 +13167,7 @@ const functionImplementation = {
             salvage = parseFloat(salvage);
 
             //资产的折旧期数
-            var life = func_methods.getFirstValue(arguments[2]);
+            let life = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(life)){
                 return life;
             }
@@ -13179,7 +13179,7 @@ const functionImplementation = {
             life = parseFloat(life);
 
             //在使用期限内要计算折旧的折旧期
-            var period = func_methods.getFirstValue(arguments[3]);
+            let period = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(period)){
                 return period;
             }
@@ -13191,7 +13191,7 @@ const functionImplementation = {
             period = parseInt(period);
 
             //折旧第一年中的月数
-            var month = 12;
+            let month = 12;
             if(arguments.length == 5){
                 month = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(month)){
@@ -13222,33 +13222,33 @@ const functionImplementation = {
             }
 
             //计算
-            var rate = (1 - Math.pow(salvage / cost, 1 / life)).toFixed(3);
+            let rate = (1 - Math.pow(salvage / cost, 1 / life)).toFixed(3);
 
-            var initial = cost * rate * month / 12;
+            let initial = cost * rate * month / 12;
 
-            var total = initial;
-            var current = 0;
-            var ceiling = (period === life) ? life - 1 : period;
+            let total = initial;
+            let current = 0;
+            let ceiling = (period === life) ? life - 1 : period;
 
-            for (var i = 2; i <= ceiling; i++) {
+            for (let i = 2; i <= ceiling; i++) {
                 current = (cost - total) * rate;
                 total += current;
             }
 
             if (period === 1) {
-                var result = initial;
+                let result = initial;
             }
             else if (period === life) {
-                var result = (cost - total) * rate;
+                let result = (cost - total) * rate;
             }
             else {
-                var result = current;
+                let result = current;
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13260,8 +13260,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13270,7 +13270,7 @@ const functionImplementation = {
 
         try {
             //资产原值
-            var cost = func_methods.getFirstValue(arguments[0]);
+            let cost = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(cost)){
                 return cost;
             }
@@ -13282,7 +13282,7 @@ const functionImplementation = {
             cost = parseFloat(cost);
 
             //资产残值
-            var salvage = func_methods.getFirstValue(arguments[1]);
+            let salvage = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(salvage)){
                 return salvage;
             }
@@ -13294,7 +13294,7 @@ const functionImplementation = {
             salvage = parseFloat(salvage);
 
             //资产的折旧期数
-            var life = func_methods.getFirstValue(arguments[2]);
+            let life = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(life)){
                 return life;
             }
@@ -13306,7 +13306,7 @@ const functionImplementation = {
             life = parseFloat(life);
 
             //在使用期限内要计算折旧的折旧期
-            var period = func_methods.getFirstValue(arguments[3]);
+            let period = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(period)){
                 return period;
             }
@@ -13318,7 +13318,7 @@ const functionImplementation = {
             period = parseInt(period);
 
             //折旧的递减系数
-            var factor = 2;
+            let factor = 2;
             if(arguments.length == 5){
                 factor = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(factor)){
@@ -13345,10 +13345,10 @@ const functionImplementation = {
             }
 
             //计算
-            var total = 0;
-            var current = 0;
+            let total = 0;
+            let current = 0;
 
-            for (var i = 1; i <= period; i++) {
+            for (let i = 1; i <= period; i++) {
                 current = Math.min((cost - total) * (factor / life), (cost - salvage - total));
                 total += current;
             }
@@ -13356,7 +13356,7 @@ const functionImplementation = {
             return current;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13368,8 +13368,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13378,7 +13378,7 @@ const functionImplementation = {
 
         try {
             //年金的付款总期数。
-            var nper = func_methods.getFirstValue(arguments[0]);
+            let nper = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(nper)){
                 return nper;
             }
@@ -13390,7 +13390,7 @@ const functionImplementation = {
             nper = parseFloat(nper);
 
             //每期的付款金额
-            var pmt = func_methods.getFirstValue(arguments[1]);
+            let pmt = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(pmt)){
                 return pmt;
             }
@@ -13402,7 +13402,7 @@ const functionImplementation = {
             pmt = parseFloat(pmt);
 
             //现值
-            var pv = func_methods.getFirstValue(arguments[2]);
+            let pv = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pv)){
                 return pv;
             }
@@ -13414,7 +13414,7 @@ const functionImplementation = {
             pv = parseFloat(pv);
 
             //最后一次付款后希望得到的现金余额
-            var fv = 0;
+            let fv = 0;
             if(arguments.length >= 4){
                 fv = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(fv)){
@@ -13429,7 +13429,7 @@ const functionImplementation = {
             }
 
             //指定各期的付款时间是在期初还是期末
-            var type = 0;
+            let type = 0;
             if(arguments.length >= 5){
                 type = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(type)){
@@ -13444,7 +13444,7 @@ const functionImplementation = {
             }
 
             //预期利率
-            var guess = 0.1;
+            let guess = 0.1;
             if(arguments.length == 6){
                 guess = func_methods.getFirstValue(arguments[5]);
                 if(valueIsError(guess)){
@@ -13463,22 +13463,22 @@ const functionImplementation = {
             }
 
             //计算
-            var epsMax = 1e-6;
+            let epsMax = 1e-6;
 
-            var iterMax = 100;
-            var iter = 0;
-            var close = false;
-            var rate = guess;
+            let iterMax = 100;
+            let iter = 0;
+            let close = false;
+            let rate = guess;
 
             while (iter < iterMax && !close) {
-                var t1 = Math.pow(rate + 1, nper);
-                var t2 = Math.pow(rate + 1, nper - 1);
+                let t1 = Math.pow(rate + 1, nper);
+                let t2 = Math.pow(rate + 1, nper - 1);
 
-                var f1 = fv + t1 * pv + pmt * (t1 - 1) * (rate * type + 1) / rate;
-                var f2 = nper * t2 * pv - pmt * (t1 - 1) *(rate * type + 1) / Math.pow(rate,2);
-                var f3 = nper * pmt * t2 * (rate * type + 1) / rate + pmt * (t1 - 1) * type / rate;
+                let f1 = fv + t1 * pv + pmt * (t1 - 1) * (rate * type + 1) / rate;
+                let f2 = nper * t2 * pv - pmt * (t1 - 1) *(rate * type + 1) / Math.pow(rate,2);
+                let f3 = nper * pmt * t2 * (rate * type + 1) / rate + pmt * (t1 - 1) * type / rate;
 
-                var newRate = rate - f1 / (f2 + f3);
+                let newRate = rate - f1 / (f2 + f3);
 
                 if (Math.abs(newRate - rate) < epsMax) close = true;
 
@@ -13491,7 +13491,7 @@ const functionImplementation = {
             return rate;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13503,8 +13503,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13513,7 +13513,7 @@ const functionImplementation = {
 
         try {
             //利率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -13525,7 +13525,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //总付款期数
-            var nper = func_methods.getFirstValue(arguments[1]);
+            let nper = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(nper)){
                 return nper;
             }
@@ -13537,7 +13537,7 @@ const functionImplementation = {
             nper = parseFloat(nper);
 
             //年金的现值
-            var pv = func_methods.getFirstValue(arguments[2]);
+            let pv = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pv)){
                 return pv;
             }
@@ -13549,7 +13549,7 @@ const functionImplementation = {
             pv = parseFloat(pv);
 
             //首期
-            var start_period = func_methods.getFirstValue(arguments[3]);
+            let start_period = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(start_period)){
                 return start_period;
             }
@@ -13561,7 +13561,7 @@ const functionImplementation = {
             start_period = parseInt(start_period);
 
             //末期
-            var end_period = func_methods.getFirstValue(arguments[4]);
+            let end_period = func_methods.getFirstValue(arguments[4]);
             if(valueIsError(end_period)){
                 return end_period;
             }
@@ -13573,7 +13573,7 @@ const functionImplementation = {
             end_period = parseInt(end_period);
 
             //指定各期的付款时间是在期初还是期末
-            var type = func_methods.getFirstValue(arguments[5]);
+            let type = func_methods.getFirstValue(arguments[5]);
             if(valueIsError(type)){
                 return type;
             }
@@ -13597,8 +13597,8 @@ const functionImplementation = {
             }
 
             //计算
-            var payment = window.luckysheet_function.PMT.f(rate, nper, pv, 0, type);
-            var principal = 0;
+            let payment = window.luckysheet_function.PMT.f(rate, nper, pv, 0, type);
+            let principal = 0;
 
             if (start_period === 1) {
                 if (type === 0) {
@@ -13610,7 +13610,7 @@ const functionImplementation = {
                 start_period++;
             }
 
-            for (var i = start_period; i <= end_period; i++) {
+            for (let i = start_period; i <= end_period; i++) {
                 if (type > 0) {
                     principal += payment - (window.luckysheet_function.FV.f(rate, i - 2, payment, pv, 1) - payment) * rate;
                 }
@@ -13622,7 +13622,7 @@ const functionImplementation = {
             return principal;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13634,8 +13634,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13644,7 +13644,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -13654,7 +13654,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -13664,7 +13664,7 @@ const functionImplementation = {
             }
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[2]);
+            let frequency = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -13676,9 +13676,9 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 4){
-                var basis = func_methods.getFirstValue(arguments[3]);
+                let basis = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(basis)){
                     return basis;
                 }
@@ -13703,14 +13703,14 @@ const functionImplementation = {
             }
 
             //计算
-            var sd = dayjs(settlement).date();
-            var sm = dayjs(settlement).month() + 1;
-            var sy = dayjs(settlement).year();
-            var ed = dayjs(maturity).date();
-            var em = dayjs(maturity).month() + 1;
-            var ey = dayjs(maturity).year();
+            let sd = dayjs(settlement).date();
+            let sm = dayjs(settlement).month() + 1;
+            let sy = dayjs(settlement).year();
+            let ed = dayjs(maturity).date();
+            let em = dayjs(maturity).month() + 1;
+            let ey = dayjs(maturity).year();
 
-            var result;
+            let result;
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     if (sd === 31 && ed === 31) {
@@ -13728,7 +13728,7 @@ const functionImplementation = {
 
                     break;
                 case 1: // Actual/actual
-                    var ylength = 365;
+                    let ylength = 365;
                     if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                         if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(settlement, maturity) || (em === 1 && ed === 29)) {
                             ylength = 366;
@@ -13737,9 +13737,9 @@ const functionImplementation = {
                         return dayjs(maturity).diff(dayjs(settlement), 'days') / (ylength / frequency);
                     }
 
-                    var years = (ey - sy) + 1;
-                    var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                    var average = days / years;
+                    let years = (ey - sy) + 1;
+                    let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                    let average = days / years;
 
                     result = dayjs(maturity).diff(dayjs(settlement), 'days') / (average / frequency);
 
@@ -13761,7 +13761,7 @@ const functionImplementation = {
             return Math.round(result);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13773,8 +13773,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13783,7 +13783,7 @@ const functionImplementation = {
 
         try {
             //资产原值
-            var cost = func_methods.getFirstValue(arguments[0]);
+            let cost = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(cost)){
                 return cost;
             }
@@ -13795,7 +13795,7 @@ const functionImplementation = {
             cost = parseFloat(cost);
 
             //资产残值
-            var salvage = func_methods.getFirstValue(arguments[1]);
+            let salvage = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(salvage)){
                 return salvage;
             }
@@ -13807,7 +13807,7 @@ const functionImplementation = {
             salvage = parseFloat(salvage);
 
             //资产的折旧期数
-            var life = func_methods.getFirstValue(arguments[2]);
+            let life = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(life)){
                 return life;
             }
@@ -13819,7 +13819,7 @@ const functionImplementation = {
             life = parseFloat(life);
 
             //在使用期限内要计算折旧的折旧期
-            var period = func_methods.getFirstValue(arguments[3]);
+            let period = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(period)){
                 return period;
             }
@@ -13841,7 +13841,7 @@ const functionImplementation = {
             return ((cost - salvage) * (life - period + 1) * 2) / (life * (life + 1));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13853,8 +13853,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13863,7 +13863,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -13873,7 +13873,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -13883,7 +13883,7 @@ const functionImplementation = {
             }
 
             //债券购买时的贴现率
-            var discount = func_methods.getFirstValue(arguments[2]);
+            let discount = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(discount)){
                 return discount;
             }
@@ -13909,7 +13909,7 @@ const functionImplementation = {
             return (365 * discount) / (360 - discount * dayjs(maturity).diff(dayjs(settlement), 'days'));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13921,8 +13921,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13931,7 +13931,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -13941,7 +13941,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -13951,7 +13951,7 @@ const functionImplementation = {
             }
 
             //有价证券的价格
-            var pr = func_methods.getFirstValue(arguments[2]);
+            let pr = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pr)){
                 return pr;
             }
@@ -13977,7 +13977,7 @@ const functionImplementation = {
             return ((100 - pr) / pr) * (360 / dayjs(maturity).diff(dayjs(settlement), 'days'));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -13989,8 +13989,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -13999,7 +13999,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -14009,7 +14009,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -14019,7 +14019,7 @@ const functionImplementation = {
             }
 
             //有价证券的价格
-            var discount = func_methods.getFirstValue(arguments[2]);
+            let discount = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(discount)){
                 return discount;
             }
@@ -14045,7 +14045,7 @@ const functionImplementation = {
             return 100 * (1 - discount * dayjs(maturity).diff(dayjs(settlement), 'days') / 360);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -14057,8 +14057,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -14067,7 +14067,7 @@ const functionImplementation = {
 
         try {
             //利率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -14079,7 +14079,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //总付款期数
-            var nper = func_methods.getFirstValue(arguments[1]);
+            let nper = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(nper)){
                 return nper;
             }
@@ -14091,7 +14091,7 @@ const functionImplementation = {
             nper = parseFloat(nper);
 
             //每期的付款金额
-            var pmt = func_methods.getFirstValue(arguments[2]);
+            let pmt = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pmt)){
                 return pmt;
             }
@@ -14103,7 +14103,7 @@ const functionImplementation = {
             pmt = parseFloat(pmt);
 
             //最后一次付款后希望得到的现金余额
-            var fv = 0;
+            let fv = 0;
             if(arguments.length >= 4){
                 fv = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(fv)){
@@ -14118,7 +14118,7 @@ const functionImplementation = {
             }
 
             //指定各期的付款时间是在期初还是期末
-            var type = 0;
+            let type = 0;
             if(arguments.length >= 5){
                 type = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(type)){
@@ -14138,16 +14138,16 @@ const functionImplementation = {
 
             //计算
             if (rate === 0) {
-                var result = -pmt * nper - fv;
+                let result = -pmt * nper - fv;
             }
             else {
-                var result = (((1 - Math.pow(1 + rate, nper)) / rate) * pmt * (1 + rate * type) - fv) / Math.pow(1 + rate, nper);
+                let result = (((1 - Math.pow(1 + rate, nper)) / rate) * pmt * (1 + rate * type) - fv) / Math.pow(1 + rate, nper);
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -14159,8 +14159,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -14169,7 +14169,7 @@ const functionImplementation = {
 
         try {
             //有价证券的发行日
-            var issue = func_methods.getCellDate(arguments[0]);
+            let issue = func_methods.getCellDate(arguments[0]);
             if(valueIsError(issue)){
                 return issue;
             }
@@ -14179,7 +14179,7 @@ const functionImplementation = {
             }
 
             //有价证券的首次计息日
-            var first_interest = func_methods.getCellDate(arguments[1]);
+            let first_interest = func_methods.getCellDate(arguments[1]);
             if(valueIsError(first_interest)){
                 return first_interest;
             }
@@ -14189,7 +14189,7 @@ const functionImplementation = {
             }
 
             //有价证券的结算日
-            var settlement = func_methods.getCellDate(arguments[2]);
+            let settlement = func_methods.getCellDate(arguments[2]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -14199,7 +14199,7 @@ const functionImplementation = {
             }
 
             //有价证券的年息票利率
-            var rate = func_methods.getFirstValue(arguments[3]);
+            let rate = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -14211,7 +14211,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //证券的票面值
-            var par = func_methods.getFirstValue(arguments[4]);
+            let par = func_methods.getFirstValue(arguments[4]);
             if(valueIsError(par)){
                 return par;
             }
@@ -14223,7 +14223,7 @@ const functionImplementation = {
             par = parseFloat(par);
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[5]);
+            let frequency = func_methods.getFirstValue(arguments[5]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -14235,7 +14235,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length >= 7){
                 basis = func_methods.getFirstValue(arguments[6]);
                 if(valueIsError(basis)){
@@ -14250,7 +14250,7 @@ const functionImplementation = {
             }
 
             //当结算日期晚于首次计息日期时用于计算总应计利息的方法
-            var calc_method = true;
+            let calc_method = true;
             if(arguments.length == 8){
                 calc_method = func_methods.getCellBoolen(arguments[7]);
 
@@ -14276,14 +14276,14 @@ const functionImplementation = {
             }
 
             //计算
-            var result;
+            let result;
             if(dayjs(settlement) - dayjs(first_interest) >= 0 && !calc_method){
-                var sd = dayjs(first_interest).date();
-                var sm = dayjs(first_interest).month() + 1;
-                var sy = dayjs(first_interest).year();
-                var ed = dayjs(settlement).date();
-                var em = dayjs(settlement).month() + 1;
-                var ey = dayjs(settlement).year();
+                let sd = dayjs(first_interest).date();
+                let sm = dayjs(first_interest).month() + 1;
+                let sy = dayjs(first_interest).year();
+                let ed = dayjs(settlement).date();
+                let em = dayjs(settlement).month() + 1;
+                let ey = dayjs(settlement).year();
 
                 switch (basis) {
                     case 0: // US (NASD) 30/360
@@ -14302,7 +14302,7 @@ const functionImplementation = {
 
                         break;
                     case 1: // Actual/actual
-                        var ylength = 365;
+                        let ylength = 365;
                         if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                             if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(first_interest, settlement) || (em === 1 && ed === 29)) {
                                 ylength = 366;
@@ -14311,9 +14311,9 @@ const functionImplementation = {
                             return dayjs(settlement).diff(dayjs(first_interest), 'days') / ylength;
                         }
 
-                        var years = (ey - sy) + 1;
-                        var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                        var average = days / years;
+                        let years = (ey - sy) + 1;
+                        let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                        let average = days / years;
 
                         result = dayjs(settlement).diff(dayjs(first_interest), 'days') / average;
 
@@ -14333,12 +14333,12 @@ const functionImplementation = {
                 }
             }
             else{
-                var sd = dayjs(issue).date();
-                var sm = dayjs(issue).month() + 1;
-                var sy = dayjs(issue).year();
-                var ed = dayjs(settlement).date();
-                var em = dayjs(settlement).month() + 1;
-                var ey = dayjs(settlement).year();
+                let sd = dayjs(issue).date();
+                let sm = dayjs(issue).month() + 1;
+                let sy = dayjs(issue).year();
+                let ed = dayjs(settlement).date();
+                let em = dayjs(settlement).month() + 1;
+                let ey = dayjs(settlement).year();
 
                 switch (basis) {
                     case 0: // US (NASD) 30/360
@@ -14357,7 +14357,7 @@ const functionImplementation = {
 
                         break;
                     case 1: // Actual/actual
-                        var ylength = 365;
+                        let ylength = 365;
                         if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                             if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(issue, settlement) || (em === 1 && ed === 29)) {
                                 ylength = 366;
@@ -14366,9 +14366,9 @@ const functionImplementation = {
                             return dayjs(settlement).diff(dayjs(issue), 'days') / ylength;
                         }
 
-                        var years = (ey - sy) + 1;
-                        var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                        var average = days / years;
+                        let years = (ey - sy) + 1;
+                        let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                        let average = days / years;
 
                         result = dayjs(settlement).diff(dayjs(issue), 'days') / average;
 
@@ -14391,7 +14391,7 @@ const functionImplementation = {
             return par * rate * result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -14403,8 +14403,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -14413,7 +14413,7 @@ const functionImplementation = {
 
         try {
             //有价证券的发行日
-            var issue = func_methods.getCellDate(arguments[0]);
+            let issue = func_methods.getCellDate(arguments[0]);
             if(valueIsError(issue)){
                 return issue;
             }
@@ -14423,7 +14423,7 @@ const functionImplementation = {
             }
 
             //有价证券的到期日
-            var settlement = func_methods.getCellDate(arguments[1]);
+            let settlement = func_methods.getCellDate(arguments[1]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -14433,7 +14433,7 @@ const functionImplementation = {
             }
 
             //有价证券的年息票利率
-            var rate = func_methods.getFirstValue(arguments[2]);
+            let rate = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -14445,7 +14445,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //证券的票面值
-            var par = func_methods.getFirstValue(arguments[3]);
+            let par = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(par)){
                 return par;
             }
@@ -14457,7 +14457,7 @@ const functionImplementation = {
             par = parseFloat(par);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 5){
                 basis = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(basis)){
@@ -14484,14 +14484,14 @@ const functionImplementation = {
             }
 
             //计算
-            var sd = dayjs(issue).date();
-            var sm = dayjs(issue).month() + 1;
-            var sy = dayjs(issue).year();
-            var ed = dayjs(settlement).date();
-            var em = dayjs(settlement).month() + 1;
-            var ey = dayjs(settlement).year();
+            let sd = dayjs(issue).date();
+            let sm = dayjs(issue).month() + 1;
+            let sy = dayjs(issue).year();
+            let ed = dayjs(settlement).date();
+            let em = dayjs(settlement).month() + 1;
+            let ey = dayjs(settlement).year();
 
-            var result;
+            let result;
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     if (sd === 31 && ed === 31) {
@@ -14509,7 +14509,7 @@ const functionImplementation = {
 
                     break;
                 case 1: // Actual/actual
-                    var ylength = 365;
+                    let ylength = 365;
                     if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                         if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(issue, settlement) || (em === 1 && ed === 29)) {
                             ylength = 366;
@@ -14518,9 +14518,9 @@ const functionImplementation = {
                         return dayjs(settlement).diff(dayjs(issue), 'days') / ylength;
                     }
 
-                    var years = (ey - sy) + 1;
-                    var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                    var average = days / years;
+                    let years = (ey - sy) + 1;
+                    let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                    let average = days / years;
 
                     result = dayjs(settlement).diff(dayjs(issue), 'days') / average;
 
@@ -14542,7 +14542,7 @@ const functionImplementation = {
             return par * rate * result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -14554,8 +14554,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -14564,7 +14564,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -14574,7 +14574,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -14584,7 +14584,7 @@ const functionImplementation = {
             }
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[2]);
+            let frequency = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -14596,7 +14596,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 4){
                 basis = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(basis)){
@@ -14623,12 +14623,12 @@ const functionImplementation = {
             }
 
             //计算
-            var interest; //结算日之前的上一个付息日
+            let interest; //结算日之前的上一个付息日
 
-            var maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
+            let maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
 
-            for(var i = 1; i <= maxCount; i++){
-                var di = dayjs(maturity).subtract((12 / frequency) * i, 'months');
+            for(let i = 1; i <= maxCount; i++){
+                let di = dayjs(maturity).subtract((12 / frequency) * i, 'months');
 
                 if(di <= dayjs(settlement)){
                     interest = di;
@@ -14636,15 +14636,21 @@ const functionImplementation = {
                 }
             }
 
-            var result;
+            let result;
+            let sd
+            let sm
+            let sy
+            let ed
+            let em
+            let ey
             switch (basis) {
                 case 0: // US (NASD) 30/360
-                    var sd = dayjs(interest).date();
-                    var sm = dayjs(interest).month() + 1;
-                    var sy = dayjs(interest).year();
-                    var ed = dayjs(settlement).date();
-                    var em = dayjs(settlement).month() + 1;
-                    var ey = dayjs(settlement).year();
+                    sd = dayjs(interest).date();
+                    sm = dayjs(interest).month() + 1;
+                    sy = dayjs(interest).year();
+                    ed = dayjs(settlement).date();
+                    em = dayjs(settlement).month() + 1;
+                    ey = dayjs(settlement).year();
 
                     if (sd === 31 && ed === 31) {
                         sd = 30;
@@ -14667,12 +14673,12 @@ const functionImplementation = {
 
                     break;
                 case 4: // European 30/360
-                    var sd = dayjs(interest).date();
-                    var sm = dayjs(interest).month() + 1;
-                    var sy = dayjs(interest).year();
-                    var ed = dayjs(settlement).date();
-                    var em = dayjs(settlement).month() + 1;
-                    var ey = dayjs(settlement).year();
+                    sd = dayjs(interest).date();
+                    sm = dayjs(interest).month() + 1;
+                    sy = dayjs(interest).year();
+                    ed = dayjs(settlement).date();
+                    em = dayjs(settlement).month() + 1;
+                    ey = dayjs(settlement).year();
 
                     result = (ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360);
 
@@ -14682,7 +14688,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -14694,8 +14700,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -14704,7 +14710,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -14714,7 +14720,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -14724,7 +14730,7 @@ const functionImplementation = {
             }
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[2]);
+            let frequency = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -14736,7 +14742,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 4){
                 basis = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(basis)){
@@ -14763,19 +14769,19 @@ const functionImplementation = {
             }
 
             //计算
-            var result;
+            let result;
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     result = 360 / frequency;
 
                     break;
                 case 1: // Actual/actual
-                    var maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
+                    let maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
 
-                    for(var i = 1; i <= maxCount; i++){
-                        var d1 = dayjs(maturity).subtract((12 / frequency) * i, 'months');
+                    for(let i = 1; i <= maxCount; i++){
+                        let d1 = dayjs(maturity).subtract((12 / frequency) * i, 'months');
                         if(d1 <= dayjs(settlement)){
-                            var d2 = dayjs(maturity).subtract((12 / frequency) * (i - 1), 'months');
+                            let d2 = dayjs(maturity).subtract((12 / frequency) * (i - 1), 'months');
                             result = dayjs(d2).diff(dayjs(d1), 'days');
                             break;
                         }
@@ -14799,7 +14805,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -14811,8 +14817,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -14821,7 +14827,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -14831,7 +14837,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -14841,7 +14847,7 @@ const functionImplementation = {
             }
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[2]);
+            let frequency = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -14853,7 +14859,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 4){
                 basis = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(basis)){
@@ -14880,12 +14886,12 @@ const functionImplementation = {
             }
 
             //计算
-            var interest; //结算日之后的下一个付息日
+            let interest; //结算日之后的下一个付息日
 
-            var maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
+            let maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
 
-            for(var i = 1; i <= maxCount; i++){
-                var di = dayjs(maturity).subtract((12 / frequency) * i, 'months');
+            for(let i = 1; i <= maxCount; i++){
+                let di = dayjs(maturity).subtract((12 / frequency) * i, 'months');
 
                 if(di <= dayjs(settlement)){
                     interest = dayjs(maturity).subtract((12 / frequency) * (i - 1), 'months');
@@ -14893,15 +14899,21 @@ const functionImplementation = {
                 }
             }
 
-            var result;
+            let result;
+            let sd
+let sm
+let sy
+let ed
+let em
+let ey
             switch (basis) {
                 case 0: // US (NASD) 30/360
-                    var sd = dayjs(settlement).date();
-                    var sm = dayjs(settlement).month() + 1;
-                    var sy = dayjs(settlement).year();
-                    var ed = dayjs(interest).date();
-                    var em = dayjs(interest).month() + 1;
-                    var ey = dayjs(interest).year();
+                     sd = dayjs(settlement).date();
+                     sm = dayjs(settlement).month() + 1;
+                     sy = dayjs(settlement).year();
+                     ed = dayjs(interest).date();
+                     em = dayjs(interest).month() + 1;
+                     ey = dayjs(interest).year();
 
                     if (sd === 31 && ed === 31) {
                         sd = 30;
@@ -14924,12 +14936,12 @@ const functionImplementation = {
 
                     break;
                 case 4: // European 30/360
-                    var sd = dayjs(settlement).date();
-                    var sm = dayjs(settlement).month() + 1;
-                    var sy = dayjs(settlement).year();
-                    var ed = dayjs(interest).date();
-                    var em = dayjs(interest).month() + 1;
-                    var ey = dayjs(interest).year();
+                     sd = dayjs(settlement).date();
+                     sm = dayjs(settlement).month() + 1;
+                     sy = dayjs(settlement).year();
+                     ed = dayjs(interest).date();
+                     em = dayjs(interest).month() + 1;
+                     ey = dayjs(interest).year();
 
                     result = (ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360);
 
@@ -14939,7 +14951,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -14951,8 +14963,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -14961,7 +14973,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -14971,7 +14983,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -14981,7 +14993,7 @@ const functionImplementation = {
             }
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[2]);
+            let frequency = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -14993,7 +15005,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 4){
                 basis = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(basis)){
@@ -15020,12 +15032,12 @@ const functionImplementation = {
             }
 
             //计算
-            var interest; //结算日之后的下一个付息日
+            let interest; //结算日之后的下一个付息日
 
-            var maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
+            let maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
 
-            for(var i = 1; i <= maxCount; i++){
-                var di = dayjs(maturity).subtract((12 / frequency) * i, 'months');
+            for(let i = 1; i <= maxCount; i++){
+                let di = dayjs(maturity).subtract((12 / frequency) * i, 'months');
 
                 if(di <= dayjs(settlement)){
                     interest = dayjs(maturity).subtract((12 / frequency) * (i - 1), 'months');
@@ -15036,7 +15048,7 @@ const functionImplementation = {
             return dayjs(interest).format("YYYY-MM-DD");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15048,8 +15060,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15058,7 +15070,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -15068,7 +15080,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -15078,7 +15090,7 @@ const functionImplementation = {
             }
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[2]);
+            let frequency = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -15090,7 +15102,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 4){
                 basis = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(basis)){
@@ -15117,12 +15129,12 @@ const functionImplementation = {
             }
 
             //计算
-            var interest; //结算日之前的上一个付息日
+            let interest; //结算日之前的上一个付息日
 
-            var maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
+            let maxCount = Math.ceil(dayjs(maturity).diff(dayjs(settlement), 'months') / (12 / frequency)) + 1;
 
-            for(var i = 1; i <= maxCount; i++){
-                var di = dayjs(maturity).subtract((12 / frequency) * i, 'months');
+            for(let i = 1; i <= maxCount; i++){
+                let di = dayjs(maturity).subtract((12 / frequency) * i, 'months');
 
                 if(di <= dayjs(settlement)){
                     interest = di;
@@ -15133,7 +15145,7 @@ const functionImplementation = {
             return dayjs(interest).format("YYYY-MM-DD");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15145,8 +15157,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15155,7 +15167,7 @@ const functionImplementation = {
 
         try {
             //利率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -15167,7 +15179,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //总付款期数
-            var nper = func_methods.getFirstValue(arguments[1]);
+            let nper = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(nper)){
                 return nper;
             }
@@ -15179,7 +15191,7 @@ const functionImplementation = {
             nper = parseFloat(nper);
 
             //每期的付款金额
-            var pmt = func_methods.getFirstValue(arguments[2]);
+            let pmt = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pmt)){
                 return pmt;
             }
@@ -15191,7 +15203,7 @@ const functionImplementation = {
             pmt = parseFloat(pmt);
 
             //现值，或一系列未来付款的当前值的累积和
-            var pv = 0;
+            let pv = 0;
             if(arguments.length >= 4){
                 pv = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(pv)){
@@ -15206,7 +15218,7 @@ const functionImplementation = {
             }
 
             //指定各期的付款时间是在期初还是期末
-            var type = 0;
+            let type = 0;
             if(arguments.length >= 5){
                 type = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(type)){
@@ -15225,12 +15237,12 @@ const functionImplementation = {
             }
 
             //计算
-            var result;
+            let result;
             if (rate === 0) {
                 result = pv + pmt * nper;
             }
             else {
-                var term = Math.pow(1 + rate, nper);
+                let term = Math.pow(1 + rate, nper);
                 if (type === 1) {
                     result = pv * term + pmt * (1 + rate) * (term - 1) / rate;
                 }
@@ -15242,7 +15254,7 @@ const functionImplementation = {
             return -result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15254,8 +15266,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15264,7 +15276,7 @@ const functionImplementation = {
 
         try {
             //现值
-            var principal = func_methods.getFirstValue(arguments[0]);
+            let principal = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(principal)){
                 return principal;
             }
@@ -15276,8 +15288,8 @@ const functionImplementation = {
             principal = parseFloat(principal);
 
             //一组利率
-            var data_schedule = arguments[1];
-            var schedule = [];
+            let data_schedule = arguments[1];
+            let schedule = [];
 
             if(getObjType(data_schedule) == "array"){
                 if(getObjType(data_schedule[0]) == "array" && !func_methods.isDyadicArr(data_schedule)){
@@ -15293,10 +15305,10 @@ const functionImplementation = {
                 schedule.push(data_schedule);
             }
 
-            var schedule_n = [];
+            let schedule_n = [];
 
-            for(var i = 0; i < schedule.length; i++){
-                var number = schedule[i];
+            for(let i = 0; i < schedule.length; i++){
+                let number = schedule[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -15306,17 +15318,17 @@ const functionImplementation = {
             }
 
             //计算
-            var n = schedule_n.length;
-            var future = principal;
+            let n = schedule_n.length;
+            let future = principal;
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 future *= 1 + schedule_n[i];
             }
 
             return future;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15328,8 +15340,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15338,7 +15350,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -15348,7 +15360,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -15358,7 +15370,7 @@ const functionImplementation = {
             }
 
             //有价证券的年息票利率
-            var rate = func_methods.getFirstValue(arguments[2]);
+            let rate = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -15370,7 +15382,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //有价证券的价格
-            var pr = func_methods.getFirstValue(arguments[3]);
+            let pr = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(pr)){
                 return pr;
             }
@@ -15382,7 +15394,7 @@ const functionImplementation = {
             pr = parseFloat(pr);
 
             //有价证券的清偿价值
-            var redemption = func_methods.getFirstValue(arguments[4]);
+            let redemption = func_methods.getFirstValue(arguments[4]);
             if(valueIsError(redemption)){
                 return redemption;
             }
@@ -15394,7 +15406,7 @@ const functionImplementation = {
             redemption = parseFloat(redemption);
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[5]);
+            let frequency = func_methods.getFirstValue(arguments[5]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -15406,7 +15418,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 7){
                 basis = func_methods.getFirstValue(arguments[6]);
                 if(valueIsError(basis)){
@@ -15441,15 +15453,15 @@ const functionImplementation = {
             }
 
             //计算
-            var num = window.luckysheet_function.COUPNUM.f(settlement, maturity, frequency, basis);
+            let num = window.luckysheet_function.COUPNUM.f(settlement, maturity, frequency, basis);
 
             if(num > 1){
-                var a = 1;
-                var b = 0;
-                var yld = a;
+                let a = 1;
+                let b = 0;
+                let yld = a;
 
-                for(var i = 1; i <= 100; i++){
-                    var price = window.luckysheet_function.PRICE.f(settlement, maturity, rate, yld, redemption, frequency, basis);
+                for(let i = 1; i <= 100; i++){
+                    let price = window.luckysheet_function.PRICE.f(settlement, maturity, rate, yld, redemption, frequency, basis);
 
                     if(Math.abs(price - pr) < 0.000001){
                         break;
@@ -15465,24 +15477,24 @@ const functionImplementation = {
                     yld = (a + b) / 2;
                 }
 
-                var result = yld;
+                let result = yld;
             }
             else{
-                var DSR = window.luckysheet_function.COUPDAYSNC.f(settlement, maturity, frequency, basis);
-                var E = window.luckysheet_function.COUPDAYS.f(settlement, maturity, frequency, basis);
-                var A = window.luckysheet_function.COUPDAYBS.f(settlement, maturity, frequency, basis);
+                let DSR = window.luckysheet_function.COUPDAYSNC.f(settlement, maturity, frequency, basis);
+                let E = window.luckysheet_function.COUPDAYS.f(settlement, maturity, frequency, basis);
+                let A = window.luckysheet_function.COUPDAYBS.f(settlement, maturity, frequency, basis);
 
-                var T1 = redemption / 100 + rate / frequency;
-                var T2 = pr / 100 + (A / E) * (rate / frequency);
-                var T3 = frequency * E / DSR;
+                let T1 = redemption / 100 + rate / frequency;
+                let T2 = pr / 100 + (A / E) * (rate / frequency);
+                let T3 = frequency * E / DSR;
 
-                var result = ((T1 - T2) / T2) * T3;
+                let result = ((T1 - T2) / T2) * T3;
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15494,8 +15506,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15504,7 +15516,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -15514,7 +15526,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -15524,7 +15536,7 @@ const functionImplementation = {
             }
 
             //有价证券的价格
-            var pr = func_methods.getFirstValue(arguments[2]);
+            let pr = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pr)){
                 return pr;
             }
@@ -15536,7 +15548,7 @@ const functionImplementation = {
             pr = parseFloat(pr);
 
             //有价证券的清偿价值
-            var redemption = func_methods.getFirstValue(arguments[3]);
+            let redemption = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(redemption)){
                 return redemption;
             }
@@ -15548,7 +15560,7 @@ const functionImplementation = {
             redemption = parseFloat(redemption);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 5){
                 basis = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(basis)){
@@ -15574,12 +15586,12 @@ const functionImplementation = {
                 return formula.error.nm;
             }
 
-            var yearfrac = window.luckysheet_function.YEARFRAC.f(settlement, maturity, basis);
+            let yearfrac = window.luckysheet_function.YEARFRAC.f(settlement, maturity, basis);
 
             return (redemption / pr - 1) / yearfrac;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15591,8 +15603,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15601,7 +15613,7 @@ const functionImplementation = {
 
         try {
             //每年的实际利率
-            var effect_rate = func_methods.getFirstValue(arguments[0]);
+            let effect_rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(effect_rate)){
                 return effect_rate;
             }
@@ -15613,7 +15625,7 @@ const functionImplementation = {
             effect_rate = parseFloat(effect_rate);
 
             //每年的复利期数
-            var npery = func_methods.getFirstValue(arguments[1]);
+            let npery = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(npery)){
                 return npery;
             }
@@ -15631,7 +15643,7 @@ const functionImplementation = {
             return (Math.pow(effect_rate + 1, 1 / npery) - 1) * npery;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15643,8 +15655,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15653,8 +15665,8 @@ const functionImplementation = {
 
         try {
             //投资相关收益或支出的数组或范围
-            var data_values = arguments[0];
-            var values = [];
+            let data_values = arguments[0];
+            let values = [];
 
             if(getObjType(data_values) == "array"){
                 if(getObjType(data_values[0]) == "array" && !func_methods.isDyadicArr(data_values)){
@@ -15670,10 +15682,10 @@ const functionImplementation = {
                 values.push(data_values);
             }
 
-            var values_n = [];
+            let values_n = [];
 
-            for(var i = 0; i < values.length; i++){
-                var number = values[i];
+            for(let i = 0; i < values.length; i++){
+                let number = values[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -15683,19 +15695,19 @@ const functionImplementation = {
             }
 
             //与现金流数额参数中的现金流对应的日期数组或范围
-            var dates = func_methods.getCellrangeDate(arguments[1]);
+            let dates = func_methods.getCellrangeDate(arguments[1]);
             if(valueIsError(dates)){
                 return dates;
             }
 
-            for(var i = 0; i < dates.length; i++){
+            for(let i = 0; i < dates.length; i++){
                 if(!dayjs(dates[i]).isValid()){
                     return formula.error.v;
                 }
             }
 
             //对内部回报率的估算值
-            var guess = 0.1;
+            let guess = 0.1;
             if(arguments.length == 3){
                 guess = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(guess)){
@@ -15709,9 +15721,9 @@ const functionImplementation = {
                 guess = parseFloat(guess);
             }
 
-            var positive = false;
-            var negative = false;
-            for (var i = 0; i < values_n.length; i++) {
+            let positive = false;
+            let negative = false;
+            for (let i = 0; i < values_n.length; i++) {
                 if (values_n[i] > 0) {
                     positive = true;
                 }
@@ -15734,34 +15746,34 @@ const functionImplementation = {
             }
 
             //计算
-            var irrResult = function(values, dates, rate) {
-                var r = rate + 1;
-                var result = values[0];
+            let irrResult = function(values, dates, rate) {
+                let r = rate + 1;
+                let result = values[0];
 
-                for (var i = 1; i < values.length; i++) {
+                for (let i = 1; i < values.length; i++) {
                     result += values[i] / Math.pow(r, window.luckysheet_function.DAYS.f(dates[i], dates[0]) / 365);
                 }
 
                 return result;
             };
 
-            var irrResultDeriv = function(values, dates, rate) {
-                var r = rate + 1;
-                var result = 0;
+            let irrResultDeriv = function(values, dates, rate) {
+                let r = rate + 1;
+                let result = 0;
 
-                for (var i = 1; i < values.length; i++) {
-                    var frac = window.luckysheet_function.DAYS.f(dates[i], dates[0]) / 365;
+                for (let i = 1; i < values.length; i++) {
+                    let frac = window.luckysheet_function.DAYS.f(dates[i], dates[0]) / 365;
                     result -= frac * values[i] / Math.pow(r, frac + 1);
                 }
 
                 return result;
             };
 
-            var resultRate = guess;
-            var epsMax = 1e-10;
+            let resultRate = guess;
+            let epsMax = 1e-10;
 
-            var newRate, epsRate, resultValue;
-            var contLoop = true;
+            let newRate, epsRate, resultValue;
+            let contLoop = true;
 
             do {
                 resultValue = irrResult(values_n, dates, resultRate);
@@ -15775,7 +15787,7 @@ const functionImplementation = {
             return resultRate;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15787,8 +15799,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15797,8 +15809,8 @@ const functionImplementation = {
 
         try {
             //投资相关收益或支出的数组或范围
-            var data_values = arguments[0];
-            var values = [];
+            let data_values = arguments[0];
+            let values = [];
 
             if(getObjType(data_values) == "array"){
                 if(getObjType(data_values[0]) == "array" && !func_methods.isDyadicArr(data_values)){
@@ -15814,10 +15826,10 @@ const functionImplementation = {
                 values.push(data_values);
             }
 
-            var values_n = [];
+            let values_n = [];
 
-            for(var i = 0; i < values.length; i++){
-                var number = values[i];
+            for(let i = 0; i < values.length; i++){
+                let number = values[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -15827,7 +15839,7 @@ const functionImplementation = {
             }
 
             //现金流中使用的资金支付的利率
-            var finance_rate = func_methods.getFirstValue(arguments[1]);
+            let finance_rate = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(finance_rate)){
                 return finance_rate;
             }
@@ -15839,7 +15851,7 @@ const functionImplementation = {
             finance_rate = parseFloat(finance_rate);
 
             //将现金流再投资的收益率
-            var reinvest_rate = func_methods.getFirstValue(arguments[2]);
+            let reinvest_rate = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(reinvest_rate)){
                 return reinvest_rate;
             }
@@ -15851,11 +15863,11 @@ const functionImplementation = {
             reinvest_rate = parseFloat(reinvest_rate);
 
             //计算
-            var n = values_n.length;
-            var payments = [];
-            var incomes = [];
+            let n = values_n.length;
+            let payments = [];
+            let incomes = [];
 
-            for (var i = 0; i < n; i++) {
+            for (let i = 0; i < n; i++) {
                 if (values_n[i] < 0) {
                     payments.push(values_n[i]);
                 }
@@ -15868,13 +15880,13 @@ const functionImplementation = {
                 return formula.error.d;
             }
 
-            var num = -window.luckysheet_function.NPV.f(reinvest_rate, incomes) * Math.pow(1 + reinvest_rate, n - 1);
-            var den = window.luckysheet_function.NPV.f(finance_rate, payments) * (1 + finance_rate);
+            let num = -window.luckysheet_function.NPV.f(reinvest_rate, incomes) * Math.pow(1 + reinvest_rate, n - 1);
+            let den = window.luckysheet_function.NPV.f(finance_rate, payments) * (1 + finance_rate);
 
             return Math.pow(num / den, 1 / (n - 1)) - 1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -15886,8 +15898,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -15896,8 +15908,8 @@ const functionImplementation = {
 
         try {
             //投资相关收益或支出的数组或范围
-            var data_values = arguments[0];
-            var values = [];
+            let data_values = arguments[0];
+            let values = [];
 
             if(getObjType(data_values) == "array"){
                 if(getObjType(data_values[0]) == "array" && !func_methods.isDyadicArr(data_values)){
@@ -15913,10 +15925,10 @@ const functionImplementation = {
                 values.push(data_values);
             }
 
-            var values_n = [];
+            let values_n = [];
 
-            for(var i = 0; i < values.length; i++){
-                var number = values[i];
+            for(let i = 0; i < values.length; i++){
+                let number = values[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -15926,7 +15938,7 @@ const functionImplementation = {
             }
 
             //对内部回报率的估算值
-            var guess = 0.1;
+            let guess = 0.1;
             if(arguments.length == 2){
                 guess = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(guess)){
@@ -15940,11 +15952,11 @@ const functionImplementation = {
                 guess = parseFloat(guess);
             }
 
-            var dates = [];
-            var positive = false;
-            var negative = false;
+            let dates = [];
+            let positive = false;
+            let negative = false;
 
-            for (var i = 0; i < values.length; i++) {
+            for (let i = 0; i < values.length; i++) {
                 dates[i] = (i === 0) ? 0 : dates[i - 1] + 365;
 
                 if (values[i] > 0) {
@@ -15961,11 +15973,11 @@ const functionImplementation = {
             }
 
             //计算
-            var irrResult = function(values, dates, rate) {
-                var r = rate + 1;
-                var result = values[0];
+            let irrResult = function(values, dates, rate) {
+                let r = rate + 1;
+                let result = values[0];
 
-                for (var i = 1; i < values.length; i++) {
+                for (let i = 1; i < values.length; i++) {
                     // result += values[i] / Math.pow(r, window.luckysheet_function.DAYS.f(dates[i], dates[0]) / 365);
                     result += values[i] / Math.pow(r, (dates[i] - dates[0]) / 365);
                 }
@@ -15973,24 +15985,24 @@ const functionImplementation = {
                 return result;
             };
 
-            var irrResultDeriv = function(values, dates, rate) {
-                var r = rate + 1;
-                var result = 0;
+            let irrResultDeriv = function(values, dates, rate) {
+                let r = rate + 1;
+                let result = 0;
 
-                for (var i = 1; i < values.length; i++) {
-                    // var frac = window.luckysheet_function.DAYS.f(dates[i], dates[0]) / 365;
-                    var frac = (dates[i] - dates[0]) / 365;
+                for (let i = 1; i < values.length; i++) {
+                    // let frac = window.luckysheet_function.DAYS.f(dates[i], dates[0]) / 365;
+                    let frac = (dates[i] - dates[0]) / 365;
                     result -= frac * values[i] / Math.pow(r, frac + 1);
                 }
 
                 return result;
             };
 
-            var resultRate = guess;
-            var epsMax = 1e-10;
+            let resultRate = guess;
+            let epsMax = 1e-10;
 
-            var newRate, epsRate, resultValue;
-            var contLoop = true;
+            let newRate, epsRate, resultValue;
+            let contLoop = true;
 
             do {
                 resultValue = irrResult(values_n, dates, resultRate);
@@ -16004,7 +16016,7 @@ const functionImplementation = {
             return resultRate;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16016,8 +16028,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16026,7 +16038,7 @@ const functionImplementation = {
 
         try {
             //某一期间的贴现率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -16038,10 +16050,10 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //支出（负值）和收益（正值）
-            var values = [];
+            let values = [];
 
-            for(var i = 1; i < arguments.length; i++){
-                var data = arguments[i];
+            for(let i = 1; i < arguments.length; i++){
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -16058,10 +16070,10 @@ const functionImplementation = {
                 }
             }
 
-            var values_n = [];
+            let values_n = [];
 
-            for(var i = 0; i < values.length; i++){
-                var number = values[i];
+            for(let i = 0; i < values.length; i++){
+                let number = values[i];
 
                 if(isRealNum(number)){
                     values_n.push(parseFloat(number));
@@ -16069,10 +16081,10 @@ const functionImplementation = {
             }
 
             //计算
-            var result = 0;
+            let result = 0;
 
             if(values_n.length > 0){
-                for(var i = 0; i < values_n.length; i++){
+                for(let i = 0; i < values_n.length; i++){
                     result += values_n[i] / Math.pow(1 + rate, i + 1);
                 }
             }
@@ -16080,7 +16092,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16092,8 +16104,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16102,7 +16114,7 @@ const functionImplementation = {
 
         try {
             //应用于现金流的贴现率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -16114,8 +16126,8 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //与 dates 中的支付时间相对应的一系列现金流
-            var data_values = arguments[1];
-            var values = [];
+            let data_values = arguments[1];
+            let values = [];
 
             if(getObjType(data_values) == "array"){
                 if(getObjType(data_values[0]) == "array" && !func_methods.isDyadicArr(data_values)){
@@ -16131,10 +16143,10 @@ const functionImplementation = {
                 values.push(data_values);
             }
 
-            var values_n = [];
+            let values_n = [];
 
-            for(var i = 0; i < values.length; i++){
-                var number = values[i];
+            for(let i = 0; i < values.length; i++){
+                let number = values[i];
 
                 if(!isRealNum(number)){
                     return formula.error.v;
@@ -16144,12 +16156,12 @@ const functionImplementation = {
             }
 
             //与现金流支付相对应的支付日期表
-            var dates = func_methods.getCellrangeDate(arguments[2]);
+            let dates = func_methods.getCellrangeDate(arguments[2]);
             if(valueIsError(dates)){
                 return dates;
             }
 
-            for(var i = 0; i < dates.length; i++){
+            for(let i = 0; i < dates.length; i++){
                 if(!dayjs(dates[i]).isValid()){
                     return formula.error.v;
                 }
@@ -16160,15 +16172,15 @@ const functionImplementation = {
             }
 
             //计算
-            var result = 0;
-            for (var i = 0; i < values_n.length; i++) {
+            let result = 0;
+            for (let i = 0; i < values_n.length; i++) {
                 result += values_n[i] / Math.pow(1 + rate, window.luckysheet_function.DAYS.f(dates[i], dates[0]) / 365);
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16180,8 +16192,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16190,7 +16202,7 @@ const functionImplementation = {
 
         try {
             //利率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -16202,7 +16214,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //总付款期数
-            var nper = func_methods.getFirstValue(arguments[1]);
+            let nper = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(nper)){
                 return nper;
             }
@@ -16214,7 +16226,7 @@ const functionImplementation = {
             nper = parseFloat(nper);
 
             //年金的现值
-            var pv = func_methods.getFirstValue(arguments[2]);
+            let pv = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pv)){
                 return pv;
             }
@@ -16226,7 +16238,7 @@ const functionImplementation = {
             pv = parseFloat(pv);
 
             //首期
-            var start_period = func_methods.getFirstValue(arguments[3]);
+            let start_period = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(start_period)){
                 return start_period;
             }
@@ -16238,7 +16250,7 @@ const functionImplementation = {
             start_period = parseInt(start_period);
 
             //末期
-            var end_period = func_methods.getFirstValue(arguments[4]);
+            let end_period = func_methods.getFirstValue(arguments[4]);
             if(valueIsError(end_period)){
                 return end_period;
             }
@@ -16250,7 +16262,7 @@ const functionImplementation = {
             end_period = parseInt(end_period);
 
             //指定各期的付款时间是在期初还是期末
-            var type = func_methods.getFirstValue(arguments[5]);
+            let type = func_methods.getFirstValue(arguments[5]);
             if(valueIsError(type)){
                 return type;
             }
@@ -16274,8 +16286,8 @@ const functionImplementation = {
             }
 
             //计算
-            var payment = window.luckysheet_function.PMT.f(rate, nper, pv, 0, type);
-            var interest = 0;
+            let payment = window.luckysheet_function.PMT.f(rate, nper, pv, 0, type);
+            let interest = 0;
 
             if (start_period === 1) {
                 if (type === 0) {
@@ -16284,7 +16296,7 @@ const functionImplementation = {
                 }
             }
 
-            for (var i = start_period; i <= end_period; i++) {
+            for (let i = start_period; i <= end_period; i++) {
                 if (type === 1) {
                     interest += window.luckysheet_function.FV.f(rate, i - 2, payment, pv, 1) - payment;
                 }
@@ -16298,7 +16310,7 @@ const functionImplementation = {
             return interest;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16310,8 +16322,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16320,7 +16332,7 @@ const functionImplementation = {
 
         try {
             //贷款利率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -16332,7 +16344,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //该项贷款的付款总数
-            var nper = func_methods.getFirstValue(arguments[1]);
+            let nper = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(nper)){
                 return nper;
             }
@@ -16344,7 +16356,7 @@ const functionImplementation = {
             nper = parseFloat(nper);
 
             //现值
-            var pv = func_methods.getFirstValue(arguments[2]);
+            let pv = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pv)){
                 return pv;
             }
@@ -16356,7 +16368,7 @@ const functionImplementation = {
             pv = parseFloat(pv);
 
             //最后一次付款后希望得到的现金余额
-            var fv = 0;
+            let fv = 0;
             if(arguments.length >= 4){
                 fv = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(fv)){
@@ -16371,7 +16383,7 @@ const functionImplementation = {
             }
 
             //指定各期的付款时间是在期初还是期末
-            var type = 0;
+            let type = 0;
             if(arguments.length == 5){
                 type = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(type)){
@@ -16390,13 +16402,13 @@ const functionImplementation = {
             }
 
             //计算
-            var result;
+            let result;
 
             if (rate === 0) {
                 result = (pv + fv) / nper;
             }
             else {
-                var term = Math.pow(1 + rate, nper);
+                let term = Math.pow(1 + rate, nper);
 
                 if (type === 1) {
                     result = (fv * rate / (term - 1) + pv * rate / (1 - 1 / term)) / (1 + rate);
@@ -16409,7 +16421,7 @@ const functionImplementation = {
             return -result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16421,8 +16433,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16431,7 +16443,7 @@ const functionImplementation = {
 
         try {
             //利率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -16443,7 +16455,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //用于计算其利息数额的期数
-            var per = func_methods.getFirstValue(arguments[1]);
+            let per = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(per)){
                 return per;
             }
@@ -16455,7 +16467,7 @@ const functionImplementation = {
             per = parseFloat(per);
 
             //总付款期数
-            var nper = func_methods.getFirstValue(arguments[2]);
+            let nper = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(nper)){
                 return nper;
             }
@@ -16467,7 +16479,7 @@ const functionImplementation = {
             nper = parseFloat(nper);
 
             //现值
-            var pv = func_methods.getFirstValue(arguments[3]);
+            let pv = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(pv)){
                 return pv;
             }
@@ -16479,7 +16491,7 @@ const functionImplementation = {
             pv = parseFloat(pv);
 
             //最后一次付款后希望得到的现金余额
-            var fv = 0;
+            let fv = 0;
             if(arguments.length >= 5){
                 fv = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(fv)){
@@ -16494,7 +16506,7 @@ const functionImplementation = {
             }
 
             //指定各期的付款时间是在期初还是期末
-            var type = 0;
+            let type = 0;
             if(arguments.length >= 6){
                 type = func_methods.getFirstValue(arguments[5]);
                 if(valueIsError(type)){
@@ -16517,8 +16529,8 @@ const functionImplementation = {
             }
 
             //计算
-            var payment = window.luckysheet_function.PMT.f(rate, nper, pv, fv, type);
-            var interest;
+            let payment = window.luckysheet_function.PMT.f(rate, nper, pv, fv, type);
+            let interest;
 
             if (per === 1) {
                 if (type === 1) {
@@ -16537,12 +16549,12 @@ const functionImplementation = {
                 }
             }
 
-            var result = interest * rate;
+            let result = interest * rate;
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16554,8 +16566,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16564,7 +16576,7 @@ const functionImplementation = {
 
         try {
             //利率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -16576,7 +16588,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //用于计算其利息数额的期数
-            var per = func_methods.getFirstValue(arguments[1]);
+            let per = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(per)){
                 return per;
             }
@@ -16588,7 +16600,7 @@ const functionImplementation = {
             per = parseFloat(per);
 
             //总付款期数
-            var nper = func_methods.getFirstValue(arguments[2]);
+            let nper = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(nper)){
                 return nper;
             }
@@ -16600,7 +16612,7 @@ const functionImplementation = {
             nper = parseFloat(nper);
 
             //现值
-            var pv = func_methods.getFirstValue(arguments[3]);
+            let pv = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(pv)){
                 return pv;
             }
@@ -16612,7 +16624,7 @@ const functionImplementation = {
             pv = parseFloat(pv);
 
             //最后一次付款后希望得到的现金余额
-            var fv = 0;
+            let fv = 0;
             if(arguments.length >= 5){
                 fv = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(fv)){
@@ -16627,7 +16639,7 @@ const functionImplementation = {
             }
 
             //指定各期的付款时间是在期初还是期末
-            var type = 0;
+            let type = 0;
             if(arguments.length >= 6){
                 type = func_methods.getFirstValue(arguments[5]);
                 if(valueIsError(type)){
@@ -16650,13 +16662,13 @@ const functionImplementation = {
             }
 
             //计算
-            var payment = window.luckysheet_function.PMT.f(rate, nper, pv, fv, type);
-            var payment2 = window.luckysheet_function.IPMT.f(rate, per, nper, pv, fv, type);
+            let payment = window.luckysheet_function.PMT.f(rate, nper, pv, fv, type);
+            let payment2 = window.luckysheet_function.IPMT.f(rate, per, nper, pv, fv, type);
 
             return payment - payment2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16668,8 +16680,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16678,7 +16690,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -16688,7 +16700,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -16698,7 +16710,7 @@ const functionImplementation = {
             }
 
             //有价证券的投资额
-            var investment = func_methods.getFirstValue(arguments[2]);
+            let investment = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(investment)){
                 return investment;
             }
@@ -16710,7 +16722,7 @@ const functionImplementation = {
             investment = parseFloat(investment);
 
             //有价证券到期时的兑换值
-            var redemption = func_methods.getFirstValue(arguments[3]);
+            let redemption = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(redemption)){
                 return redemption;
             }
@@ -16722,7 +16734,7 @@ const functionImplementation = {
             redemption = parseFloat(redemption);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 5){
                 basis = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(basis)){
@@ -16749,14 +16761,14 @@ const functionImplementation = {
             }
 
             //计算
-            var sd = dayjs(settlement).date();
-            var sm = dayjs(settlement).month() + 1;
-            var sy = dayjs(settlement).year();
-            var ed = dayjs(maturity).date();
-            var em = dayjs(maturity).month() + 1;
-            var ey = dayjs(maturity).year();
+            let sd = dayjs(settlement).date();
+            let sm = dayjs(settlement).month() + 1;
+            let sy = dayjs(settlement).year();
+            let ed = dayjs(maturity).date();
+            let em = dayjs(maturity).month() + 1;
+            let ey = dayjs(maturity).year();
 
-            var result;
+            let result;
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     if (sd === 31 && ed === 31) {
@@ -16774,7 +16786,7 @@ const functionImplementation = {
 
                     break;
                 case 1: // Actual/actual
-                    var ylength = 365;
+                    let ylength = 365;
                     if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                         if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(settlement, maturity) || (em === 1 && ed === 29)) {
                             ylength = 366;
@@ -16786,9 +16798,9 @@ const functionImplementation = {
                         return result;
                     }
 
-                    var years = (ey - sy) + 1;
-                    var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                    var average = days / years;
+                    let years = (ey - sy) + 1;
+                    let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                    let average = days / years;
 
                     result = average / dayjs(maturity).diff(dayjs(settlement), 'days');
 
@@ -16812,7 +16824,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16824,8 +16836,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16834,7 +16846,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -16844,7 +16856,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -16854,7 +16866,7 @@ const functionImplementation = {
             }
 
             //有价证券的年息票利率
-            var rate = func_methods.getFirstValue(arguments[2]);
+            let rate = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -16866,7 +16878,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //有价证券的年收益率
-            var yld = func_methods.getFirstValue(arguments[3]);
+            let yld = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(yld)){
                 return yld;
             }
@@ -16878,7 +16890,7 @@ const functionImplementation = {
             yld = parseFloat(yld);
 
             //有价证券的清偿价值
-            var redemption = func_methods.getFirstValue(arguments[4]);
+            let redemption = func_methods.getFirstValue(arguments[4]);
             if(valueIsError(redemption)){
                 return redemption;
             }
@@ -16890,7 +16902,7 @@ const functionImplementation = {
             redemption = parseFloat(redemption);
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[5]);
+            let frequency = func_methods.getFirstValue(arguments[5]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -16902,7 +16914,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 7){
                 basis = func_methods.getFirstValue(arguments[6]);
                 if(valueIsError(basis)){
@@ -16937,36 +16949,36 @@ const functionImplementation = {
             }
 
             //计算
-            var DSC = window.luckysheet_function.COUPDAYSNC.f(settlement, maturity, frequency, basis);
-            var E = window.luckysheet_function.COUPDAYS.f(settlement, maturity, frequency, basis);
-            var A = window.luckysheet_function.COUPDAYBS.f(settlement, maturity, frequency, basis);
-            var num = window.luckysheet_function.COUPNUM.f(settlement, maturity, frequency, basis);
+            let DSC = window.luckysheet_function.COUPDAYSNC.f(settlement, maturity, frequency, basis);
+            let E = window.luckysheet_function.COUPDAYS.f(settlement, maturity, frequency, basis);
+            let A = window.luckysheet_function.COUPDAYBS.f(settlement, maturity, frequency, basis);
+            let num = window.luckysheet_function.COUPNUM.f(settlement, maturity, frequency, basis);
 
             if(num > 1){
-                var T1 = redemption / Math.pow(1 + yld / frequency, num - 1 + DSC / E);
+                let T1 = redemption / Math.pow(1 + yld / frequency, num - 1 + DSC / E);
 
-                var T2 = 0;
-                for(var i = 1; i <= num; i++){
+                let T2 = 0;
+                for(let i = 1; i <= num; i++){
                     T2 += (100 * rate / frequency) / Math.pow(1 + yld / frequency, i - 1 + DSC / E);
                 }
 
-                var T3 = 100 * (rate / frequency) * (A / E);
+                let T3 = 100 * (rate / frequency) * (A / E);
 
-                var result = T1 + T2 - T3;
+                let result = T1 + T2 - T3;
             }
             else{
-                var DSR = E - A;
-                var T1 = 100 * (rate / frequency) + redemption;
-                var T2 = (yld / frequency) * (DSR / E) + 1;
-                var T3 = 100 * (rate / frequency) * (A / E);
+                let DSR = E - A;
+                let T1 = 100 * (rate / frequency) + redemption;
+                let T2 = (yld / frequency) * (DSR / E) + 1;
+                let T3 = 100 * (rate / frequency) * (A / E);
 
-                var result = T1 / T2 - T3;
+                let result = T1 / T2 - T3;
             }
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -16978,8 +16990,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -16988,7 +17000,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -16998,7 +17010,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -17008,7 +17020,7 @@ const functionImplementation = {
             }
 
             //有价证券的贴现率
-            var discount = func_methods.getFirstValue(arguments[2]);
+            let discount = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(discount)){
                 return discount;
             }
@@ -17020,7 +17032,7 @@ const functionImplementation = {
             discount = parseFloat(discount);
 
             //有价证券的清偿价值
-            var redemption = func_methods.getFirstValue(arguments[3]);
+            let redemption = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(redemption)){
                 return redemption;
             }
@@ -17032,7 +17044,7 @@ const functionImplementation = {
             redemption = parseFloat(redemption);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 5){
                 basis = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(basis)){
@@ -17059,14 +17071,14 @@ const functionImplementation = {
             }
 
             //计算
-            var sd = dayjs(settlement).date();
-            var sm = dayjs(settlement).month() + 1;
-            var sy = dayjs(settlement).year();
-            var ed = dayjs(maturity).date();
-            var em = dayjs(maturity).month() + 1;
-            var ey = dayjs(maturity).year();
+            let sd = dayjs(settlement).date();
+            let sm = dayjs(settlement).month() + 1;
+            let sy = dayjs(settlement).year();
+            let ed = dayjs(maturity).date();
+            let em = dayjs(maturity).month() + 1;
+            let ey = dayjs(maturity).year();
 
-            var result;
+            let result;
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     if (sd === 31 && ed === 31) {
@@ -17084,7 +17096,7 @@ const functionImplementation = {
 
                     break;
                 case 1: // Actual/actual
-                    var ylength = 365;
+                    let ylength = 365;
                     if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                         if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(settlement, maturity) || (em === 1 && ed === 29)) {
                             ylength = 366;
@@ -17096,9 +17108,9 @@ const functionImplementation = {
                         return result;
                     }
 
-                    var years = (ey - sy) + 1;
-                    var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                    var average = days / years;
+                    let years = (ey - sy) + 1;
+                    let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                    let average = days / years;
 
                     result = dayjs(maturity).diff(dayjs(settlement), 'days') / average;
 
@@ -17122,7 +17134,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -17134,8 +17146,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -17144,7 +17156,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -17154,7 +17166,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -17164,7 +17176,7 @@ const functionImplementation = {
             }
 
             //发行日
-            var issue = func_methods.getCellDate(arguments[2]);
+            let issue = func_methods.getCellDate(arguments[2]);
             if(valueIsError(issue)){
                 return issue;
             }
@@ -17174,7 +17186,7 @@ const functionImplementation = {
             }
 
             //有价证券在发行日的利率
-            var rate = func_methods.getFirstValue(arguments[3]);
+            let rate = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -17186,7 +17198,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //有价证券的年收益率
-            var yld = func_methods.getFirstValue(arguments[4]);
+            let yld = func_methods.getFirstValue(arguments[4]);
             if(valueIsError(yld)){
                 return yld;
             }
@@ -17198,7 +17210,7 @@ const functionImplementation = {
             yld = parseFloat(yld);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 6){
                 basis = func_methods.getFirstValue(arguments[5]);
                 if(valueIsError(basis)){
@@ -17225,17 +17237,21 @@ const functionImplementation = {
             }
 
             //计算
-            var sd = dayjs(settlement).date();
-            var sm = dayjs(settlement).month() + 1;
-            var sy = dayjs(settlement).year();
-            var ed = dayjs(maturity).date();
-            var em = dayjs(maturity).month() + 1;
-            var ey = dayjs(maturity).year();
-            var td = dayjs(issue).date();
-            var tm = dayjs(issue).month() + 1;
-            var ty = dayjs(issue).year();
+            let sd = dayjs(settlement).date();
+            let sm = dayjs(settlement).month() + 1;
+            let sy = dayjs(settlement).year();
+            let ed = dayjs(maturity).date();
+            let em = dayjs(maturity).month() + 1;
+            let ey = dayjs(maturity).year();
+            let td = dayjs(issue).date();
+            let tm = dayjs(issue).month() + 1;
+            let ty = dayjs(issue).year();
 
-            var result;
+            let result;
+            let B
+let DSM
+let DIM
+let A
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     if(sd == 31){
@@ -17250,58 +17266,58 @@ const functionImplementation = {
                         td = 30;
                     }
 
-                    var B = 360;
-                    var DSM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
-                    var DIM = ((ed + em * 30 + ey * 360) - (td + tm * 30 + ty * 360));
-                    var A = ((sd + sm * 30 + sy * 360) - (td + tm * 30 + ty * 360));
+                    let B = 360;
+                    let DSM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
+                    let DIM = ((ed + em * 30 + ey * 360) - (td + tm * 30 + ty * 360));
+                    let A = ((sd + sm * 30 + sy * 360) - (td + tm * 30 + ty * 360));
 
                     break;
                 case 1: // Actual/actual
-                    var ylength = 365;
+                    let ylength = 365;
                     if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                         if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(settlement, maturity) || (em === 1 && ed === 29)) {
                             ylength = 366;
                         }
 
-                        var B = ylength;
-                        var DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
-                        var DIM = dayjs(settlement).diff(dayjs(issue), 'days');
-                        var A = dayjs(maturity).diff(dayjs(issue), 'days');
+                         B = ylength;
+                         DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                         DIM = dayjs(settlement).diff(dayjs(issue), 'days');
+                         A = dayjs(maturity).diff(dayjs(issue), 'days');
 
                         result = (100 + (DIM / B * rate * 100)) / (1 + DSM / B * yld) - (A / B * rate * 100);
 
                         return result;
                     }
 
-                    var years = (ey - sy) + 1;
-                    var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                    var average = days / years;
+                    let years = (ey - sy) + 1;
+                    let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                    let average = days / years;
 
-                    var B = average;
-                    var DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
-                    var DIM = dayjs(settlement).diff(dayjs(issue), 'days');
-                    var A = dayjs(maturity).diff(dayjs(issue), 'days');
+                     B = average;
+                     DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                     DIM = dayjs(settlement).diff(dayjs(issue), 'days');
+                     A = dayjs(maturity).diff(dayjs(issue), 'days');
 
                     break;
                 case 2: // Actual/360
-                    var B = 360;
-                    var DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
-                    var DIM = dayjs(settlement).diff(dayjs(issue), 'days');
-                    var A = dayjs(maturity).diff(dayjs(issue), 'days');
+                     B = 360;
+                     DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                     DIM = dayjs(settlement).diff(dayjs(issue), 'days');
+                     A = dayjs(maturity).diff(dayjs(issue), 'days');
 
                     break;
                 case 3: // Actual/365
-                    var B = 365;
-                    var DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
-                    var DIM = dayjs(settlement).diff(dayjs(issue), 'days');
-                    var A = dayjs(maturity).diff(dayjs(issue), 'days');
+                     B = 365;
+                     DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                     DIM = dayjs(settlement).diff(dayjs(issue), 'days');
+                     A = dayjs(maturity).diff(dayjs(issue), 'days');
 
                     break;
                 case 4: // European 30/360
-                    var B = 360;
-                    var DSM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
-                    var DIM = ((ed + em * 30 + ey * 360) - (td + tm * 30 + ty * 360));
-                    var A = ((sd + sm * 30 + sy * 360) - (td + tm * 30 + ty * 360));
+                     B = 360;
+                     DSM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
+                     DIM = ((ed + em * 30 + ey * 360) - (td + tm * 30 + ty * 360));
+                     A = ((sd + sm * 30 + sy * 360) - (td + tm * 30 + ty * 360));
 
                     break;
             }
@@ -17311,7 +17327,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -17323,8 +17339,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -17333,7 +17349,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -17343,7 +17359,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -17353,7 +17369,7 @@ const functionImplementation = {
             }
 
             //有价证券的投资额
-            var investment = func_methods.getFirstValue(arguments[2]);
+            let investment = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(investment)){
                 return investment;
             }
@@ -17365,7 +17381,7 @@ const functionImplementation = {
             investment = parseFloat(investment);
 
             //有价证券的贴现率
-            var discount = func_methods.getFirstValue(arguments[3]);
+            let discount = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(discount)){
                 return discount;
             }
@@ -17377,7 +17393,7 @@ const functionImplementation = {
             discount = parseFloat(discount);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 5){
                 basis = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(basis)){
@@ -17404,14 +17420,15 @@ const functionImplementation = {
             }
 
             //计算
-            var sd = dayjs(settlement).date();
-            var sm = dayjs(settlement).month() + 1;
-            var sy = dayjs(settlement).year();
-            var ed = dayjs(maturity).date();
-            var em = dayjs(maturity).month() + 1;
-            var ey = dayjs(maturity).year();
-
-            var result;
+            let sd = dayjs(settlement).date();
+            let sm = dayjs(settlement).month() + 1;
+            let sy = dayjs(settlement).year();
+            let ed = dayjs(maturity).date();
+            let em = dayjs(maturity).month() + 1;
+            let ey = dayjs(maturity).year();
+            let B
+            let DIM
+            let result;
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     if(sd == 31){
@@ -17422,46 +17439,46 @@ const functionImplementation = {
                         ed = 30;
                     }
 
-                    var B = 360;
-                    var DIM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
+                    B = 360;
+                    DIM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
 
                     break;
                 case 1: // Actual/actual
-                    var ylength = 365;
+                    let ylength = 365;
                     if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                         if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(settlement, maturity) || (em === 1 && ed === 29)) {
                             ylength = 366;
                         }
 
-                        var B = ylength;
-                        var DIM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                        let B = ylength;
+                        let DIM = dayjs(maturity).diff(dayjs(settlement), 'days');
 
                         result = investment / (1 - discount * DIM / B);
 
                         return result;
                     }
 
-                    var years = (ey - sy) + 1;
-                    var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
-                    var average = days / years;
+                    let years = (ey - sy) + 1;
+                    let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, 'date': 1 })) / 1000 / 60 / 60 / 24;
+                    let average = days / years;
 
-                    var B = average;
-                    var DIM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                    B = average;
+                    DIM = dayjs(maturity).diff(dayjs(settlement), 'days');
 
                     break;
                 case 2: // Actual/360
-                    var B = 360;
-                    var DIM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                    B = 360;
+                    DIM = dayjs(maturity).diff(dayjs(settlement), 'days');
 
                     break;
                 case 3: // Actual/365
-                    var B = 365;
-                    var DIM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                    B = 365;
+                    DIM = dayjs(maturity).diff(dayjs(settlement), 'days');
 
                     break;
                 case 4: // European 30/360
-                    var B = 360;
-                    var DIM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
+                    B = 360;
+                    DIM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
 
                     break;
             }
@@ -17471,7 +17488,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -17483,8 +17500,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -17493,7 +17510,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -17503,7 +17520,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -17513,7 +17530,7 @@ const functionImplementation = {
             }
 
             //有价证券的价格
-            var pr = func_methods.getFirstValue(arguments[2]);
+            let pr = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pr)){
                 return pr;
             }
@@ -17525,7 +17542,7 @@ const functionImplementation = {
             pr = parseFloat(pr);
 
             //有价证券的清偿价值
-            var redemption = func_methods.getFirstValue(arguments[3]);
+            let redemption = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(redemption)){
                 return redemption;
             }
@@ -17537,7 +17554,7 @@ const functionImplementation = {
             redemption = parseFloat(redemption);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 5){
                 basis = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(basis)){
@@ -17564,14 +17581,16 @@ const functionImplementation = {
             }
 
             //计算
-            var sd = dayjs(settlement).date();
-            var sm = dayjs(settlement).month() + 1;
-            var sy = dayjs(settlement).year();
-            var ed = dayjs(maturity).date();
-            var em = dayjs(maturity).month() + 1;
-            var ey = dayjs(maturity).year();
+            let sd = dayjs(settlement).date();
+            let sm = dayjs(settlement).month() + 1;
+            let sy = dayjs(settlement).year();
+            let ed = dayjs(maturity).date();
+            let em = dayjs(maturity).month() + 1;
+            let ey = dayjs(maturity).year();
 
-            var result;
+            let result;
+            let B
+let DSM
             switch (basis) {
                 case 0: // US (NASD) 30/360
                     if(sd == 31){
@@ -17582,46 +17601,46 @@ const functionImplementation = {
                         ed = 30;
                     }
 
-                    var B = 360;
-                    var DSM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
+                    B = 360;
+                    DSM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
 
                     break;
                 case 1: // Actual/actual
-                    var ylength = 365;
+                    let ylength = 365;
                     if (sy === ey || ((sy + 1) === ey) && ((sm > em) || ((sm === em) && (sd >= ed)))) {
                         if ((sy === ey && func_methods.isLeapYear(sy)) || func_methods.feb29Between(settlement, maturity) || (em === 1 && ed === 29)) {
                             ylength = 366;
                         }
 
-                        var B = ylength;
-                        var DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                        let B = ylength;
+                        let DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
 
                         result = ((redemption - pr) / redemption) * (B / DSM);
 
                         return result;
                     }
 
-                    var years = (ey - sy) + 1;
-                    var days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, "date": 1 })) / 1000 / 60 / 60 / 24;
-                    var average = days / years;
+                    let years = (ey - sy) + 1;
+                    let days = (dayjs().set({ 'year': ey + 1, 'month': 0, 'date': 1 }) - dayjs().set({ 'year': sy, 'month': 0, "date": 1 })) / 1000 / 60 / 60 / 24;
+                    let average = days / years;
 
-                    var B = average;
-                    var DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                    B = average;
+                    DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
 
                     break;
                 case 2: // Actual/360
-                    var B = 360;
-                    var DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                    B = 360;
+                    DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
 
                     break;
                 case 3: // Actual/365
-                    var B = 365;
-                    var DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
+                    B = 365;
+                    DSM = dayjs(maturity).diff(dayjs(settlement), 'days');
 
                     break;
                 case 4: // European 30/360
-                    var B = 360;
-                    var DSM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
+                    B = 360;
+                    DSM = ((ed + em * 30 + ey * 360) - (sd + sm * 30 + sy * 360));
 
                     break;
             }
@@ -17631,7 +17650,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -17643,8 +17662,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -17653,7 +17672,7 @@ const functionImplementation = {
 
         try {
             //利率
-            var rate = func_methods.getFirstValue(arguments[0]);
+            let rate = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rate)){
                 return rate;
             }
@@ -17665,7 +17684,7 @@ const functionImplementation = {
             rate = parseFloat(rate);
 
             //各期所应支付的金额
-            var pmt = func_methods.getFirstValue(arguments[1]);
+            let pmt = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(pmt)){
                 return pmt;
             }
@@ -17677,7 +17696,7 @@ const functionImplementation = {
             pmt = parseFloat(pmt);
 
             //现值
-            var pv = func_methods.getFirstValue(arguments[2]);
+            let pv = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(pv)){
                 return pv;
             }
@@ -17689,7 +17708,7 @@ const functionImplementation = {
             pv = parseFloat(pv);
 
             //最后一次付款后希望得到的现金余额
-            var fv = 0;
+            let fv = 0;
             if(arguments.length >= 4){
                 fv = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(fv)){
@@ -17704,7 +17723,7 @@ const functionImplementation = {
             }
 
             //指定各期的付款时间是在期初还是期末
-            var type = 0;
+            let type = 0;
             if(arguments.length >= 5){
                 type = func_methods.getFirstValue(arguments[4]);
                 if(valueIsError(type)){
@@ -17723,13 +17742,13 @@ const functionImplementation = {
             }
 
             //计算
-            var num = pmt * (1 + rate * type) - fv * rate;
-            var den = (pv * rate + pmt * (1 + rate * type));
+            let num = pmt * (1 + rate * type) - fv * rate;
+            let den = (pv * rate + pmt * (1 + rate * type));
 
             return Math.log(num / den) / Math.log(1 + rate);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -17741,8 +17760,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -17751,7 +17770,7 @@ const functionImplementation = {
 
         try {
             //资产原值
-            var cost = func_methods.getFirstValue(arguments[0]);
+            let cost = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(cost)){
                 return cost;
             }
@@ -17763,7 +17782,7 @@ const functionImplementation = {
             cost = parseFloat(cost);
 
             //资产残值
-            var salvage = func_methods.getFirstValue(arguments[1]);
+            let salvage = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(salvage)){
                 return salvage;
             }
@@ -17775,7 +17794,7 @@ const functionImplementation = {
             salvage = parseFloat(salvage);
 
             //资产的折旧期数
-            var life = func_methods.getFirstValue(arguments[2]);
+            let life = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(life)){
                 return life;
             }
@@ -17793,7 +17812,7 @@ const functionImplementation = {
             return (cost - salvage) / life;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -17805,8 +17824,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -17815,7 +17834,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -17825,7 +17844,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -17835,7 +17854,7 @@ const functionImplementation = {
             }
 
             //有价证券的年息票利率
-            var coupon = func_methods.getFirstValue(arguments[2]);
+            let coupon = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(coupon)){
                 return coupon;
             }
@@ -17847,7 +17866,7 @@ const functionImplementation = {
             coupon = parseFloat(coupon);
 
             //有价证券的年收益率
-            var yld = func_methods.getFirstValue(arguments[3]);
+            let yld = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(yld)){
                 return yld;
             }
@@ -17859,7 +17878,7 @@ const functionImplementation = {
             yld = parseFloat(yld);
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[4]);
+            let frequency = func_methods.getFirstValue(arguments[4]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -17871,7 +17890,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 6){
                 basis = func_methods.getFirstValue(arguments[5]);
                 if(valueIsError(basis)){
@@ -17901,22 +17920,22 @@ const functionImplementation = {
                 return formula.error.nm;
             }
 
-            var nper = window.luckysheet_function.COUPNUM.f(settlement, maturity, frequency, basis);
+            let nper = window.luckysheet_function.COUPNUM.f(settlement, maturity, frequency, basis);
 
-            var sum1 = 0;
-            var sum2 = 0;
-            for(var i = 1; i <= nper; i++){
+            let sum1 = 0;
+            let sum2 = 0;
+            for(let i = 1; i <= nper; i++){
                 sum1 += 100 * (coupon / frequency) * i / Math.pow(1 + (yld / frequency), i);
                 sum2 += 100 * (coupon / frequency) / Math.pow(1 + (yld / frequency), i);
             }
 
-            var result = (sum1 + 100 * nper / Math.pow(1 + (yld / frequency), nper)) / (sum2 + 100 / Math.pow(1 + (yld / frequency), nper));
+            let result = (sum1 + 100 * nper / Math.pow(1 + (yld / frequency), nper)) / (sum2 + 100 / Math.pow(1 + (yld / frequency), nper));
             result = result / frequency;
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -17928,8 +17947,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -17938,7 +17957,7 @@ const functionImplementation = {
 
         try {
             //结算日
-            var settlement = func_methods.getCellDate(arguments[0]);
+            let settlement = func_methods.getCellDate(arguments[0]);
             if(valueIsError(settlement)){
                 return settlement;
             }
@@ -17948,7 +17967,7 @@ const functionImplementation = {
             }
 
             //到期日
-            var maturity = func_methods.getCellDate(arguments[1]);
+            let maturity = func_methods.getCellDate(arguments[1]);
             if(valueIsError(maturity)){
                 return maturity;
             }
@@ -17958,7 +17977,7 @@ const functionImplementation = {
             }
 
             //有价证券的年息票利率
-            var coupon = func_methods.getFirstValue(arguments[2]);
+            let coupon = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(coupon)){
                 return coupon;
             }
@@ -17970,7 +17989,7 @@ const functionImplementation = {
             coupon = parseFloat(coupon);
 
             //有价证券的年收益率
-            var yld = func_methods.getFirstValue(arguments[3]);
+            let yld = func_methods.getFirstValue(arguments[3]);
             if(valueIsError(yld)){
                 return yld;
             }
@@ -17982,7 +18001,7 @@ const functionImplementation = {
             yld = parseFloat(yld);
 
             //年付息次数
-            var frequency = func_methods.getFirstValue(arguments[4]);
+            let frequency = func_methods.getFirstValue(arguments[4]);
             if(valueIsError(frequency)){
                 return frequency;
             }
@@ -17994,7 +18013,7 @@ const functionImplementation = {
             frequency = parseInt(frequency);
 
             //日计数基准类型
-            var basis = 0;
+            let basis = 0;
             if(arguments.length == 6){
                 basis = func_methods.getFirstValue(arguments[5]);
                 if(valueIsError(basis)){
@@ -18024,12 +18043,12 @@ const functionImplementation = {
                 return formula.error.nm;
             }
 
-            var duration = window.luckysheet_function.DURATION.f(settlement, maturity, coupon, yld, frequency, basis);
+            let duration = window.luckysheet_function.DURATION.f(settlement, maturity, coupon, yld, frequency, basis);
 
             return duration / (1 + yld / frequency);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18041,8 +18060,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18051,7 +18070,7 @@ const functionImplementation = {
 
         try {
             //二进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -18061,8 +18080,8 @@ const functionImplementation = {
             }
 
             //计算
-            var result = parseInt(number, 2);
-            var stringified = number.toString();
+            let result = parseInt(number, 2);
+            let stringified = number.toString();
 
             if (stringified.length === 10 && stringified.substring(0, 1) === '1') {
                 return parseInt(stringified.substring(1), 2) - 512;
@@ -18072,7 +18091,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18084,8 +18103,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18094,13 +18113,13 @@ const functionImplementation = {
 
         try {
             //二进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18119,7 +18138,7 @@ const functionImplementation = {
             }
 
             //计算
-            var result = parseInt(number, 2).toString(16).toUpperCase();
+            let result = parseInt(number, 2).toString(16).toUpperCase();
 
             if (places == null) {
                 return result;
@@ -18133,7 +18152,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18145,8 +18164,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18155,13 +18174,13 @@ const functionImplementation = {
 
         try {
             //二进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18180,12 +18199,12 @@ const functionImplementation = {
             }
 
             //计算
-            var stringified = number.toString();
+            let stringified = number.toString();
             if (stringified.length === 10 && stringified.substring(0, 1) === '1') {
                 return (1073741312 + parseInt(stringified.substring(1), 2)).toString(8);
             }
 
-            var result = parseInt(number, 2).toString(8);
+            let result = parseInt(number, 2).toString(8);
 
             if (places == null) {
                 return result;
@@ -18199,7 +18218,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18211,8 +18230,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18221,7 +18240,7 @@ const functionImplementation = {
 
         try {
             //十进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -18233,7 +18252,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18256,7 +18275,7 @@ const functionImplementation = {
                 return '1' + new Array(9 - (512 + number).toString(2).length).join('0') + (512 + number).toString(2);
             }
 
-            var result = parseInt(number, 10).toString(2);
+            let result = parseInt(number, 10).toString(2);
 
             if (places == null) {
                 return result;
@@ -18270,7 +18289,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18282,8 +18301,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18292,7 +18311,7 @@ const functionImplementation = {
 
         try {
             //十进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -18304,7 +18323,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18327,7 +18346,7 @@ const functionImplementation = {
                 return (1099511627776 + number).toString(16).toUpperCase();
             }
 
-            var result = parseInt(number, 10).toString(16).toUpperCase();
+            let result = parseInt(number, 10).toString(16).toUpperCase();
 
             if (places == null) {
                 return result;
@@ -18341,7 +18360,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18353,8 +18372,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18363,7 +18382,7 @@ const functionImplementation = {
 
         try {
             //十进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -18375,7 +18394,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18398,7 +18417,7 @@ const functionImplementation = {
                 return (1073741824 + number).toString(8);
             }
 
-            var result = parseInt(number, 10).toString(8);
+            let result = parseInt(number, 10).toString(8);
 
             if (places == null) {
                 return result;
@@ -18412,7 +18431,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18424,8 +18443,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18434,13 +18453,13 @@ const functionImplementation = {
 
         try {
             //十六进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18459,9 +18478,9 @@ const functionImplementation = {
             }
 
             //计算
-            var negative = (number.length === 10 && number.substring(0, 1).toLowerCase() === 'f') ? true : false;
+            let negative = (number.length === 10 && number.substring(0, 1).toLowerCase() === 'f') ? true : false;
 
-            var decimal = (negative) ? parseInt(number, 16) - 1099511627776 : parseInt(number, 16);
+            let decimal = (negative) ? parseInt(number, 16) - 1099511627776 : parseInt(number, 16);
 
             if (decimal < -512 || decimal > 511) {
                 return formula.error.nm;
@@ -18471,7 +18490,7 @@ const functionImplementation = {
                 return '1' + new Array(9 - (512 + decimal).toString(2).length).join('0') + (512 + decimal).toString(2);
             }
 
-            var result = decimal.toString(2);
+            let result = decimal.toString(2);
 
             if (places == null) {
                 return result;
@@ -18485,7 +18504,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18497,8 +18516,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18507,7 +18526,7 @@ const functionImplementation = {
 
         try {
             //十六进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -18517,12 +18536,12 @@ const functionImplementation = {
             }
 
             //计算
-            var decimal = parseInt(number, 16);
+            let decimal = parseInt(number, 16);
 
             return (decimal >= 549755813888) ? decimal - 1099511627776 : decimal;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18534,8 +18553,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18544,13 +18563,13 @@ const functionImplementation = {
 
         try {
             //十六进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18569,7 +18588,7 @@ const functionImplementation = {
             }
 
             //计算
-            var decimal = parseInt(number, 16);
+            let decimal = parseInt(number, 16);
 
             if (decimal > 536870911 && decimal < 1098974756864) {
                 return formula.error.nm;
@@ -18579,7 +18598,7 @@ const functionImplementation = {
                 return (decimal - 1098437885952).toString(8);
             }
 
-            var result = decimal.toString(8);
+            let result = decimal.toString(8);
 
             if (places == null) {
                 return result;
@@ -18593,7 +18612,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18605,8 +18624,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18615,13 +18634,13 @@ const functionImplementation = {
 
         try {
             //八进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18642,9 +18661,9 @@ const functionImplementation = {
             //计算
             number = number.toString();
 
-            var negative = (number.length === 10 && number.substring(0, 1) === '7') ? true : false;
+            let negative = (number.length === 10 && number.substring(0, 1) === '7') ? true : false;
 
-            var decimal = (negative) ? parseInt(number, 8) - 1073741824 : parseInt(number, 8);
+            let decimal = (negative) ? parseInt(number, 8) - 1073741824 : parseInt(number, 8);
 
             if (decimal < -512 || decimal > 511) {
                 return error.num;
@@ -18654,7 +18673,7 @@ const functionImplementation = {
                 return '1' + new Array(9 - (512 + decimal).toString(2).length).join('0') + (512 + decimal).toString(2);
             }
 
-            var result = decimal.toString(2);
+            let result = decimal.toString(2);
 
             if (places == null) {
                 return result;
@@ -18668,7 +18687,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18680,8 +18699,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18690,7 +18709,7 @@ const functionImplementation = {
 
         try {
             //八进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -18700,12 +18719,12 @@ const functionImplementation = {
             }
 
             //计算
-            var decimal = parseInt(number, 8);
+            let decimal = parseInt(number, 8);
 
             return (decimal >= 536870912) ? decimal - 1073741824 : decimal;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18717,8 +18736,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18727,13 +18746,13 @@ const functionImplementation = {
 
         try {
             //八进制数
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
 
             //有效位数
-            var places = null;
+            let places = null;
             if(arguments.length == 2){
                 places = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(places)){
@@ -18752,13 +18771,13 @@ const functionImplementation = {
             }
 
             //计算
-            var decimal = parseInt(number, 8);
+            let decimal = parseInt(number, 8);
 
             if (decimal >= 536870912) {
                 return 'FF' + (decimal + 3221225472).toString(16).toUpperCase();
             }
 
-            var result = decimal.toString(16).toUpperCase();
+            let result = decimal.toString(16).toUpperCase();
 
             if (places == null) {
                 return result;
@@ -18772,7 +18791,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18784,8 +18803,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18794,7 +18813,7 @@ const functionImplementation = {
 
         try {
             //复数的实系数
-            var real_num = func_methods.getFirstValue(arguments[0]);
+            let real_num = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(real_num)){
                 return real_num;
             }
@@ -18806,7 +18825,7 @@ const functionImplementation = {
             real_num = parseFloat(real_num);
 
             //复数的虚系数
-            var i_num = func_methods.getFirstValue(arguments[1]);
+            let i_num = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(i_num)){
                 return i_num;
             }
@@ -18818,7 +18837,7 @@ const functionImplementation = {
             i_num = parseFloat(i_num);
 
             //复数中虚系数的后缀
-            var suffix = "i";
+            let suffix = "i";
             if(arguments.length == 3){
                 suffix = arguments[2].toString();
             }
@@ -18838,12 +18857,12 @@ const functionImplementation = {
                 return real_num.toString();
             }
             else {
-                var sign = (i_num > 0) ? '+' : '';
+                let sign = (i_num > 0) ? '+' : '';
                 return real_num.toString() + sign + ((i_num === 1) ? suffix : i_num.toString() + suffix);
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18855,8 +18874,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18865,7 +18884,7 @@ const functionImplementation = {
 
         try {
             //复数
-            var inumber = func_methods.getFirstValue(arguments[0]);
+            let inumber = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(inumber)){
                 return inumber;
             }
@@ -18885,8 +18904,8 @@ const functionImplementation = {
                 return 0;
             }
 
-            var plus = inumber.indexOf('+');
-            var minus = inumber.indexOf('-');
+            let plus = inumber.indexOf('+');
+            let minus = inumber.indexOf('-');
 
             if (plus === 0) {
                 plus = inumber.indexOf('+', 1);
@@ -18896,8 +18915,8 @@ const functionImplementation = {
                 minus = inumber.indexOf('-', 1);
             }
 
-            var last = inumber.substring(inumber.length - 1, inumber.length);
-            var unit = (last === 'i' || last === 'j');
+            let last = inumber.substring(inumber.length - 1, inumber.length);
+            let unit = (last === 'i' || last === 'j');
 
             if (plus >= 0 || minus >= 0) {
                 if (!unit) {
@@ -18921,7 +18940,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -18933,8 +18952,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -18943,7 +18962,7 @@ const functionImplementation = {
 
         try {
             //复数
-            var inumber = func_methods.getFirstValue(arguments[0]);
+            let inumber = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(inumber)){
                 return inumber;
             }
@@ -18965,8 +18984,8 @@ const functionImplementation = {
 
             inumber = inumber.replace('+i', '+1i').replace('-i', '-1i').replace('+j', '+1j').replace('-j', '-1j');
 
-            var plus = inumber.indexOf('+');
-            var minus = inumber.indexOf('-');
+            let plus = inumber.indexOf('+');
+            let minus = inumber.indexOf('-');
 
             if (plus === 0) {
                 plus = inumber.indexOf('+', 1);
@@ -18976,8 +18995,8 @@ const functionImplementation = {
                 minus = inumber.indexOf('-', 1);
             }
 
-            var last = inumber.substring(inumber.length - 1, inumber.length);
-            var unit = (last === 'i' || last === 'j');
+            let last = inumber.substring(inumber.length - 1, inumber.length);
+            let unit = (last === 'i' || last === 'j');
 
             if (plus >= 0 || minus >= 0) {
                 if (!unit) {
@@ -19001,7 +19020,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19013,8 +19032,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19023,30 +19042,30 @@ const functionImplementation = {
 
         try {
             //复数
-            var inumber = func_methods.getFirstValue(arguments[0]);
+            let inumber = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(inumber)){
                 return inumber;
             }
 
             inumber = inumber.toString();
 
-            var x = window.luckysheet_function.IMREAL.f(inumber);
+            let x = window.luckysheet_function.IMREAL.f(inumber);
             if(valueIsError(x)){
                 return x;
             }
 
-            var y = window.luckysheet_function.IMAGINARY.f(inumber);
+            let y = window.luckysheet_function.IMAGINARY.f(inumber);
             if(valueIsError(y)){
                 return y;
             }
 
-            var unit = inumber.substring(inumber.length - 1);
+            let unit = inumber.substring(inumber.length - 1);
             unit = (unit === 'i' || unit === 'j') ? unit : 'i';
 
             return (y !== 0) ? window.luckysheet_function.COMPLEX.f(x, -y, unit) : inumber;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19058,8 +19077,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19067,12 +19086,12 @@ const functionImplementation = {
         }
 
         try {
-            var x = window.luckysheet_function.IMREAL.f(arguments[0]);
+            let x = window.luckysheet_function.IMREAL.f(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
 
-            var y = window.luckysheet_function.IMAGINARY.f(arguments[0]);
+            let y = window.luckysheet_function.IMAGINARY.f(arguments[0]);
             if(valueIsError(y)){
                 return y;
             }
@@ -19080,7 +19099,7 @@ const functionImplementation = {
             return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19092,8 +19111,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19102,7 +19121,7 @@ const functionImplementation = {
 
         try {
             //第一个数字
-            var number1 = func_methods.getFirstValue(arguments[0]);
+            let number1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number1)){
                 return number1;
             }
@@ -19114,7 +19133,7 @@ const functionImplementation = {
             number1 = parseFloat(number1);
 
             //第二个数字
-            var number2 = 0;
+            let number2 = 0;
             if(arguments.length == 2){
                 number2 = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(number2)){
@@ -19131,7 +19150,7 @@ const functionImplementation = {
             return (number1 === number2) ? 1 : 0;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19143,8 +19162,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19152,35 +19171,35 @@ const functionImplementation = {
         }
 
         try {
-            var x = window.luckysheet_function.IMREAL.f(arguments[0]);
+            let x = window.luckysheet_function.IMREAL.f(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
 
-            var y = window.luckysheet_function.IMAGINARY.f(arguments[0]);
+            let y = window.luckysheet_function.IMAGINARY.f(arguments[0]);
             if(valueIsError(y)){
                 return y;
             }
 
-            var result = arguments[0];
+            let result = arguments[0];
 
-            for(var i = 1; i < arguments.length; i++){
-                var a = window.luckysheet_function.IMREAL.f(result);
+            for(let i = 1; i < arguments.length; i++){
+                let a = window.luckysheet_function.IMREAL.f(result);
                 if(valueIsError(a)){
                     return a;
                 }
 
-                var b = window.luckysheet_function.IMAGINARY.f(result);
+                let b = window.luckysheet_function.IMAGINARY.f(result);
                 if(valueIsError(b)){
                     return b;
                 }
 
-                var c = window.luckysheet_function.IMREAL.f(arguments[i]);
+                let c = window.luckysheet_function.IMREAL.f(arguments[i]);
                 if(valueIsError(c)){
                     return c;
                 }
 
-                var d = window.luckysheet_function.IMAGINARY.f(arguments[i]);
+                let d = window.luckysheet_function.IMAGINARY.f(arguments[i]);
                 if(valueIsError(d)){
                     return d;
                 }
@@ -19191,7 +19210,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19203,8 +19222,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19213,7 +19232,7 @@ const functionImplementation = {
 
         try {
             //inumber1
-            var inumber1 = func_methods.getFirstValue(arguments[0]);
+            let inumber1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(inumber1)){
                 return inumber1;
             }
@@ -19224,18 +19243,18 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var a = window.luckysheet_function.IMREAL.f(inumber1);
+            let a = window.luckysheet_function.IMREAL.f(inumber1);
             if(valueIsError(a)){
                 return a;
             }
 
-            var b = window.luckysheet_function.IMAGINARY.f(inumber1);
+            let b = window.luckysheet_function.IMAGINARY.f(inumber1);
             if(valueIsError(b)){
                 return b;
             }
 
             //inumber2
-            var inumber2 = func_methods.getFirstValue(arguments[1]);
+            let inumber2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(inumber2)){
                 return inumber2;
             }
@@ -19246,21 +19265,21 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var c = window.luckysheet_function.IMREAL.f(inumber2);
+            let c = window.luckysheet_function.IMREAL.f(inumber2);
             if(valueIsError(c)){
                 return c;
             }
 
-            var d = window.luckysheet_function.IMAGINARY.f(inumber2);
+            let d = window.luckysheet_function.IMAGINARY.f(inumber2);
             if(valueIsError(d)){
                 return d;
             }
 
             //计算
-            var unit1 = inumber1.substring(inumber1.length - 1);
-            var unit2 = inumber2.substring(inumber2.length - 1);
+            let unit1 = inumber1.substring(inumber1.length - 1);
+            let unit2 = inumber2.substring(inumber2.length - 1);
 
-            var unit = 'i';
+            let unit = 'i';
 
             if (unit1 === 'j') {
                 unit = 'j';
@@ -19272,7 +19291,7 @@ const functionImplementation = {
             return window.luckysheet_function.COMPLEX.f(a - c, b - d, unit);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19284,8 +19303,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19293,35 +19312,35 @@ const functionImplementation = {
         }
 
         try {
-            var x = window.luckysheet_function.IMREAL.f(arguments[0]);
+            let x = window.luckysheet_function.IMREAL.f(arguments[0]);
             if(valueIsError(x)){
                 return x;
             }
 
-            var y = window.luckysheet_function.IMAGINARY.f(arguments[0]);
+            let y = window.luckysheet_function.IMAGINARY.f(arguments[0]);
             if(valueIsError(y)){
                 return y;
             }
 
-            var result = arguments[0];
+            let result = arguments[0];
 
-            for(var i = 1; i < arguments.length; i++){
-                var a = window.luckysheet_function.IMREAL.f(result);
+            for(let i = 1; i < arguments.length; i++){
+                let a = window.luckysheet_function.IMREAL.f(result);
                 if(valueIsError(a)){
                     return a;
                 }
 
-                var b = window.luckysheet_function.IMAGINARY.f(result);
+                let b = window.luckysheet_function.IMAGINARY.f(result);
                 if(valueIsError(b)){
                     return b;
                 }
 
-                var c = window.luckysheet_function.IMREAL.f(arguments[i]);
+                let c = window.luckysheet_function.IMREAL.f(arguments[i]);
                 if(valueIsError(c)){
                     return c;
                 }
 
-                var d = window.luckysheet_function.IMAGINARY.f(arguments[i]);
+                let d = window.luckysheet_function.IMAGINARY.f(arguments[i]);
                 if(valueIsError(d)){
                     return d;
                 }
@@ -19332,7 +19351,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19344,8 +19363,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19354,7 +19373,7 @@ const functionImplementation = {
 
         try {
             //inumber1
-            var inumber1 = func_methods.getFirstValue(arguments[0]);
+            let inumber1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(inumber1)){
                 return inumber1;
             }
@@ -19365,18 +19384,18 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var a = window.luckysheet_function.IMREAL.f(inumber1);
+            let a = window.luckysheet_function.IMREAL.f(inumber1);
             if(valueIsError(a)){
                 return a;
             }
 
-            var b = window.luckysheet_function.IMAGINARY.f(inumber1);
+            let b = window.luckysheet_function.IMAGINARY.f(inumber1);
             if(valueIsError(b)){
                 return b;
             }
 
             //inumber2
-            var inumber2 = func_methods.getFirstValue(arguments[1]);
+            let inumber2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(inumber2)){
                 return inumber2;
             }
@@ -19387,21 +19406,21 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var c = window.luckysheet_function.IMREAL.f(inumber2);
+            let c = window.luckysheet_function.IMREAL.f(inumber2);
             if(valueIsError(c)){
                 return c;
             }
 
-            var d = window.luckysheet_function.IMAGINARY.f(inumber2);
+            let d = window.luckysheet_function.IMAGINARY.f(inumber2);
             if(valueIsError(d)){
                 return d;
             }
 
             //计算
-            var unit1 = inumber1.substring(inumber1.length - 1);
-            var unit2 = inumber2.substring(inumber2.length - 1);
+            let unit1 = inumber1.substring(inumber1.length - 1);
+            let unit2 = inumber2.substring(inumber2.length - 1);
 
-            var unit = 'i';
+            let unit = 'i';
 
             if (unit1 === 'j') {
                 unit = 'j';
@@ -19414,12 +19433,12 @@ const functionImplementation = {
                 return formula.error.nm;
             }
 
-            var den = c * c + d * d;
+            let den = c * c + d * d;
 
             return window.luckysheet_function.COMPLEX.f((a * c + b * d) / den, (b * c - a * d) / den, unit);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19431,8 +19450,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19441,7 +19460,7 @@ const functionImplementation = {
 
         try {
             //logical
-            var logical = func_methods.getCellBoolen(arguments[0]);
+            let logical = func_methods.getCellBoolen(arguments[0]);
 
             if(valueIsError(logical)){
                 return logical;
@@ -19450,7 +19469,7 @@ const functionImplementation = {
             return !logical;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19462,8 +19481,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19474,7 +19493,7 @@ const functionImplementation = {
             return true;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19486,8 +19505,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19498,7 +19517,7 @@ const functionImplementation = {
             return false;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19510,8 +19529,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19519,10 +19538,10 @@ const functionImplementation = {
         }
 
         try {
-            var result = true;
+            let result = true;
 
-            for(var i = 0; i < arguments.length; i++){
-                var logical = func_methods.getCellBoolen(arguments[i]);
+            for(let i = 0; i < arguments.length; i++){
+                let logical = func_methods.getCellBoolen(arguments[i]);
 
                 if(valueIsError(logical)){
                     return logical;
@@ -19537,7 +19556,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19549,8 +19568,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19558,9 +19577,9 @@ const functionImplementation = {
         }
 
         try {
-            var value_if_error = func_methods.getFirstValue(arguments[1], "text");
+            let value_if_error = func_methods.getFirstValue(arguments[1], "text");
 
-            var value = func_methods.getFirstValue(arguments[0], "text");
+            let value = func_methods.getFirstValue(arguments[0], "text");
             // (getObjType(value) === 'string' && $.trim(value) === ''It means that the cell associated with IFERROR has been deleted by keyboard
             if(valueIsError(value) || (getObjType(value) === 'string' && $.trim(value) === '' )){
                 return value_if_error;
@@ -19569,7 +19588,7 @@ const functionImplementation = {
             return value;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19581,8 +19600,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19591,19 +19610,19 @@ const functionImplementation = {
 
         try {
             //要测试的条件
-            var logical_test = func_methods.getCellBoolen(arguments[0]);
+            let logical_test = func_methods.getCellBoolen(arguments[0]);
             if(valueIsError(logical_test)){
                 return logical_test;
             }
 
             //结果为 TRUE
-            var value_if_true = func_methods.getFirstValue(arguments[1], "text");
+            let value_if_true = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(value_if_true) && value_if_false!=error.d){
                 return value_if_true;
             }
 
             //结果为 FALSE
-            var value_if_false = "";
+            let value_if_false = "";
             if(arguments.length == 3){
                 value_if_false = func_methods.getFirstValue(arguments[2], "text");
                 if(valueIsError(value_if_false) && value_if_false!=error.d){
@@ -19619,7 +19638,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19631,8 +19650,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19640,10 +19659,10 @@ const functionImplementation = {
         }
 
         try {
-            var result = false;
+            let result = false;
 
-            for(var i = 0; i < arguments.length; i++){
-                var logical = func_methods.getCellBoolen(arguments[i]);
+            for(let i = 0; i < arguments.length; i++){
+                let logical = func_methods.getCellBoolen(arguments[i]);
 
                 if(valueIsError(logical)){
                     return logical;
@@ -19658,7 +19677,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19670,8 +19689,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19680,13 +19699,13 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -19694,7 +19713,7 @@ const functionImplementation = {
             return value1 != value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19706,8 +19725,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19716,13 +19735,13 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -19730,7 +19749,7 @@ const functionImplementation = {
             return value1 == value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19742,8 +19761,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19752,7 +19771,7 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
@@ -19764,7 +19783,7 @@ const functionImplementation = {
             value1 = parseFloat(value1);
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -19778,7 +19797,7 @@ const functionImplementation = {
             return value1 > value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19790,8 +19809,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19800,7 +19819,7 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
@@ -19812,7 +19831,7 @@ const functionImplementation = {
             value1 = parseFloat(value1);
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -19826,7 +19845,7 @@ const functionImplementation = {
             return value1 >= value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19838,8 +19857,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19848,7 +19867,7 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
@@ -19860,7 +19879,7 @@ const functionImplementation = {
             value1 = parseFloat(value1);
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -19874,7 +19893,7 @@ const functionImplementation = {
             return value1 < value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19886,8 +19905,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19896,7 +19915,7 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
@@ -19908,7 +19927,7 @@ const functionImplementation = {
             value1 = parseFloat(value1);
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -19922,7 +19941,7 @@ const functionImplementation = {
             return value1 <= value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19934,8 +19953,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19944,7 +19963,7 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
@@ -19956,7 +19975,7 @@ const functionImplementation = {
             value1 = parseFloat(value1);
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -19970,7 +19989,7 @@ const functionImplementation = {
             return value1 + value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -19982,8 +20001,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -19992,7 +20011,7 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
@@ -20004,7 +20023,7 @@ const functionImplementation = {
             value1 = parseFloat(value1);
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -20018,7 +20037,7 @@ const functionImplementation = {
             return value1 - value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20030,8 +20049,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20040,7 +20059,7 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
@@ -20052,7 +20071,7 @@ const functionImplementation = {
             value1 = parseFloat(value1);
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -20066,7 +20085,7 @@ const functionImplementation = {
             return value1 * value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20078,8 +20097,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20088,7 +20107,7 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0]);
+            let value1 = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value1)){
                 return value1;
             }
@@ -20100,7 +20119,7 @@ const functionImplementation = {
             value1 = parseFloat(value1);
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1]);
+            let value2 = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(value2)){
                 return value2;
             }
@@ -20118,7 +20137,7 @@ const functionImplementation = {
             return value1 / value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20130,8 +20149,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20140,13 +20159,13 @@ const functionImplementation = {
 
         try {
             //value1
-            var value1 = func_methods.getFirstValue(arguments[0], "text");
+            let value1 = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(value1)){
                 return value1;
             }
 
             //value2
-            var value2 = func_methods.getFirstValue(arguments[1], "text");
+            let value2 = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(value2)){
                 return value2;
             }
@@ -20154,7 +20173,7 @@ const functionImplementation = {
             return value1 + "" + value2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20166,8 +20185,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20176,7 +20195,7 @@ const functionImplementation = {
 
         try {
             //要作为百分比解释的数值
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -20187,12 +20206,12 @@ const functionImplementation = {
 
             number = parseFloat(number);
 
-            var result = number / 100;
+            let result = number / 100;
 
             return Math.round(result * 100) / 100;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20204,8 +20223,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20213,10 +20232,10 @@ const functionImplementation = {
         }
 
         try {
-            var result = "";
+            let result = "";
 
-            for(var i = 0; i < arguments.length; i++){
-                var text = func_methods.getFirstValue(arguments[i], "text");
+            for(let i = 0; i < arguments.length; i++){
+                let text = func_methods.getFirstValue(arguments[i], "text");
                 if(valueIsError(text)){
                     return text;
                 }
@@ -20227,7 +20246,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20239,8 +20258,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20249,7 +20268,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -20261,7 +20280,7 @@ const functionImplementation = {
             return text.charCodeAt(0);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20273,8 +20292,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20283,7 +20302,7 @@ const functionImplementation = {
 
         try {
             //数字
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -20301,7 +20320,7 @@ const functionImplementation = {
             return String.fromCharCode(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20313,8 +20332,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20323,7 +20342,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -20334,7 +20353,7 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var r = 0;
+            let r = 0;
             text.replace(/[MDLV]|C[MD]?|X[CL]?|I[XV]?/g, function(i) {
                 r += {
                     M: 1000,
@@ -20356,7 +20375,7 @@ const functionImplementation = {
             return r;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20368,8 +20387,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20378,7 +20397,7 @@ const functionImplementation = {
 
         try {
             //数字
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -20398,17 +20417,17 @@ const functionImplementation = {
 
             //计算
             function convert(num) {
-                var a=[
+                let a=[
                     ["","I","II","III","IV","V","VI","VII","VIII","IX"],
                     ["","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"],
                     ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"],
                     ["","M","MM","MMM"]
                 ];
 
-                var i = a[3][Math.floor(num / 1000)];
-                var j = a[2][Math.floor(num % 1000 / 100)];
-                var k = a[1][Math.floor(num % 100 / 10)];
-                var l = a[0][num % 10];
+                let i = a[3][Math.floor(num / 1000)];
+                let j = a[2][Math.floor(num % 1000 / 100)];
+                let k = a[1][Math.floor(num % 100 / 10)];
+                let l = a[0][num % 10];
 
                 return  i + j + k + l;
             }
@@ -20416,7 +20435,7 @@ const functionImplementation = {
             return convert(number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20428,8 +20447,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20438,22 +20457,22 @@ const functionImplementation = {
 
         try {
             //输入文本
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
 
             //表达式
-            var regular_expression = func_methods.getFirstValue(arguments[1], "text");
+            let regular_expression = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(regular_expression)){
                 return regular_expression;
             }
 
-            var match = text.match(new RegExp(regular_expression));
+            let match = text.match(new RegExp(regular_expression));
             return match ? (match[match.length > 1 ? match.length - 1 : 0]) : null;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20465,8 +20484,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20475,22 +20494,22 @@ const functionImplementation = {
 
         try {
             //输入文本
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
 
             //表达式
-            var regular_expression = func_methods.getFirstValue(arguments[1], "text");
+            let regular_expression = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(regular_expression)){
                 return regular_expression;
             }
 
-            var match = text.match(new RegExp(regular_expression));
+            let match = text.match(new RegExp(regular_expression));
             return match ? true : false;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20502,8 +20521,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20512,19 +20531,19 @@ const functionImplementation = {
 
         try {
             //输入文本
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
 
             //表达式
-            var regular_expression = func_methods.getFirstValue(arguments[1], "text");
+            let regular_expression = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(regular_expression)){
                 return regular_expression;
             }
 
             //插入文本
-            var replacement = func_methods.getFirstValue(arguments[2], "text");
+            let replacement = func_methods.getFirstValue(arguments[2], "text");
             if(valueIsError(replacement)){
                 return replacement;
             }
@@ -20532,7 +20551,7 @@ const functionImplementation = {
             return text.replace(new RegExp(regular_expression), replacement);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20544,8 +20563,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20554,7 +20573,7 @@ const functionImplementation = {
 
         try {
             //文本
-            var value = func_methods.getFirstValue(arguments[0], "text");
+            let value = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(value)){
                 return value;
             }
@@ -20562,7 +20581,7 @@ const functionImplementation = {
             return getObjType(value) == "string" ? value : '';
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20574,8 +20593,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20584,7 +20603,7 @@ const functionImplementation = {
 
         try {
             //要进行舍入并转换为文本的数字
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -20596,7 +20615,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //小数位数
-            var decimals = 2;
+            let decimals = 2;
             if(arguments.length >= 2){
                 decimals = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(decimals)){
@@ -20611,7 +20630,7 @@ const functionImplementation = {
             }
 
             //逻辑值
-            var no_commas = false;
+            let no_commas = false;
             if(arguments.length == 3){
                 no_commas = func_methods.getCellBoolen(arguments[2]);
 
@@ -20625,7 +20644,7 @@ const functionImplementation = {
             }
 
             //计算
-            var format = no_commas ? '0' : '#,##0';
+            let format = no_commas ? '0' : '#,##0';
 
             if (decimals <= 0) {
                 number = Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals);
@@ -20637,7 +20656,7 @@ const functionImplementation = {
             return update(format, number);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20649,8 +20668,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20659,7 +20678,7 @@ const functionImplementation = {
 
         try {
             //要查找的文本
-            var find_text = func_methods.getFirstValue(arguments[0], "text");
+            let find_text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(find_text)){
                 return find_text;
             }
@@ -20667,7 +20686,7 @@ const functionImplementation = {
             find_text = find_text.toString();
 
             //包含要查找文本的文本
-            var within_text = func_methods.getFirstValue(arguments[1], "text");
+            let within_text = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(within_text)){
                 return within_text;
             }
@@ -20675,7 +20694,7 @@ const functionImplementation = {
             within_text = within_text.toString();
 
             //指定开始进行查找的字符
-            var start_num = 1;
+            let start_num = 1;
             if(arguments.length == 3){
                 start_num = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(start_num)){
@@ -20701,12 +20720,12 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var result = within_text.indexOf(find_text, start_num - 1) + 1;
+            let result = within_text.indexOf(find_text, start_num - 1) + 1;
 
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20718,8 +20737,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20728,7 +20747,7 @@ const functionImplementation = {
 
         try {
             //要查找的文本
-            var find_text = func_methods.getFirstValue(arguments[0], "text");
+            let find_text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(find_text)){
                 return find_text;
             }
@@ -20736,7 +20755,7 @@ const functionImplementation = {
             find_text = find_text.toString();
 
             //包含要查找文本的文本
-            var within_text = func_methods.getFirstValue(arguments[1], "text");
+            let within_text = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(within_text)){
                 return within_text;
             }
@@ -20744,7 +20763,7 @@ const functionImplementation = {
             within_text = within_text.toString();
 
             //指定开始进行查找的字符
-            var start_num = 1;
+            let start_num = 1;
             if(arguments.length == 3){
                 start_num = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(start_num)){
@@ -20770,11 +20789,11 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var strArr = within_text.split("");
-            var index = within_text.indexOf(find_text, start_num - 1);
+            let strArr = within_text.split("");
+            let index = within_text.indexOf(find_text, start_num - 1);
 
-            var result = 0;
-            for(var i = 0; i < index; i++){
+            let result = 0;
+            for(let i = 0; i < index; i++){
                 if(/[^\x00-\xff]/g.test(strArr[i])){
                     result += 2;
                 }
@@ -20786,7 +20805,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20798,8 +20817,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20808,16 +20827,16 @@ const functionImplementation = {
 
         try {
             //定界符
-            var separator = func_methods.getFirstValue(arguments[0], "text");
+            let separator = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(separator)){
                 return separator;
             }
 
             //值或数组
-            var dataArr = [];
+            let dataArr = [];
 
-            for(var i = 1; i < arguments.length; i++){
-                var data = arguments[i];
+            for(let i = 1; i < arguments.length; i++){
+                let data = arguments[i];
 
                 if(getObjType(data) == "array"){
                     if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -20837,7 +20856,7 @@ const functionImplementation = {
             return dataArr.join(separator);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20849,8 +20868,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20859,7 +20878,7 @@ const functionImplementation = {
 
         try {
             //包含要提取���字符的文本字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -20867,7 +20886,7 @@ const functionImplementation = {
             text = text.toString();
 
             //提取的字符的数量
-            var num_chars = 1;
+            let num_chars = 1;
             if(arguments.length == 2){
                 num_chars = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(num_chars)){
@@ -20897,7 +20916,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20909,8 +20928,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20919,7 +20938,7 @@ const functionImplementation = {
 
         try {
             //包含要提取的字符的文本字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -20927,7 +20946,7 @@ const functionImplementation = {
             text = text.toString();
 
             //提取的字符的数量
-            var num_chars = 1;
+            let num_chars = 1;
             if(arguments.length == 2){
                 num_chars = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(num_chars)){
@@ -20957,7 +20976,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -20969,8 +20988,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -20979,7 +20998,7 @@ const functionImplementation = {
 
         try {
             //包含要提取的字符的文本字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -20987,7 +21006,7 @@ const functionImplementation = {
             text = text.toString();
 
             //开始提取的位置
-            var start_num = func_methods.getFirstValue(arguments[1]);
+            let start_num = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(start_num)){
                 return start_num;
             }
@@ -20999,7 +21018,7 @@ const functionImplementation = {
             start_num = parseInt(start_num);
 
             //提取的字符的数量
-            var num_chars = func_methods.getFirstValue(arguments[2]);
+            let num_chars = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(num_chars)){
                 return num_chars;
             }
@@ -21026,7 +21045,7 @@ const functionImplementation = {
             return text.substr(start_num - 1, num_chars);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21038,8 +21057,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21048,7 +21067,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21058,7 +21077,7 @@ const functionImplementation = {
             return text.length;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21070,8 +21089,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21080,7 +21099,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21090,7 +21109,7 @@ const functionImplementation = {
             return text.replace(/[^\x00-\xff]/g, "aa").length;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21102,8 +21121,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21112,7 +21131,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21122,7 +21141,7 @@ const functionImplementation = {
             return text ? text.toLowerCase() : text;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21134,8 +21153,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21144,7 +21163,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21154,7 +21173,7 @@ const functionImplementation = {
             return text ? text.toUpperCase() : text;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21166,8 +21185,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21176,7 +21195,7 @@ const functionImplementation = {
 
         try {
             //字符串1
-            var text1 = func_methods.getFirstValue(arguments[0], "text");
+            let text1 = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text1)){
                 return text1;
             }
@@ -21184,7 +21203,7 @@ const functionImplementation = {
             text1 = text1.toString();
 
             //字符串2
-            var text2 = func_methods.getFirstValue(arguments[1], "text");
+            let text2 = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(text2)){
                 return text2;
             }
@@ -21194,7 +21213,7 @@ const functionImplementation = {
             return text1 === text2;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21206,8 +21225,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21216,7 +21235,7 @@ const functionImplementation = {
 
         try {
             //字符串1
-            var old_text = func_methods.getFirstValue(arguments[0], "text");
+            let old_text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(old_text)){
                 return old_text;
             }
@@ -21224,7 +21243,7 @@ const functionImplementation = {
             old_text = old_text.toString();
 
             //进行替换操作的位置
-            var start_num = func_methods.getFirstValue(arguments[1]);
+            let start_num = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(start_num)){
                 return start_num;
             }
@@ -21236,7 +21255,7 @@ const functionImplementation = {
             start_num = parseInt(start_num);
 
             //要在文本中替换的字符个数
-            var num_chars = func_methods.getFirstValue(arguments[2]);
+            let num_chars = func_methods.getFirstValue(arguments[2]);
             if(valueIsError(num_chars)){
                 return num_chars;
             }
@@ -21248,7 +21267,7 @@ const functionImplementation = {
             num_chars = parseInt(num_chars);
 
             //字符串2
-            var new_text = func_methods.getFirstValue(arguments[3], "text");
+            let new_text = func_methods.getFirstValue(arguments[3], "text");
             if(valueIsError(new_text)){
                 return new_text;
             }
@@ -21258,7 +21277,7 @@ const functionImplementation = {
             return old_text.substr(0, start_num - 1) + new_text + old_text.substr(start_num - 1 + num_chars);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21270,8 +21289,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21280,7 +21299,7 @@ const functionImplementation = {
 
         try {
             //字符串1
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21288,7 +21307,7 @@ const functionImplementation = {
             text = text.toString();
 
             //重复次数
-            var number_times = func_methods.getFirstValue(arguments[1]);
+            let number_times = func_methods.getFirstValue(arguments[1]);
             if(valueIsError(number_times)){
                 return number_times;
             }
@@ -21310,7 +21329,7 @@ const functionImplementation = {
             return new Array(number_times + 1).join(text);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21322,8 +21341,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21332,7 +21351,7 @@ const functionImplementation = {
 
         try {
             //字符串1
-            var find_text = func_methods.getFirstValue(arguments[0], "text");
+            let find_text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(find_text)){
                 return find_text;
             }
@@ -21340,7 +21359,7 @@ const functionImplementation = {
             find_text = find_text.toString();
 
             //字符串2
-            var within_text = func_methods.getFirstValue(arguments[1], "text");
+            let within_text = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(within_text)){
                 return within_text;
             }
@@ -21348,7 +21367,7 @@ const functionImplementation = {
             within_text = within_text.toString();
 
             //开始位置
-            var start_num = 1;
+            let start_num = 1;
             if(arguments.length == 3){
                 start_num = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(start_num)){
@@ -21366,12 +21385,12 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var foundAt = within_text.toLowerCase().indexOf(find_text.toLowerCase(), start_num - 1) + 1;
+            let foundAt = within_text.toLowerCase().indexOf(find_text.toLowerCase(), start_num - 1) + 1;
 
             return (foundAt === 0) ? formula.error.v : foundAt;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21383,8 +21402,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21393,7 +21412,7 @@ const functionImplementation = {
 
         try {
             //需要替换其中字符的文本
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21401,7 +21420,7 @@ const functionImplementation = {
             text = text.toString();
 
             //需要替换的文本
-            var old_text = func_methods.getFirstValue(arguments[1], "text");
+            let old_text = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(old_text)){
                 return old_text;
             }
@@ -21409,7 +21428,7 @@ const functionImplementation = {
             old_text = old_text.toString();
 
             //用于替换 old_text 的文本
-            var new_text = func_methods.getFirstValue(arguments[2], "text");
+            let new_text = func_methods.getFirstValue(arguments[2], "text");
             if(valueIsError(new_text)){
                 return new_text;
             }
@@ -21417,7 +21436,7 @@ const functionImplementation = {
             new_text = new_text.toString();
 
             //instance_num
-            var instance_num = null;
+            let instance_num = null;
             if(arguments.length == 4){
                 instance_num = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(instance_num)){
@@ -21432,9 +21451,9 @@ const functionImplementation = {
             }
 
             //计算
-            var reg = new RegExp(old_text, "g");
+            let reg = new RegExp(old_text, "g");
 
-            var result;
+            let result;
 
             if(instance_num == null){
                 result = text.replace(reg, new_text);
@@ -21444,16 +21463,16 @@ const functionImplementation = {
                     return formula.error.v;
                 }
 
-                var match = text.match(reg);
+                let match = text.match(reg);
 
                 if(match == null || instance_num > match.length){
                     return text;
                 }
                 else{
-                    var len = old_text.length;
-                    var index = 0;
+                    let len = old_text.length;
+                    let index = 0;
 
-                    for(var i = 1; i <= instance_num; i++){
+                    for(let i = 1; i <= instance_num; i++){
                         index = text.indexOf(old_text, index) + 1;
                     }
 
@@ -21464,7 +21483,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21476,8 +21495,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21486,16 +21505,16 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
 
             text = text.toString();
 
-            var textArr = [];
-            for(var i = 0; i < text.length; i++){
-                var code = text.charCodeAt(i);
+            let textArr = [];
+            for(let i = 0; i < text.length; i++){
+                let code = text.charCodeAt(i);
 
                 if(/[\u4e00-\u9fa5]/g.test(text.charAt(i)) || (code > 31 && code < 127)){
                     textArr.push(text.charAt(i));
@@ -21505,7 +21524,7 @@ const functionImplementation = {
             return textArr.join("");
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21517,8 +21536,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21527,7 +21546,7 @@ const functionImplementation = {
 
         try {
             //数字
-            var value = func_methods.getFirstValue(arguments[0]);
+            let value = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value)){
                 return value;
             }
@@ -21539,7 +21558,7 @@ const functionImplementation = {
             value = parseFloat(value);
 
             //格式
-            var format_text = func_methods.getFirstValue(arguments[1], "text");
+            let format_text = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(format_text)){
                 return format_text;
             }
@@ -21549,7 +21568,7 @@ const functionImplementation = {
             return update(format_text, value);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21561,8 +21580,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21571,7 +21590,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21581,7 +21600,7 @@ const functionImplementation = {
             return text.replace(/ +/g, ' ').trim();
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21593,8 +21612,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21603,7 +21622,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21613,7 +21632,7 @@ const functionImplementation = {
             return genarate(text)[2];
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21625,8 +21644,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21635,7 +21654,7 @@ const functionImplementation = {
 
         try {
             //字符串
-            var text = func_methods.getFirstValue(arguments[0], "text");
+            let text = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(text)){
                 return text;
             }
@@ -21645,7 +21664,7 @@ const functionImplementation = {
             return text.replace(/[a-zA-Z]+/g, function(word){ return word.substring(0,1).toUpperCase() + word.substring(1); })
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21657,8 +21676,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21667,7 +21686,7 @@ const functionImplementation = {
 
         try {
             //数字
-            var number = func_methods.getFirstValue(arguments[0]);
+            let number = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(number)){
                 return number;
             }
@@ -21679,7 +21698,7 @@ const functionImplementation = {
             number = parseFloat(number);
 
             //数值的单位
-            var from_unit = func_methods.getFirstValue(arguments[1], "text");
+            let from_unit = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(from_unit)){
                 return from_unit;
             }
@@ -21687,7 +21706,7 @@ const functionImplementation = {
             from_unit = from_unit.toString();
 
             //结果的单位
-            var to_unit = func_methods.getFirstValue(arguments[2], "text");
+            let to_unit = func_methods.getFirstValue(arguments[2], "text");
             if(valueIsError(to_unit)){
                 return to_unit;
             }
@@ -21695,7 +21714,7 @@ const functionImplementation = {
             to_unit = to_unit.toString();
 
             //计算
-            var units = [
+            let units = [
                 ["a.u. of action", "?", null, "action", false, false, 1.05457168181818e-34],
                 ["a.u. of charge", "e", null, "electric_charge", false, false, 1.60217653141414e-19],
                 ["a.u. of energy", "Eh", null, "energy", false, false, 4.35974417757576e-18],
@@ -21844,7 +21863,7 @@ const functionImplementation = {
                 ["year", "yr", null, "time", false, true, 31557600]
             ];
 
-            var binary_prefixes = {
+            let binary_prefixes = {
                 Yi: ["yobi", 80, 1208925819614629174706176, "Yi", "yotta"],
                 Zi: ["zebi", 70, 1180591620717411303424, "Zi", "zetta"],
                 Ei: ["exbi", 60, 1152921504606846976, "Ei", "exa"],
@@ -21855,7 +21874,7 @@ const functionImplementation = {
                 ki: ["kibi", 10, 1024, "ki", "kilo"]
             };
 
-            var unit_prefixes = {
+            let unit_prefixes = {
                 Y: ["yotta", 1e+24, "Y"],
                 Z: ["zetta", 1e+21, "Z"],
                 E: ["exa", 1e+18, "E"],
@@ -21878,15 +21897,15 @@ const functionImplementation = {
                 y: ["yocto", 1e-24, "y"]
             };
 
-            var from = null;
-            var to = null;
-            var base_from_unit = from_unit;
-            var base_to_unit = to_unit;
-            var from_multiplier = 1;
-            var to_multiplier = 1;
-            var alt;
+            let from = null;
+            let to = null;
+            let base_from_unit = from_unit;
+            let base_to_unit = to_unit;
+            let from_multiplier = 1;
+            let to_multiplier = 1;
+            let alt;
 
-            for (var i = 0; i < units.length; i++) {
+            for (let i = 0; i < units.length; i++) {
                 alt = (units[i][2] === null) ? [] : units[i][2];
 
                 if (units[i][1] === base_from_unit || alt.indexOf(base_from_unit) >= 0) {
@@ -21899,8 +21918,8 @@ const functionImplementation = {
             }
 
             if (from === null) {
-                var from_binary_prefix = binary_prefixes[from_unit.substring(0, 2)];
-                var from_unit_prefix = unit_prefixes[from_unit.substring(0, 1)];
+                let from_binary_prefix = binary_prefixes[from_unit.substring(0, 2)];
+                let from_unit_prefix = unit_prefixes[from_unit.substring(0, 1)];
 
                 if (from_unit.substring(0, 2) === 'da') {
                     from_unit_prefix = ["dekao", 1e+01, "da"];
@@ -21915,7 +21934,7 @@ const functionImplementation = {
                     base_from_unit = from_unit.substring(from_unit_prefix[2].length);
                 }
 
-                for (var j = 0; j < units.length; j++) {
+                for (let j = 0; j < units.length; j++) {
                     alt = (units[j][2] === null) ? [] : units[j][2];
 
                     if (units[j][1] === base_from_unit || alt.indexOf(base_from_unit) >= 0) {
@@ -21925,8 +21944,8 @@ const functionImplementation = {
             }
 
             if (to === null) {
-                var to_binary_prefix = binary_prefixes[to_unit.substring(0, 2)];
-                var to_unit_prefix = unit_prefixes[to_unit.substring(0, 1)];
+                let to_binary_prefix = binary_prefixes[to_unit.substring(0, 2)];
+                let to_unit_prefix = unit_prefixes[to_unit.substring(0, 1)];
 
                 if (to_unit.substring(0, 2) === 'da') {
                     to_unit_prefix = ["dekao", 1e+01, "da"];
@@ -21941,7 +21960,7 @@ const functionImplementation = {
                     base_to_unit = to_unit.substring(to_unit_prefix[2].length);
                 }
 
-                for (var k = 0; k < units.length; k++) {
+                for (let k = 0; k < units.length; k++) {
                     alt = (units[k][2] === null) ? [] : units[k][2];
 
                     if (units[k][1] === base_to_unit || alt.indexOf(base_to_unit) >= 0) {
@@ -21961,7 +21980,7 @@ const functionImplementation = {
             return number * from[6] * from_multiplier / (to[6] * to_multiplier);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -21973,8 +21992,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -21983,8 +22002,8 @@ const functionImplementation = {
 
         try {
             //第一个数组或数值区域
-            var data_array_x = arguments[0];
-            var array_x = [];
+            let data_array_x = arguments[0];
+            let array_x = [];
 
             if(getObjType(data_array_x) == "array"){
                 if(getObjType(data_array_x[0]) == "array" && !func_methods.isDyadicArr(data_array_x)){
@@ -22001,8 +22020,8 @@ const functionImplementation = {
             }
 
             //第二个数组或数值区域
-            var data_array_y = arguments[1];
-            var array_y = [];
+            let data_array_y = arguments[1];
+            let array_y = [];
 
             if(getObjType(data_array_y) == "array"){
                 if(getObjType(data_array_y[0]) == "array" && !func_methods.isDyadicArr(data_array_y)){
@@ -22023,11 +22042,11 @@ const functionImplementation = {
             }
 
             //array_x 和 array_y 只取数值
-            var data_x = [], data_y = [];
+            let data_x = [], data_y = [];
 
-            for(var i = 0; i < array_x.length; i++){
-                var num_x = array_x[i];
-                var num_y = array_y[i];
+            for(let i = 0; i < array_x.length; i++){
+                let num_x = array_x[i];
+                let num_y = array_y[i];
 
                 if(isRealNum(num_x) && isRealNum(num_y)){
                     data_x.push(parseFloat(num_x));
@@ -22036,16 +22055,16 @@ const functionImplementation = {
             }
 
             //计算
-            var sum = 0;
+            let sum = 0;
 
-            for (var i = 0; i < data_x.length; i++) {
+            for (let i = 0; i < data_x.length; i++) {
                 sum += Math.pow(data_x[i], 2) - Math.pow(data_y[i], 2);
             }
 
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22057,8 +22076,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22067,8 +22086,8 @@ const functionImplementation = {
 
         try {
             //第一个数组或数值区域
-            var data_array_x = arguments[0];
-            var array_x = [];
+            let data_array_x = arguments[0];
+            let array_x = [];
 
             if(getObjType(data_array_x) == "array"){
                 if(getObjType(data_array_x[0]) == "array" && !func_methods.isDyadicArr(data_array_x)){
@@ -22085,8 +22104,8 @@ const functionImplementation = {
             }
 
             //第二个数组或数值区域
-            var data_array_y = arguments[1];
-            var array_y = [];
+            let data_array_y = arguments[1];
+            let array_y = [];
 
             if(getObjType(data_array_y) == "array"){
                 if(getObjType(data_array_y[0]) == "array" && !func_methods.isDyadicArr(data_array_y)){
@@ -22107,11 +22126,11 @@ const functionImplementation = {
             }
 
             //array_x 和 array_y 只取数值
-            var data_x = [], data_y = [];
+            let data_x = [], data_y = [];
 
-            for(var i = 0; i < array_x.length; i++){
-                var num_x = array_x[i];
-                var num_y = array_y[i];
+            for(let i = 0; i < array_x.length; i++){
+                let num_x = array_x[i];
+                let num_y = array_y[i];
 
                 if(isRealNum(num_x) && isRealNum(num_y)){
                     data_x.push(parseFloat(num_x));
@@ -22120,16 +22139,16 @@ const functionImplementation = {
             }
 
             //计算
-            var sum = 0;
+            let sum = 0;
 
-            for (var i = 0; i < data_x.length; i++) {
+            for (let i = 0; i < data_x.length; i++) {
                 sum += Math.pow(data_x[i], 2) + Math.pow(data_y[i], 2);
             }
 
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22141,8 +22160,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22151,8 +22170,8 @@ const functionImplementation = {
 
         try {
             //第一个数组或数值区域
-            var data_array_x = arguments[0];
-            var array_x = [];
+            let data_array_x = arguments[0];
+            let array_x = [];
 
             if(getObjType(data_array_x) == "array"){
                 if(getObjType(data_array_x[0]) == "array" && !func_methods.isDyadicArr(data_array_x)){
@@ -22169,8 +22188,8 @@ const functionImplementation = {
             }
 
             //第二个数组或数值区域
-            var data_array_y = arguments[1];
-            var array_y = [];
+            let data_array_y = arguments[1];
+            let array_y = [];
 
             if(getObjType(data_array_y) == "array"){
                 if(getObjType(data_array_y[0]) == "array" && !func_methods.isDyadicArr(data_array_y)){
@@ -22191,11 +22210,11 @@ const functionImplementation = {
             }
 
             //array_x 和 array_y 只取数值
-            var data_x = [], data_y = [];
+            let data_x = [], data_y = [];
 
-            for(var i = 0; i < array_x.length; i++){
-                var num_x = array_x[i];
-                var num_y = array_y[i];
+            for(let i = 0; i < array_x.length; i++){
+                let num_x = array_x[i];
+                let num_y = array_y[i];
 
                 if(isRealNum(num_x) && isRealNum(num_y)){
                     data_x.push(parseFloat(num_x));
@@ -22204,16 +22223,16 @@ const functionImplementation = {
             }
 
             //计算
-            var sum = 0;
+            let sum = 0;
 
-            for (var i = 0; i < data_x.length; i++) {
+            for (let i = 0; i < data_x.length; i++) {
                 sum += Math.pow(data_x[i] - data_y[i], 2);
             }
 
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22225,8 +22244,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22235,8 +22254,8 @@ const functionImplementation = {
 
         try {
             //从其返回唯一值的数组或区域
-            var data_array = arguments[0];
-            var array = [];
+            let data_array = arguments[0];
+            let array = [];
 
             if(getObjType(data_array) == "array"){
                 if(getObjType(data_array[0]) == "array" && !func_methods.isDyadicArr(data_array)){
@@ -22258,7 +22277,7 @@ const functionImplementation = {
             return array;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22270,8 +22289,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22280,8 +22299,8 @@ const functionImplementation = {
 
         try {
             //已知的 y 值集合
-            var data_known_y = arguments[0];
-            var known_y = [];
+            let data_known_y = arguments[0];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -22298,18 +22317,18 @@ const functionImplementation = {
                     return formula.error.v;
                 }
 
-                var rowArr = [];
+                let rowArr = [];
 
                 rowArr.push(parseFloat(data_known_y));
 
                 known_y.push(rowArr);
             }
 
-            var known_y_rowlen = known_y.length;
-            var known_y_collen = known_y[0].length;
+            let known_y_rowlen = known_y.length;
+            let known_y_collen = known_y[0].length;
 
-            for(var i = 0; i < known_y_rowlen; i++){
-                for(var j = 0; j < known_y_collen; j++){
+            for(let i = 0; i < known_y_rowlen; i++){
+                for(let j = 0; j < known_y_collen; j++){
                     if(!isRealNum(known_y[i][j])){
                         return formula.error.v;
                     }
@@ -22319,16 +22338,16 @@ const functionImplementation = {
             }
 
             //可选 x 值集合
-            var known_x = [];
-            for(var i = 1; i <= known_y_rowlen; i++){
-                for(var j = 1; j <= known_y_collen; j++){
-                    var number = (i - 1) * known_y_collen + j;
+            let known_x = [];
+            for(let i = 1; i <= known_y_rowlen; i++){
+                for(let j = 1; j <= known_y_collen; j++){
+                    let number = (i - 1) * known_y_collen + j;
                     known_x.push(number);
                 }
             }
 
             if(arguments.length >= 2){
-                var data_known_x = arguments[1];
+                let data_known_x = arguments[1];
                 known_x = [];
 
                 if(getObjType(data_known_x) == "array"){
@@ -22346,15 +22365,15 @@ const functionImplementation = {
                         return formula.error.v;
                     }
 
-                    var rowArr = [];
+                    let rowArr = [];
 
                     rowArr.push(parseFloat(data_known_x));
 
                     known_x.push(rowArr);
                 }
 
-                for(var i = 0; i < known_x.length; i++){
-                    for(var j = 0; j < known_x[0].length; j++){
+                for(let i = 0; i < known_x.length; i++){
+                    for(let j = 0; j < known_x[0].length; j++){
                         if(!isRealNum(known_x[i][j])){
                             return formula.error.v;
                         }
@@ -22364,14 +22383,14 @@ const functionImplementation = {
                 }
             }
 
-            var known_x_rowlen = known_x.length;
-            var known_x_collen = known_x[0].length;
+            let known_x_rowlen = known_x.length;
+            let known_x_collen = known_x[0].length;
 
             //新 x 值
-            var new_x = known_x;
+            let new_x = known_x;
 
             if(arguments.length >= 3){
-                var data_new_x = arguments[2];
+                let data_new_x = arguments[2];
                 new_x = [];
 
                 if(getObjType(data_new_x) == "array"){
@@ -22389,15 +22408,15 @@ const functionImplementation = {
                         return formula.error.v;
                     }
 
-                    var rowArr = [];
+                    let rowArr = [];
 
                     rowArr.push(parseFloat(data_new_x));
 
                     new_x.push(rowArr);
                 }
 
-                for(var i = 0; i < new_x.length; i++){
-                    for(var j = 0; j < new_x[0].length; j++){
+                for(let i = 0; i < new_x.length; i++){
+                    for(let j = 0; j < new_x[0].length; j++){
                         if(!isRealNum(new_x[i][j])){
                             return formula.error.v;
                         }
@@ -22408,7 +22427,7 @@ const functionImplementation = {
             }
 
             //逻辑值
-            var const_b = true;
+            let const_b = true;
 
             if(arguments.length == 4){
                 const_b = func_methods.getCellBoolen(arguments[3]);
@@ -22424,10 +22443,10 @@ const functionImplementation = {
 
             //计算
             function leastSquare(arr_x, arr_y){
-                var xSum = 0, ySum = 0, xySum = 0, x2Sum = 0;
+                let xSum = 0, ySum = 0, xySum = 0, x2Sum = 0;
 
-                for(var i = 0; i < arr_x.length; i++){
-                    for(var j = 0; j < arr_x[i].length; j++){
+                for(let i = 0; i < arr_x.length; i++){
+                    for(let j = 0; j < arr_x[i].length; j++){
                         xSum += arr_x[i][j];
                         ySum += arr_y[i][j];
                         xySum += arr_x[i][j] * arr_y[i][j];
@@ -22435,35 +22454,35 @@ const functionImplementation = {
                     }
                 }
 
-                var n = arr_x.length * arr_x[0].length;
+                let n = arr_x.length * arr_x[0].length;
 
-                var xMean = xSum / n;
-                var yMean = ySum / n;
-                var xyMean = xySum / n;
-                var x2Mean = x2Sum / n;
+                let xMean = xSum / n;
+                let yMean = ySum / n;
+                let xyMean = xySum / n;
+                let x2Mean = x2Sum / n;
 
-                var m = (xyMean - xMean * yMean) / (x2Mean - xMean * xMean);
-                var b = yMean - m * xMean;
+                let m = (xyMean - xMean * yMean) / (x2Mean - xMean * xMean);
+                let b = yMean - m * xMean;
 
                 return [m, b];
             }
 
-            var ls = leastSquare(known_x, known_y);
-            var m = ls[0];
+            let ls = leastSquare(known_x, known_y);
+            let m = ls[0];
 
             if(const_b){
-                var b = ls[1];
+                let b = ls[1];
             }
             else{
-                var b = 0;
+                let b = 0;
             }
 
-            var result = [];
+            let result = [];
 
-            for(var i = 0; i < new_x.length; i++){
-                for(var j = 0; j < new_x[i].length; j++){
-                    var x = new_x[i][j];
-                    var y = m * x + b;
+            for(let i = 0; i < new_x.length; i++){
+                for(let j = 0; j < new_x[i].length; j++){
+                    let x = new_x[i][j];
+                    let y = m * x + b;
 
                     result.push(Math.round(y * 1000000000) / 1000000000);
                 }
@@ -22472,7 +22491,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22484,8 +22503,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22494,8 +22513,8 @@ const functionImplementation = {
 
         try {
             //频率数组
-            var data_data_array = arguments[0];
-            var data_array = [];
+            let data_data_array = arguments[0];
+            let data_array = [];
 
             if(getObjType(data_data_array) == "array"){
                 if(getObjType(data_data_array[0]) == "array" && !func_methods.isDyadicArr(data_data_array)){
@@ -22515,17 +22534,17 @@ const functionImplementation = {
                 data_array.push(data_data_array);
             }
 
-            var data_array_n = [];
+            let data_array_n = [];
 
-            for(var i = 0; i < data_array.length; i++){
+            for(let i = 0; i < data_array.length; i++){
                 if(isRealNum(data_array[i])){
                     data_array_n.push(parseFloat(data_array[i]));
                 }
             }
 
             //间隔数组
-            var data_bins_array = arguments[1];
-            var bins_array = [];
+            let data_bins_array = arguments[1];
+            let bins_array = [];
 
             if(getObjType(data_bins_array) == "array"){
                 if(getObjType(data_bins_array[0]) == "array" && !func_methods.isDyadicArr(data_bins_array)){
@@ -22545,9 +22564,9 @@ const functionImplementation = {
                 bins_array.push(data_bins_array);
             }
 
-            var bins_array_n = [];
+            let bins_array_n = [];
 
-            for(var i = 0; i < bins_array.length; i++){
+            for(let i = 0; i < bins_array.length; i++){
                 if(isRealNum(bins_array[i])){
                     bins_array_n.push(parseFloat(bins_array[i]));
                 }
@@ -22558,9 +22577,9 @@ const functionImplementation = {
                 return [[0], [0]];
             }
             else if(data_array_n.length == 0){
-                var result = [[0]];
+                let result = [[0]];
 
-                for(var i = 0; i < bins_array_n.length; i++){
+                for(let i = 0; i < bins_array_n.length; i++){
                     result.push([0]);
                 }
 
@@ -22574,13 +22593,13 @@ const functionImplementation = {
                     return a - b;
                 });
 
-                var result = [];
+                let result = [];
 
-                for(var i = 0; i < bins_array_n.length; i++){
+                for(let i = 0; i < bins_array_n.length; i++){
                     if(i == 0){
-                        var count = 0;
+                        let count = 0;
 
-                        for(var j = 0; j < data_array_n.length; j++){
+                        for(let j = 0; j < data_array_n.length; j++){
                             if(data_array_n[j] <= bins_array_n[0]){
                                 count++;
                             }
@@ -22589,9 +22608,9 @@ const functionImplementation = {
                         result.push([count]);
                     }
                     else if(i == bins_array_n.length - 1){
-                        var count1 = 0, count2 = 0;
+                        let count1 = 0, count2 = 0;
 
-                        for(var j = 0; j < data_array_n.length; j++){
+                        for(let j = 0; j < data_array_n.length; j++){
                             if(data_array_n[j] <= bins_array_n[i] && data_array_n[j] > bins_array_n[i - 1]){
                                 count1++;
                             }
@@ -22605,9 +22624,9 @@ const functionImplementation = {
                         result.push([count2]);
                     }
                     else{
-                        var count = 0;
+                        let count = 0;
 
-                        for(var j = 0; j < data_array_n.length; j++){
+                        for(let j = 0; j < data_array_n.length; j++){
                             if(data_array_n[j] <= bins_array_n[i] && data_array_n[j] > bins_array_n[i - 1]){
                                 count++;
                             }
@@ -22621,7 +22640,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22633,8 +22652,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22643,8 +22662,8 @@ const functionImplementation = {
 
         try {
             //已知的 y 值集合
-            var data_known_y = arguments[0];
-            var known_y = [];
+            let data_known_y = arguments[0];
+            let known_y = [];
 
             if(getObjType(data_known_y) == "array"){
                 if(getObjType(data_known_y[0]) == "array" && !func_methods.isDyadicArr(data_known_y)){
@@ -22661,18 +22680,18 @@ const functionImplementation = {
                     return formula.error.v;
                 }
 
-                var rowArr = [];
+                let rowArr = [];
 
                 rowArr.push(parseFloat(data_known_y));
 
                 known_y.push(rowArr);
             }
 
-            var known_y_rowlen = known_y.length;
-            var known_y_collen = known_y[0].length;
+            let known_y_rowlen = known_y.length;
+            let known_y_collen = known_y[0].length;
 
-            for(var i = 0; i < known_y_rowlen; i++){
-                for(var j = 0; j < known_y_collen; j++){
+            for(let i = 0; i < known_y_rowlen; i++){
+                for(let j = 0; j < known_y_collen; j++){
                     if(!isRealNum(known_y[i][j])){
                         return formula.error.v;
                     }
@@ -22682,16 +22701,16 @@ const functionImplementation = {
             }
 
             //可选 x 值集合
-            var known_x = [];
-            for(var i = 1; i <= known_y_rowlen; i++){
-                for(var j = 1; j <= known_y_collen; j++){
-                    var number = (i - 1) * known_y_collen + j;
+            let known_x = [];
+            for(let i = 1; i <= known_y_rowlen; i++){
+                for(let j = 1; j <= known_y_collen; j++){
+                    let number = (i - 1) * known_y_collen + j;
                     known_x.push(number);
                 }
             }
 
             if(arguments.length >= 2){
-                var data_known_x = arguments[1];
+                let data_known_x = arguments[1];
                 known_x = [];
 
                 if(getObjType(data_known_x) == "array"){
@@ -22709,15 +22728,15 @@ const functionImplementation = {
                         return formula.error.v;
                     }
 
-                    var rowArr = [];
+                    let rowArr = [];
 
                     rowArr.push(parseFloat(data_known_x));
 
                     known_x.push(rowArr);
                 }
 
-                for(var i = 0; i < known_x.length; i++){
-                    for(var j = 0; j < known_x[0].length; j++){
+                for(let i = 0; i < known_x.length; i++){
+                    for(let j = 0; j < known_x[0].length; j++){
                         if(!isRealNum(known_x[i][j])){
                             return formula.error.v;
                         }
@@ -22727,14 +22746,14 @@ const functionImplementation = {
                 }
             }
 
-            var known_x_rowlen = known_x.length;
-            var known_x_collen = known_x[0].length;
+            let known_x_rowlen = known_x.length;
+            let known_x_collen = known_x[0].length;
 
             //新 x 值
-            var new_x = known_x;
+            let new_x = known_x;
 
             if(arguments.length >= 3){
-                var data_new_x = arguments[2];
+                let data_new_x = arguments[2];
                 new_x = [];
 
                 if(getObjType(data_new_x) == "array"){
@@ -22752,15 +22771,15 @@ const functionImplementation = {
                         return formula.error.v;
                     }
 
-                    var rowArr = [];
+                    let rowArr = [];
 
                     rowArr.push(parseFloat(data_new_x));
 
                     new_x.push(rowArr);
                 }
 
-                for(var i = 0; i < new_x.length; i++){
-                    for(var j = 0; j < new_x[0].length; j++){
+                for(let i = 0; i < new_x.length; i++){
+                    for(let j = 0; j < new_x[0].length; j++){
                         if(!isRealNum(new_x[i][j])){
                             return formula.error.v;
                         }
@@ -22771,7 +22790,7 @@ const functionImplementation = {
             }
 
             //逻辑值
-            var const_b = true;
+            let const_b = true;
 
             if(arguments.length == 4){
                 const_b = func_methods.getCellBoolen(arguments[3]);
@@ -22787,10 +22806,10 @@ const functionImplementation = {
 
             //计算
             function leastSquare(arr_x, arr_y){
-                var xSum = 0, ySum = 0, xySum = 0, x2Sum = 0;
+                let xSum = 0, ySum = 0, xySum = 0, x2Sum = 0;
 
-                for(var i = 0; i < arr_x.length; i++){
-                    for(var j = 0; j < arr_x[i].length; j++){
+                for(let i = 0; i < arr_x.length; i++){
+                    for(let j = 0; j < arr_x[i].length; j++){
                         xSum += arr_x[i][j];
                         // ySum += arr_y[i][j];
                         ySum += Math.log(arr_y[i][j]);
@@ -22800,36 +22819,36 @@ const functionImplementation = {
                     }
                 }
 
-                var n = arr_x.length * arr_x[0].length;
+                let n = arr_x.length * arr_x[0].length;
 
-                var xMean = xSum / n;
-                var yMean = ySum / n;
-                var xyMean = xySum / n;
-                var x2Mean = x2Sum / n;
+                let xMean = xSum / n;
+                let yMean = ySum / n;
+                let xyMean = xySum / n;
+                let x2Mean = x2Sum / n;
 
-                var m = (xyMean - xMean * yMean) / (x2Mean - xMean * xMean);
-                var b = yMean - m * xMean;
+                let m = (xyMean - xMean * yMean) / (x2Mean - xMean * xMean);
+                let b = yMean - m * xMean;
 
                 return [Math.exp(m), Math.exp(b)];
             }
 
-            var ls = leastSquare(known_x, known_y);
-            var m = ls[0];
+            let ls = leastSquare(known_x, known_y);
+            let m = ls[0];
 
             if(const_b){
-                var b = ls[1];
+                let b = ls[1];
             }
             else{
-                var b = 1;
+                let b = 1;
             }
 
-            var result = [];
+            let result = [];
 
-            for(var i = 0; i < new_x.length; i++){
-                for(var j = 0; j < new_x[i].length; j++){
-                    var x = new_x[i][j];
-                    var y = b * Math.pow(m, x);
-                    // var y = Math.exp(b + m * x);
+            for(let i = 0; i < new_x.length; i++){
+                for(let j = 0; j < new_x[i].length; j++){
+                    let x = new_x[i][j];
+                    let y = b * Math.pow(m, x);
+                    // let y = Math.exp(b + m * x);
 
                     result.push(Math.round(y * 1000000000) / 1000000000);
                 }
@@ -22838,7 +22857,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22850,8 +22869,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22862,7 +22881,7 @@ const functionImplementation = {
             return formula.error.v;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22874,8 +22893,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22886,7 +22905,7 @@ const functionImplementation = {
             return formula.error.v;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -22898,8 +22917,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -22908,8 +22927,8 @@ const functionImplementation = {
 
         try {
             //数组
-            var data_array = arguments[0];
-            var array = [];
+            let data_array = arguments[0];
+            let array = [];
 
             if(getObjType(data_array) == "array"){
                 if(getObjType(data_array[0]) == "array" && !func_methods.isDyadicArr(data_array)){
@@ -22922,13 +22941,13 @@ const functionImplementation = {
                 array = func_methods.getCellDataDyadicArr(data_array, "text");
             }
             else{
-                var rowArr = [];
+                let rowArr = [];
                 rowArr.push(data_array);
                 array.push(rowArr);
             }
 
-            for(var i = 0; i < array.length; i++){
-                for(var j = 0; j < array[i].length; j++){
+            for(let i = 0; i < array.length; i++){
+                for(let j = 0; j < array[i].length; j++){
                     if(!isRealNum(array[i][j])){
                         return formula.error.v;
                     }
@@ -22943,8 +22962,8 @@ const functionImplementation = {
 
             //计算
             function Ma(a, n){
-                var A;
-                var b = new Array();
+                let A;
+                let b = new Array();
 
                 if(n == 1){
                     A = a[0][0];
@@ -22963,26 +22982,26 @@ const functionImplementation = {
                 }
                 else{
                     A = 0;
-                    var c = new Array();
-                    var e = new Array();
+                    let c = new Array();
+                    let e = new Array();
 
-                    for(var i = 0; i < n; i++){
+                    for(let i = 0; i < n; i++){
                         b[i] = a[i][0] * Math.pow(-1, i + 1 + 1);
                     }
 
-                    for(var i = 0; i < n; i++){
+                    for(let i = 0; i < n; i++){
                         e[i] = new Array();
 
-                        for(var j = 0; j < n - 1; j++){
+                        for(let j = 0; j < n - 1; j++){
                             e[i][j] = a[i][j + 1];
                         }
                     }
 
-                    for(var i = 0; i < n; i++){
-                        for(var j = 0; j < n; j++){
+                    for(let i = 0; i < n; i++){
+                        for(let j = 0; j < n; j++){
                             c[j] = new Array();
 
-                            for(var k = 0; k < n - 1; k++){
+                            for(let k = 0; k < n - 1; k++){
                                 if(i > j){
                                     c[j][k] = e[j][k];
                                 }
@@ -23002,7 +23021,7 @@ const functionImplementation = {
             return Ma(array, array.length);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23014,8 +23033,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23024,8 +23043,8 @@ const functionImplementation = {
 
         try {
             //数组
-            var data_array = arguments[0];
-            var array = [];
+            let data_array = arguments[0];
+            let array = [];
 
             if(getObjType(data_array) == "array"){
                 if(getObjType(data_array[0]) == "array" && !func_methods.isDyadicArr(data_array)){
@@ -23038,13 +23057,13 @@ const functionImplementation = {
                 array = func_methods.getCellDataDyadicArr(data_array, "text");
             }
             else{
-                var rowArr = [];
+                let rowArr = [];
                 rowArr.push(data_array);
                 array.push(rowArr);
             }
 
-            for(var i = 0; i < array.length; i++){
-                for(var j = 0; j < array[i].length; j++){
+            for(let i = 0; i < array.length; i++){
+                for(let j = 0; j < array[i].length; j++){
                     if(!isRealNum(array[i][j])){
                         return formula.error.v;
                     }
@@ -23061,7 +23080,7 @@ const functionImplementation = {
             return inverse(array);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23073,8 +23092,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23083,8 +23102,8 @@ const functionImplementation = {
 
         try {
             //数组1
-            var data_array1 = arguments[0];
-            var array1 = [];
+            let data_array1 = arguments[0];
+            let array1 = [];
 
             if(getObjType(data_array1) == "array"){
                 if(getObjType(data_array1[0]) == "array" && !func_methods.isDyadicArr(data_array1)){
@@ -23097,13 +23116,13 @@ const functionImplementation = {
                 array1 = func_methods.getCellDataDyadicArr(data_array1, "text");
             }
             else{
-                var rowArr = [];
+                let rowArr = [];
                 rowArr.push(data_array1);
                 array1.push(rowArr);
             }
 
-            for(var i = 0; i < array1.length; i++){
-                for(var j = 0; j < array1[i].length; j++){
+            for(let i = 0; i < array1.length; i++){
+                for(let j = 0; j < array1[i].length; j++){
                     if(!isRealNum(array1[i][j])){
                         return formula.error.v;
                     }
@@ -23113,8 +23132,8 @@ const functionImplementation = {
             }
 
             //数组2
-            var data_array2 = arguments[1];
-            var array2 = [];
+            let data_array2 = arguments[1];
+            let array2 = [];
 
             if(getObjType(data_array2) == "array"){
                 if(getObjType(data_array2[0]) == "array" && !func_methods.isDyadicArr(data_array2)){
@@ -23127,13 +23146,13 @@ const functionImplementation = {
                 array2 = func_methods.getCellDataDyadicArr(data_array2, "text");
             }
             else{
-                var rowArr = [];
+                let rowArr = [];
                 rowArr.push(data_array2);
                 array2.push(rowArr);
             }
 
-            for(var i = 0; i < array2.length; i++){
-                for(var j = 0; j < array2[i].length; j++){
+            for(let i = 0; i < array2.length; i++){
+                for(let j = 0; j < array2[i].length; j++){
                     if(!isRealNum(array2[i][j])){
                         return formula.error.v;
                     }
@@ -23147,18 +23166,18 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var rowlen = array1.length;
-            var collen = array2[0].length;
+            let rowlen = array1.length;
+            let collen = array2[0].length;
 
-            var result = [];
+            let result = [];
 
-            for(var m = 0; m < rowlen; m++){
-                var rowArr = [];
+            for(let m = 0; m < rowlen; m++){
+                let rowArr = [];
 
-                for(var n = 0; n < collen; n++){
-                    var value = 0;
+                for(let n = 0; n < collen; n++){
+                    let value = 0;
 
-                    for(var p = 0; p < array1[0].length; p++){
+                    for(let p = 0; p < array1[0].length; p++){
                         value += array1[m][p] * array2[p][n];
                     }
 
@@ -23171,7 +23190,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23183,8 +23202,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23194,8 +23213,8 @@ const functionImplementation = {
         try {
             //第一个数组
             //数组1
-            var data_array1 = arguments[0];
-            var array1 = [];
+            let data_array1 = arguments[0];
+            let array1 = [];
 
             if(getObjType(data_array1) == "array"){
                 if(getObjType(data_array1[0]) == "array" && !func_methods.isDyadicArr(data_array1)){
@@ -23208,13 +23227,13 @@ const functionImplementation = {
                 array1 = func_methods.getCellDataDyadicArr(data_array1, "text");
             }
             else{
-                var rowArr = [];
+                let rowArr = [];
                 rowArr.push(data_array1);
                 array1.push(rowArr);
             }
 
-            for(var i = 0; i < array1.length; i++){
-                for(var j = 0; j < array1[i].length; j++){
+            for(let i = 0; i < array1.length; i++){
+                for(let j = 0; j < array1[i].length; j++){
                     if(!isRealNum(array1[i][j])){
                         array1[i][j] = 0;
                     }
@@ -23224,13 +23243,13 @@ const functionImplementation = {
                 }
             }
 
-            var rowlen = array1.length;
-            var collen = array1[0].length;
+            let rowlen = array1.length;
+            let collen = array1[0].length;
 
             if(arguments.length >= 2){
-                for(var i = 1; i < arguments.length; i++){
-                    var data = arguments[i];
-                    var arr = [];
+                for(let i = 1; i < arguments.length; i++){
+                    let data = arguments[i];
+                    let arr = [];
 
                     if(getObjType(data) == "array"){
                         if(getObjType(data[0]) == "array" && !func_methods.isDyadicArr(data)){
@@ -23243,7 +23262,7 @@ const functionImplementation = {
                         arr = func_methods.getCellDataDyadicArr(data, "text");
                     }
                     else{
-                        var rowArr = [];
+                        let rowArr = [];
                         rowArr.push(data);
                         arr.push(rowArr);
                     }
@@ -23252,8 +23271,8 @@ const functionImplementation = {
                         return formula.error.v;
                     }
 
-                    for(var m = 0; m < rowlen; m++){
-                        for(var n = 0; n < collen; n++){
+                    for(let m = 0; m < rowlen; m++){
+                        for(let n = 0; n < collen; n++){
                             if(!isRealNum(arr[m][n])){
                                 array1[m][n] = 0;
                             }
@@ -23265,10 +23284,10 @@ const functionImplementation = {
                 }
             }
 
-            var sum = 0;
+            let sum = 0;
 
-            for(var m = 0; m < rowlen; m++){
-                for(var n = 0; n < collen; n++){
+            for(let m = 0; m < rowlen; m++){
+                for(let n = 0; n < collen; n++){
                     sum += array1[m][n];
                 }
             }
@@ -23276,7 +23295,7 @@ const functionImplementation = {
             return sum;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23288,8 +23307,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23297,8 +23316,8 @@ const functionImplementation = {
         }
 
         try {
-            var data_cell = arguments[0];
-            var cell;
+            let data_cell = arguments[0];
+            let cell;
 
             if(getObjType(data_cell) == "object" && data_cell.startCell != null){
                 if(data_cell.data == null){
@@ -23324,7 +23343,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23336,8 +23355,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23346,8 +23365,8 @@ const functionImplementation = {
 
         try {
             //单元格信息的类型
-            var data_info_type = arguments[0];
-            var info_type;
+            let data_info_type = arguments[0];
+            let info_type;
 
             if(getObjType(data_info_type) == "array"){
                 if(getObjType(data_info_type[0]) == "array"){
@@ -23382,8 +23401,8 @@ const functionImplementation = {
             }
 
             //单元格
-            var data_reference = arguments[1];
-            var reference;
+            let data_reference = arguments[1];
+            let reference;
 
             if(getObjType(data_reference) == "object" && data_reference.startCell != null){
                 reference = data_reference.startCell;
@@ -23396,11 +23415,11 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var file = getluckysheetfile()[getSheetIndex(Store.currentSheetIndex)];
+            let file = getluckysheetfile()[getSheetIndex(Store.currentSheetIndex)];
 
-            var cellrange = formula.getcellrange(reference);
-            var row_index = cellrange.row[0];
-            var col_index = cellrange.column[0];
+            let cellrange = formula.getcellrange(reference);
+            let row_index = cellrange.row[0];
+            let col_index = cellrange.column[0];
 
             // let sheetdata = null;
             // sheetdata = Store.flowdata;
@@ -23497,7 +23516,7 @@ const functionImplementation = {
                     return "l";
                     break;
                 case "width":
-                    var cfg = file.config;
+                    let cfg = file.config;
 
                     if(cfg["columnlen"] != null && col_index in cfg["columnlen"]){
                         return cfg["columnlen"][col_index];
@@ -23508,7 +23527,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23520,8 +23539,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23532,7 +23551,7 @@ const functionImplementation = {
             return formula.error.na;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23544,8 +23563,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23554,8 +23573,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_error_val = arguments[0];
-            var error_val;
+            let data_error_val = arguments[0];
+            let error_val;
 
             if(getObjType(data_error_val) == "array"){
                 if(getObjType(data_error_val[0]) == "array"){
@@ -23595,7 +23614,7 @@ const functionImplementation = {
                 error_val = data_error_val;
             }
 
-            var error_obj = {
+            let error_obj = {
                 "#NULL!": 1,
                 "#DIV/0!": 2,
                 "#VALUE!": 3,
@@ -23614,7 +23633,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23626,8 +23645,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23636,8 +23655,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_error_val = arguments[0];
-            var error_val;
+            let data_error_val = arguments[0];
+            let error_val;
 
             if(getObjType(data_error_val) == "object" && data_error_val.startCell != null){
                 if(data_error_val.data == null){
@@ -23652,7 +23671,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23664,8 +23683,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23674,8 +23693,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 if(getObjType(data_value[0]) == "array"){
@@ -23712,7 +23731,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23724,8 +23743,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23734,8 +23753,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 if(getObjType(data_value[0]) == "array"){
@@ -23772,7 +23791,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23784,8 +23803,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23794,8 +23813,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 if(getObjType(data_value[0]) == "array"){
@@ -23832,7 +23851,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23844,8 +23863,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23854,8 +23873,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 if(getObjType(data_value[0]) == "array"){
@@ -23892,7 +23911,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23904,8 +23923,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23914,8 +23933,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 if(getObjType(data_value[0]) == "array"){
@@ -23958,7 +23977,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -23970,8 +23989,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -23980,8 +23999,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 if(getObjType(data_value[0]) == "array"){
@@ -24018,7 +24037,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24030,8 +24049,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24047,7 +24066,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24059,8 +24078,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24069,8 +24088,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 if(getObjType(data_value[0]) == "array"){
@@ -24113,7 +24132,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24125,8 +24144,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24135,8 +24154,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 return 64;
@@ -24170,7 +24189,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24182,8 +24201,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24192,8 +24211,8 @@ const functionImplementation = {
 
         try {
             //单元格
-            var data_value = arguments[0];
-            var value;
+            let data_value = arguments[0];
+            let value;
 
             if(getObjType(data_value) == "array"){
                 if(getObjType(data_value[0]) == "array"){
@@ -24248,7 +24267,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24260,8 +24279,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24270,7 +24289,7 @@ const functionImplementation = {
 
         try {
             //数字
-            var value = func_methods.getFirstValue(arguments[0]);
+            let value = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value)){
                 return value;
             }
@@ -24284,7 +24303,7 @@ const functionImplementation = {
             return update("yyyy-mm-dd", value);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24296,8 +24315,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24305,7 +24324,7 @@ const functionImplementation = {
         }
 
         try {
-            var value = func_methods.getFirstValue(arguments[0], "text");
+            let value = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(value)){
                 return value;
             }
@@ -24318,7 +24337,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24330,8 +24349,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24339,7 +24358,7 @@ const functionImplementation = {
         }
 
         try {
-            var value = func_methods.getFirstValue(arguments[0], "text");
+            let value = func_methods.getFirstValue(arguments[0], "text");
             if(valueIsError(value)){
                 return value;
             }
@@ -24347,7 +24366,7 @@ const functionImplementation = {
             return update("@", value);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24359,8 +24378,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24369,7 +24388,7 @@ const functionImplementation = {
 
         try {
             //数字
-            var value = func_methods.getFirstValue(arguments[0]);
+            let value = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value)){
                 return value;
             }
@@ -24383,7 +24402,7 @@ const functionImplementation = {
             return update("$ 0.00", value);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24395,8 +24414,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24405,7 +24424,7 @@ const functionImplementation = {
 
         try {
             //数字
-            var value = func_methods.getFirstValue(arguments[0]);
+            let value = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(value)){
                 return value;
             }
@@ -24419,7 +24438,7 @@ const functionImplementation = {
             return update("0%", value);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24431,8 +24450,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24441,8 +24460,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -24456,7 +24475,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -24466,8 +24485,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -24484,11 +24503,11 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
@@ -24506,7 +24525,7 @@ const functionImplementation = {
             return targetFields[resultIndexes[0]];
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24518,8 +24537,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24528,8 +24547,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -24543,7 +24562,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -24553,8 +24572,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -24571,20 +24590,20 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var maxValue = targetFields[resultIndexes[0]];
+            let maxValue = targetFields[resultIndexes[0]];
 
-            for (var i = 1; i < resultIndexes.length; i++) {
+            for (let i = 1; i < resultIndexes.length; i++) {
                 if (maxValue < targetFields[resultIndexes[i]]) {
                     maxValue = targetFields[resultIndexes[i]];
                 }
@@ -24593,7 +24612,7 @@ const functionImplementation = {
             return maxValue;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24605,8 +24624,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24615,8 +24634,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -24630,7 +24649,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -24640,8 +24659,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -24658,20 +24677,20 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = findField(database, field);
+                let index = findField(database, field);
                 targetFields = rest(database[index]);
             }
             else {
                 targetFields = rest(database[field]);
             }
 
-            var minValue = targetFields[resultIndexes[0]];
+            let minValue = targetFields[resultIndexes[0]];
 
-            for (var i = 1; i < resultIndexes.length; i++) {
+            for (let i = 1; i < resultIndexes.length; i++) {
                 if (minValue > targetFields[resultIndexes[i]]) {
                     minValue = targetFields[resultIndexes[i]];
                 }
@@ -24680,7 +24699,7 @@ const functionImplementation = {
             return minValue;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24692,8 +24711,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24702,8 +24721,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -24717,7 +24736,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -24727,8 +24746,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -24745,27 +24764,27 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var sum = 0;
+            let sum = 0;
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 sum += targetFields[resultIndexes[i]];
             }
 
             return resultIndexes.length === 0 ? formula.error.d : sum / resultIndexes.length;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24777,8 +24796,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24787,8 +24806,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -24802,7 +24821,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -24812,8 +24831,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -24830,27 +24849,27 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var targetValues = [];
+            let targetValues = [];
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 targetValues[i] = targetFields[resultIndexes[i]];
             }
 
             return window.luckysheet_function.COUNT.f.apply(window.luckysheet_function.COUNT, targetValues);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24862,8 +24881,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24872,8 +24891,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -24887,7 +24906,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -24897,8 +24916,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -24915,27 +24934,27 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var targetValues = [];
+            let targetValues = [];
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 targetValues[i] = targetFields[resultIndexes[i]];
             }
 
             return window.luckysheet_function.COUNTA.f.apply(window.luckysheet_function.COUNTA, targetValues);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -24947,8 +24966,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -24957,8 +24976,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -24972,7 +24991,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -24982,8 +25001,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -25000,26 +25019,26 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var targetValues = [];
+            let targetValues = [];
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 targetValues[i] = targetFields[resultIndexes[i]];
             }
 
             targetValues = func_methods.compact(targetValues);
 
-            var result = 1;
+            let result = 1;
 
             for (i = 0; i < targetValues.length; i++) {
                 result *= targetValues[i];
@@ -25028,7 +25047,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -25040,8 +25059,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25050,8 +25069,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -25065,7 +25084,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -25075,8 +25094,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -25093,20 +25112,20 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var targetValues = [];
+            let targetValues = [];
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 targetValues[i] = targetFields[resultIndexes[i]];
             }
 
@@ -25115,7 +25134,7 @@ const functionImplementation = {
             return window.luckysheet_function.STDEVA.f.apply(window.luckysheet_function.STDEVA, targetValues);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -25127,8 +25146,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25137,8 +25156,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -25152,7 +25171,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -25162,8 +25181,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -25180,20 +25199,20 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var targetValues = [];
+            let targetValues = [];
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 targetValues[i] = targetFields[resultIndexes[i]];
             }
 
@@ -25202,7 +25221,7 @@ const functionImplementation = {
             return window.luckysheet_function.STDEVP.f.apply(window.luckysheet_function.STDEVP, targetValues);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -25214,8 +25233,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25224,8 +25243,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -25239,7 +25258,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -25249,8 +25268,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -25267,26 +25286,26 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var targetValues = [];
+            let targetValues = [];
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 targetValues[i] = targetFields[resultIndexes[i]];
             }
 
             targetValues = func_methods.compact(targetValues);
 
-            var result = 0;
+            let result = 0;
 
             for (i = 0; i < targetValues.length; i++) {
                 result += targetValues[i];
@@ -25295,7 +25314,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -25307,8 +25326,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25317,8 +25336,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -25332,7 +25351,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -25342,8 +25361,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -25360,20 +25379,20 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var targetValues = [];
+            let targetValues = [];
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 targetValues[i] = targetFields[resultIndexes[i]];
             }
 
@@ -25382,7 +25401,7 @@ const functionImplementation = {
             return window.luckysheet_function.VAR_S.f.apply(window.luckysheet_function.VAR_S, targetValues);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -25394,8 +25413,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25404,8 +25423,8 @@ const functionImplementation = {
 
         try {
             //数据库的单元格区域
-            var data_database = arguments[0];
-            var database = [];
+            let data_database = arguments[0];
+            let database = [];
 
             if(getObjType(data_database) == "object" && data_database.startCell != null){
                 if(data_database.data == null){
@@ -25419,7 +25438,7 @@ const functionImplementation = {
             }
 
             //列
-            var field = func_methods.getFirstValue(arguments[1], "text");
+            let field = func_methods.getFirstValue(arguments[1], "text");
             if(valueIsError(field)){
                 return field;
             }
@@ -25429,8 +25448,8 @@ const functionImplementation = {
             }
 
             //条件的单元格区域
-            var data_criteria = arguments[2];
-            var criteria = [];
+            let data_criteria = arguments[2];
+            let criteria = [];
 
             if(getObjType(data_criteria) == "object" && data_criteria.startCell != null){
                 if(data_criteria.data == null){
@@ -25447,20 +25466,20 @@ const functionImplementation = {
                 return formula.error.v;
             }
 
-            var resultIndexes = func_methods.findResultIndex(database, criteria);
-            var targetFields = [];
+            let resultIndexes = func_methods.findResultIndex(database, criteria);
+            let targetFields = [];
 
             if (getObjType(field) === "string") {
-                var index = func_methods.findField(database, field);
+                let index = func_methods.findField(database, field);
                 targetFields = func_methods.rest(database[index]);
             }
             else {
                 targetFields = func_methods.rest(database[field]);
             }
 
-            var targetValues = [];
+            let targetValues = [];
 
-            for (var i = 0; i < resultIndexes.length; i++) {
+            for (let i = 0; i < resultIndexes.length; i++) {
                 targetValues[i] = targetFields[resultIndexes[i]];
             }
 
@@ -25469,7 +25488,7 @@ const functionImplementation = {
             return window.luckysheet_function.VAR_P.f.apply(window.luckysheet_function.VAR_P, targetValues);
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -25481,8 +25500,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25490,34 +25509,34 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
-            var lineColor = arguments[1];
-            var lineWidth = arguments[2];
-            var normalValue = arguments[3];
-            var normalColor = arguments[4];
-            var maxSpot = arguments[5];
-            var minSpot = arguments[6];
-            var spotRadius = arguments[7];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
+            let lineColor = arguments[1];
+            let lineWidth = arguments[2];
+            let normalValue = arguments[3];
+            let normalColor = arguments[4];
+            let maxSpot = arguments[5];
+            let minSpot = arguments[6];
+            let spotRadius = arguments[7];
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //定义需要格式化data数据
-            var dataformat = formula.readCellDataToOneArray(rangeValue);
+            let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             if(lineWidth==null){
                 lineWidth = 1;
@@ -25529,7 +25548,7 @@ const functionImplementation = {
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -25555,7 +25574,7 @@ const functionImplementation = {
             if(!!normalValue){
                 if(typeof(normalValue)=="string"){
                     normalValue = normalValue.toLowerCase();
-                    var nv = null;
+                    let nv = null;
                     if(normalValue=="min"){
                         nv = window.luckysheet_function.MIN.f({"data":dataformat});
                     }
@@ -25595,7 +25614,7 @@ const functionImplementation = {
             sparksetting["spotRadius"] = spotRadius;
 
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
             // {
@@ -25608,7 +25627,7 @@ const functionImplementation = {
             //return "";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -25621,8 +25640,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25630,35 +25649,35 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
-            var lineColor = arguments[1];
-            var fillColor = arguments[2];
-            var lineWidth = arguments[3];
-            var normalValue = arguments[4];
-            var normalColor = arguments[5];
-            // var maxSpot = arguments[5];
-            // var minSpot = arguments[6];
-            // var spotRadius = arguments[7];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
+            let lineColor = arguments[1];
+            let fillColor = arguments[2];
+            let lineWidth = arguments[3];
+            let normalValue = arguments[4];
+            let normalColor = arguments[5];
+            // let maxSpot = arguments[5];
+            // let minSpot = arguments[6];
+            // let spotRadius = arguments[7];
 
             //定义需要格式化data数据
-            var dataformat = formula.readCellDataToOneArray(rangeValue);
+            let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             if(lineWidth==null){
                 lineWidth = 1;
@@ -25670,7 +25689,7 @@ const functionImplementation = {
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -25698,7 +25717,7 @@ const functionImplementation = {
             if(!!normalValue){
                 if(typeof(normalValue)=="string"){
                     normalValue = normalValue.toLowerCase();
-                    var nv = null;
+                    let nv = null;
                     if(normalValue=="min"){
                         nv = window.luckysheet_function.MIN.f({"data":dataformat});
                     }
@@ -25738,7 +25757,7 @@ const functionImplementation = {
             // sparksetting["spotRadius"] = spotRadius;
 
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
             // {
@@ -25751,7 +25770,7 @@ const functionImplementation = {
             //return "";
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -25764,8 +25783,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25773,34 +25792,34 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            var dataformat = formula.readCellDataToOneArray(rangeValue);
+            let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -25812,10 +25831,10 @@ const functionImplementation = {
                 }
             }
 
-            var barSpacing = arguments[1];
-            var barColor = arguments[2];
-            var negBarColor = arguments[3];
-            var chartRangeMax = arguments[4];
+            let barSpacing = arguments[1];
+            let barColor = arguments[2];
+            let negBarColor = arguments[3];
+            let chartRangeMax = arguments[4];
 
             ////具体实现
             sparksetting["type"] = "column";
@@ -25841,18 +25860,18 @@ const functionImplementation = {
                 sparksetting["chartRangeMax"] = chartRangeMax;
             }
 
-            var colorLists = formula.sparklinesColorMap(arguments);
+            let colorLists = formula.sparklinesColorMap(arguments);
             if(!!colorLists){
                 sparksetting["colorMap"] = colorLists;
             }
             ////具体实现
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -25865,8 +25884,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -25874,19 +25893,19 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            //var dataformat = formula.readCellDataToOneArray(rangeValue);
+            //let dataformat = formula.readCellDataToOneArray(rangeValue);
 
-            var dataformat = [];
+            let dataformat = [];
 
-            var data = [];
+            let data = [];
             if(rangeValue!=null && rangeValue.data!=null){
                 data = rangeValue.data;
             }
@@ -25906,12 +25925,12 @@ const functionImplementation = {
                 data = new Function("return " + data)();
             }
 
-            var stackconfig = arguments[1];
-            var offsetY = data.length;
+            let stackconfig = arguments[1];
+            let offsetY = data.length;
             if(stackconfig==null || !!stackconfig){
-                for(var c=0;c<data[0].length;c++){
-                    var colstr = "";
-                    for(var r=0;r<data.length;r++){
+                for(let c=0;c<data[0].length;c++){
+                    let colstr = "";
+                    for(let r=0;r<data.length;r++){
                         colstr += data[r][c] + ":";
                     }
                     colstr = colstr.substr(0, colstr.length-1);
@@ -25919,27 +25938,27 @@ const functionImplementation = {
                 }
             }
             else{
-                for(var r=0;r<data.length;r++){
-                    var rowstr = "";
-                    for(var c=0;c<data[0].length;c++){
+                for(let r=0;r<data.length;r++){
+                    let rowstr = "";
+                    for(let c=0;c<data[0].length;c++){
                         rowstr += data[r][c] + ":";
                     }
                     rowstr = rowstr.substr(0, rowstr.length-1);
                     dataformat.push(rowstr);
                 }
-                var offsetY = data[0].length;
+                let offsetY = data[0].length;
             }
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
@@ -25947,7 +25966,7 @@ const functionImplementation = {
             //sparksetting.offsetY = offsetY;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -25959,8 +25978,8 @@ const functionImplementation = {
                 }
             }
 
-            var barSpacing = arguments[2];
-            var chartRangeMax = arguments[3];
+            let barSpacing = arguments[2];
+            let chartRangeMax = arguments[3];
 
             ////具体实现
             sparksetting["type"] = "column";
@@ -25976,19 +25995,19 @@ const functionImplementation = {
                 sparksetting["chartRangeMax"] = chartRangeMax;
             }
 
-            var colorLists = formula.sparklinesColorMap(arguments, 4);
+            let colorLists = formula.sparklinesColorMap(arguments, 4);
             if(!!colorLists){
                 sparksetting["colorMap"] = colorLists;
             }
             ////具体实现
 
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -26001,8 +26020,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26010,34 +26029,34 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            var dataformat = formula.readCellDataToOneArray(rangeValue);
+            let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -26049,10 +26068,10 @@ const functionImplementation = {
                 }
             }
 
-            var barSpacing = arguments[1];
-            var barColor = arguments[2];
-            var negBarColor = arguments[3];
-            var chartRangeMax = arguments[4];
+            let barSpacing = arguments[1];
+            let barColor = arguments[2];
+            let negBarColor = arguments[3];
+            let chartRangeMax = arguments[4];
 
             ////具体实现
             sparksetting["type"] = "bar";
@@ -26078,18 +26097,18 @@ const functionImplementation = {
                 sparksetting["chartRangeMax"] = chartRangeMax;
             }
 
-            var colorLists = formula.sparklinesColorMap(arguments);
+            let colorLists = formula.sparklinesColorMap(arguments);
             if(!!colorLists){
                 sparksetting["colorMap"] = colorLists;
             }
             ////具体实现
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -26102,8 +26121,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26111,19 +26130,19 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            //var dataformat = formula.readCellDataToOneArray(rangeValue);
+            //let dataformat = formula.readCellDataToOneArray(rangeValue);
 
-            var dataformat = [];
+            let dataformat = [];
 
-            var data = [];
+            let data = [];
             if(rangeValue!=null && rangeValue.data!=null){
                 data = rangeValue.data;
             }
@@ -26142,12 +26161,12 @@ const functionImplementation = {
                 data = new Function("return " + data)();
             }
 
-            var stackconfig = arguments[1];
-            var offsetY = data.length;
+            let stackconfig = arguments[1];
+            let offsetY = data.length;
             if(stackconfig==null || !!stackconfig){
-                for(var c=0;c<data[0].length;c++){
-                    var colstr = "";
-                    for(var r=0;r<data.length;r++){
+                for(let c=0;c<data[0].length;c++){
+                    let colstr = "";
+                    for(let r=0;r<data.length;r++){
                         colstr += data[r][c] + ":";
                     }
                     colstr = colstr.substr(0, colstr.length-1);
@@ -26155,27 +26174,27 @@ const functionImplementation = {
                 }
             }
             else{
-                for(var r=0;r<data.length;r++){
-                    var rowstr = "";
-                    for(var c=0;c<data[0].length;c++){
+                for(let r=0;r<data.length;r++){
+                    let rowstr = "";
+                    for(let c=0;c<data[0].length;c++){
                         rowstr += data[r][c] + ":";
                     }
                     rowstr = rowstr.substr(0, rowstr.length-1);
                     dataformat.push(rowstr);
                 }
-                var offsetY = data[0].length;
+                let offsetY = data[0].length;
             }
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
@@ -26183,7 +26202,7 @@ const functionImplementation = {
             //sparksetting.offsetY = offsetY;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -26195,8 +26214,8 @@ const functionImplementation = {
                 }
             }
 
-            var barSpacing = arguments[2];
-            var chartRangeMax = arguments[3];
+            let barSpacing = arguments[2];
+            let chartRangeMax = arguments[3];
 
             ////具体实现
             sparksetting["type"] = "bar";
@@ -26212,19 +26231,19 @@ const functionImplementation = {
                 sparksetting["chartRangeMax"] = chartRangeMax;
             }
 
-            var colorLists = formula.sparklinesColorMap(arguments, 4);
+            let colorLists = formula.sparklinesColorMap(arguments, 4);
             if(!!colorLists){
                 sparksetting["colorMap"] = colorLists;
             }
             ////具体实现
 
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -26237,8 +26256,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26246,34 +26265,34 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            var dataformat = formula.readCellDataToOneArray(rangeValue);
+            let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -26285,9 +26304,9 @@ const functionImplementation = {
                 }
             }
 
-            var thresholdValue = arguments[1];
-            var barColor = arguments[2];
-            var negBarColor = arguments[3];
+            let thresholdValue = arguments[1];
+            let barColor = arguments[2];
+            let negBarColor = arguments[3];
 
             ////具体实现
             sparksetting["type"] = "discrete";
@@ -26308,12 +26327,12 @@ const functionImplementation = {
             sparkColorSetting("thresholdColor", negBarColor);
             ////具体实现
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -26326,8 +26345,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26335,34 +26354,34 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            var dataformat = formula.readCellDataToOneArray(rangeValue);
+            let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -26374,10 +26393,10 @@ const functionImplementation = {
                 }
             }
 
-            var barSpacing = arguments[1];
-            var barColor = arguments[2];
-            var negBarColor = arguments[3];
-            var zeroBarColor = arguments[4];
+            let barSpacing = arguments[1];
+            let barColor = arguments[2];
+            let negBarColor = arguments[3];
+            let zeroBarColor = arguments[4];
 
             ////具体实现
             sparksetting["type"] = "tristate";
@@ -26401,18 +26420,18 @@ const functionImplementation = {
             }
             sparkColorSetting("zeroBarColor", zeroBarColor);
 
-            var colorLists = formula.sparklinesColorMap(arguments);
+            let colorLists = formula.sparklinesColorMap(arguments);
             if(!!colorLists){
                 sparksetting["colorMap"] = colorLists;
             }
             ////具体实现
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -26425,8 +26444,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26434,34 +26453,34 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            var dataformat = formula.readCellDataToOneArray(rangeValue);
+            let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -26473,9 +26492,9 @@ const functionImplementation = {
                 }
             }
 
-            var offset = arguments[1];
-            var borderWidth = arguments[2];
-            var borderColor = arguments[3];
+            let offset = arguments[1];
+            let borderWidth = arguments[2];
+            let borderColor = arguments[3];
 
             ////具体实现
             sparksetting["type"] = "pie";
@@ -26494,18 +26513,18 @@ const functionImplementation = {
             }
             sparkColorSetting("borderColor", borderColor);
 
-            var colorLists = formula.sparklinesColorMap(arguments, 4);
+            let colorLists = formula.sparklinesColorMap(arguments, 4);
             if(!!colorLists){
                 sparksetting["colorMap"] = colorLists;
             }
             ////具体实现
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -26518,8 +26537,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26527,34 +26546,34 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来���用到
-            var colorList = formula.colorList;
-            var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            var dataformat = formula.readCellDataToOneArray(rangeValue);
+            let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -26566,9 +26585,9 @@ const functionImplementation = {
                 }
             }
 
-            var outlierIQR = arguments[1];
-            var target = arguments[2];
-            var spotRadius = arguments[3];
+            let outlierIQR = arguments[1];
+            let target = arguments[2];
+            let spotRadius = arguments[3];
 
             ////具体实现
             sparksetting["type"] = "box";
@@ -26590,12 +26609,12 @@ const functionImplementation = {
             sparkColorSetting("spotRadius", spotRadius);
             ////具体实现
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -26608,8 +26627,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26617,34 +26636,34 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var cell_fp = window.luckysheetCurrentFunction;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let cell_fp = window.luckysheetCurrentFunction;
             //色表，接下来会用到
-            var colorList = formula.colorList;
-            //var rangeValue = arguments[0];
+            let colorList = formula.colorList;
+            //let rangeValue = arguments[0];
 
             //定义需要格式化data数据
-            //var dataformat = formula.readCellDataToOneArray(rangeValue);
+            //let dataformat = formula.readCellDataToOneArray(rangeValue);
 
             let luckysheetfile = getluckysheetfile();
             let index = getSheetIndex(Store.calculateSheetIndex);
             let sheetdata = luckysheetfile[index].data;
 
             //在下面获得该单元格的长度和宽度,同时考虑了合并单元格问题
-            var cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
-            var width = cellSize[0];
-            var height = cellSize[1];
+            let cellSize = menuButton.getCellRealSize(sheetdata, cell_r, cell_c);
+            let width = cellSize[0];
+            let height = cellSize[1];
 
             //开始进行sparklines的详细设置，宽和高为单元格的宽高。
-            var sparksetting = {};
+            let sparksetting = {};
 
             //设置sparklines图表的宽高，线图的高会随着粗细而超出单元格高度，所以减去一个量，设置offsetY或者offsetX为渲染偏移量，传给luckysheetDrawMain使用。默认为0。=LINESPLINES(D9:E24,3,5)
             sparksetting.height = height;
             sparksetting.width = width;
 
             //定义sparklines的通用色彩设置函数，可以设置 色表【colorList】索引数值 或者 具体颜色值
-            var sparkColorSetting = function(attr, value){
+            let sparkColorSetting = function(attr, value){
                 if(!!value){
                     if(typeof(value)=="number"){
                         if(value>19){
@@ -26657,28 +26676,28 @@ const functionImplementation = {
             }
 
             ////具体实现
-            var dataformat = [];
+            let dataformat = [];
             luckysheet_getValue(arguments);
 
-            var data1 = formula.getValueByFuncData(arguments[0]);
-            var data2 = formula.getValueByFuncData(arguments[1]);
+            let data1 = formula.getValueByFuncData(arguments[0]);
+            let data2 = formula.getValueByFuncData(arguments[1]);
 
             dataformat.push(data1);
             dataformat.push(data2);
 
-            for(var i=2;i<arguments.length;i++){
+            for(let i=2;i<arguments.length;i++){
                 dataformat.push(formula.getValueByFuncData(arguments[i]));
             }
 
             sparksetting["type"] = "bullet";
             ////具体实现
 
-            var temp1 = luckysheetSparkline.init(dataformat, sparksetting);
+            let temp1 = luckysheetSparkline.init(dataformat, sparksetting);
 
             return temp1;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];
@@ -26692,8 +26711,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26702,8 +26721,8 @@ const functionImplementation = {
 
         try {
             //要排序的范围或数组
-            var data_array = arguments[0];
-            var array = [], rowlen = 1, collen = 1;
+            let data_array = arguments[0];
+            let array = [], rowlen = 1, collen = 1;
 
             if(getObjType(data_array) == "array"){
                 if(getObjType(data_array[0]) == "array"){
@@ -26711,11 +26730,11 @@ const functionImplementation = {
                         return formula.error.v;
                     }
 
-                    for(var i = 0; i < data_array.length; i++){
-                        var rowArr = [];
+                    for(let i = 0; i < data_array.length; i++){
+                        let rowArr = [];
 
-                        for(var j = 0; j < data_array[i].length; j++){
-                            var number = data_array[i][j];
+                        for(let j = 0; j < data_array[i].length; j++){
+                            let number = data_array[i][j];
 
                             rowArr.push(number);
                         }
@@ -26727,8 +26746,8 @@ const functionImplementation = {
                     collen = array[0].length;
                 }
                 else{
-                    for(var i = 0; i < data_array.length; i++){
-                        var number = data_array[i];
+                    for(let i = 0; i < data_array.length; i++){
+                        let number = data_array[i];
 
                         array.push(number);
                     }
@@ -26739,12 +26758,12 @@ const functionImplementation = {
             else if(getObjType(data_array) == "object" && data_array.startCell != null){
                 if(data_array.data != null){
                     if(getObjType(data_array.data) == "array"){
-                        for(var i = 0; i < data_array.data.length; i++){
-                            var rowArr = [];
+                        for(let i = 0; i < data_array.data.length; i++){
+                            let rowArr = [];
 
-                            for(var j = 0; j < data_array.data[i].length; j++){
+                            for(let j = 0; j < data_array.data[i].length; j++){
                                 if(data_array.data[i][j] != null){
-                                    var number = data_array.data[i][j].v;
+                                    let number = data_array.data[i][j].v;
 
                                     if(isRealNull(number)){
                                         number = 0;
@@ -26764,7 +26783,7 @@ const functionImplementation = {
                         collen = array[0].length;
                     }
                     else{
-                        var number = data_array.data.v;
+                        let number = data_array.data.v;
 
                         if(isRealNull(number)){
                             number = 0;
@@ -26778,13 +26797,13 @@ const functionImplementation = {
                 }
             }
             else{
-                var number = data_array;
+                let number = data_array;
 
                 array.push(number);
             }
 
             //表示要排序的行或列的数字（默认row1/col1）
-            var sort_index = 1;
+            let sort_index = 1;
             if(arguments.length >= 2){
                 sort_index = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(sort_index)){
@@ -26799,7 +26818,7 @@ const functionImplementation = {
             }
 
             //表示所需排序顺序的数字；1表示升序（默认），-1表示降序。
-            var sort_order = 1;
+            let sort_order = 1;
             if(arguments.length >= 3){
                 sort_order = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(sort_order)){
@@ -26814,7 +26833,7 @@ const functionImplementation = {
             }
 
             //表示所需排序方向的逻辑值；按行排序为FALSE（默认），按列排序为TRUE。
-            var by_col = false;
+            let by_col = false;
             if(arguments.length == 4){
                 by_col = func_methods.getCellBoolen(arguments[3]);
 
@@ -26839,7 +26858,7 @@ const functionImplementation = {
             }
 
             //计算
-            var asc = function(x, y){
+            let asc = function(x, y){
                 if(getObjType(x) == "array"){
                     x = x[sort_index - 1];
                 }
@@ -26867,7 +26886,7 @@ const functionImplementation = {
                 }
             }
 
-            var desc = function(x, y){
+            let desc = function(x, y){
                 if(getObjType(x) == "array"){
                     x = x[sort_index - 1];
                 }
@@ -26929,7 +26948,7 @@ const functionImplementation = {
             return array;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -26941,8 +26960,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -26951,8 +26970,8 @@ const functionImplementation = {
 
         try {
             //要筛选的数组或范围
-            var data_array = arguments[0];
-            var array = [];
+            let data_array = arguments[0];
+            let array = [];
 
             if(getObjType(data_array) == "array"){
                 if(getObjType(data_array[0]) == "array" && !func_methods.isDyadicArr(data_array)){
@@ -26965,20 +26984,20 @@ const functionImplementation = {
                 array = func_methods.getCellDataDyadicArr(data_array, "number");
             }
             else{
-                var rowArr = [];
+                let rowArr = [];
 
                 rowArr.push(parseFloat(data_array));
 
                 array.push(rowArr);
             }
 
-            var rowlen = array.length,
+            let rowlen = array.length,
                 collen = array[0].length;
 
             //布尔数组，其高度或宽度与数组相同
-            var data_include = arguments[1];
-            var include = [];
-            var type = "row"; //筛选方式 row - 行，col - 列
+            let data_include = arguments[1];
+            let include = [];
+            let type = "row"; //筛选方式 row - 行，col - 列
 
             if(getObjType(data_include) == "array"){
                 if(getObjType(data_include[0]) == "array"){
@@ -26997,8 +27016,8 @@ const functionImplementation = {
 
                         type = "row";
 
-                        for(var i = 0; i < data_include.length; i++){
-                            var txt = data_include[i][0];
+                        for(let i = 0; i < data_include.length; i++){
+                            let txt = data_include[i][0];
 
                             if(getObjType(txt) == "boolean"){
 
@@ -27031,8 +27050,8 @@ const functionImplementation = {
 
                         type = "col";
 
-                        for(var i = 0; i < data_include[0].length; i++){
-                            var txt = data_include[0][i];
+                        for(let i = 0; i < data_include[0].length; i++){
+                            let txt = data_include[0][i];
 
                             if(getObjType(txt) == "boolean"){
 
@@ -27065,8 +27084,8 @@ const functionImplementation = {
 
                     type = "col";
 
-                    for(var i = 0; i < data_include.length; i++){
-                        var txt = data_include[i];
+                    for(let i = 0; i < data_include.length; i++){
+                        let txt = data_include[i];
 
                         if(getObjType(txt) == "boolean"){
 
@@ -27104,8 +27123,8 @@ const functionImplementation = {
 
                     type = "row";
 
-                    for(var i = 0; i < data_include.data.length; i++){
-                        var txt = data_include.data[i][0].v;
+                    for(let i = 0; i < data_include.data.length; i++){
+                        let txt = data_include.data[i][0].v;
 
                         if(isRealNull(txt)){
                             txt = 0;
@@ -27142,8 +27161,8 @@ const functionImplementation = {
 
                     type = "col";
 
-                    for(var i = 0; i < data_include.data[0].length; i++){
-                        var txt = data_include.data[0][i].v;
+                    for(let i = 0; i < data_include.data[0].length; i++){
+                        let txt = data_include.data[0][i].v;
 
                         if(isRealNull(txt)){
                             txt = 0;
@@ -27178,7 +27197,7 @@ const functionImplementation = {
             }
 
             //如果包含数组中的所有值都为空(filter不返回任何值)，则返回的值
-            var if_empty = "";
+            let if_empty = "";
             if(arguments.length == 3){
                 if_empty = func_methods.getFirstValue(arguments[2], "text");
                 if(valueIsError(if_empty)){
@@ -27187,19 +27206,19 @@ const functionImplementation = {
             }
 
             //计算
-            var result = [];
+            let result = [];
             if(type == "row"){
-                for(var i = 0; i < array.length; i++){
+                for(let i = 0; i < array.length; i++){
                     if(include[i]){
                         result.push(array[i]);
                     }
                 }
             }
             else{
-                for(var i = 0; i < array.length; i++){
-                    var rowArr = [];
+                for(let i = 0; i < array.length; i++){
+                    let rowArr = [];
 
-                    for(var j = 0; j < array[0].length; j++){
+                    for(let j = 0; j < array[0].length; j++){
                         if(include[j]){
                             rowArr.push(array[i][j]);
                         }
@@ -27218,7 +27237,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -27230,8 +27249,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -27240,8 +27259,8 @@ const functionImplementation = {
 
         try {
             //从其返回唯一值的数组或区域
-            var data_array = arguments[0];
-            var array = [];
+            let data_array = arguments[0];
+            let array = [];
 
             if(getObjType(data_array) == "array"){
                 if(getObjType(data_array[0]) == "array" && !func_methods.isDyadicArr(data_array)){
@@ -27254,7 +27273,7 @@ const functionImplementation = {
                 array = func_methods.getCellDataDyadicArr(data_array, "number");
             }
             else{
-                var rowArr = [];
+                let rowArr = [];
 
                 rowArr.push(parseFloat(data_array));
 
@@ -27262,7 +27281,7 @@ const functionImplementation = {
             }
 
             //逻辑值，指示如何比较；按行 = FALSE 或省略；按列 = TRUE
-            var by_col = false;
+            let by_col = false;
             if(arguments.length >= 2){
                 by_col = func_methods.getCellBoolen(arguments[1]);
 
@@ -27272,7 +27291,7 @@ const functionImplementation = {
             }
 
             //逻辑值，仅返回唯一值中出现一次 = TRUE；包括所有唯一值 = FALSE 或省略
-            var occurs_once = false;
+            let occurs_once = false;
             if(arguments.length == 3){
                 occurs_once = func_methods.getCellBoolen(arguments[2]);
 
@@ -27289,13 +27308,13 @@ const functionImplementation = {
                     });
                 });
 
-                var strObj = {}, strArr = [];
-                var allUnique = [];
+                let strObj = {}, strArr = [];
+                let allUnique = [];
 
-                for(var i = 0; i < array.length; i++){
-                    var str = '';
+                for(let i = 0; i < array.length; i++){
+                    let str = '';
 
-                    for(var j = 0; j < array[i].length; j++){
+                    for(let j = 0; j < array[i].length; j++){
                         str += array[i][j].toString() + "|||";
                     }
 
@@ -27309,9 +27328,9 @@ const functionImplementation = {
                 }
 
                 if(occurs_once){
-                    var oneUnique = [];
+                    let oneUnique = [];
 
-                    for(var i = 0; i < strArr.length; i++){
+                    for(let i = 0; i < strArr.length; i++){
                         if(strArr.indexOf(strArr[i]) == strArr.lastIndexOf(strArr[i])){
                             oneUnique.push(array[i]);
                         }
@@ -27336,13 +27355,13 @@ const functionImplementation = {
                 }
             }
             else{
-                var strObj = {}, strArr = [];
-                var allUnique = [];
+                let strObj = {}, strArr = [];
+                let allUnique = [];
 
-                for(var i = 0; i < array.length; i++){
-                    var str = '';
+                for(let i = 0; i < array.length; i++){
+                    let str = '';
 
-                    for(var j = 0; j < array[i].length; j++){
+                    for(let j = 0; j < array[i].length; j++){
                         str += array[i][j].toString() + "|||";
                     }
 
@@ -27356,9 +27375,9 @@ const functionImplementation = {
                 }
 
                 if(occurs_once){
-                    var oneUnique = [];
+                    let oneUnique = [];
 
-                    for(var i = 0; i < strArr.length; i++){
+                    for(let i = 0; i < strArr.length; i++){
                         if(strArr.indexOf(strArr[i]) == strArr.lastIndexOf(strArr[i])){
                             oneUnique.push(array[i]);
                         }
@@ -27372,7 +27391,7 @@ const functionImplementation = {
             }
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -27384,8 +27403,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -27394,7 +27413,7 @@ const functionImplementation = {
 
         try {
             //要返回的行数
-            var rows = 1;
+            let rows = 1;
             if(arguments.length >= 1){
                 rows = func_methods.getFirstValue(arguments[0]);
                 if(valueIsError(rows)){
@@ -27409,7 +27428,7 @@ const functionImplementation = {
             }
 
             //要返回的列数
-            var cols = 1;
+            let cols = 1;
             if(arguments.length == 2){
                 cols = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(cols)){
@@ -27428,12 +27447,12 @@ const functionImplementation = {
             }
 
             //计算
-            var result = [];
+            let result = [];
 
-            for(var i = 0; i < rows; i++){
-                var result_row = [];
+            for(let i = 0; i < rows; i++){
+                let result_row = [];
 
-                for(var j = 0; j < cols; j++){
+                for(let j = 0; j < cols; j++){
                     result_row.push(Math.random().toFixed(9));
                 }
 
@@ -27443,7 +27462,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -27455,8 +27474,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -27465,7 +27484,7 @@ const functionImplementation = {
 
         try {
             //要返回的行数
-            var rows = func_methods.getFirstValue(arguments[0]);
+            let rows = func_methods.getFirstValue(arguments[0]);
             if(valueIsError(rows)){
                 return rows;
             }
@@ -27477,7 +27496,7 @@ const functionImplementation = {
             rows = parseInt(rows);
 
             //要返回的列数
-            var cols = 1;
+            let cols = 1;
             if(arguments.length >= 2){
                 cols = func_methods.getFirstValue(arguments[1]);
                 if(valueIsError(cols)){
@@ -27492,7 +27511,7 @@ const functionImplementation = {
             }
 
             //序列中的第一个数字
-            var start = 1;
+            let start = 1;
             if(arguments.length >= 3){
                 start = func_methods.getFirstValue(arguments[2]);
                 if(valueIsError(start)){
@@ -27507,7 +27526,7 @@ const functionImplementation = {
             }
 
             //序列中每个序列值的增量
-            var step = 1;
+            let step = 1;
             if(arguments.length == 4){
                 step = func_methods.getFirstValue(arguments[3]);
                 if(valueIsError(step)){
@@ -27526,13 +27545,13 @@ const functionImplementation = {
             }
 
             //计算
-            var result = [];
+            let result = [];
 
-            for(var i = 0; i < rows; i++){
-                var result_row = [];
+            for(let i = 0; i < rows; i++){
+                let result_row = [];
 
-                for(var j = 0; j < cols; j++){
-                    var number = start + step * (j + cols * i);
+                for(let j = 0; j < cols; j++){
+                    let number = start + step * (j + cols * i);
                     result_row.push(number);
                 }
 
@@ -27542,7 +27561,7 @@ const functionImplementation = {
             return result;
         }
         catch (e) {
-            var err = e;
+            let err = e;
             err = formula.errorInfo(err);
             return [formula.error.v, err];
         }
@@ -27554,8 +27573,8 @@ const functionImplementation = {
         }
 
         //参数类型错误检测
-        for (var i = 0; i < arguments.length; i++) {
-            var p = formula.errorParamCheck(this.p, arguments[i], i);
+        for (let i = 0; i < arguments.length; i++) {
+            let p = formula.errorParamCheck(this.p, arguments[i], i);
 
             if (!p[0]) {
                 return formula.error.v;
@@ -27563,11 +27582,11 @@ const functionImplementation = {
         }
 
         try {
-            var cell_r = window.luckysheetCurrentRow;
-            var cell_c = window.luckysheetCurrentColumn;
-            var sheetindex_now = window.luckysheetCurrentIndex;
+            let cell_r = window.luckysheetCurrentRow;
+            let cell_c = window.luckysheetCurrentColumn;
+            let sheetindex_now = window.luckysheetCurrentIndex;
             //公式文本
-            var strtext = func_methods.getFirstValue(arguments[0]).toString();
+            let strtext = func_methods.getFirstValue(arguments[0]).toString();
             if(valueIsError(strtext)){
                 return strtext;
             }
@@ -27577,11 +27596,11 @@ const functionImplementation = {
                 strtext ='='+strtext;
             }
             //console.log(strtext);
-            var result_this = formula.execstringformula(strtext,cell_r,cell_c,sheetindex_now);
+            let result_this = formula.execstringformula(strtext,cell_r,cell_c,sheetindex_now);
             return result_this[1];
         }
         catch (e) {
-            var err = e;
+            let err = e;
             //计算错误检测
             err = formula.errorInfo(err);
             return [formula.error.v, err];

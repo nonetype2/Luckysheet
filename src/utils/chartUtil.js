@@ -6,14 +6,14 @@ function generateRandomKey(prefix) {
         prefix = 'chart'
     }
 
-    var userAgent = window.navigator.userAgent
+    let userAgent = window.navigator.userAgent
         .replace(/[^a-zA-Z0-9]/g, '')
         .split('')
-    var mid = ''
-    for (var i = 0; i < 12; i++) {
+    let mid = ''
+    for (let i = 0; i < 12; i++) {
         mid += userAgent[Math.round(Math.random() * (userAgent.length - 1))]
     }
-    var time = new Date().getTime()
+    let time = new Date().getTime()
 
     return prefix + '_' + mid + '_' + time
 }
@@ -62,7 +62,7 @@ function deepCopy(obj) {
 
 /**
  * 判断参数是否是Object类型
- * @param {*} o 
+ * @param {*} o
  */
 function isObject(o) {
     return (
@@ -74,7 +74,7 @@ function isObject(o) {
 
 /**
  * 判断参数是否是Map类型
- * @param {*} obj 
+ * @param {*} obj
  */
 function isMap(obj) {
     if (obj instanceof Map) {
@@ -87,11 +87,11 @@ function isMap(obj) {
 // 替换temp中的${xxx}为指定内容 ,temp:字符串，这里指html代码，dataarry：一个对象{"xxx":"替换的内容"}
 // 例：luckysheet.replaceHtml("${image}",{"image":"abc","jskdjslf":"abc"})   ==>  abc
 function replaceHtml(temp, dataarry) {
-    return temp.replace(/\$\{([\w]+)\}/g, function (s1, s2) { var s = dataarry[s2]; if (typeof (s) != "undefined") { return s; } else { return s1; } });
+    return temp.replace(/\$\{([\w]+)\}/g, function (s1, s2) { let s = dataarry[s2]; if (typeof (s) != "undefined") { return s; } else { return s1; } });
 }
 
 function hasChinaword(s) {
-    var patrn = /[\u4E00-\u9FA5]|[\uFE30-\uFFA0]/gi;
+    let patrn = /[\u4E00-\u9FA5]|[\uFE30-\uFFA0]/gi;
     if (!patrn.exec(s)) {
         return false;
     }

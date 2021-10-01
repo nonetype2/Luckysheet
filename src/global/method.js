@@ -15,23 +15,23 @@ import Store from '../store';
 
 const defaultConfig = {
     defaultStore:{
-        container: null, 
-        luckysheetfile: null, 
-        defaultcolumnNum: 60, 
-        defaultrowNum: 84, 
+        container: null,
+        luckysheetfile: null,
+        defaultcolumnNum: 60,
+        defaultrowNum: 84,
         fullscreenmode: true,
         devicePixelRatio: 1,
-    
+
         currentSheetIndex: 0,
         calculateSheetIndex: 0,
         flowdata: [],
         config: {},
-    
+
         visibledatarow: [],
         visibledatacolumn: [],
         ch_width: 0,
         rh_height: 0,
-    
+
         cellmainWidth: 0,
         cellmainHeight: 0,
         toolbarHeight: 0,
@@ -42,60 +42,60 @@ const defaultConfig = {
         cellMainSrollBarSize: 12,
         sheetBarHeight: 31,
         statisticBarHeight: 23,
-        luckysheetTableContentHW: [0, 0], 
-    
+        luckysheetTableContentHW: [0, 0],
+
         defaultcollen: 73,
         defaultrowlen: 19,
-    
-        jfcountfuncTimeout: null, 
+
+        jfcountfuncTimeout: null,
         jfautoscrollTimeout: null,
-    
+
         luckysheet_select_status: false,
         luckysheet_select_save: [{ "row": [0, 0], "column": [0, 0] }],
         luckysheet_selection_range: [],
-    
+
         luckysheet_copy_save: {}, //复制粘贴
         luckysheet_paste_iscut: false,
-    
+
         filterchage: true, //筛选
         luckysheet_filter_save: { "row": [], "column": [] },
-    
+
         luckysheet_sheet_move_status: false,
         luckysheet_sheet_move_data: [],
         luckysheet_scroll_status: false,
-    
+
         luckysheetisrefreshdetail: true,
         luckysheetisrefreshtheme: true,
         luckysheetcurrentisPivotTable: false,
-    
+
         luckysheet_rows_selected_status: false,  //行列标题相关参
-        luckysheet_cols_selected_status: false,  
+        luckysheet_cols_selected_status: false,
         luckysheet_rows_change_size: false,
         luckysheet_rows_change_size_start: [],
         luckysheet_cols_change_size: false,
         luckysheet_cols_change_size_start: [],
         luckysheet_cols_dbclick_timeout: null,
         luckysheet_cols_dbclick_times: 0,
-    
+
         luckysheetCellUpdate: [],
-        
+
         luckysheet_shiftpositon: null,
-    
+
         iscopyself: true,
-    
+
         orderbyindex: 0, //排序下标
-    
+
         luckysheet_model_move_state: false, //模态框拖动
         luckysheet_model_xy: [0, 0],
         luckysheet_model_move_obj: null,
-    
+
         luckysheet_cell_selected_move: false,  //选区拖动替换
         luckysheet_cell_selected_move_index: [],
-    
+
         luckysheet_cell_selected_extend: false,  //选区下拉
         luckysheet_cell_selected_extend_index: [],
         luckysheet_cell_selected_extend_time: null,
-    
+
         clearjfundo: true,
         jfredo: [],
         jfundo: [],
@@ -131,28 +131,28 @@ const defaultConfig = {
         chart_selection: {},
         currentChart: '',
         scrollRefreshSwitch:true,
-    
+
         measureTextCache:{},
         measureTextCellInfoCache:{},
         measureTextCacheTimeOut:null,
         cellOverflowMapCache:{},
-    
+
         zoomRatio:1,
-    
+
         visibledatacolumn_unique:null,
         visibledatarow_unique:null,
-    
+
         showGridLines:true,
-    
+
         toobarObject: {}, //toolbar constant
         inlineStringEditCache:null,
         inlineStringEditRange:null,
-    
+
         fontList:[],
 
         currentSheetView:"viewNormal",
-    
-    },    
+
+    },
     defaultFormula:{
         searchFunctionCell: null,
         functionlistPosition: {},
@@ -261,11 +261,11 @@ const defaultConfig = {
         currentImgId: null,
         currentWinW: null,
         currentWinH: null,
-        resize: null,  
+        resize: null,
         resizeXY: null,
         move: false,
         moveXY: null,
-        cropChange: null,  
+        cropChange: null,
         cropChangeXY: null,
         cropChangeObj: null,
         copyImgItemObj: null,
@@ -304,7 +304,7 @@ const method = {
 
         $("#luckysheet-grid-window-1").append(luckysheetlodingHTML());
         param.currentPage++;
-        
+
         let dataType = 'application/json;charset=UTF-8';
         let token = sessionStorage.getItem('x-auth-token');
 
@@ -321,7 +321,7 @@ const method = {
                 }
 
                 let dataset = d.data;
-                
+
                 let newData = dataset.celldata;
                 luckysheetextendData(dataset["row"], newData);
 
@@ -329,7 +329,7 @@ const method = {
                     $("#luckysheetloadingdata").fadeOut().remove();
                 }, 500);
 
-                if(func && typeof(func)=="function"){ 
+                if(func && typeof(func)=="function"){
                     func(dataset);
                 }
             }
@@ -376,7 +376,7 @@ const method = {
 
             sheetmanage.changeSheet(index);
 
-            if(func && typeof(func)=="function"){ 
+            if(func && typeof(func)=="function"){
                 func();
             }
         });
@@ -422,7 +422,7 @@ const method = {
                 let sheetfile = Store.luckysheetfile[i];
                 _this.clearSheetByIndex(sheetfile.index);
             }
-            
+
         }
         else{
             if(index == null){
@@ -445,7 +445,7 @@ const method = {
         //document event release
         $(document).off(".luckysheetEvent");
         $(document).off(".luckysheetProtection");
-        
+
         //参数重置
         luckysheetFreezen.initialHorizontal = true;
         luckysheetFreezen.initialVertical = true;
@@ -515,7 +515,7 @@ const method = {
     createHookFunction:function(){
         let hookName = arguments[0];
         if(luckysheetConfigsetting.hook && luckysheetConfigsetting.hook[hookName]!=null && (typeof luckysheetConfigsetting.hook[hookName] == "function")){
-            var args = Array.prototype.slice.apply(arguments);
+            let args = Array.prototype.slice.apply(arguments);
             args.shift();
             let ret = luckysheetConfigsetting.hook[hookName].apply(this, args);
             if(ret===false){

@@ -46,11 +46,11 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
     }
 
     let size = getColumnAndRowSize(row_index1, col_index1, d);
-    let row = size.row, 
-        row_pre = size.row_pre, 
-        col = size.col, 
-        col_pre = size.col_pre, 
-        row_index = size.row_index, 
+    let row = size.row,
+        row_pre = size.row_pre,
+        col = size.col,
+        col_pre = size.col_pre,
+        row_index = size.row_index,
         col_index = size.col_index;
 
     if($("#luckysheet-dropCell-icon").is(":visible")){
@@ -77,13 +77,13 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
     }
 
     let input_postition = {
-        "min-width": col - col_pre+ 1- 8, 
-        "min-height": row - row_pre + 1- 4,  
-        
-        "max-width": winW + scrollLeft - col_pre - 20 - Store.rowHeaderWidth, 
-        "max-height": winH + scrollTop - row_pre - 20 - 15 - Store.toolbarHeight - Store.infobarHeight - Store.calculatebarHeight - Store.sheetBarHeight - Store.statisticBarHeight, 
-        "left": left, 
-        "top": top, 
+        "min-width": col - col_pre+ 1- 8,
+        "min-height": row - row_pre + 1- 4,
+
+        "max-width": winW + scrollLeft - col_pre - 20 - Store.rowHeaderWidth,
+        "max-height": winH + scrollTop - row_pre - 20 - 15 - Store.toolbarHeight - Store.infobarHeight - Store.calculatebarHeight - Store.sheetBarHeight - Store.statisticBarHeight,
+        "left": left,
+        "top": top,
     }
 
     let inputContentScale = {
@@ -98,11 +98,11 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
         $("#luckysheet-rich-text-editor").focus().select();
     }
 
-    $("#luckysheet-input-box").removeAttr("style").css({ 
-        "background-color": "rgb(255, 255, 255)", 
-        "padding": "0px 2px", 
-        "font-size": "13px", 
-        "right": "auto", 
+    $("#luckysheet-input-box").removeAttr("style").css({
+        "background-color": "rgb(255, 255, 255)",
+        "padding": "0px 2px",
+        "font-size": "13px",
+        "right": "auto",
         "overflow-y": "auto",
         "box-sizing": "initial",
         "display":"flex",
@@ -111,26 +111,26 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
     if(luckysheetFreezen.freezenverticaldata != null || luckysheetFreezen.freezenhorizontaldata != null){
         $("#luckysheet-input-box").css("z-index", 10002);
     }
-    
+
     $("#luckysheet-input-box-index").html(chatatABC(col_index) + (row_index + 1)).hide();
     $("#luckysheet-wa-functionbox-cancel, #luckysheet-wa-functionbox-confirm").addClass("luckysheet-wa-calculate-active");
-    
+
     let value = "", isCenter=false;
-    
+
     if (d[row_index] != null && d[row_index][col_index] != null) {
         let cell = d[row_index][col_index];
         let htValue = cell["ht"];
         let leftOrigin = "left", topOrigin = "top";
         if(htValue == "0"){//0 center, 1 left, 2 right
-            input_postition = { 
-                "min-width": col - col_pre + 1- 8, 
-                "min-height": row - row_pre + 1- 4, 
+            input_postition = {
+                "min-width": col - col_pre + 1- 8,
+                "min-height": row - row_pre + 1- 4,
                 // "transform":"scale("+ Store.zoomRatio +")",
                 // "transform-origin":"center top",
-                "max-width": winW*2/3, 
-                "max-height": winH + scrollTop - row_pre - 20 - 15 - Store.toolbarHeight - Store.infobarHeight - Store.calculatebarHeight - Store.sheetBarHeight - Store.statisticBarHeight, 
-                "left": col_pre + container_offset.left + Store.rowHeaderWidth - scrollLeft - 2, 
-                "top":  row_pre + container_offset.top + Store.infobarHeight + Store.toolbarHeight + Store.calculatebarHeight + Store.columnHeaderHeight - scrollTop - 2, 
+                "max-width": winW*2/3,
+                "max-height": winH + scrollTop - row_pre - 20 - 15 - Store.toolbarHeight - Store.infobarHeight - Store.calculatebarHeight - Store.sheetBarHeight - Store.statisticBarHeight,
+                "left": col_pre + container_offset.left + Store.rowHeaderWidth - scrollLeft - 2,
+                "top":  row_pre + container_offset.top + Store.infobarHeight + Store.toolbarHeight + Store.calculatebarHeight + Store.columnHeaderHeight - scrollTop - 2,
             }
 
             if(Store.zoomRatio<1){
@@ -140,15 +140,15 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
             isCenter = true;
         }
         else if(htValue == "2"){
-            input_postition = { 
-                "min-width": col - col_pre+ 1- 8, 
-                "min-height": row - row_pre + 1- 4, 
+            input_postition = {
+                "min-width": col - col_pre+ 1- 8,
+                "min-height": row - row_pre + 1- 4,
                 // "transform":"scale("+ Store.zoomRatio +")",
                 // "transform-origin":"right top",
-                "max-width": col + container_offset.left - scrollLeft  - 8, 
-                "max-height": winH + scrollTop - row_pre - 20 - 15 - Store.toolbarHeight - Store.infobarHeight - Store.calculatebarHeight - Store.sheetBarHeight - Store.statisticBarHeight, 
-                "right": winW - (container_offset.left + (Store.rowHeaderWidth-1) - scrollLeft) - col, 
-                "top":  row_pre + container_offset.top + Store.infobarHeight + Store.toolbarHeight + Store.calculatebarHeight + Store.columnHeaderHeight - scrollTop - 2, 
+                "max-width": col + container_offset.left - scrollLeft  - 8,
+                "max-height": winH + scrollTop - row_pre - 20 - 15 - Store.toolbarHeight - Store.infobarHeight - Store.calculatebarHeight - Store.sheetBarHeight - Store.statisticBarHeight,
+                "right": winW - (container_offset.left + (Store.rowHeaderWidth-1) - scrollLeft) - col,
+                "top":  row_pre + container_offset.top + Store.infobarHeight + Store.toolbarHeight + Store.calculatebarHeight + Store.columnHeaderHeight - scrollTop - 2,
             }
 
             if(Store.zoomRatio<1){
@@ -165,7 +165,7 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
 
         inputContentScale["transform-origin"] = leftOrigin +" " + topOrigin;
 
-        
+
         if (!cover) {
             if(isInlineStringCell(cell)){
                 value = getInlineStringStyle(row_index, col_index, d);
@@ -180,7 +180,7 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
                 }
             }
         }
-        
+
         let style = menuButton.getStyleByCell(d, row_index, col_index);
         style = $("#luckysheet-input-box").get(0).style.cssText + style;
 
@@ -192,11 +192,11 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
     else{
         //交替颜色
         let af_compute = alternateformat.getComputeMap();
-        var checksAF = alternateformat.checksAF(row_index, col_index, af_compute);
+        let checksAF = alternateformat.checksAF(row_index, col_index, af_compute);
 
         //条件格式
-        var cf_compute = conditionformat.getComputeMap();
-        var checksCF = conditionformat.checksCF(row_index, col_index, cf_compute);
+        let cf_compute = conditionformat.getComputeMap();
+        let checksCF = conditionformat.checksCF(row_index, col_index, cf_compute);
 
         if(checksCF != null && checksCF["cellColor"] != null){
             $("#luckysheet-input-box").get(0).style.background = checksCF["cellColor"];
@@ -213,11 +213,11 @@ export function luckysheetupdateCell(row_index1, col_index1, d, cover, isnotfocu
     if(input_postition["min-width"] > input_postition["max-width"]){
         input_postition["min-width"] = input_postition["max-width"];
     }
-   
+
     if((value == null || value.toString() == "") && !cover){
         value = "<br/>";
     }
-    
+
     if(!checkProtectionCellHidden(row_index, col_index, Store.currentSheetIndex) && value.length>0 && value.substr(0, 63)=='<span dir="auto" class="luckysheet-formula-text-color">=</span>'){
         $("#luckysheet-rich-text-editor").html("");
     }
@@ -281,10 +281,10 @@ export function setCenterInputPosition(row_index, col_index, d){
     let scrollLeft = $("#luckysheet-cell-main").scrollLeft();
     let scrollTop = $("#luckysheet-cell-main").scrollTop();
 
-    let input_postition = { 
-        "min-width": col - col_pre + 1 - 8, 
-        "max-width": winW*2/3, 
-        "left": col_pre + container_offset.left + Store.rowHeaderWidth - scrollLeft - 2, 
+    let input_postition = {
+        "min-width": col - col_pre + 1 - 8,
+        "max-width": winW*2/3,
+        "left": col_pre + container_offset.left + Store.rowHeaderWidth - scrollLeft - 2,
     }
 
     let width = $("#luckysheet-input-box").width();
@@ -307,9 +307,9 @@ export function setCenterInputPosition(row_index, col_index, d){
 }
 
 export function getColumnAndRowSize(row_index, col_index, d){
-    let row = Store.visibledatarow[row_index], 
+    let row = Store.visibledatarow[row_index],
         row_pre = row_index - 1 == -1 ? 0 : Store.visibledatarow[row_index - 1];
-    let col = Store.visibledatacolumn[col_index], 
+    let col = Store.visibledatacolumn[col_index],
         col_pre = col_index - 1 == -1 ? 0 : Store.visibledatacolumn[col_index - 1];
 
     if(d == null){
@@ -324,7 +324,7 @@ export function getColumnAndRowSize(row_index, col_index, d){
         col = margeset.column[1];
         col_pre = margeset.column[0];
         col_index = margeset.column[2];
-    }    
+    }
 
     return {
         row: row,

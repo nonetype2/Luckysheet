@@ -13,7 +13,7 @@ import numeral from 'numeral';
 
 /**
  * Determine whether a string is in standard JSON format
- * @param {String} str 
+ * @param {String} str
  */
 function isJsonString(str) {
     try {
@@ -29,7 +29,7 @@ function isJsonString(str) {
 /**
  * extend two objects
  * @param {Object } jsonbject1
- * @param {Object } jsonbject2 
+ * @param {Object } jsonbject2
  */
 function common_extend(jsonbject1, jsonbject2) {
     let resultJsonObject = {};
@@ -180,15 +180,15 @@ function ABCatNum(a) {
     if(a==null || a.length==0){
         return NaN;
     }
-    var str=a.toLowerCase().split("");
-    var num=0;
-    var al = str.length;
-    var getCharNumber = function(charx){
+    let str=a.toLowerCase().split("");
+    let num=0;
+    let al = str.length;
+    let getCharNumber = function(charx){
         return charx.charCodeAt() -96;
     };
-    var numout = 0;
-    var charnum = 0;
-    for(var i = 0; i < al; i++){
+    let numout = 0;
+    let charnum = 0;
+    for(let i = 0; i < al; i++){
         charnum = getCharNumber(str[i]);
         numout += charnum * Math.pow(26, al-i-1);
     };
@@ -240,23 +240,23 @@ function chatatABC(n) {
     //     }
     // }
 
-    var orda = 'a'.charCodeAt(0); 
-   
-    var ordz = 'z'.charCodeAt(0); 
-   
-    var len = ordz - orda + 1; 
-   
-    var s = ""; 
-   
-    while( n >= 0 ) { 
-   
-        s = String.fromCharCode(n % len + orda) + s; 
-   
-        n = Math.floor(n / len) - 1; 
-   
-    } 
-   
-    return s.toUpperCase(); 
+    let orda = 'a'.charCodeAt(0);
+
+    let ordz = 'z'.charCodeAt(0);
+
+    let len = ordz - orda + 1;
+
+    let s = "";
+
+    while( n >= 0 ) {
+
+        s = String.fromCharCode(n % len + orda) + s;
+
+        n = Math.floor(n / len) - 1;
+
+    }
+
+    return s.toUpperCase();
 };
 
 function ceateABC(index) {
@@ -415,7 +415,7 @@ function luckysheetfontformat(format) {
         }
 
         if (!format.ff) {
-            
+
             font += fontarray[0] + ', "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif';
         }
         else {
@@ -486,10 +486,10 @@ function luckysheetactiveCell() {
 
 //单元格编辑聚焦
 function luckysheetContainerFocus() {
-    // $("#" + Store.container).focus({ 
-    //     preventScroll: true 
+    // $("#" + Store.container).focus({
+    //     preventScroll: true
     // });
-    
+
     // fix jquery error: Uncaught TypeError: ((n.event.special[g.origType] || {}).handle || g.handler).apply is not a function
 
     $("#" + Store.container).attr("tabindex", 0).focus();
@@ -589,13 +589,13 @@ function mouseclickposition($menu, x, y, p) {
  */
 function $$(selector, context) {
     context = context || document
-    var elements = context.querySelectorAll(selector)
+    let elements = context.querySelectorAll(selector)
     return elements.length == 1
         ? Array.prototype.slice.call(elements)[0]
         : Array.prototype.slice.call(elements)
 }
 
-/** 
+/**
  * 串行加载指定的脚本
  * 串行加载[异步]逐个加载，每个加载完成后加载下一个
  * 全部加载完成后执行回调
@@ -607,13 +607,13 @@ function $$(selector, context) {
 
 function seriesLoadScripts(scripts, options, callback) {
     if (typeof (scripts) !== 'object') {
-        var scripts = [scripts];
+        let scripts = [scripts];
     }
-    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-    var s = [];
-    var last = scripts.length - 1;
+    let HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    let s = [];
+    let last = scripts.length - 1;
     //递归
-    var recursiveLoad = function (i) {
+    let recursiveLoad = function (i) {
         s[i] = document.createElement('script');
         s[i].setAttribute('type', 'text/javascript');
         // Attach handlers for all browsers
@@ -634,7 +634,7 @@ function seriesLoadScripts(scripts, options, callback) {
 
         // 设置属性
         if (typeof options === 'object') {
-            for (var attr in options) {
+            for (let attr in options) {
                 s[i].setAttribute(attr, options[attr]);
             }
         }
@@ -657,12 +657,12 @@ function seriesLoadScripts(scripts, options, callback) {
 
 function parallelLoadScripts(scripts, options, callback) {
     if (typeof (scripts) !== 'object') {
-        var scripts = [scripts];
+        let scripts = [scripts];
     }
-    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-    var s = [];
-    var loaded = 0;
-    for (var i = 0; i < scripts.length; i++) {
+    let HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    let s = [];
+    let loaded = 0;
+    for (let i = 0; i < scripts.length; i++) {
         s[i] = document.createElement('script');
         s[i].setAttribute('type', 'text/javascript');
         // Attach handlers for all browsers
@@ -680,7 +680,7 @@ function parallelLoadScripts(scripts, options, callback) {
 
         // 设置属性
         if (typeof options === 'object') {
-            for (var attr in options) {
+            for (let attr in options) {
                 s[i].setAttribute(attr, options[attr]);
             }
         }
@@ -694,13 +694,13 @@ function parallelLoadScripts(scripts, options, callback) {
 * @param {String}  url 指定要加载的css地址
 */
 function loadLink(url) {
-    var doc = document;
-    var link = doc.createElement("link");
+    let doc = document;
+    let link = doc.createElement("link");
     link.setAttribute("rel", "stylesheet");
     link.setAttribute("type", "text/css");
     link.setAttribute("href", url);
 
-    var heads = doc.getElementsByTagName("head");
+    let heads = doc.getElementsByTagName("head");
     if (heads.length) {
         heads[0].appendChild(link);
     }
@@ -767,21 +767,21 @@ function transformRangeToAbsolute(txt1){
         ret += sheetName + rangeRet + ",";
     }
 
-    return ret.substr(0, ret.length-1); 
+    return ret.substr(0, ret.length-1);
 }
 
 function openSelfModel(id, isshowMask=true){
     let $t = $("#"+id)
             .find(".luckysheet-modal-dialog-content")
             .css("min-width", 300)
-            .end(), 
-        myh = $t.outerHeight(), 
+            .end(),
+        myh = $t.outerHeight(),
         myw = $t.outerWidth();
     let winw = $(window).width(), winh = $(window).height();
     let scrollLeft = $(document).scrollLeft(), scrollTop = $(document).scrollTop();
-    $t.css({ 
-    "left": (winw + scrollLeft - myw) / 2, 
-    "top": (winh + scrollTop - myh) / 3 
+    $t.css({
+    "left": (winw + scrollLeft - myw) / 2,
+    "top": (winh + scrollTop - myh) / 3
     }).show();
 
     if(isshowMask){
@@ -791,7 +791,7 @@ function openSelfModel(id, isshowMask=true){
 
 /**
  * 监控对象变更
- * @param {*} data 
+ * @param {*} data
  */
 // const createProxy = (data,list=[]) => {
 //     if (typeof data === 'object' && data.toString() === '[object Object]') {
@@ -808,9 +808,9 @@ function openSelfModel(id, isshowMask=true){
 // }
 
 const createProxy = (data, k, callback) => {
-    if(!data.hasOwnProperty(k)){ 
+    if(!data.hasOwnProperty(k)){
         console.info('No %s in data',k);
-        return; 
+        return;
     };
 
     if (getObjType(data) === 'object') {
@@ -821,21 +821,19 @@ const createProxy = (data, k, callback) => {
         }
     }
 }
-  
+
 function defineObjectReactive(obj, key, value, callback) {
     // 递归
     obj[key] = new Proxy(value, {
       set(target, property, val, receiver) {
-        
           setTimeout(() => {
             callback(target, property, val, receiver);
           }, 0);
-
         return Reflect.set(target, property, val, receiver)
       }
     })
 }
-  
+
 function defineBasicReactive(obj, key, value, callback) {
     Object.defineProperty(obj, key, {
       enumerable: true,
@@ -859,7 +857,7 @@ function defineBasicReactive(obj, key, value, callback) {
 
 /**
  * Remove an item in the specified array
- * @param {array} array Target array 
+ * @param {array} array Target array
  * @param {string} item What needs to be removed
  */
 function arrayRemoveItem(array, item) {
@@ -871,7 +869,7 @@ function arrayRemoveItem(array, item) {
     })
 }
 
-  
+
 export {
     isJsonString,
     common_extend,

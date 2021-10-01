@@ -9,7 +9,7 @@ import { rowLocation, colLocation, mouseposition } from '../../global/location'
 import { setluckysheet_scroll_status } from '../../methods/set'
 import {
     luckysheetMoveHighlightCell,
-    luckysheetMoveHighlightCell2, 
+    luckysheetMoveHighlightCell2,
     luckysheetMoveHighlightRange,
     luckysheetMoveHighlightRange2,
     luckysheetMoveEndCell
@@ -187,8 +187,8 @@ function renderCharts(chartLists, isDemo) {
                         );
                     }
 
-                    var toffset = chartInfo.chartparam.luckysheetCurrentChartMoveObj.offset();
-                    var tpsition = chartInfo.chartparam.luckysheetCurrentChartMoveObj.position();
+                    let toffset = chartInfo.chartparam.luckysheetCurrentChartMoveObj.offset();
+                    let tpsition = chartInfo.chartparam.luckysheetCurrentChartMoveObj.position();
                     //luckysheetCurrentChartMoveXy: [鼠标点相对chart框的距离X方向，鼠标点相对chart框的距离Y方向，chart框相对cell-main的距离X方向，chart框相对cell-main的距离Y方向，水平滚动条的位置，垂直滚动条的位置]
                     chartInfo.chartparam.luckysheetCurrentChartMoveXy = [
                         e.pageX - toffset.left,
@@ -233,12 +233,12 @@ function renderCharts(chartLists, isDemo) {
                 if (chartInfo.chartparam.luckysheetCurrentChartActive) {
                     chartInfo.chartparam.luckysheetCurrentChartResize = $(this).data("type"); //开始状态resize
 
-                    var mouse = mouseposition(e.pageX, e.pageY),
+                    let mouse = mouseposition(e.pageX, e.pageY),
                         scrollLeft = $("#luckysheet-scrollbar-x").scrollLeft(),
                         scrollTop = $("#luckysheet-scrollbar-y").scrollTop();
-                    var x = mouse[0] + scrollLeft;
-                    var y = mouse[1] + scrollTop;
-                    var position = chartInfo.chartparam.luckysheetCurrentChartResizeObj.position();
+                    let x = mouse[0] + scrollLeft;
+                    let y = mouse[1] + scrollTop;
+                    let position = chartInfo.chartparam.luckysheetCurrentChartResizeObj.position();
                     //参数：x,y:鼠标位置，$t.width(), $t.height(): chart框宽高， position.left + scrollLeft, position.top + scrollTop ：chart框位置 ，scrollLeft, scrollTop：滚动条位置
                     chartInfo.chartparam.luckysheetCurrentChartResizeXy = [
                         x,
@@ -287,8 +287,8 @@ function jfrefreshchartall(flowdata1, r_st, r_ed, c_st, c_ed) {
         return
     }
     if (chart.rangeArray.length == 1) {
-        var row = chart.rangeArray[0].row;
-        var column = chart.rangeArray[0].column;
+        let row = chart.rangeArray[0].row;
+        let column = chart.rangeArray[0].column;
         //不在范围内的不更新
         if (
             r_st > row[1] ||
@@ -299,20 +299,20 @@ function jfrefreshchartall(flowdata1, r_st, r_ed, c_st, c_ed) {
             return
         }
         //根据原有的范围取得数据
-        var luckysheetgetcellrange = formula.getcellrange(
+        let luckysheetgetcellrange = formula.getcellrange(
             chart.rangeTxt
         );
-        var sheetIndex =
+        let sheetIndex =
             luckysheetgetcellrange.sheetIndex == -1
                 ? 0
                 : luckysheetgetcellrange.sheetIndex; //sheetIndex为-1时，转化为0
 
-        var selection = {
+        let selection = {
             row: luckysheetgetcellrange.row,
             column: luckysheetgetcellrange.column,
             dataSheetIndex: sheetIndex
         }; //数组
-        var getcelldata = luckysheet_getcelldata(chart.rangeTxt);
+        let getcelldata = luckysheet_getcelldata(chart.rangeTxt);
 
         if (
             typeof getcelldata === "object" &&
@@ -320,7 +320,8 @@ function jfrefreshchartall(flowdata1, r_st, r_ed, c_st, c_ed) {
             getcelldata.data.length != null
         ) {
             //getcelldata有值，且不为空数组 && getcelldata.data为二维数组
-            var chartData = getcelldata.data;
+            let chartData = getcelldata.data;
+            getcelldata = null;
             chartInfo.chartparam.changeChartCellData(chart.chart_id, chartData);
         }
     }
@@ -329,7 +330,7 @@ function jfrefreshchartall(flowdata1, r_st, r_ed, c_st, c_ed) {
 function chart_selection() {
     return {
         create: function () {
-            var chart_json = chartInfo.currentChart
+            let chart_json = chartInfo.currentChart
 
             if (chart_json.rangeArray.length > 1) {
                 return
@@ -343,16 +344,16 @@ function chart_selection() {
             $('#luckysheet-row-count-show').hide()
             $('#luckysheet-column-count-show').hide()
 
-            var st_r = chart_json.rangeArray[0].row[0]
-            var st_c = chart_json.rangeArray[0].column[0]
+            let st_r = chart_json.rangeArray[0].row[0]
+            let st_c = chart_json.rangeArray[0].column[0]
 
-            var rangeSplitArray = chart_json.rangeSplitArray
+            let rangeSplitArray = chart_json.rangeSplitArray
 
             //首行是否标题
-            var rangeRowCheck = chart_json.rangeRowCheck
+            let rangeRowCheck = chart_json.rangeRowCheck
 
             if (rangeRowCheck.exits) {
-                var chart_rowtitle_html = getRangeShowHtml(
+                let chart_rowtitle_html = getRangeShowHtml(
                     'rowtitle',
                     rangeSplitArray.rowtitle.row[0] + st_r,
                     rangeSplitArray.rowtitle.row[1] + st_r,
@@ -360,14 +361,14 @@ function chart_selection() {
                     rangeSplitArray.rowtitle.column[1] + st_c
                 )
             } else {
-                var chart_rowtitle_html = ''
+                let chart_rowtitle_html = ''
             }
 
             //首列是否标题
-            var rangeColCheck = chart_json.rangeColCheck
+            let rangeColCheck = chart_json.rangeColCheck
 
             if (rangeColCheck.exits) {
-                var chart_coltitle_html = getRangeShowHtml(
+                let chart_coltitle_html = getRangeShowHtml(
                     'coltitle',
                     rangeSplitArray.coltitle.row[0] + st_r,
                     rangeSplitArray.coltitle.row[1] + st_r,
@@ -375,11 +376,11 @@ function chart_selection() {
                     rangeSplitArray.coltitle.column[1] + st_c
                 )
             } else {
-                var chart_coltitle_html = ''
+                let chart_coltitle_html = ''
             }
 
             //内容块
-            var chart_content_html = getRangeShowHtml(
+            let chart_content_html = getRangeShowHtml(
                 'content',
                 rangeSplitArray.content.row[0] + st_r,
                 rangeSplitArray.content.row[1] + st_r,
@@ -392,27 +393,27 @@ function chart_selection() {
             )
 
             function getRangeShowHtml(type, r1, r2, c1, c2) {
-                var visibledatarow = getvisibledatarow()
-                var visibledatacolumn = getvisibledatacolumn()
+                let visibledatarow = getvisibledatarow()
+                let visibledatacolumn = getvisibledatacolumn()
 
-                var row = visibledatarow[r2],
+                let row = visibledatarow[r2],
                     row_pre = r1 - 1 == -1 ? 0 : visibledatarow[r1 - 1]
-                var col = visibledatacolumn[c2],
+                let col = visibledatacolumn[c2],
                     col_pre = c1 - 1 == -1 ? 0 : visibledatacolumn[c1 - 1]
-
+                    let color;
                 if (type == 'rowtitle') {
-                    var color = '#C65151'
+                     color = '#C65151'
                 }
 
                 if (type == 'coltitle') {
-                    var color = '#9667C0'
+                     color = '#9667C0'
                 }
 
                 if (type == 'content') {
-                    var color = '#4970D1'
+                     color = '#4970D1'
                 }
 
-                var html =
+                let html =
                     '<div id="luckysheet-chart-rangeShow-' +
                     type +
                     '" style="left: ' +
@@ -461,37 +462,37 @@ function chart_selection() {
         rangeMoveIndex: null,
         rangeMoveObj: null,
         rangeMoveDraging: function (event, sheetBarHeight, statisticBarHeight) {
-            var chart_json = chartInfo.currentChart
-            var st_r = chart_json.rangeArray[0].row[0]
-            var st_c = chart_json.rangeArray[0].column[0]
-            var rangeRowCheck = chart_json.rangeRowCheck
-            var rangeColCheck = chart_json.rangeColCheck
-            var rangeSplitArray = chart_json.rangeSplitArray
+            let chart_json = chartInfo.currentChart
+            let st_r = chart_json.rangeArray[0].row[0]
+            let st_c = chart_json.rangeArray[0].column[0]
+            let rangeRowCheck = chart_json.rangeRowCheck
+            let rangeColCheck = chart_json.rangeColCheck
+            let rangeSplitArray = chart_json.rangeSplitArray
 
-            var mouse = mouseposition(event.pageX, event.pageY)
-            var scrollLeft = $('#luckysheet-cell-main').scrollLeft()
-            var scrollTop = $('#luckysheet-cell-main').scrollTop()
+            let mouse = mouseposition(event.pageX, event.pageY)
+            let scrollLeft = $('#luckysheet-cell-main').scrollLeft()
+            let scrollTop = $('#luckysheet-cell-main').scrollTop()
 
-            var x = mouse[0] + scrollLeft
-            var y = mouse[1] + scrollTop
+            let x = mouse[0] + scrollLeft
+            let y = mouse[1] + scrollTop
 
-            var winH =
+            let winH =
                 $(window).height() + scrollTop - sheetBarHeight - statisticBarHeight,
                 winW = $(window).width() + scrollLeft
 
-            var rowLocation = _rowLocation(y),
+            let rowLocation = _rowLocation(y),
                 row_index = rowLocation[2]
-            var colLocation = _colLocation(x),
+            let colLocation = _colLocation(x),
                 col_index = colLocation[2]
 
-            var visibledatarow = getvisibledatarow()
-            var visibledatacolumn = getvisibledatacolumn()
+            let visibledatarow = getvisibledatarow()
+            let visibledatacolumn = getvisibledatacolumn()
 
-            var $id = chartInfo.chart_selection.rangeMoveObj.attr('id')
+            let $id = chartInfo.chart_selection.rangeMoveObj.attr('id')
 
             if ($id == 'luckysheet-chart-rangeShow-content') {
                 //行
-                var row_s =
+                let row_s =
                     chartInfo.chart_selection.rangeMoveIndex[0] -
                     chartInfo.chart_selection.rangeMovexy[0] +
                     row_index
@@ -506,7 +507,7 @@ function chart_selection() {
                     }
                 }
 
-                var row_e =
+                let row_e =
                     rangeSplitArray.content.row[1] - rangeSplitArray.content.row[0] + row_s
 
                 if (row_e >= visibledatarow.length - 1 || y > winH) {
@@ -519,7 +520,7 @@ function chart_selection() {
                 }
 
                 //列
-                var col_s =
+                let col_s =
                     chartInfo.chart_selection.rangeMoveIndex[1] -
                     chartInfo.chart_selection.rangeMovexy[1] +
                     col_index
@@ -533,7 +534,7 @@ function chart_selection() {
                     }
                 }
 
-                var col_e =
+                let col_e =
                     rangeSplitArray.content.column[1] -
                     rangeSplitArray.content.column[0] +
                     col_s
@@ -602,7 +603,7 @@ function chart_selection() {
                 }
             } else if ($id == 'luckysheet-chart-rangeShow-rowtitle') {
                 //列
-                var col_s =
+                let col_s =
                     chartInfo.chart_selection.rangeMoveIndex[1] -
                     chartInfo.chart_selection.rangeMovexy[1] +
                     col_index
@@ -617,7 +618,7 @@ function chart_selection() {
                     }
                 }
 
-                var col_e =
+                let col_e =
                     rangeSplitArray.rowtitle.column[1] -
                     rangeSplitArray.rowtitle.column[0] +
                     col_s
@@ -660,7 +661,7 @@ function chart_selection() {
                 }
             } else if ($id == 'luckysheet-chart-rangeShow-coltitle') {
                 //行
-                var row_s =
+                let row_s =
                     chartInfo.chart_selection.rangeMoveIndex[0] -
                     chartInfo.chart_selection.rangeMovexy[0] +
                     row_index
@@ -675,7 +676,7 @@ function chart_selection() {
                 }
 
                 //更新
-                var row_e =
+                let row_e =
                     rangeSplitArray.coltitle.row[1] -
                     rangeSplitArray.coltitle.row[0] +
                     row_s
@@ -722,7 +723,7 @@ function chart_selection() {
         rangeMoveDragged: function () {
             chartInfo.chart_selection.rangeMove = false
 
-            var updateJson = chartInfo.currentChart
+            let updateJson = chartInfo.currentChart
 
             updateJson.rangeTxt = getRangetxt(
                 chartInfo.currentSheetIndex,
@@ -741,37 +742,37 @@ function chart_selection() {
         rangeResizeIndex: null,
         rangeResizeObj: null,
         rangeResizeDraging: function (event, sheetBarHeight, statisticBarHeight) {
-            var chart_json = chartInfo.currentChart
+            let chart_json = chartInfo.currentChart
 
-            var st_r = chart_json.rangeArray[0].row[0]
-            var st_c = chart_json.rangeArray[0].column[0]
-            var rangeRowCheck = chart_json.rangeRowCheck
-            var rangeColCheck = chart_json.rangeColCheck
-            var rangeSplitArray = chart_json.rangeSplitArray
+            let st_r = chart_json.rangeArray[0].row[0]
+            let st_c = chart_json.rangeArray[0].column[0]
+            let rangeRowCheck = chart_json.rangeRowCheck
+            let rangeColCheck = chart_json.rangeColCheck
+            let rangeSplitArray = chart_json.rangeSplitArray
 
-            var mouse = mouseposition(event.pageX, event.pageY)
-            var scrollLeft = $('#luckysheet-cell-main').scrollLeft()
-            var scrollTop = $('#luckysheet-cell-main').scrollTop()
+            let mouse = mouseposition(event.pageX, event.pageY)
+            let scrollLeft = $('#luckysheet-cell-main').scrollLeft()
+            let scrollTop = $('#luckysheet-cell-main').scrollTop()
 
-            var x = mouse[0] + scrollLeft
-            var y = mouse[1] + scrollTop
+            let x = mouse[0] + scrollLeft
+            let y = mouse[1] + scrollTop
 
-            var winH =
+            let winH =
                 $(window).height() + scrollTop - sheetBarHeight - statisticBarHeight,
                 winW = $(window).width() + scrollLeft
 
-            var rowLocation = _rowLocation(y),
+            let rowLocation = _rowLocation(y),
                 row_index = rowLocation[2]
-            var colLocation = _colLocation(x),
+            let colLocation = _colLocation(x),
                 col_index = colLocation[2]
 
-            var visibledatarow = getvisibledatarow()
-            var visibledatacolumn = getvisibledatacolumn()
+            let visibledatarow = getvisibledatarow()
+            let visibledatacolumn = getvisibledatacolumn()
 
-            var $id = chartInfo.chart_selection.rangeResizeObj.attr('id')
+            let $id = chartInfo.chart_selection.rangeResizeObj.attr('id')
 
             if ($id == 'luckysheet-chart-rangeShow-content') {
-                var r1, r2, c1, c2
+                let r1, r2, c1, c2
 
                 if (chartInfo.chart_selection.rangeResize == 'lt') {
                     r1 = chartInfo.chart_selection.rangeResizeIndex.row[0]
@@ -801,7 +802,7 @@ function chart_selection() {
 
                 //行
                 if (rangeRowCheck.exits) {
-                    var row_s = r1 - chartInfo.chart_selection.rangeResizexy[0] + row_index
+                    let row_s = r1 - chartInfo.chart_selection.rangeResizexy[0] + row_index
 
                     if (row_s < st_r + rangeRowCheck.range[1] + 1 || y < 0) {
                         row_s = st_r + rangeRowCheck.range[1] + 1
@@ -809,7 +810,7 @@ function chart_selection() {
                         row_s = visibledatarow.length - 1
                     }
                 } else {
-                    var row_s = st_r - chartInfo.chart_selection.rangeResizexy[0] + row_index
+                    let row_s = st_r - chartInfo.chart_selection.rangeResizexy[0] + row_index
 
                     if (row_s < 0 || y < 0) {
                         row_s = 0
@@ -820,7 +821,7 @@ function chart_selection() {
 
                 //列
                 if (rangeColCheck.exits) {
-                    var col_s = c1 - chartInfo.chart_selection.rangeResizexy[1] + col_index
+                    let col_s = c1 - chartInfo.chart_selection.rangeResizexy[1] + col_index
 
                     if (col_s < st_c + rangeColCheck.range[1] + 1 || x < 0) {
                         col_s = st_c + rangeColCheck.range[1] + 1
@@ -828,7 +829,7 @@ function chart_selection() {
                         col_s = visibledatacolumn.length - 1
                     }
                 } else {
-                    var col_s = st_c - chartInfo.chart_selection.rangeResizexy[1] + col_index
+                    let col_s = st_c - chartInfo.chart_selection.rangeResizexy[1] + col_index
 
                     if (col_s < 0 || x < 0) {
                         col_s = 0
@@ -837,7 +838,7 @@ function chart_selection() {
                     }
                 }
 
-                var obj_r1, obj_r2, obj_c1, obj_c2
+                let obj_r1, obj_r2, obj_c1, obj_c2
 
                 if (row_s > r2) {
                     obj_r1 = r2
@@ -892,7 +893,7 @@ function chart_selection() {
                     }
                 }
             } else if ($id == 'luckysheet-chart-rangeShow-rowtitle') {
-                var c1, c2
+                let c1, c2
 
                 if (
                     chartInfo.chart_selection.rangeResize == 'lt' ||
@@ -910,7 +911,7 @@ function chart_selection() {
 
                 //列
                 if (rangeColCheck.exits) {
-                    var col_s = c1 - chartInfo.chart_selection.rangeResizexy[1] + col_index
+                    let col_s = c1 - chartInfo.chart_selection.rangeResizexy[1] + col_index
 
                     if (col_s < st_c + rangeColCheck.range[1] + 1 || x < 0) {
                         col_s = st_c + rangeColCheck.range[1] + 1
@@ -918,7 +919,7 @@ function chart_selection() {
                         col_s = visibledatacolumn.length - 1
                     }
                 } else {
-                    var col_s = st_c - chartInfo.chart_selection.rangeResizexy[1] + col_index
+                    let col_s = st_c - chartInfo.chart_selection.rangeResizexy[1] + col_index
 
                     if (col_s < 0 || x < 0) {
                         col_s = 0
@@ -927,7 +928,7 @@ function chart_selection() {
                     }
                 }
 
-                var obj_c1, obj_c2
+                let obj_c1, obj_c2
 
                 if (col_s > c2) {
                     obj_c1 = c2
@@ -965,7 +966,7 @@ function chart_selection() {
                     }
                 }
             } else if ($id == 'luckysheet-chart-rangeShow-coltitle') {
-                var r1, r2
+                let r1, r2
 
                 if (
                     chartInfo.chart_selection.rangeResize == 'lt' ||
@@ -983,7 +984,7 @@ function chart_selection() {
 
                 //行
                 if (rangeRowCheck.exits) {
-                    var row_s = r1 - chartInfo.chart_selection.rangeResizexy[0] + row_index
+                    let row_s = r1 - chartInfo.chart_selection.rangeResizexy[0] + row_index
 
                     if (row_s < st_r + rangeRowCheck.range[1] + 1 || y < 0) {
                         row_s = st_r + rangeRowCheck.range[1] + 1
@@ -991,7 +992,7 @@ function chart_selection() {
                         row_s = visibledatarow.length - 1
                     }
                 } else {
-                    var row_s = st_r - chartInfo.chart_selection.rangeResizexy[0] + row_index
+                    let row_s = st_r - chartInfo.chart_selection.rangeResizexy[0] + row_index
 
                     if (row_s < 0 || y < 0) {
                         row_s = 0
@@ -1000,7 +1001,7 @@ function chart_selection() {
                     }
                 }
 
-                var obj_r1, obj_r2
+                let obj_r1, obj_r2
 
                 if (row_s > r2) {
                     obj_r1 = r2
@@ -1043,7 +1044,7 @@ function chart_selection() {
         },
         rangeResizeDragged: function () {
             chartInfo.chart_selection.rangeResize = null
-            var updateJson = chartInfo.currentChart
+            let updateJson = chartInfo.currentChart
 
             updateJson.rangeTxt = getRangetxt(
                 chartInfo.currentSheetIndex,
@@ -1064,7 +1065,7 @@ function chart_selection() {
 // create chart
 function createLuckyChart(width, height, left, top) {
     //如果只选中一个单元格，则自动填充选取
-    var jfgird_select_save = luckysheet.getluckysheet_select_save();
+    let jfgird_select_save = luckysheet.getluckysheet_select_save();
     if (
         jfgird_select_save.length == 1 &&
         jfgird_select_save[0].row[0] == jfgird_select_save[0].row[1] &&
@@ -1077,21 +1078,21 @@ function createLuckyChart(width, height, left, top) {
         jfgird_select_save = luckysheet.getluckysheet_select_save();
     }
     //处理右边的空白单元格，自动略过并修改选区 ---------------start
-    var shiftpositon_row = -1;
+    let shiftpositon_row = -1;
 
-    var row_ed =
+    let row_ed =
         jfgird_select_save[0]["row"][1] - jfgird_select_save[0]["row"][0];
     for (
-        var r = jfgird_select_save[0]["row"][0];
+        let r = jfgird_select_save[0]["row"][0];
         r <= jfgird_select_save[0]["row"][1];
         r++
     ) {
         for (
-            var c = jfgird_select_save[0]["column"][0];
+            let c = jfgird_select_save[0]["column"][0];
             c <= jfgird_select_save[0]["column"][1];
             c++
         ) {
-            var value = getcellvalue(r, c, luckysheet.flowdata());
+            let value = getcellvalue(r, c, luckysheet.flowdata());
             //console.log("value,r,c",value,r,c);
             if (value != null && value.toString().length > 0) {
                 shiftpositon_row = r;
@@ -1115,20 +1116,20 @@ function createLuckyChart(width, height, left, top) {
     luckysheetMoveEndCell("down", "range", false, row_ed);
     jfgird_select_save = luckysheet.getluckysheet_select_save();
 
-    var shiftpositon_col = -1;
-    var column_ed =
+    let shiftpositon_col = -1;
+    let column_ed =
         jfgird_select_save[0]["column"][1] - jfgird_select_save[0]["column"][0];
     for (
-        var c = jfgird_select_save[0]["column"][0];
+        let c = jfgird_select_save[0]["column"][0];
         c <= jfgird_select_save[0]["column"][1];
         c++
     ) {
         for (
-            var r = jfgird_select_save[0]["row"][0];
+            let r = jfgird_select_save[0]["row"][0];
             r <= jfgird_select_save[0]["row"][1];
             r++
         ) {
-            var value = getcellvalue(r, c, luckysheet.flowdata());
+            let value = getcellvalue(r, c, luckysheet.flowdata());
             if (value != null && value.toString().length > 0) {
                 shiftpositon_col = c;
                 break;
@@ -1151,9 +1152,9 @@ function createLuckyChart(width, height, left, top) {
     luckysheetMoveEndCell("right", "range", false, column_ed);
     jfgird_select_save = luckysheet.getluckysheet_select_save()
 
-    var rangeArray = $.extend(true, [], jfgird_select_save);
+    let rangeArray = $.extend(true, [], jfgird_select_save);
 
-    var rangeTxt = getRangetxt(chartInfo.currentSheetIndex, rangeArray[0], chartInfo.currentSheetIndex)
+    let rangeTxt = getRangetxt(chartInfo.currentSheetIndex, rangeArray[0], chartInfo.currentSheetIndex)
 
 
     let chartData = getdatabyselection()
@@ -1255,8 +1256,8 @@ function createLuckyChart(width, height, left, top) {
                 );
             }
 
-            var toffset = chartInfo.chartparam.luckysheetCurrentChartMoveObj.offset();
-            var tpsition = chartInfo.chartparam.luckysheetCurrentChartMoveObj.position();
+            let toffset = chartInfo.chartparam.luckysheetCurrentChartMoveObj.offset();
+            let tpsition = chartInfo.chartparam.luckysheetCurrentChartMoveObj.position();
             //luckysheetCurrentChartMoveXy: [鼠标点相对chart框的距离X方向，鼠标点相对chart框的距离Y方向，chart框相对cell-main的距离X方向，chart框相对cell-main的距离Y方向，水平滚动条的位置，垂直滚动条的位置]
             chartInfo.chartparam.luckysheetCurrentChartMoveXy = [
                 e.pageX - toffset.left,
@@ -1301,12 +1302,12 @@ function createLuckyChart(width, height, left, top) {
             if (chartInfo.chartparam.luckysheetCurrentChartActive) {
                 chartInfo.chartparam.luckysheetCurrentChartResize = $(this).data("type"); //开始状态resize
 
-                var mouse = mouseposition(e.pageX, e.pageY),
+                let mouse = mouseposition(e.pageX, e.pageY),
                     scrollLeft = $("#luckysheet-scrollbar-x").scrollLeft(),
                     scrollTop = $("#luckysheet-scrollbar-y").scrollTop();
-                var x = mouse[0] + scrollLeft;
-                var y = mouse[1] + scrollTop;
-                var position = chartInfo.chartparam.luckysheetCurrentChartResizeObj.position();
+                let x = mouse[0] + scrollLeft;
+                let y = mouse[1] + scrollTop;
+                let position = chartInfo.chartparam.luckysheetCurrentChartResizeObj.position();
                 //参数：x,y:鼠标位置，$t.width(), $t.height(): chart框宽高， position.left + scrollLeft, position.top + scrollTop ：chart框位置 ，scrollLeft, scrollTop：滚动条位置
                 chartInfo.chartparam.luckysheetCurrentChartResizeXy = [
                     x,

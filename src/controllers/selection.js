@@ -526,7 +526,7 @@ const selection = {
             //     $("#luckysheet-copy-content").blur();
             // }, 10);
 
-            var oInput = document.createElement('input');
+            let oInput = document.createElement('input');
             oInput.setAttribute('readonly', 'readonly');
             oInput.value = cpdata;
             document.body.appendChild(oInput);
@@ -819,7 +819,7 @@ const selection = {
                             value = String(value);
                         } else {
                             value = parseFloat(value);
-                        } 
+                        }
                     }
                     if(originCell instanceof Object){
                         originCell.v = value;

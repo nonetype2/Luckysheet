@@ -3,52 +3,52 @@ import { isdatetime } from './datecontroll';
 import { getcellvalue } from './getdata';
 import numeral from 'numeral';
 
-var SSF = ({});
-var make_ssf = function make_ssf(SSF) {
+let SSF = ({});
+let make_ssf = function make_ssf(SSF) {
     SSF.version = '0.11.2';
 
     function _strrev(x) {
-        var o = "",
+        let o = "",
             i = x.length - 1;
         while (i >= 0) o += x.charAt(i--);
         return o;
     }
 
     function fill(c, l) {
-        var o = "";
+        let o = "";
         while (o.length < l) o += c;
         return o;
     }
 
     function pad0(v, d) {
-        var t = "" + v;
+        let t = "" + v;
         return t.length >= d ? t : fill('0', d - t.length) + t;
     }
 
     function pad_(v, d) {
-        var t = "" + v;
+        let t = "" + v;
         return t.length >= d ? t : fill(' ', d - t.length) + t;
     }
 
     function rpad_(v, d) {
-        var t = "" + v;
+        let t = "" + v;
         return t.length >= d ? t : t + fill(' ', d - t.length);
     }
 
     function pad0r1(v, d) {
-        var t = "" + Math.round(v);
+        let t = "" + Math.round(v);
         return t.length >= d ? t : fill('0', d - t.length) + t;
     }
 
     function pad0r2(v, d) {
-        var t = "" + v;
+        let t = "" + v;
         return t.length >= d ? t : fill('0', d - t.length) + t;
     }
-    var p2_32 = Math.pow(2, 32);
+    let p2_32 = Math.pow(2, 32);
 
     function pad0r(v, d) {
         if (v > p2_32 || v < -p2_32) return pad0r1(v, d);
-        var i = Math.round(v);
+        let i = Math.round(v);
         return pad0r2(i, d);
     }
 
@@ -56,7 +56,7 @@ var make_ssf = function make_ssf(SSF) {
         i = i || 0;
         return s.length >= 7 + i && (s.charCodeAt(i) | 32) === 103 && (s.charCodeAt(i + 1) | 32) === 101 && (s.charCodeAt(i + 2) | 32) === 110 && (s.charCodeAt(i + 3) | 32) === 101 && (s.charCodeAt(i + 4) | 32) === 114 && (s.charCodeAt(i + 5) | 32) === 97 && (s.charCodeAt(i + 6) | 32) === 108;
     }
-    var days = [
+    let days = [
         ['Sun', 'Sunday'],
         ['Mon', 'Monday'],
         ['Tue', 'Tuesday'],
@@ -65,7 +65,7 @@ var make_ssf = function make_ssf(SSF) {
         ['Fri', 'Friday'],
         ['Sat', 'Saturday']
     ];
-    var months = [
+    let months = [
         ['J', 'Jan', 'January'],
         ['F', 'Feb', 'February'],
         ['M', 'Mar', 'March'],
@@ -112,12 +112,12 @@ var make_ssf = function make_ssf(SSF) {
         t[56] = '"上午/下午 "hh"時"mm"分"ss"秒 "';
         t[65535] = 'General';
     }
-    var table_fmt = {};
+    let table_fmt = {};
     init_table(table_fmt);
     /* Defaults determined by systematically testing in Excel 2019 */
     /* These formats appear to default to other formats in the table */
-    var default_map = [];
-    var defi = 0;
+    let default_map = [];
+    let defi = 0;
     //  5 -> 37 ...  8 -> 40
     for (defi = 5; defi <= 8; ++defi) default_map[defi] = 32 + defi;
     // 23 ->  0 ... 26 ->  0
@@ -140,7 +140,7 @@ var make_ssf = function make_ssf(SSF) {
     for (defi = 79; defi <= 81; ++defi) default_map[defi] = defi - 34;
     // 82 ->  0 ... 65536 -> 0 (omitted)
     /* These formats technically refer to Accounting formats with no equivalent */
-    var default_str = [];
+    let default_str = [];
     //  5 -- Currency,   0 decimal, black negative
     default_str[5] = default_str[63] = '"$"#,##0_);\\("$"#,##0\\)';
     //  6 -- Currency,   0 decimal, red   negative
@@ -159,15 +159,15 @@ var make_ssf = function make_ssf(SSF) {
     default_str[44] = '_("$"* #,##0.00_);_("$"* \\(#,##0.00\\);_("$"* "-"??_);_(@_)';
 
     function frac(x, D, mixed) {
-        var sgn = x < 0 ? -1 : 1;
-        var B = x * sgn;
-        var P_2 = 0,
+        let sgn = x < 0 ? -1 : 1;
+        let B = x * sgn;
+        let P_2 = 0,
             P_1 = 1,
             P = 0;
-        var Q_2 = 1,
+        let Q_2 = 1,
             Q_1 = 0,
             Q = 0;
-        var A = Math.floor(B);
+        let A = Math.floor(B);
         while (Q_1 < D) {
             A = Math.floor(B);
             P = A * P_1 + P_2;
@@ -189,17 +189,17 @@ var make_ssf = function make_ssf(SSF) {
             }
         }
         if (!mixed) return [0, sgn * P, Q];
-        var q = Math.floor(sgn * P / Q);
+        let q = Math.floor(sgn * P / Q);
         return [q, sgn * P - q * Q, Q];
     }
 
     function parse_date_code(v, opts, b2) {
         if (v > 2958465 || v < 0) return null;
-        var date = (v | 0),
+        let date = (v | 0),
             time = Math.floor(86400 * (v - date)),
             dow = 0;
-        var dout = [];
-        var out = {
+        let dout = [];
+        let out = {
             D: date,
             T: time,
             u: 86400 * (v - date) - time,
@@ -230,7 +230,7 @@ var make_ssf = function make_ssf(SSF) {
         } else {
             if (date > 60) --date;
             /* 1 = Jan 1 1900 in Gregorian */
-            var d = new Date(1900, 0, 1);
+            let d = new Date(1900, 0, 1);
             d.setDate(d.getDate() + date - 1);
             dout = [d.getFullYear(), d.getMonth() + 1, d.getDate()];
             dow = d.getDay();
@@ -249,12 +249,12 @@ var make_ssf = function make_ssf(SSF) {
         return out;
     }
     SSF.parse_date_code = parse_date_code;
-    var basedate = new Date(1899, 11, 31, 0, 0, 0);
-    var dnthresh = basedate.getTime();
-    var base1904 = new Date(1900, 2, 1, 0, 0, 0);
+    let basedate = new Date(1899, 11, 31, 0, 0, 0);
+    let dnthresh = basedate.getTime();
+    let base1904 = new Date(1900, 2, 1, 0, 0, 0);
 
     function datenum_local(v, date1904) {
-        var epoch = v.getTime();
+        let epoch = v.getTime();
         if (date1904) epoch -= 1461 * 24 * 60 * 60 * 1000;
         else if (v >= base1904) epoch += 24 * 60 * 60 * 1000;
         return (epoch - (dnthresh + (v.getTimezoneOffset() - basedate.getTimezoneOffset()) * 60000)) / (24 * 60 * 60 * 1000);
@@ -266,15 +266,15 @@ var make_ssf = function make_ssf(SSF) {
     SSF._general_int = general_fmt_int;
     /* ECMA-376 18.8.30 numFmt*/
     /* Note: `toPrecision` uses standard form when prec > E and E >= -6 */
-    var general_fmt_num = (function make_general_fmt_num() {
-        var trailing_zeroes_and_decimal = /(?:\.0*|(\.\d*[1-9])0+)$/;
+    let general_fmt_num = (function make_general_fmt_num() {
+        let trailing_zeroes_and_decimal = /(?:\.0*|(\.\d*[1-9])0+)$/;
 
         function strip_decimal(o) {
             return (o.indexOf(".") == -1) ? o : o.replace(trailing_zeroes_and_decimal, "$1");
         }
         /* General Exponential always shows 2 digits exp and trims the mantissa */
-        var mantissa_zeroes_and_decimal = /(?:\.0*|(\.\d*[1-9])0+)[Ee]/;
-        var exp_with_single_digit = /(E[+-])(\d)$/;
+        let mantissa_zeroes_and_decimal = /(?:\.0*|(\.\d*[1-9])0+)[Ee]/;
+        let exp_with_single_digit = /(E[+-])(\d)$/;
 
         function normalize_exp(o) {
             if (o.indexOf("E") == -1) return o;
@@ -282,8 +282,8 @@ var make_ssf = function make_ssf(SSF) {
         }
         /* exponent >= -9 and <= 9 */
         function small_exp(v) {
-            var w = (v < 0 ? 12 : 11);
-            var o = strip_decimal(v.toFixed(12));
+            let w = (v < 0 ? 12 : 11);
+            let o = strip_decimal(v.toFixed(12));
             if (o.length <= w) return o;
             o = v.toPrecision(10);
             if (o.length <= w) return o;
@@ -291,12 +291,12 @@ var make_ssf = function make_ssf(SSF) {
         }
         /* exponent >= 11 or <= -10 likely exponential */
         function large_exp(v) {
-            var o = strip_decimal(v.toFixed(11));
+            let o = strip_decimal(v.toFixed(11));
             return (o.length > (v < 0 ? 12 : 11) || o === "0" || o === "-0") ? v.toPrecision(6) : o;
         }
 
         function general_fmt_num_base(v) {
-            var V = Math.floor(Math.log(Math.abs(v)) * Math.LOG10E),
+            let V = Math.floor(Math.log(Math.abs(v)) * Math.LOG10E),
                 o;
             if (V >= -4 && V <= -1) o = v.toPrecision(10 + V);
             else if (Math.abs(V) <= 9) o = small_exp(v);
@@ -336,14 +336,14 @@ var make_ssf = function make_ssf(SSF) {
     function fix_hijri(date, o) {
         /* TODO: properly adjust y/m/d and  */
         o[0] -= 581;
-        var dow = date.getDay();
+        let dow = date.getDay();
         if (date < 60) dow = (dow + 6) % 7;
         return dow;
     }
-    var THAI_DIGITS = "\u0E50\u0E51\u0E52\u0E53\u0E54\u0E55\u0E56\u0E57\u0E58\u0E59".split("");
+    let THAI_DIGITS = "\u0E50\u0E51\u0E52\u0E53\u0E54\u0E55\u0E56\u0E57\u0E58\u0E59".split("");
     /*jshint -W086 */
     function write_date(type, fmt, val, ss0) {
-        var o = "",
+        let o = "",
             ss = 0,
             tt = 0,
             y = val.y,
@@ -461,46 +461,46 @@ var make_ssf = function make_ssf(SSF) {
                 outl = 1;
                 break;
         }
-        var outstr = outl > 0 ? pad0(out, outl) : "";
+        let outstr = outl > 0 ? pad0(out, outl) : "";
         return outstr;
     }
     /*jshint +W086 */
     function commaify(s) {
-        var w = 3;
+        let w = 3;
         if (s.length <= w) return s;
-        var j = (s.length % w),
+        let j = (s.length % w),
             o = s.substr(0, j);
         for (; j != s.length; j += w) o += (o.length > 0 ? "," : "") + s.substr(j, w);
         return o;
     }
-    var write_num = (function make_write_num() {
-        var pct1 = /%/g;
+    let write_num = (function make_write_num() {
+        let pct1 = /%/g;
 
         function write_num_pct(type, fmt, val) {
-            var sfmt = fmt.replace(pct1, ""),
+            let sfmt = fmt.replace(pct1, ""),
                 mul = fmt.length - sfmt.length;
             return write_num(type, sfmt, val * Math.pow(10, 2 * mul)) + fill("%", mul);
         }
 
         function write_num_cm(type, fmt, val) {
-            var idx = fmt.length - 1;
+            let idx = fmt.length - 1;
             while (fmt.charCodeAt(idx - 1) === 44) --idx;
             return write_num(type, fmt.substr(0, idx), val / Math.pow(10, 3 * (fmt.length - idx)));
         }
 
         function write_num_exp(fmt, val) {
-            var o;
-            var idx = fmt.indexOf("E") - fmt.indexOf(".") - 1;
+            let o;
+            let idx = fmt.indexOf("E") - fmt.indexOf(".") - 1;
             if (fmt.match(/^#+0.0E\+0$/)) {
                 if (val == 0) return "0.0E+0";
                 else if (val < 0) return "-" + write_num_exp(fmt, -val);
-                var period = fmt.indexOf(".");
+                let period = fmt.indexOf(".");
                 if (period === -1) period = fmt.indexOf('E');
-                var ee = Math.floor(Math.log(val) * Math.LOG10E) % period;
+                let ee = Math.floor(Math.log(val) * Math.LOG10E) % period;
                 if (ee < 0) ee += period;
                 o = (val / Math.pow(10, ee)).toPrecision(idx + 1 + (period + ee) % period);
                 if (o.indexOf("e") === -1) {
-                    var fakee = Math.floor(Math.log(val) * Math.LOG10E);
+                    let fakee = Math.floor(Math.log(val) * Math.LOG10E);
                     if (o.indexOf(".") === -1) o = o.charAt(0) + "." + o.substr(1) + "E+" + (fakee - o.length + ee);
                     else o += "E+" + (fakee - ee);
                     while (o.substr(0, 2) === "0.") {
@@ -517,13 +517,13 @@ var make_ssf = function make_ssf(SSF) {
             if (fmt.match(/E\-/) && o.match(/e\+/)) o = o.replace(/e\+/, "e");
             return o.replace("e", "E");
         }
-        var frac1 = /# (\?+)( ?)\/( ?)(\d+)/;
+        let frac1 = /# (\?+)( ?)\/( ?)(\d+)/;
 
         function write_num_f1(r, aval, sign) {
-            var den = parseInt(r[4], 10),
+            let den = parseInt(r[4], 10),
                 rr = Math.round(aval * den),
                 base = Math.floor(rr / den);
-            var myn = (rr - base * den),
+            let myn = (rr - base * den),
                 myd = den;
             return sign + (base === 0 ? "" : "" + base) + " " + (myn === 0 ? fill(" ", r[1].length + 1 + r[4].length) : pad_(myn, r[1].length) + r[2] + "/" + r[3] + pad0(myd, r[4].length));
         }
@@ -531,14 +531,14 @@ var make_ssf = function make_ssf(SSF) {
         function write_num_f2(r, aval, sign) {
             return sign + (aval === 0 ? "" : "" + aval) + fill(" ", r[1].length + 2 + r[4].length);
         }
-        var dec1 = /^#*0*\.([0#]+)/;
-        var closeparen = /\).*[0#]/;
-        var phone = /\(###\) ###\\?-####/;
+        let dec1 = /^#*0*\.([0#]+)/;
+        let closeparen = /\).*[0#]/;
+        let phone = /\(###\) ###\\?-####/;
 
         function hashq(str) {
-            var o = "",
+            let o = "",
                 cc;
-            for (var i = 0; i != str.length; ++i) switch ((cc = str.charCodeAt(i))) {
+            for (let i = 0; i != str.length; ++i) switch ((cc = str.charCodeAt(i))) {
                 case 35:
                     break;
                 case 63:
@@ -554,12 +554,12 @@ var make_ssf = function make_ssf(SSF) {
         }
 
         function rnd(val, d) {
-            var dd = Math.pow(10, d);
+            let dd = Math.pow(10, d);
             return "" + (Math.round(val * dd) / dd);
         }
 
         function dec(val, d) {
-            var _frac = val - Math.floor(val),
+            let _frac = val - Math.floor(val),
                 dd = Math.pow(10, d);
             if (d < ('' + Math.round(_frac * dd)).length) return 0;
             return Math.round(_frac * dd);
@@ -579,7 +579,7 @@ var make_ssf = function make_ssf(SSF) {
 
         function write_num_flt(type, fmt, val) {
             if (type.charCodeAt(0) === 40 && !fmt.match(closeparen)) {
-                var ffmt = fmt.replace(/\( */, "").replace(/ \)/, "").replace(/\)/, "");
+                let ffmt = fmt.replace(/\( */, "").replace(/ \)/, "").replace(/\)/, "");
                 if (val >= 0) return write_num_flt('n', ffmt, val);
                 return '(' + write_num_flt('n', ffmt, -val) + ')';
             }
@@ -587,8 +587,8 @@ var make_ssf = function make_ssf(SSF) {
             if (fmt.indexOf('%') !== -1) return write_num_pct(type, fmt, val);
             if (fmt.indexOf('E') !== -1) return write_num_exp(fmt, val);
             if (fmt.charCodeAt(0) === 36) return "$" + write_num_flt(type, fmt.substr(fmt.charAt(1) == ' ' ? 2 : 1), val);
-            var o;
-            var r, ri, ff, aval = Math.abs(val),
+            let o;
+            let r, ri, ff, aval = Math.abs(val),
                 sign = val < 0 ? "-" : "";
             if (fmt.match(/^00+$/)) return sign + pad0r(aval, fmt.length);
             if (fmt.match(/^[#?]+$/)) {
@@ -624,7 +624,7 @@ var make_ssf = function make_ssf(SSF) {
                 o = write_num_flt(type, "##########", val);
                 return "(" + o.substr(0, 3) + ") " + o.substr(3, 3) + "-" + o.substr(6);
             }
-            var oa = "";
+            let oa = "";
             if ((r = fmt.match(/^([#0?]+)( ?)\/( ?)([#0?]+)/))) {
                 ri = Math.min(r[4].length, 7);
                 ff = frac(aval, Math.pow(10, ri) - 1, false);
@@ -650,7 +650,7 @@ var make_ssf = function make_ssf(SSF) {
             if ((r = fmt.match(/^([#0?]+)\.([#0]+)$/))) {
                 o = "" + val.toFixed(Math.min(r[2].length, 10)).replace(/([^0])0+$/, "$1");
                 ri = o.indexOf(".");
-                var lres = fmt.indexOf(".") - ri,
+                let lres = fmt.indexOf(".") - ri,
                     rres = fmt.length - o.length - lres;
                 return hashq(fmt.substr(0, lres) + o + fmt.substr(fmt.length - rres));
             }
@@ -666,7 +666,7 @@ var make_ssf = function make_ssf(SSF) {
                 case "###,###":
                 case "##,###":
                 case "#,###":
-                    var x = commaify(pad0r(aval, 0));
+                    let x = commaify(pad0r(aval, 0));
                     return x !== "0" ? sign + x : "";
                 case "###,###.00":
                     return write_num_flt(type, "###,##0.00", val).replace(/^0\./, ".");
@@ -678,30 +678,30 @@ var make_ssf = function make_ssf(SSF) {
         }
 
         function write_num_cm2(type, fmt, val) {
-            var idx = fmt.length - 1;
+            let idx = fmt.length - 1;
             while (fmt.charCodeAt(idx - 1) === 44) --idx;
             return write_num(type, fmt.substr(0, idx), val / Math.pow(10, 3 * (fmt.length - idx)));
         }
 
         function write_num_pct2(type, fmt, val) {
-            var sfmt = fmt.replace(pct1, ""),
+            let sfmt = fmt.replace(pct1, ""),
                 mul = fmt.length - sfmt.length;
             return write_num(type, sfmt, val * Math.pow(10, 2 * mul)) + fill("%", mul);
         }
 
         function write_num_exp2(fmt, val) {
-            var o;
-            var idx = fmt.indexOf("E") - fmt.indexOf(".") - 1;
+            let o;
+            let idx = fmt.indexOf("E") - fmt.indexOf(".") - 1;
             if (fmt.match(/^#+0.0E\+0$/)) {
                 if (val == 0) return "0.0E+0";
                 else if (val < 0) return "-" + write_num_exp2(fmt, -val);
-                var period = fmt.indexOf(".");
+                let period = fmt.indexOf(".");
                 if (period === -1) period = fmt.indexOf('E');
-                var ee = Math.floor(Math.log(val) * Math.LOG10E) % period;
+                let ee = Math.floor(Math.log(val) * Math.LOG10E) % period;
                 if (ee < 0) ee += period;
                 o = (val / Math.pow(10, ee)).toPrecision(idx + 1 + (period + ee) % period);
                 if (!o.match(/[Ee]/)) {
-                    var fakee = Math.floor(Math.log(val) * Math.LOG10E);
+                    let fakee = Math.floor(Math.log(val) * Math.LOG10E);
                     if (o.indexOf(".") === -1) o = o.charAt(0) + "." + o.substr(1) + "E+" + (fakee - o.length + ee);
                     else o += "E+" + (fakee - ee);
                     o = o.replace(/\+-/, "-");
@@ -717,7 +717,7 @@ var make_ssf = function make_ssf(SSF) {
 
         function write_num_int(type, fmt, val) {
             if (type.charCodeAt(0) === 40 && !fmt.match(closeparen)) {
-                var ffmt = fmt.replace(/\( */, "").replace(/ \)/, "").replace(/\)/, "");
+                let ffmt = fmt.replace(/\( */, "").replace(/ \)/, "").replace(/\)/, "");
                 if (val >= 0) return write_num_int('n', ffmt, val);
                 return '(' + write_num_int('n', ffmt, -val) + ')';
             }
@@ -725,8 +725,8 @@ var make_ssf = function make_ssf(SSF) {
             if (fmt.indexOf('%') !== -1) return write_num_pct2(type, fmt, val);
             if (fmt.indexOf('E') !== -1) return write_num_exp2(fmt, val);
             if (fmt.charCodeAt(0) === 36) return "$" + write_num_int(type, fmt.substr(fmt.charAt(1) == ' ' ? 2 : 1), val);
-            var o;
-            var r, ri, ff, aval = Math.abs(val),
+            let o;
+            let r, ri, ff, aval = Math.abs(val),
                 sign = val < 0 ? "-" : "";
             if (fmt.match(/^00+$/)) return sign + pad0(aval, fmt.length);
             if (fmt.match(/^[#?]+$/)) {
@@ -763,7 +763,7 @@ var make_ssf = function make_ssf(SSF) {
                 o = write_num_int(type, "##########", val);
                 return "(" + o.substr(0, 3) + ") " + o.substr(3, 3) + "-" + o.substr(6);
             }
-            var oa = "";
+            let oa = "";
             if ((r = fmt.match(/^([#0?]+)( ?)\/( ?)([#0?]+)/))) {
                 ri = Math.min(r[4].length, 7);
                 ff = frac(aval, Math.pow(10, ri) - 1, false);
@@ -789,7 +789,7 @@ var make_ssf = function make_ssf(SSF) {
             if ((r = fmt.match(/^([#0]+)\.([#0]+)$/))) {
                 o = "" + val.toFixed(Math.min(r[2].length, 10)).replace(/([^0])0+$/, "$1");
                 ri = o.indexOf(".");
-                var lres = fmt.indexOf(".") - ri,
+                let lres = fmt.indexOf(".") - ri,
                     rres = fmt.length - o.length - lres;
                 return hashq(fmt.substr(0, lres) + o + fmt.substr(fmt.length - rres));
             }
@@ -802,7 +802,7 @@ var make_ssf = function make_ssf(SSF) {
                 case "###,###":
                 case "##,###":
                 case "#,###":
-                    var x = commaify("" + aval);
+                    let x = commaify("" + aval);
                     return x !== "0" ? sign + x : "";
                 default:
                     if (fmt.match(/\.[0#?]*$/)) return write_num_int(type, fmt.slice(0, fmt.lastIndexOf(".")), val) + hashq(fmt.slice(fmt.lastIndexOf(".")));
@@ -815,9 +815,10 @@ var make_ssf = function make_ssf(SSF) {
     })();
 
     function split_fmt(fmt) {
-        var out = [];
-        var in_str = false /*, cc*/ ;
-        for (var i = 0, j = 0; i < fmt.length; ++i) switch (( /*cc=*/ fmt.charCodeAt(i))) {
+        let out = [];
+        let in_str = false /*, cc*/ ;
+        let i,j
+        for (i = 0, j = 0; i < fmt.length; ++i) switch (( /*cc=*/ fmt.charCodeAt(i))) {
             case 34:
                 /* '"' */ in_str = !in_str;
                 break;
@@ -836,10 +837,10 @@ var make_ssf = function make_ssf(SSF) {
         return out;
     }
     SSF._split = split_fmt;
-    var abstime = /\[[HhMmSs\u0E0A\u0E19\u0E17]*\]/;
+    let abstime = /\[[HhMmSs\u0E0A\u0E19\u0E17]*\]/;
 
     function fmt_is_date(fmt) {
-        var i = 0,
+        let i = 0,
             /*cc = 0,*/ c = "",
             o = "";
         while (i < fmt.length) {
@@ -934,13 +935,13 @@ var make_ssf = function make_ssf(SSF) {
     SSF.is_date = fmt_is_date;
 
     function eval_fmt(fmt, v, opts, flen) {
-        var out = [],
+        let out = [],
             o = "",
             i = 0,
             c = "",
             lst = 't',
             dt, j, cc;
-        var hr = 'H';
+        let hr = 'H';
         /* Tokenize */
         while (i < fmt.length) {
             switch ((c = fmt.charAt(i))) {
@@ -962,7 +963,7 @@ var make_ssf = function make_ssf(SSF) {
                     ++i;
                     break;
                 case '\\':
-                    var w = fmt.charAt(++i),
+                    let w = fmt.charAt(++i),
                         t = (w === "(" || w === ")") ? w : 't';
                     out[out.length] = {
                         t: t,
@@ -1033,7 +1034,7 @@ var make_ssf = function make_ssf(SSF) {
                 case 'A':
                 case 'a':
                 case '上':
-                    var q = {
+                    let q = {
                         t: c,
                         v: c
                     };
@@ -1167,7 +1168,7 @@ var make_ssf = function make_ssf(SSF) {
             }
         }
         /* Scan for date/time parts */
-        var bt = 0,
+        let bt = 0,
             ss0 = 0,
             ssm;
         for (i = out.length - 1, lst = 't'; i >= 0; --i) {
@@ -1232,7 +1233,7 @@ var make_ssf = function make_ssf(SSF) {
                 break;
         }
         /* replace fields */
-        var nstr = "",
+        let nstr = "",
             jj;
         for (i = 0; i < out.length; ++i) {
             switch (out[i].t) {
@@ -1279,7 +1280,7 @@ var make_ssf = function make_ssf(SSF) {
                     break;
             }
         }
-        var vv = "",
+        let vv = "",
             myv, ostr;
         if (nstr.length > 0) {
             if (nstr.charCodeAt(0) == 40) /* '(' */ {
@@ -1294,13 +1295,13 @@ var make_ssf = function make_ssf(SSF) {
                 }
             }
             jj = ostr.length - 1;
-            var decpt = out.length;
+            let decpt = out.length;
             for (i = 0; i < out.length; ++i)
                 if (out[i] != null && out[i].t != 't' && out[i].v.indexOf(".") > -1) {
                     decpt = i;
                     break;
                 }
-            var lasti = out.length;
+            let lasti = out.length;
             if (decpt === out.length && ostr.indexOf("E") === -1) {
                 for (i = out.length - 1; i >= 0; --i) {
                     if (out[i] == null || 'n?'.indexOf(out[i].t) === -1) continue;
@@ -1350,18 +1351,18 @@ var make_ssf = function make_ssf(SSF) {
                 out[i].v = write_num(out[i].t, out[i].v, myv);
                 out[i].t = 't';
             }
-        var retval = "";
+        let retval = "";
         for (i = 0; i !== out.length; ++i)
             if (out[i] != null) retval += out[i].v;
         return retval;
     }
     SSF._eval = eval_fmt;
-    var cfregex = /\[[=<>]/;
-    var cfregex2 = /\[(=|>[=]?|<[>=]?)(-?\d+(?:\.\d*)?)\]/;
+    let cfregex = /\[[=<>]/;
+    let cfregex2 = /\[(=|>[=]?|<[>=]?)(-?\d+(?:\.\d*)?)\]/;
 
     function chkcond(v, rr) {
         if (rr == null) return false;
-        var thresh = parseFloat(rr[2]);
+        let thresh = parseFloat(rr[2]);
         switch (rr[1]) {
             case "=":
                 if (v == thresh) return true;
@@ -1386,8 +1387,8 @@ var make_ssf = function make_ssf(SSF) {
     }
 
     function choose_fmt(f, v) {
-        var fmt = split_fmt(f);
-        var l = fmt.length,
+        let fmt = split_fmt(f);
+        let l = fmt.length,
             lat = fmt[l - 1].indexOf("@");
         if (l < 4 && lat > -1) --l;
         if (fmt.length > 4) throw new Error("cannot find right format for |" + fmt.join("|") + "|");
@@ -1405,11 +1406,11 @@ var make_ssf = function make_ssf(SSF) {
             case 4:
                 break;
         }
-        var ff = v > 0 ? fmt[0] : v < 0 ? fmt[1] : fmt[2];
+        let ff = v > 0 ? fmt[0] : v < 0 ? fmt[1] : fmt[2];
         if (fmt[0].indexOf("[") === -1 && fmt[1].indexOf("[") === -1) return [l, ff];
         if (fmt[0].match(cfregex) != null || fmt[1].match(cfregex) != null) {
-            var m1 = fmt[0].match(cfregex2);
-            var m2 = fmt[1].match(cfregex2);
+            let m1 = fmt[0].match(cfregex2);
+            let m2 = fmt[1].match(cfregex2);
             return chkcond(v, m1) ? [l, fmt[0]] : chkcond(v, m2) ? [l, fmt[1]] : [l, fmt[m1 != null && m2 != null ? 2 : 1]];
         }
         return [l, ff];
@@ -1417,7 +1418,7 @@ var make_ssf = function make_ssf(SSF) {
 
     function format(fmt, v, o) {
         if (o == null) o = {};
-        var sfmt = "";
+        let sfmt = "";
         switch (typeof fmt) {
             case "string":
                 if (fmt == "m/d/yy" && o.dateNF) sfmt = o.dateNF;
@@ -1431,42 +1432,42 @@ var make_ssf = function make_ssf(SSF) {
                 break;
         }
 
-        //new runze 增加万 亿 格式  
+        //new runze 增加万 亿 格式
         //注："w":2万2500  "w0":2万2500  "w0.0":2万2500.2  "w0.00":2万2500.23......自定义精确度
-        var reg = /^(w|W)((0?)|(0\.0+))$/;
+        let reg = /^(w|W)((0?)|(0\.0+))$/;
         if(!!sfmt.match(reg)){
             if(isNaN(v)){
                 return v;
             }
 
-             //var v =300101886.436;
-            var acc = sfmt.slice(1); //取得0/0.0/0.00
-            var isNegative = false;
+             //let v =300101886.436;
+            let acc = sfmt.slice(1); //取得0/0.0/0.00
+            let isNegative = false;
             if(!isNaN(v) && Number(v) < 0){
                 isNegative = true;
                 v = Math.abs(v);
             }
-            var vInt = parseInt(v);
-             
-            var vlength = vInt.toString().length;
+            let vInt = parseInt(v);
+
+            let vlength = vInt.toString().length;
             if( vlength> 4){
                 if(vlength > 8){
-                    var y =parseInt (v / 100000000);  //亿
-                    var w = parseInt(parseFloat(v).subtract(y*100000000) / 10000); //万
-                    var q = parseFloat(v).subtract(y*100000000 + w*10000); //千以后
+                    let y =parseInt (v / 100000000);  //亿
+                    let w = parseInt(parseFloat(v).subtract(y*100000000) / 10000); //万
+                    let q = parseFloat(v).subtract(y*100000000 + w*10000); //千以后
                     if(acc != ""){
                         q = numeral(q).format(acc); //处理精确度
                     }
                     v = y + "亿" + w + "万" + q;
                 }else{
-                    var w = parseInt(v / 10000); //万
-                    var q = parseFloat(v).subtract(w*10000) //千以后
+                    let w = parseInt(v / 10000); //万
+                    let q = parseFloat(v).subtract(w*10000) //千以后
                     if(acc != ""){
                         q = numeral(q).format(acc); //处理精确度
                     }
                     v = w + "万" + q;
                 }
-                
+
 
                 if(v.indexOf("亿0万0") != -1){
                     v = v.replace("0万0","");
@@ -1478,7 +1479,7 @@ var make_ssf = function make_ssf(SSF) {
 
                 //舍弃正则后顾断言写法，旧浏览器不识别（360 V9）
                 if (v.indexOf("亿") != -1 && v.indexOf("万") == -1) { //1亿/1亿111 => 1亿/1亿0111
-                    var afterYi = v.substring(v.indexOf("亿") + 1);
+                    let afterYi = v.substring(v.indexOf("亿") + 1);
                     if (afterYi.substring(0, 1) !== "." && afterYi != "") {
                         switch ((parseInt(afterYi) + "").length) {
                             case 1:
@@ -1494,7 +1495,7 @@ var make_ssf = function make_ssf(SSF) {
                         v = v.substring(0, v.indexOf("亿") + 1) + afterYi;
                     }
                 } else if (v.indexOf("亿") == -1 && v.indexOf("万") != -1) { //3万0011
-                    var afterWan = v.substring(v.indexOf("万") + 1);
+                    let afterWan = v.substring(v.indexOf("万") + 1);
                     if (afterWan.substring(0, 1) !== "." && afterWan != "") {
                         switch ((parseInt(afterWan) + "").length) {
                             case 1:
@@ -1510,7 +1511,7 @@ var make_ssf = function make_ssf(SSF) {
                         v = v.substring(0, v.indexOf("万") + 1) + afterWan;
                     }
                 } else if (v.indexOf("亿") != -1 && v.indexOf("万") != -1) { //1亿0053万0611
-                    var afterYi = v.substring(v.indexOf("亿") + 1,v.indexOf("万")),
+                    let afterYi = v.substring(v.indexOf("亿") + 1,v.indexOf("万")),
                         afterWan = v.substring(v.indexOf("万") + 1);
 
                     switch ((parseInt(afterYi) + "").length) {
@@ -1525,7 +1526,7 @@ var make_ssf = function make_ssf(SSF) {
                             break;
                     }
                     v = v.substring(0, v.indexOf("亿") + 1) + afterYi + v.substring(v.indexOf("万"))
-                    
+
 
                     if (afterWan.substring(0, 1) !== "." && afterWan != "") {
                         switch ((parseInt(afterWan) + "").length) {
@@ -1553,13 +1554,13 @@ var make_ssf = function make_ssf(SSF) {
             }else{
                 return v;
             }
-            
+
         }
 
 
         if (isgeneral(sfmt, 0)) return general_fmt(v, o);
         if (v instanceof Date) v = datenum_local(v, o.date1904);
-        var f = choose_fmt(sfmt, v);
+        let f = choose_fmt(sfmt, v);
         if (isgeneral(f[1])) return general_fmt(v, o);
         if (v === true) v = "TRUE";
         else if (v === false) v = "FALSE";
@@ -1570,7 +1571,7 @@ var make_ssf = function make_ssf(SSF) {
     function load_entry(fmt, idx) {
         if (typeof idx != 'number') {
             idx = +idx || -1;
-            for (var i = 0; i < 0x0188; ++i) {
+            for (let i = 0; i < 0x0188; ++i) {
                 if (table_fmt[i] == undefined) {
                     if (idx < 0) idx = i;
                     continue;
@@ -1591,7 +1592,7 @@ var make_ssf = function make_ssf(SSF) {
         return table_fmt;
     };
     SSF.load_table = function load_table(tbl) {
-        for (var i = 0; i != 0x0188; ++i)
+        for (let i = 0; i != 0x0188; ++i)
             if (tbl[i] !== undefined) load_entry(tbl[i], i);
     };
     SSF.init_table = init_table;
@@ -1599,7 +1600,7 @@ var make_ssf = function make_ssf(SSF) {
 };
 make_ssf(SSF);
 
-var XLMLFormatMap /*{[string]:string}*/ = ({
+let XLMLFormatMap /*{[string]:string}*/ = ({
     "General Number": "General",
     "General Date": SSF._table[22],
     "Long Date": "dddd, mmmm dd, yyyy",
@@ -1618,42 +1619,42 @@ var XLMLFormatMap /*{[string]:string}*/ = ({
     "On/Off": '"Yes";"Yes";"No";@'
 });
 
-var unescapexml = (function() {
+let unescapexml = (function() {
     /* 22.4.2.4 bstr (Basic String) */
-    var encregex = /&(?:quot|apos|gt|lt|amp|#x?([\da-fA-F]+));/g,
+    let encregex = /&(?:quot|apos|gt|lt|amp|#x?([\da-fA-F]+));/g,
         coderegex = /_x([\da-fA-F]{4})_/g;
     return function unescapexml(text) {
-        var s = text + '',
+        let s = text + '',
             i = s.indexOf("<![CDATA[");
         if (i == -1) return s.replace(encregex, function($$, $1) {
             return encodings[$$] || String.fromCharCode(parseInt($1, $$.indexOf("x") > -1 ? 16 : 10)) || $$;
         }).replace(coderegex, function(m, c) {
             return String.fromCharCode(parseInt(c, 16));
         });
-        var j = s.indexOf("]]>");
+        let j = s.indexOf("]]>");
         return unescapexml(s.slice(0, i)) + s.slice(i + 9, j) + unescapexml(s.slice(j + 3));
     };
 })();
 
 function xlml_format(format, value) {
-    var fmt = XLMLFormatMap[format] || unescapexml(format);
+    let fmt = XLMLFormatMap[format] || unescapexml(format);
     if (fmt === "General") return SSF._general(value);
     return SSF.format(fmt, value);
 }
 
-var basedate = new Date(1899, 11, 31, 0, 0, 0);
-var dnthresh = basedate.getTime();
-var base1904 = new Date(1900, 2, 1, 0, 0, 0);
+let basedate = new Date(1899, 11, 31, 0, 0, 0);
+let dnthresh = basedate.getTime();
+let base1904 = new Date(1900, 2, 1, 0, 0, 0);
 
 function datenum(v, date1904) {
-    var epoch = v.getTime();
+    let epoch = v.getTime();
     if (date1904) epoch -= 1462 * 24 * 60 * 60 * 1000;
     return (epoch - dnthresh) / (24 * 60 * 60 * 1000);
 }
 
 export function datenum_local(v, date1904) {
-    var epoch = Date.UTC(v.getFullYear(), v.getMonth(), v.getDate(), v.getHours(), v.getMinutes(), v.getSeconds());
-    var dnthresh_utc = Date.UTC(1899, 11, 31, 0, 0, 0);
+    let epoch = Date.UTC(v.getFullYear(), v.getMonth(), v.getDate(), v.getHours(), v.getMinutes(), v.getSeconds());
+    let dnthresh_utc = Date.UTC(1899, 11, 31, 0, 0, 0);
 
     if (date1904) epoch -= 1461 * 24 * 60 * 60 * 1000;
     else if (v >= base1904) epoch += 24 * 60 * 60 * 1000;
@@ -1661,18 +1662,18 @@ export function datenum_local(v, date1904) {
 }
 
 function numdate(v) {
-    var out = new Date();
+    let out = new Date();
     out.setTime(v * 24 * 60 * 60 * 1000 + dnthresh);
     return out;
 }
 /* ISO 8601 Duration */
 function parse_isodur(s) {
-    var sec = 0,
+    let sec = 0,
         mt = 0,
         time = false;
-    var m = s.match(/P([0-9\.]+Y)?([0-9\.]+M)?([0-9\.]+D)?T([0-9\.]+H)?([0-9\.]+M)?([0-9\.]+S)?/);
+    let m = s.match(/P([0-9\.]+Y)?([0-9\.]+M)?([0-9\.]+D)?T([0-9\.]+H)?([0-9\.]+M)?([0-9\.]+S)?/);
     if (!m) throw new Error("|" + s + "| is not an ISO8601 Duration");
-    for (var i = 1; i != m.length; ++i) {
+    for (let i = 1; i != m.length; ++i) {
         if (!m[i]) continue;
         mt = 1;
         if (i > 3) time = true;
@@ -1696,12 +1697,12 @@ function parse_isodur(s) {
     }
     return sec;
 }
-var good_pd_date = new Date('2017-02-19T19:06:09.000Z');
+let good_pd_date = new Date('2017-02-19T19:06:09.000Z');
 if (isNaN(good_pd_date.getFullYear())) good_pd_date = new Date('2/19/17');
-var good_pd = good_pd_date.getFullYear() == 2017;
+let good_pd = good_pd_date.getFullYear() == 2017;
 /* parses a date as a local date */
 function parseDate(str, fixdate) {
-    var d = new Date(str);
+    let d = new Date(str);
     //console.log(d);
     if (good_pd) {
         if (fixdate > 0) d.setTime(d.getTime() + d.getTimezoneOffset() * 60 * 1000);
@@ -1710,26 +1711,26 @@ function parseDate(str, fixdate) {
     }
     if (str instanceof Date) return str;
     if (good_pd_date.getFullYear() == 1917 && !isNaN(d.getFullYear())) {
-        var s = d.getFullYear();
+        let s = d.getFullYear();
         if (str.indexOf("" + s) > -1) return d;
         d.setFullYear(d.getFullYear() + 100);
         return d;
     }
-    var n = str.match(/\d+/g) || ["2017", "2", "19", "0", "0", "0"];
-    var out = new Date(+n[0], +n[1] - 1, +n[2], (+n[3] || 0), (+n[4] || 0), (+n[5] || 0));
+    let n = str.match(/\d+/g) || ["2017", "2", "19", "0", "0", "0"];
+    let out = new Date(+n[0], +n[1] - 1, +n[2], (+n[3] || 0), (+n[4] || 0), (+n[5] || 0));
     if (str.indexOf("Z") > -1) out = new Date(out.getTime() - out.getTimezoneOffset() * 60 * 1000);
     return out;
 }
 
 /* TODO: stress test */
 function fuzzynum(s) {
-    var v = Number(s);
+    let v = Number(s);
     if(typeof s == "number"){
         return s;
     }
     if (!isNaN(v)) return v;
-    var wt = 1;
-    var ss = s.replace(/([\d]),([\d])/g, "$1$2").replace(/[$]/g, "").replace(/[%]/g, function() {
+    let wt = 1;
+    let ss = s.replace(/([\d]),([\d])/g, "$1$2").replace(/[$]/g, "").replace(/[%]/g, function() {
         wt *= 100;
         return "";
     });
@@ -1743,9 +1744,9 @@ function fuzzynum(s) {
 }
 
 function fuzzydate(s) {
-    var o = new Date(s),
+    let o = new Date(s),
         n = new Date(NaN);
-    var y = o.getYear(),
+    let y = o.getYear(),
         m = o.getMonth(),
         d = o.getDate();
     if (isNaN(d)) return n;
@@ -1757,9 +1758,9 @@ function fuzzydate(s) {
 }
 
 export function genarate(value) {//万 单位格式增加！！！
-    var ret = [];
-    var m = null, ct = {}, v = value;
-    
+    let ret = [];
+    let m = null, ct = {}, v = value;
+
     if(value == null){
         return null;
     }
@@ -1789,14 +1790,14 @@ export function genarate(value) {//万 单位格式增加！！！
     else if(isRealNum(value) && Math.abs(parseFloat(value)) > 0 && (Math.abs(parseFloat(value)) >= 1e+11 || Math.abs(parseFloat(value)) < 1e-9)){
         v = numeral(value).value();
 
-        var str = v.toExponential();
+        let str = v.toExponential();
         if(str.indexOf(".") > -1){
-            var strlen = str.split(".")[1].split("e")[0].length;
+            let strlen = str.split(".")[1].split("e")[0].length;
             if(strlen > 5){
                 strlen = 5;
             }
 
-            ct = { "fa": "#0."+ new Array(strlen + 1).join("0") +"E+00", "t": "n" }; 
+            ct = { "fa": "#0."+ new Array(strlen + 1).join("0") +"E+00", "t": "n" };
         }
         else{
             ct = { "fa": "#0.E+00", "t": "n" };
@@ -1805,26 +1806,26 @@ export function genarate(value) {//万 单位格式增加！！！
         m = SSF.format(ct.fa, v);
     }
     else if(value.toString().indexOf("%") > -1){
-        var index = value.toString().indexOf("%");
-        var value2 = value.toString().substr(0, index);
-        var value3 = value2.replace(/,/g, "");
+        let index = value.toString().indexOf("%");
+        let value2 = value.toString().substr(0, index);
+        let value3 = value2.replace(/,/g, "");
 
         if(index == value.toString().length - 1 && isRealNum(value3)){
             if(value2.indexOf(".") > -1){
                 if(value2.indexOf(".") == value2.lastIndexOf(".")){
-                    var value4 = value2.split(".")[0];
-                    var value5 = value2.split(".")[1];
+                    let value4 = value2.split(".")[0];
+                    let value5 = value2.split(".")[1];
 
-                    var len = value5.length;
+                    let len = value5.length;
                     if(len > 9){
                         len = 9;
                     }
 
                     if(value4.indexOf(",") > -1){
-                        var isThousands = true;
-                        var ThousandsArr = value4.split(",");
+                        let isThousands = true;
+                        let ThousandsArr = value4.split(",");
 
-                        for(var i = 1; i < ThousandsArr.length; i++){
+                        for(let i = 1; i < ThousandsArr.length; i++){
                             if(ThousandsArr[i].length < 3){
                                 isThousands = false;
                                 break;
@@ -1853,10 +1854,10 @@ export function genarate(value) {//万 单位格式增加！！！
                 }
             }
             else if(value2.indexOf(",") > -1){
-                var isThousands = true;
-                var ThousandsArr = value2.split(",");
+                let isThousands = true;
+                let ThousandsArr = value2.split(",");
 
-                for(var i = 1; i < ThousandsArr.length; i++){
+                for(let i = 1; i < ThousandsArr.length; i++){
                     if(ThousandsArr[i].length < 3){
                         isThousands = false;
                         break;
@@ -1886,19 +1887,19 @@ export function genarate(value) {//万 单位格式增加！！！
     }
     else if(value.toString().indexOf(".") > -1){
         if(value.toString().indexOf(".") == value.toString().lastIndexOf(".")){
-            var value1 = value.toString().split(".")[0];
-            var value2 = value.toString().split(".")[1];
+            let value1 = value.toString().split(".")[0];
+            let value2 = value.toString().split(".")[1];
 
-            var len = value2.length;
+            let len = value2.length;
             if(len > 9){
                 len = 9;
             }
 
             if(value1.indexOf(",") > -1){
-                var isThousands = true;
-                var ThousandsArr = value1.split(",");
+                let isThousands = true;
+                let ThousandsArr = value1.split(",");
 
-                for(var i = 1; i < ThousandsArr.length; i++){
+                for(let i = 1; i < ThousandsArr.length; i++){
                     if(!isRealNum(ThousandsArr[i]) || ThousandsArr[i].length < 3){
                         isThousands = false;
                         break;
@@ -1954,7 +1955,7 @@ export function genarate(value) {//万 单位格式增加！！！
         else{
             ct.fa = "yyyy-MM-dd";
         }
-        
+
         ct.t = "d";
         m = SSF.format(ct.fa, v);
     }
@@ -1976,14 +1977,14 @@ export function is_date(fmt, v) {
 }
 
 export function valueShowEs(r, c, d) {
-    var value = getcellvalue(r, c, d, "m");
+    let value = getcellvalue(r, c, d, "m");
     if(value == null){
         value = getcellvalue(r, c, d, "v");
     }
     else{
         if (!isNaN(fuzzynum(value))){
             if(typeof(value) == "string" && value.indexOf("%") > -1){
-                
+
             }
             else{
                 value = getcellvalue(r, c, d, "v");

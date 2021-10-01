@@ -8,25 +8,25 @@ export const inlineStyleAffectCssName = {"font-weight":1, "font-style":1 , "font
 
 export function isInlineStringCell(cell){
     let isIs = cell && cell.ct!=null && cell.ct.t=="inlineStr" && cell.ct.s!=null && cell.ct.s.length>0;
-    return isIs; 
+    return isIs;
 }
 
 export function isInlineStringCT(ct){
     let isIs = ct!=null && ct.t=="inlineStr" && ct.s!=null && ct.s.length>0;
-    return isIs; 
+    return isIs;
 }
 
 export function updateInlineStringFormat(cell, attr, value, $input){
     // let s = Store.inlineStringEditCache;
-    var  w = window.getSelection(); 
-    var range;
+    let  w = window.getSelection();
+    let range;
     if(w.type=="None"){
         range = Store.inlineStringEditRange;
     }
     else{
         range = w.getRangeAt(0);
-    } 
-    
+    }
+
 
     // if(isInlineStringCell(cell)){
     //     if(Store.inlineStringEditCache==null){
@@ -71,7 +71,7 @@ export function updateInlineStringFormat(cell, attr, value, $input){
     if($textEditor.length>0){
         if(startContainer===endContainer){
             let span = startContainer.parentNode, spanIndex, inherit=false;
-            
+
             let content = span.innerHTML;
 
             let fullContent = $textEditor.html();
@@ -115,7 +115,7 @@ export function updateInlineStringFormat(cell, attr, value, $input){
                         cssText = extendCssText(box.style.cssText, cssText);
                     }
                 }
-                
+
                 cont += "<span style='"+ cssText +"'>" + mid + "</span>";
             }
 
@@ -138,7 +138,7 @@ export function updateInlineStringFormat(cell, attr, value, $input){
                 spanIndex = 0;
                 $(span).html(cont);
             }
-            
+
 
             let seletedNodeIndex = 0;
             if(s1==s2){
@@ -193,8 +193,8 @@ export function updateInlineStringFormat(cell, attr, value, $input){
                 if(eleft!=""){
                     let cssText = getCssText(endSpan.style.cssText, attr, value);
                     cont += "<span style='"+ cssText +"'>" + eleft + "</span>";
-                }                
-                
+                }
+
                 if(eright!=""){
                     cont += "<span style='"+ endSpan.style.cssText +"'>" + eright + "</span>";
                 }
@@ -231,12 +231,12 @@ export function updateInlineStringFormat(cell, attr, value, $input){
 }
 
 export function enterKeyControll(cell){
-    var  w = window.getSelection(); 
-    
+    let  w = window.getSelection();
+
     if(w.type=="None"){
         return
     }
-    var range = w.getRangeAt(0);
+    let range = w.getRangeAt(0);
     let cac = range.commonAncestorContainer;
     let $textEditor;
     if(cac.id=="luckysheet-rich-text-editor"){
@@ -253,7 +253,7 @@ export function enterKeyControll(cell){
 
     let endContainer = range.endContainer, startContainer = range.startContainer;
     let endOffset = range.endOffset, startOffset = range.startOffset;
-    
+
     if($textEditor.length>0){
         let startSpan = startContainer.parentNode;
         if(startContainer.id=="luckysheet-rich-text-editor"){
@@ -277,7 +277,7 @@ export function enterKeyControll(cell){
         sleft = startContent.substring(s1, s2);
         sright = startContent.substring(s2, startContent.length);
 
-        
+
         let spanIndex,cont;
         if(startContainer.parentNode.tagName=="SPAN"){
             let textSpan = $textEditor.find("span");
@@ -290,16 +290,16 @@ export function enterKeyControll(cell){
                 else{
                     cont = "<span style='"+ startSpan.style.cssText +"'>" + sleft + "\n\n" + "</span>";
                 }
-                
+
             }
             else{
                 cont = "<span style='"+ startSpan.style.cssText +"'>" + sleft + "\n" + sright + "</span>";
             }
-            
+
             $(startSpan).replaceWith(cont);
         }
         else{
-            
+
             let cssText = getFontStyleByCell(cell);
             if(sright==""){
                 cont = "<span style='"+ cssText +"'>" + sleft + "\n\n" + "</span>";
@@ -307,7 +307,7 @@ export function enterKeyControll(cell){
             else{
                 cont = "<span style='"+ cssText +"'>" + sleft + "\n" + sright + "</span>";
             }
-            
+
             if(startContainer.id=="luckysheet-rich-text-editor"){
                 $(startSpan).replaceWith(cont);
                 let textSpan = $textEditor.find("span");
@@ -318,7 +318,7 @@ export function enterKeyControll(cell){
                 $(startSpan).html(cont);
                 spanIndex = 0;
             }
-            
+
         }
 
         selectTextContentCollapse($textEditor.find("span").get(spanIndex), startOffset+1);
@@ -359,7 +359,7 @@ export function convertSpanToShareString($dom){
         }
         else{
             styleList.v = v;
-            styles.push(styleList); 
+            styles.push(styleList);
 
             preStyleListString = curStyleListString;
             preStyleList = styleList;
@@ -378,7 +378,7 @@ export function convertCssToStyleList(cssText){
     const _locale = locale();
     const locale_fontarray = _locale.fontarray;
     const locale_fontjson = _locale.fontjson;
-    let styleList = {    
+    let styleList = {
         "ff":locale_fontarray[0], //font family
         "fc":"#000000",//font color
         "fs":10,//font size
@@ -499,7 +499,7 @@ function upsetClassWithCss(cssText, ukey, uvalue){
         }
     }
     else if(ukey.length>0){
-        cssText += ukey + ":" + uvalue + ";"; 
+        cssText += ukey + ":" + uvalue + ";";
         newCss = cssText;
     }
 
@@ -569,7 +569,7 @@ function extendCssText(origin, cover, isLimit=true){
     let originArray = origin.split(";");
     let coverArray = cover.split(";");
     let newCss = "";
-    
+
     let addKeyList = {};
     for(let i=0;i<originArray.length;i++){
         let so = originArray[i], isAdd=true;

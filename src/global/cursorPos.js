@@ -2,7 +2,7 @@ import Store from '../store';
 
 function luckysheetRangeLast(obj) {
     let range;
-    
+
     if(document.createRange){ //chrome, firefox, opera, safari, ie9+
         if(obj.innerHTML != obj.innerText || obj.innerHTML == ""){
             obj.focus(); //解决ff不获取焦点无法定位问题
@@ -20,7 +20,7 @@ function luckysheetRangeLast(obj) {
 
             let selection = window.getSelection();
             selection.removeAllRanges();
-            selection.addRange(range);    
+            selection.addRange(range);
         }
     }
     else if(document.selection){ //ie8 and lower
@@ -33,7 +33,7 @@ function luckysheetRangeLast(obj) {
 
 function getCursortPosition(textDom){
     let cursorPos = 0;
-    
+
     if(document.selection){
         textDom.focus();
         let selectRange = document.selection.createRange();
@@ -80,13 +80,13 @@ function selectTextDom(ele){
         let range = document.body.createTextRange();
         range.moveToElementText(ele);
         range.select();
-    } 
+    }
 }
 
 function selectTextContent(ele){
     if (window.getSelection) {
         let range = document.createRange();
-        var content=ele.firstChild;
+        let content=ele.firstChild;
         range.setStart(content,0);
         range.setEnd(content,content.length);
         if(range.startContainer && isInPage(range.startContainer)){
@@ -98,13 +98,13 @@ function selectTextContent(ele){
         let range = document.body.createTextRange();
         range.moveToElementText(ele);
         range.select();
-    } 
+    }
 }
 
 function selectTextContentCross(sEle, eEle){
     if (window.getSelection) {
         let range = document.createRange();
-        var sContent=sEle.firstChild, eContent=eEle.firstChild;
+        let sContent=sEle.firstChild, eContent=eEle.firstChild;
         range.setStart(sContent,0);
         range.setEnd(eContent,eContent.length);
         if(range.startContainer && isInPage(range.startContainer)){
@@ -117,7 +117,7 @@ function selectTextContentCross(sEle, eEle){
 function selectTextContentCollapse(sEle, index){
     if (window.getSelection) {
         let range = document.createRange();
-        var sContent=sEle.firstChild;
+        let sContent=sEle.firstChild;
         if(index>sContent.length){
             index=sContent.length;
         }

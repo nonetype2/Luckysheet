@@ -141,8 +141,8 @@ function getMeasureText(value, ctx, fontset){
         }
 
         let measureText = ctx.measureText(value), cache = {};
-        // var regu = "^[ ]+$";
-        // var re = new RegExp(regu);
+        // let regu = "^[ ]+$";
+        // let re = new RegExp(regu);
         // if(measureText.actualBoundingBoxRight==null || re.test(value)){
         //     cache.width = measureText.width;
         // }

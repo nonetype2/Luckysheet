@@ -1687,6 +1687,8 @@ const luckysheetformula = {
         else {
             rangetxt = val[0];
         }
+        val.length = 0;
+        val = null;
 
         let reg_cell = /^(([a-zA-Z]+)|([$][a-zA-Z]+))(([0-9]+)|([$][0-9]+))$/g; //增加正则判断单元格为字母+数字的格式：如 A1:B3
         let reg_cellRange = /^(((([a-zA-Z]+)|([$][a-zA-Z]+))(([0-9]+)|([$][0-9]+)))|((([a-zA-Z]+)|([$][a-zA-Z]+))))$/g; //增加正则判断单元格为字母+数字或字母的格式：如 A1:B3，A:A
@@ -1696,15 +1698,31 @@ const luckysheetformula = {
             let col = ABCatNum(rangetxt.replace(/[^A-Za-z]/g, ""));
 
             if (!isNaN(row) && !isNaN(col) && rangetxt.toString().match(reg_cell)) {
+                row = null;
+                col = null;
+                reg_cell = null;
+                reg_cellRange = null;
                 return true;
             }
             else if (!isNaN(row)) {
+                row = null;
+                col = null;
+                reg_cell = null;
+                reg_cellRange = null;
                 return false;
             }
             else if (!isNaN(col)) {
+                row = null;
+                col = null;
+                reg_cell = null;
+                reg_cellRange = null;
                 return false;
             }
             else {
+                row = null;
+                col = null;
+                reg_cell = null;
+                reg_cellRange = null;
                 return false;
             }
         }
@@ -1717,19 +1735,35 @@ const luckysheetformula = {
             row[0] = parseInt(rangetxt[0].replace(/[^0-9]/g, "")) - 1;
             row[1] = parseInt(rangetxt[1].replace(/[^0-9]/g, "")) - 1;
             if (row[0] > row[1]) {
+                row = null;
+                col = null;
+                reg_cell = null;
+                reg_cellRange = null;
                 return false;
             }
 
             col[0] = ABCatNum(rangetxt[0].replace(/[^A-Za-z]/g, ""));
             col[1] = ABCatNum(rangetxt[1].replace(/[^A-Za-z]/g, ""));
             if (col[0] > col[1]) {
+                row = null;
+                col = null;
+                reg_cell = null;
+                reg_cellRange = null;
                 return false;
             }
 
             if (rangetxt[0].toString().match(reg_cellRange) && rangetxt[1].toString().match(reg_cellRange)) {
+                row = null;
+                col = null;
+                reg_cell = null;
+                reg_cellRange = null;
                 return true;
             }
             else {
+                row = null;
+                col = null;
+                reg_cell = null;
+                reg_cellRange = null;
                 return false;
             }
         }
@@ -4194,7 +4228,7 @@ const luckysheetformula = {
         for (let i = 0; i < luckysheetfile.length; i++) {
             let file = luckysheetfile[i];
             let calcChain = file.calcChain;
-            
+
             /* 备注：再次加载表格获取的数据可能是JSON字符串格式(需要进行发序列化处理) */
             if(calcChain){
                 let tempCalcChain = [];
@@ -4525,7 +4559,8 @@ const luckysheetformula = {
                     this.isFunctionRangeSaveChange(cellStr, r, c, index, dynamicArray_compute);
                 }
             }
-
+            cellLis.length = 0;
+            cellList = null;
             return;
         }
 
@@ -4545,9 +4580,8 @@ const luckysheetformula = {
                 op = {};
 
             for (let i = 0; i < arr.length; i++) {
-                op[arr[i].toString()] = 1;
+                op[arr[i]] = 1;
             }
-
             _this.operatorjson = op;
         }
 
@@ -4832,7 +4866,8 @@ const luckysheetformula = {
 
             i++;
         }
-        // console.log(function_str);
+        funcstack.length = 0;
+        funcstack = null;
         _this.checkSpecialFunctionRange(function_str, r, c, index, dynamicArray_compute, cellRangeFunction);
         return function_str;
     },
